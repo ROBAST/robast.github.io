@@ -28,91 +28,97 @@
 
     <div class="container">
       <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
+        <div class="container-fluid">
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
               <li class="active"><a href="index.html">ROBAST</a></li>
               <li><a href="download.html">Download</a></li>
               <li><a href="support.html">Support</a></li>
-          <li><a href="tutorials.html">Tutorials</a></li>
-          <li><a href="documentation.html">Documentation</a></li>
-          <li><a href="publications.html">Publications</a></li>
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="publications.html">Publications</a></li>
             </ul>
           </div>
-    </div>
-      </nav>
-    
-      <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-11">
-      <h3>What is ROBAST?</h3>
-    </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-7" style="text-align:justify;">
-      <p>ROOT-based simulator for ray tracing (ROBAST) is a non-sequential ray-tracing simulation library developed for wide use in optical simulations of gamma-ray and cosmic-ray telescopes. The library is written in C++ and fully utilizes the geometry library of the <a href="http://root.cern.ch/" target="_blank">ROOT</a> analysis framework.</p>
-      
-      <p>In 2007 ROBAST was first developed to simulate the modified Baker–Nunn optical system of the Ashra experiment, which is composed of three aspherical lenses and spherical segemented mirrors as illustrated in Figure 1. In 2010 ROBAST was released as an open-source project to be more widely used in the cosmic-ray and gamma-ray community. It is currently used by many sub projects of <a href="http://www.cta-observatory.org/" target="_blank">the Cherenkov Telescope Array</a> and some other projects.</p>
-      
-      <p>If you are already familiar with ROOT and C++, and if you are looking for a ray-tracing simulater suited for cosmic-ray telescopes, ROBAST is probably what you want. Even if you are a ROOT/C++ beginer, it is worth to try ROBAST and start lerning ROOT and C++ right now.</p>
         </div>
-    
-    <div class="col-md-4">
+      </nav>
+      
+      <div class="row">
+        <div class="col-md-1 col-sm-0 col-xs-0"></div>
+        <div class="col-md-11 col-sm-12 col-xs-12">
+          <h3>What is ROBAST?</h3>
+        </div>
+        <div class="col-md-1 col-sm-0 col-xs-0"></div>
+        <div class="col-md-7 col-sm-8 col-xs-8" style="text-align:justify;">
+          <p>ROOT-based simulator for ray tracing (ROBAST) is a non-sequential ray-tracing simulation library developed for wide use in optical simulations of gamma-ray and cosmic-ray telescopes. The library is written in C++ and fully utilizes the geometry library of the <a href="http://root.cern.ch/" target="_blank">ROOT</a> analysis framework.</p>
+          
+          <p>In 2007 ROBAST was first developed to simulate the modified Baker–Nunn optical system of the Ashra experiment, which is composed of three aspherical lenses and spherical segemented mirrors as illustrated in Figure 1. In 2010 ROBAST was released as an open-source project to be more widely used in the cosmic-ray and gamma-ray community. It is currently used by many sub projects of <a href="http://www.cta-observatory.org/" target="_blank">the Cherenkov Telescope Array</a> and some other projects.</p>
+          
+          <p>If you are already familiar with ROOT and C++, and if you are looking for a ray-tracing simulater suited for cosmic-ray telescopes, ROBAST is probably what you want. Even if you are a ROOT/C++ beginer, it is worth to try ROBAST and start lerning ROOT and C++ right now.</p>
+        </div>
+        
+        <div class="col-md-4 col-sm-4 col-xs-4">
           <div class="thumbnail">
             <img alt="The Ashra Optics" src="./img/ashra_optics.png">
             <div class="caption" style="font-size:small;">
               Fig 1. ROBAST 3D model of the Ashra optical system (modified Baker–Nunn optical system)
             </div>
           </div>
+          
+        </div>
+      </div>
       
-    </div>
+      <div class="row">
+        <div class="col-md-1 col-sm-0 col-xs-0"></div>
+        <div class="col-md-11 col-sm-12 col-xs-12">
+          <h3>Complex Telescope Geometry</h3>
+        </div>
+        <div class="col-md-1 col-sm-0"></div>    
+        <div class="col-md-7 col-sm-8 col-xs-8" style="text-align:justify;">
+          <p>Thanks to the ROOT geometry library and additional ROBAST classes, complex telescope geometry with a number of segmented mirrors and telescope masts can be built. Indeed, ROBAST is currently used for optics simulations of several telescope designs of the Cherenkov Telescope Array;
+            <ul>
+              <li>Large-Sized Telescope (LST): A parabolic telescope comprising of 198 hexagonal segmented mirrors with spherical surfaces.</li>
+              <li>Medium-Sized Telescope (MST): A Davies–Cotton system comprising of 88 hexagonal segmented mirrors with spherical surfaces.</li>
+              <li>Schwarzschild–Couder Medium-Sized Telescope (SC-MST): A system with aspherical primary and secondary mirrors divided into 48 and 24 segmented facets, respectively. The facet shapes are tetragons and pentagons.</li>
+              <li>Schwarzschild–Couder Small-Sized Telescope (SC-SST): A system similar to the SC-MST optics, but the primary is divided into 6 mirrors, and the secondary is monolithic.</li>
+            </ul>
+          </p>
+          <p>As shown in Figures 1 and 2, segmented mirrors, telescope masts and trusses, lenses, and focal plane can be modeled in ROBAST. The telescope geometry can be drawn in an OpenGL window.</p>
+          <p>In addition to telescope simulations, ROBAST has a few dedicated geometry classes for light concentrators (also known as Winston cones). Multiple reflections on the surface of a light concentrator can be easily simulated by the non-sequential ray-tracing functionality of ROBAST.</p>
+        </div>
+        
+        <div class="col-md-4 col-sm-4 col-xs-4">
+          <div class="thumbnail">
+            <img alt="The SCT Optics" src="./img/sct_optics.png">
+            <div class="caption" style="font-size:small;">
+              Fig 2. A Schwarzschild-Couder optical system to be used in CTA
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-1 col-sm-0 col-xs-0"></div>
+        <div class="col-md-11 col-sm-12 col-xs-12">
+          <h3>Direct Analysis with ROOT</h3>
+        </div>
+        <div class="col-md-1 col-sm-0 col-xs-0"></div>    
+        <div class="col-md-7 col-sm-8 col-xs-8" style="text-align:justify;">
+          <p>Your ROBAST simulation programs can be written in C++ or Python, and so you can directly analyze the simulation results inside a ROOT or a Python script (via PyROOT). Figure 3 shows spot diagrams of a SC optical system directly analyzed in a ROOT session.</p>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4">
+          <div class="thumbnail">
+            <img alt="Spot Diagrams" src="./img/sct_spot.png">
+            <div class="caption" style="font-size:small;">
+              Fig 3. Spot diagrams of the Schwarzschild-Couder optical system
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-11">
-      <h3>Complex Telescope Geometry</h3>
-    </div>
-    <div class="col-md-1"></div>    
-    <div class="col-md-7" style="text-align:justify;">
-      <p>Thanks to the ROOT geometry library and additional ROBAST classes, complex telescope geometry with a number of segmented mirrors and telescope masts can be built. Indeed, ROBAST is currently used for optics simulations of several telescope designs of the Cherenkov Telescope Array;
-        <ul>
-          <li>Large-Sized Telescope (LST): A parabolic telescope comprising of 198 hexagonal segmented mirrors with spherical surfaces.</li>
-          <li>Medium-Sized Telescope (MST): A Davies–Cotton system comprising of 88 hexagonal segmented mirrors with spherical surfaces.</li>
-          <li>Schwarzschild–Couder Medium-Sized Telescope (SC-MST): A system with aspherical primary and secondary mirrors divided into 48 and 24 segmented facets, respectively. The facet shapes are tetragons and pentagons.</li>
-          <li>Schwarzschild–Couder Small-Sized Telescope (SC-SST): A system similar to the SC-MST optics, but the primary is divided into 6 mirrors, and the secondary is monolithic.</li>
-        </ul>
-      </p>
-      <p>As shown in Figures 1 and 2, segmented mirrors, telescope masts and trusses, lenses, and focal plane can be modeled in ROBAST. The telescope geometry can be drawn in an OpenGL window.</p>
-      <p>In addition to telescope simulations, ROBAST has a few dedicated geometry classes for light concentrators (also known as Winston cones). Multiple reflections on the surface of a light concentrator can be easily simulated by the non-sequential ray-tracing functionality of ROBAST.</p>
-    </div>
-    
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <img alt="The SCT Optics" src="./img/sct_optics.png">
-        <div class="caption" style="font-size:small;">
-          Fig 2. A Schwarzschild-Couder optical system to be used in CTA
-        </div>
-      </div>
-    </div>
-      </div>
-
-      <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-11">
-      <h3>Direct Analysis with ROOT</h3>
-    </div>
-    <div class="col-md-1"></div>    
-    <div class="col-md-7" style="text-align:justify;">
-      <p>Your ROBAST simulation programs can be written in C++ or Python, and so you can directly analyze the simulation results inside a ROOT or a Python script (via PyROOT). Figure 3 shows spot diagrams of a SC optical system directly analyzed in a ROOT session.</p>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <img alt="Spot Diagrams" src="./img/sct_spot.png">
-        <div class="caption" style="font-size:small;">
-          Fig 3. Spot diagrams of the Schwarzschild-Couder optical system
-        </div>
-      </div>
-    </div>
+        <hr>
+        <footer>
+          <p style="text-align:right;">&copy; Copyright 2015 Akira Okumura</p>
+        </footer>
       </div>
     </div>
     

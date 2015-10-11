@@ -34,7 +34,6 @@
               <li><a href="index.html">ROBAST</a></li>
               <li><a href="download.html">Download</a></li>
               <li class="active"><a href="support.html">Support</a></li>
-              <li><a href="tutorials.html">Tutorials</a></li>
               <li><a href="documentation.html">Documentation</a></li>
               <li><a href="publications.html">Publications</a></li>
             </ul>
@@ -49,14 +48,104 @@
           <p>ROBAST is currently developed by <a href="http://www.stelab.nagoya-u.ac.jp/~okumura/profile.html" target="_blank">Akira Okumura</a> (Institute for Space-Earth Environmental Research, Nagoya University) as an open-source project on GitHub. Please feel free to contact me by <a href="mailto:oxon@mac.com">e-mail</a>.</p>
           <p>In addition to the tutorial programs provided with ROBAST, you can get some more complex (= dirty) simulation examples upon request.</p>
           <h3>Bug Reports and Feature Requests</h3>
-          <p>Pleas visit the GitHub page <a href="https://github.com/ROBAST/ROBAST" target="_blank">https://github.com/ROBAST/ROBAST</a> to post your bug report or feature request. If you are not familiar with GitHub, please contact me by e-mail.</p>
+          <p>Pleas go to the GitHub page <a href="https://github.com/ROBAST/ROBAST" target="_blank">https://github.com/ROBAST/ROBAST</a> to post your bug report or feature request. If you are not familiar with GitHub, please contact me by e-mail.</p>
           <h3>ROOT Help</h3>
-          <p>ROBAST requires you very basic knowledge of ROOT and C++. We do not answer your basic ROOT questions such as how to use TH2D or what "new" and "delete" are. Pleaes refer to <a href="https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html" target="_blank">the ROOT User's Guide</a>, that is quite well written for ROOT beginners. You can also use <a href="https://root.cern.ch/mailing-list" target="_blank">the ROOT mailing list</a> or <a href="https://root.cern.ch/phpBB3/" target="_blank">the ROOT forum</a> to get an answer for your question.</p>
+          <p>ROBAST requires you very basic knowledge of ROOT and C++. We do not answer your basic ROOT questions such as how to use TH2D or what <code class="language-cpp">new</code> and <code class="language-cpp">delete</code> are. Pleaes refer to <a href="https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html" target="_blank">the ROOT User's Guide</a>, that is quite well written for ROOT beginners. You can also use <a href="https://root.cern.ch/mailing-list" target="_blank">the ROOT mailing list</a> or <a href="https://root.cern.ch/phpBB3/" target="_blank">the ROOT forum</a> to get an answer for your question.</p>
           <h3>Future Development</h3>
           <p>ROBAST is a volunteer-based open-source project, and it is currently developed and maintained by only Akira Okumura. Thus, we cannot guarantee the future development or support at the moment. In my personal prospect, however, ROBAST will be maintained for the next 10 years, because it will be used during the initial phase (–2025) of the Cherenkov Telescope Array observatory.</p>
+
+          <h3>FAQ</h3>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Q. What operating systems are supported?</h3>
+            </div>
+            <div class="panel-body">
+              <p>OS X and Linux. In principle any POSIX systems that are supported in ROOT are compatible with ROBAST. We have been using ROBAST on several versions of OS X (up to El Capitan) and Linux distributions (Scientific Linux 5, 6, and 7). We do not know if ROBAST runs on Windows machines, because we have never seen researchers who use ROOT on Windows.</p>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Q. Can ROBAST simulate diffraction?</h3>
+            </div>
+            <div class="panel-body">
+              <p>No. ROBAST simulates photon tracks with a geometrical optics approach, because it relies on the particle tracking engine of the ROOT geometry library. We do not have a plan to support diffraction either.</p>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Q. Can ROBAST simulate polarization?</h3>
+            </div>
+            <div class="panel-body">
+              <p>Currently ROBAST cannot simulate photon polarization, however, we have a plan to support it in a future ROBAST release. Fresnel reflection and refraction in ROBAST assume random polarization.</p>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Q. How do I model a Fresnel lens?</h3>
+            </div>
+            <div class="panel-body">
+              <p>Please make a composite shape from a number of AGeoAsphericDisk objects. ROBAST does not have a dedicated class for simulation of Fresnel lenses. However, you can model a Fresnel lens geometry by using a number of AGeoAsphericDisk volumes aligned like an onion slice. The simulation speed will be very slow if the pitch of the concentric circles is very small.</p>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Q. Can I simulate diffusive reflection?</h3>
+            </div>
+            <div class="panel-body">
+              <p>Currently no. We have a plant to support diffusive reflection on a matte surface such as white paint or the ground.</p>
+            </div>
+          </div>
+          
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Q. Who is the owner of TGeo objects?</h3>
+            </div>
+            <div class="panel-body">
+              <p><code>TGeoManager</code>, the base class of <code>AOpticsManager</code>, takes care of heap objects. TGeo objects are automatically deleted when the destructor of <code>TGeoManager</code> or <code>AOpticsManager</code> is called.</p>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Q. What functionality will be added in future?</h3>
+            </div>
+            <div class="panel-body">
+              <p>I have a plan to support photon polarization and diffuse reflection.</p>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Q. What projects use ROBAST?</h3>
+            </div>
+            <div class="panel-body">
+              <p>There are more than 15 researchers and students who use ROBAST in the Cherenkov Telescope Array. As far as I know there are several persons who use ROBAST for their other projects, but I do not know what these projects are.</p>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Q. Can I use ROBAST in Python?</h3>
+            </div>
+            <div class="panel-body">
+              <p>Yes. You can use it via PyROOT. Please try <code>tutorial/SimpleParabolicTelescope.py</code>.</p>
+            </div>
+          </div>
+
         </div>
       </div>
 
+      <div class="row">
+        <hr>
+        <footer>
+          <p style="text-align:right;">&copy; Copyright 2015 Akira Okumura</p>
+        </footer>
+      </div>
     </div>
 
     <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
