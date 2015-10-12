@@ -1,0 +1,596 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--                                             -->
+<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!--                                             -->
+<!--   Date: Mon Oct 12 11:12:34 2015            -->
+<!--                                             -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>ACorsikaIACTEventHeader</title>
+<meta name="rating" content="General" />
+<meta name="objecttype" content="Manual" />
+<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
+<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<link rel="stylesheet" type="text/css" href="ROOT.css" id="ROOTstyle" />
+<script type="text/javascript" src="ROOT.js"></script>
+</head>
+<body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
+<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<a name="TopOfPage"></a>
+<script type="text/javascript">WriteFollowPageBox('class ACorsikaIACTEventHeader','libROBAST','ACorsikaIACTEventHeader.h');</script>
+<div id="toplinks">
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Quick Links:</span>
+<a class="descrheadentry" href="http://root.cern.ch">ROOT Homepage</a>
+<a class="descrheadentry" href="./ClassIndex.html">Class Index</a>
+<a class="descrheadentry" href="./ClassHierarchy.html">Class Hierarchy</a></div>
+<script type="text/javascript">
+function onSearch() {
+var s='http://www.google.com/search?q=%s+site%3A%u+-site%3A%u%2Fsrc%2F+-site%3A%u%2Fexamples%2F';
+var ref=String(document.location.href).replace(/https?:\/\//,'').replace(/\/[^\/]*$/,'').replace(/\//g,'%2F');
+window.location.href=s.replace(/%u/ig,ref).replace(/%s/ig,escape(document.searchform.t.value));
+return false;}
+</script>
+<form id="searchform" name="searchform" onsubmit="return onSearch()" action="javascript:onSearch();" method="post">
+<input name="t" size="30" value="Search documentation..." onfocus="if (document.searchform.t.value=='Search documentation...') document.searchform.t.value='';"></input>
+<a id="searchlink"  title="www.google.com"  href="javascript:onSearch();" onclick="return onSearch()">Search</a></form>
+</div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Source:</span>
+<a class="descrheadentry" href="src/ACorsikaIACTEventHeader.h.html">header file</a>
+<a class="descrheadentry" href="src/ACorsikaIACTEventHeader.cxx.html">source file</a>
+
+</div></div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Sections:</span>
+<a class="descrheadentry" href="#ACorsikaIACTEventHeader:description">class description</a> 
+<a class="descrheadentry" href="#ACorsikaIACTEventHeader:Function_Members">function members</a>
+<a class="descrheadentry" href="#ACorsikaIACTEventHeader:Data_Members">data members</a>
+<a class="descrheadentry" href="#ACorsikaIACTEventHeader:Class_Charts">class charts</a>
+</div></div>
+</div>
+<div class="location">
+<a class="locationlevel" href="index.html">ROBAST</a>
+ &#187; <a class="locationlevel" href="./SRC_Index.html">SRC</a>
+ &#187; <a class="locationlevel" href="#TopOfPage">ACorsikaIACTEventHeader</a>
+</div>
+<div class="dropshadow"><div class="withshadow"><h1><a name="ACorsikaIACTEventHeader:description"></a>class ACorsikaIACTEventHeader</h1>
+<div class="classdescr">
+</div>
+</div></div>
+
+<div id="functions">
+<h2><a id="ACorsikaIACTEventHeader:Function_Members"></a>Function Members (Methods)</h2>
+<div class="access" id="funcpubl"><b>public:</b>
+<table class="func" id="tabfuncpubl" cellspacing="0">
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:ACorsikaIACTEventHeader">ACorsikaIACTEventHeader</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a>* eventHeader = 0)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:ACorsikaIACTEventHeader@1">ACorsikaIACTEventHeader</a>(<span class="keyword">const</span> <a href="./ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:_ACorsikaIACTEventHeader">~ACorsikaIACTEventHeader</a>()</td></tr>
+<tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:Class">Class</a>()</td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetActualWeightLimitWMAX_WEITRATForThinningElectromagnetic">GetActualWeightLimitWMAX_WEITRATForThinningElectromagnetic</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetActualWeightLimitWMAXForThinningHadronic">GetActualWeightLimitWMAXForThinningHadronic</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetAdditionalMuonInformationFlag">GetAdditionalMuonInformationFlag</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetAngleBetweenArrayXDirectionAndMagneticNorth">GetAngleBetweenArrayXDirectionAndMagneticNorth</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetAzimuthAngle">GetAzimuthAngle</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetCherenkovBandwidthLowerEnd">GetCherenkovBandwidthLowerEnd</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetCherenkovBandwidthUpperEnd">GetCherenkovBandwidthUpperEnd</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetCherenkovBunchSize">GetCherenkovBunchSize</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetCherenkovFlag">GetCherenkovFlag</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetComputerFlag">GetComputerFlag</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetCurvedFlag">GetCurvedFlag</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">TDatime</td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetDateOfBeginRun">GetDateOfBeginRun</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetDPMJETCrossSectionFlag">GetDPMJETCrossSectionFlag</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetDPMJETInteractionFlag">GetDPMJETInteractionFlag</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetEFRCTHN_THINRATEnergyFractionOfThinningLevelElectromagnetic">GetEFRCTHN_THINRATEnergyFractionOfThinningLevelElectromagnetic</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetEFRCTHNEnergyFractionOfThinningLevelHadronic">GetEFRCTHNEnergyFractionOfThinningLevelHadronic</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetEnergyCutoffForPhotons">GetEnergyCutoffForPhotons</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetEventNumber">GetEventNumber</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetFlagForEGS4Treatment">GetFlagForEGS4Treatment</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetFlagForNKGTreatment">GetFlagForNKGTreatment</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetGridSpacingOfCherenkovDetectorsInX">GetGridSpacingOfCherenkovDetectorsInX</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetGridSpacingOfCherenkovDetectorsInY">GetGridSpacingOfCherenkovDetectorsInY</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetHeightOfLevel">GetHeightOfLevel</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetHighEnergyHadronModelFlag">GetHighEnergyHadronModelFlag</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetInnerAngleOfViewingCone">GetInnerAngleOfViewingCone</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetKineticEnergyCutoffForElectrons">GetKineticEnergyCutoffForElectrons</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetKineticEnergyCutoffForHadrons">GetKineticEnergyCutoffForHadrons</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetKineticEnergyCutoffForMuons">GetKineticEnergyCutoffForMuons</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetLengthOfEachCherenkovDetectorInX">GetLengthOfEachCherenkovDetectorInX</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetLengthOfEachCherenkovDetectorInY">GetLengthOfEachCherenkovDetectorInY</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetLowEnergyHadronModelFlag">GetLowEnergyHadronModelFlag</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetLowerEdgeOfPhiInterval">GetLowerEdgeOfPhiInterval</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetLowerEdgeOfThetaInterval">GetLowerEdgeOfThetaInterval</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetLowerLimitOfEnergyRange">GetLowerLimitOfEnergyRange</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetMaxRadiusForRadialThinning">GetMaxRadiusForRadialThinning</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetMuonMultipleScatteringFlag">GetMuonMultipleScatteringFlag</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetNeutrinoFlag">GetNeutrinoFlag</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetNFLAIN">GetNFLAIN</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetNFLCHE">GetNFLCHE</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetNFLDIF">GetNFLDIF</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetNFLPI0">GetNFLPI0</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetNFLPIF">GetNFLPIF</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetNFRAGM">GetNFRAGM</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetNKGRadialDistributionRange">GetNKGRadialDistributionRange</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetNumberOfArrays">GetNumberOfArrays</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetNumberOfCherenkovDetectorsInX">GetNumberOfCherenkovDetectorsInX</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetNumberOfCherenkovDetectorsInY">GetNumberOfCherenkovDetectorsInY</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetNumberOfDifferentRandomNumberSequences">GetNumberOfDifferentRandomNumberSequences</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetNumberOfFirstTarget">GetNumberOfFirstTarget</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetNumberOfObservationLevels">GetNumberOfObservationLevels</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetNumberOfRandomCalls">GetNumberOfRandomCalls</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetNumberOfUsesOfEachCherenkovEvent">GetNumberOfUsesOfEachCherenkovEvent</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetOuterAngleOfViewingCone">GetOuterAngleOfViewingCone</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetParticleID">GetParticleID</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetPxMomentum">GetPxMomentum</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetPyMomentum">GetPyMomentum</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetPzMomentum">GetPzMomentum</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetQGSJETCrossSectionFlag">GetQGSJETCrossSectionFlag</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetQGSJETInteractionFlag">GetQGSJETInteractionFlag</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetRunNumber">GetRunNumber</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetSIBYLLCrossSectionFlag">GetSIBYLLCrossSectionFlag</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetSIBYLLInteractionFlag">GetSIBYLLInteractionFlag</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetSlopeOfEnergySpectrum">GetSlopeOfEnergySpectrum</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetStartingAltitude">GetStartingAltitude</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetStepLengthFactorForMultipleScattering">GetStepLengthFactorForMultipleScattering</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetTimeOffset">GetTimeOffset</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetTotalEnergy">GetTotalEnergy</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetTransitionEnergyHighEnergyLowEnergyModel">GetTransitionEnergyHighEnergyLowEnergyModel</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetUpperEdgeOfPhiInterval">GetUpperEdgeOfPhiInterval</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetUpperEdgeOfThetaInterval">GetUpperEdgeOfThetaInterval</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetUpperLimitOfEnergyRange">GetUpperLimitOfEnergyRange</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetVENUS_NEXUSCrossSectionFlag">GetVENUS_NEXUSCrossSectionFlag</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetVersionOfProgram">GetVersionOfProgram</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetXComponentOfEarthMagneticField">GetXComponentOfEarthMagneticField</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetXCoordinateOfCoreLocationForScatteredEvent">GetXCoordinateOfCoreLocationForScatteredEvent</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetXOffset">GetXOffset</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetYCoordinateOfCoreLocationForScatteredEvent">GetYCoordinateOfCoreLocationForScatteredEvent</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetYOffset">GetYOffset</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetZComponentOfEarthMagneticField">GetZComponentOfEarthMagneticField</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetZCoordinateOfFirstInteraction">GetZCoordinateOfFirstInteraction</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:GetZenithAngle">GetZenithAngle</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual TClass*</td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>&amp;</td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:operator_">operator=</a>(<span class="keyword">const</span> <a href="./ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:SetMultipleUseHeader">SetMultipleUseHeader</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> numberOfArrays, <a href="./ListOfTypes.html#Double_t">Double_t</a> timeOffset, <a href="./ListOfTypes.html#Double_t">Double_t</a>* xOffset, <a href="./ListOfTypes.html#Double_t">Double_t</a>* yOffset)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:ShowMembers">ShowMembers</a>(TMemberInspector&amp;)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:Streamer">Streamer</a>(TBuffer&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ACorsikaIACTEventHeader:StreamerNVirtual">StreamerNVirtual</a>(TBuffer&amp; ClassDef_StreamerNVirtual_b)</td></tr>
+
+</table></div>
+</div>
+
+<div id="datamembers">
+<h2><a name="ACorsikaIACTEventHeader:Data_Members"></a>Data Members</h2>
+<div class="access" id="datapriv"><b>private:</b>
+<table class="data" id="tabdatapriv" cellspacing="0">
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Float_t">Float_t</a></td><td class="dataname"><a name="ACorsikaIACTEventHeader:fEventHeader"></a>fEventHeader[273]</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="ACorsikaIACTEventHeader:fNumberOfArrays"></a>fNumberOfArrays</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="ACorsikaIACTEventHeader:fTimeOffset"></a>fTimeOffset</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="ACorsikaIACTEventHeader:fXOffset"></a>fXOffset[20]</td><td></td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="ACorsikaIACTEventHeader:fYOffset"></a>fYOffset[20]</td><td></td></tr>
+<tr class="data"><td class="datatype">static <span class="keyword">const</span> <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="ACorsikaIACTEventHeader:kMaxArrays"></a>kMaxArrays</td><td></td></tr>
+
+</table></div>
+</div>
+<h2><a id="ACorsikaIACTEventHeader:Class_Charts"></a>Class Charts</h2>
+<map name="MapACorsikaIACTEventHeader_Lib" id="MapACorsikaIACTEventHeader_Lib">
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="471,237,589,285"/>
+</map>
+<div class="tabs">
+<a id="imgACorsikaIACTEventHeader_Inh" class="tabsel" href="inh/ACorsikaIACTEventHeader_Inh.png" onclick="javascript:return SetImg('Charts','inh/ACorsikaIACTEventHeader_Inh.png');">Inheritance</a>
+<a id="imgACorsikaIACTEventHeader_InhMem" class="tab" href="inhmem/ACorsikaIACTEventHeader_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/ACorsikaIACTEventHeader_InhMem.png');">Inherited Members</a>
+<a id="imgACorsikaIACTEventHeader_Incl" class="tab" href="incl/ACorsikaIACTEventHeader_Incl.png" onclick="javascript:return SetImg('Charts','incl/ACorsikaIACTEventHeader_Incl.png');">Includes</a>
+<a id="imgACorsikaIACTEventHeader_Lib" class="tab" href="lib/ACorsikaIACTEventHeader_Lib.png" onclick="javascript:return SetImg('Charts','lib/ACorsikaIACTEventHeader_Lib.png');">Libraries</a><br/>
+</div><div class="classcharts"><div class="classchartswidth"></div>
+<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapACorsikaIACTEventHeader_Inh" src="inh/ACorsikaIACTEventHeader_Inh.png"/></div>
+<h2>Function documentation</h2>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ACorsikaIACTEventHeader:ACorsikaIACTEventHeader" href="src/ACorsikaIACTEventHeader.cxx.html#TG5P9C">ACorsikaIACTEventHeader</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a>* eventHeader = 0)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ACorsikaIACTEventHeader:_ACorsikaIACTEventHeader" href="src/ACorsikaIACTEventHeader.cxx.html#VKvYKB">~ACorsikaIACTEventHeader</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname">TDatime <a class="funcname" name="ACorsikaIACTEventHeader:GetDateOfBeginRun" href="src/ACorsikaIACTEventHeader.cxx.html#mi.9vD">GetDateOfBeginRun</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetNumberOfRandomCalls" href="src/ACorsikaIACTEventHeader.cxx.html#mTFSlE">GetNumberOfRandomCalls</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetHeightOfLevel" href="src/ACorsikaIACTEventHeader.cxx.html#ATgEWC">GetHeightOfLevel</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetXCoordinateOfCoreLocationForScatteredEvent" href="src/ACorsikaIACTEventHeader.cxx.html#RdYjnC">GetXCoordinateOfCoreLocationForScatteredEvent</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetYCoordinateOfCoreLocationForScatteredEvent" href="src/ACorsikaIACTEventHeader.cxx.html#FcYjnC">GetYCoordinateOfCoreLocationForScatteredEvent</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetXOffset" href="src/ACorsikaIACTEventHeader.cxx.html#V2R7qE">GetXOffset</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetYOffset" href="src/ACorsikaIACTEventHeader.cxx.html#X2R7qE">GetYOffset</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ACorsikaIACTEventHeader:SetMultipleUseHeader" href="src/ACorsikaIACTEventHeader.cxx.html#KLXX9D">SetMultipleUseHeader</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> numberOfArrays, <a href="./ListOfTypes.html#Double_t">Double_t</a> timeOffset, <a href="./ListOfTypes.html#Double_t">Double_t</a>* xOffset, <a href="./ListOfTypes.html#Double_t">Double_t</a>* yOffset)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ACorsikaIACTEventHeader:ACorsikaIACTEventHeader" href="src/ACorsikaIACTEventHeader.h.html#gTdRRD">ACorsikaIACTEventHeader</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a>* eventHeader = 0)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetEventNumber" href="src/ACorsikaIACTEventHeader.h.html#V7Dmw">GetEventNumber</a>() const</span><br />
+<div class="funccomm"><pre> Read CORSIKA_GUIDE69xx.pdf (table 8) for the detail
+</pre></div>
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[1];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetParticleID" href="src/ACorsikaIACTEventHeader.h.html#cX8cXE">GetParticleID</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[2];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetTotalEnergy" href="src/ACorsikaIACTEventHeader.h.html#IDJpKB">GetTotalEnergy</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[3];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetStartingAltitude" href="src/ACorsikaIACTEventHeader.h.html#N5Qt3E">GetStartingAltitude</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[4];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetNumberOfFirstTarget" href="src/ACorsikaIACTEventHeader.h.html#dJeHzB">GetNumberOfFirstTarget</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[5];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetZCoordinateOfFirstInteraction" href="src/ACorsikaIACTEventHeader.h.html#P6CDy">GetZCoordinateOfFirstInteraction</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[6];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetPxMomentum" href="src/ACorsikaIACTEventHeader.h.html#PXh7m">GetPxMomentum</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[7];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetPyMomentum" href="src/ACorsikaIACTEventHeader.h.html#UIw8m">GetPyMomentum</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[8];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetPzMomentum" href="src/ACorsikaIACTEventHeader.h.html#h5_9m">GetPzMomentum</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[9];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetZenithAngle" href="src/ACorsikaIACTEventHeader.h.html#RWqXdB">GetZenithAngle</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[10];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetAzimuthAngle" href="src/ACorsikaIACTEventHeader.h.html#VDZzGC">GetAzimuthAngle</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[11];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetNumberOfDifferentRandomNumberSequences" href="src/ACorsikaIACTEventHeader.h.html#sBNObC">GetNumberOfDifferentRandomNumberSequences</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[12];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetRunNumber" href="src/ACorsikaIACTEventHeader.h.html#h3fCyE">GetRunNumber</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[43];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetVersionOfProgram" href="src/ACorsikaIACTEventHeader.h.html#UMwD4E">GetVersionOfProgram</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[45];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetNumberOfObservationLevels" href="src/ACorsikaIACTEventHeader.h.html#G7XmjD">GetNumberOfObservationLevels</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[46];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetSlopeOfEnergySpectrum" href="src/ACorsikaIACTEventHeader.h.html#TOzrZB">GetSlopeOfEnergySpectrum</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[57];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetLowerLimitOfEnergyRange" href="src/ACorsikaIACTEventHeader.h.html#MkZuvC">GetLowerLimitOfEnergyRange</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[58];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetUpperLimitOfEnergyRange" href="src/ACorsikaIACTEventHeader.h.html#EkU4vC">GetUpperLimitOfEnergyRange</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[59];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetKineticEnergyCutoffForHadrons" href="src/ACorsikaIACTEventHeader.h.html#bNPa3B">GetKineticEnergyCutoffForHadrons</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[60];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetKineticEnergyCutoffForMuons" href="src/ACorsikaIACTEventHeader.h.html#weszzE">GetKineticEnergyCutoffForMuons</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[61];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetKineticEnergyCutoffForElectrons" href="src/ACorsikaIACTEventHeader.h.html#jcJK2C">GetKineticEnergyCutoffForElectrons</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[62];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetEnergyCutoffForPhotons" href="src/ACorsikaIACTEventHeader.h.html#rBlCb">GetEnergyCutoffForPhotons</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[63];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetNFLAIN" href="src/ACorsikaIACTEventHeader.h.html#l72kxE">GetNFLAIN</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[64];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetNFLDIF" href="src/ACorsikaIACTEventHeader.h.html#I_suxE">GetNFLDIF</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[65];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetNFLPI0" href="src/ACorsikaIACTEventHeader.h.html#bqiYzE">GetNFLPI0</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[66];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetNFLPIF" href="src/ACorsikaIACTEventHeader.h.html#igsuxE">GetNFLPIF</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[67];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetNFLCHE" href="src/ACorsikaIACTEventHeader.h.html#pFyvxE">GetNFLCHE</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[68];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetNFRAGM" href="src/ACorsikaIACTEventHeader.h.html#PZZmxE">GetNFRAGM</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[69];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetXComponentOfEarthMagneticField" href="src/ACorsikaIACTEventHeader.h.html#Z_Ur6C">GetXComponentOfEarthMagneticField</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[70];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetZComponentOfEarthMagneticField" href="src/ACorsikaIACTEventHeader.h.html#xgSr6C">GetZComponentOfEarthMagneticField</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[71];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetFlagForEGS4Treatment" href="src/ACorsikaIACTEventHeader.h.html#sGUdmC">GetFlagForEGS4Treatment</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[72];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetFlagForNKGTreatment" href="src/ACorsikaIACTEventHeader.h.html#OLPldE">GetFlagForNKGTreatment</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[73];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetLowEnergyHadronModelFlag" href="src/ACorsikaIACTEventHeader.h.html#Sb.stC">GetLowEnergyHadronModelFlag</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[74];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetHighEnergyHadronModelFlag" href="src/ACorsikaIACTEventHeader.h.html#J_mUq">GetHighEnergyHadronModelFlag</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[75];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetCherenkovFlag" href="src/ACorsikaIACTEventHeader.h.html#b2NDgC">GetCherenkovFlag</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[76];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetNeutrinoFlag" href="src/ACorsikaIACTEventHeader.h.html#L.ryDD">GetNeutrinoFlag</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[77];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetCurvedFlag" href="src/ACorsikaIACTEventHeader.h.html#tny.wB">GetCurvedFlag</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[78];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetComputerFlag" href="src/ACorsikaIACTEventHeader.h.html#JCHEB">GetComputerFlag</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[79];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetLowerEdgeOfThetaInterval" href="src/ACorsikaIACTEventHeader.h.html#v5Je7">GetLowerEdgeOfThetaInterval</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[80];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetUpperEdgeOfThetaInterval" href="src/ACorsikaIACTEventHeader.h.html#XhFGU">GetUpperEdgeOfThetaInterval</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[81];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetLowerEdgeOfPhiInterval" href="src/ACorsikaIACTEventHeader.h.html#VbITiE">GetLowerEdgeOfPhiInterval</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[82];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetUpperEdgeOfPhiInterval" href="src/ACorsikaIACTEventHeader.h.html#RqqTiE">GetUpperEdgeOfPhiInterval</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[82];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetCherenkovBunchSize" href="src/ACorsikaIACTEventHeader.h.html#e1XSlD">GetCherenkovBunchSize</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[84];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetNumberOfCherenkovDetectorsInX" href="src/ACorsikaIACTEventHeader.h.html#fP_W">GetNumberOfCherenkovDetectorsInX</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[85];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetNumberOfCherenkovDetectorsInY" href="src/ACorsikaIACTEventHeader.h.html#Pjqg2B">GetNumberOfCherenkovDetectorsInY</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[86];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetGridSpacingOfCherenkovDetectorsInX" href="src/ACorsikaIACTEventHeader.h.html#wnKq8D">GetGridSpacingOfCherenkovDetectorsInX</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[87];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetGridSpacingOfCherenkovDetectorsInY" href="src/ACorsikaIACTEventHeader.h.html#zYZr8D">GetGridSpacingOfCherenkovDetectorsInY</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[88];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetLengthOfEachCherenkovDetectorInX" href="src/ACorsikaIACTEventHeader.h.html#BdKOt">GetLengthOfEachCherenkovDetectorInX</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[89];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetLengthOfEachCherenkovDetectorInY" href="src/ACorsikaIACTEventHeader.h.html#B9HTu">GetLengthOfEachCherenkovDetectorInY</a>() const</span><br />
+<div class="funccomm"><pre> Skip [91]
+</pre></div>
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[90];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetAngleBetweenArrayXDirectionAndMagneticNorth" href="src/ACorsikaIACTEventHeader.h.html#dssEEE">GetAngleBetweenArrayXDirectionAndMagneticNorth</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[92];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetAdditionalMuonInformationFlag" href="src/ACorsikaIACTEventHeader.h.html#H7uld">GetAdditionalMuonInformationFlag</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[93];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetStepLengthFactorForMultipleScattering" href="src/ACorsikaIACTEventHeader.h.html#VLUUUC">GetStepLengthFactorForMultipleScattering</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[94];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetCherenkovBandwidthLowerEnd" href="src/ACorsikaIACTEventHeader.h.html#dTsuO">GetCherenkovBandwidthLowerEnd</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[95];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetCherenkovBandwidthUpperEnd" href="src/ACorsikaIACTEventHeader.h.html#FMGQsC">GetCherenkovBandwidthUpperEnd</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[96];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetNumberOfUsesOfEachCherenkovEvent" href="src/ACorsikaIACTEventHeader.h.html#uTEHsE">GetNumberOfUsesOfEachCherenkovEvent</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[97];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetSIBYLLInteractionFlag" href="src/ACorsikaIACTEventHeader.h.html#QajpIE">GetSIBYLLInteractionFlag</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[138];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetSIBYLLCrossSectionFlag" href="src/ACorsikaIACTEventHeader.h.html#tgtodE">GetSIBYLLCrossSectionFlag</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[139];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetQGSJETInteractionFlag" href="src/ACorsikaIACTEventHeader.h.html#snwEYD">GetQGSJETInteractionFlag</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[140];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetQGSJETCrossSectionFlag" href="src/ACorsikaIACTEventHeader.h.html#WaFmyE">GetQGSJETCrossSectionFlag</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[141];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetDPMJETInteractionFlag" href="src/ACorsikaIACTEventHeader.h.html#qs8.XD">GetDPMJETInteractionFlag</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[142];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetDPMJETCrossSectionFlag" href="src/ACorsikaIACTEventHeader.h.html#u8CYcE">GetDPMJETCrossSectionFlag</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[143];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetVENUS_NEXUSCrossSectionFlag" href="src/ACorsikaIACTEventHeader.h.html#z1We0D">GetVENUS_NEXUSCrossSectionFlag</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[144];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetMuonMultipleScatteringFlag" href="src/ACorsikaIACTEventHeader.h.html#eCEd.B">GetMuonMultipleScatteringFlag</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> (<a href="./ListOfTypes.html#Int_t">Int_t</a>)<a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[145];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetNKGRadialDistributionRange" href="src/ACorsikaIACTEventHeader.h.html#V.icSC">GetNKGRadialDistributionRange</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[146];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetEFRCTHNEnergyFractionOfThinningLevelHadronic" href="src/ACorsikaIACTEventHeader.h.html#C4AEo">GetEFRCTHNEnergyFractionOfThinningLevelHadronic</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[147];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetEFRCTHN_THINRATEnergyFractionOfThinningLevelElectromagnetic" href="src/ACorsikaIACTEventHeader.h.html#KAMXfB">GetEFRCTHN_THINRATEnergyFractionOfThinningLevelElectromagnetic</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[148];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetActualWeightLimitWMAXForThinningHadronic" href="src/ACorsikaIACTEventHeader.h.html#lGIXID">GetActualWeightLimitWMAXForThinningHadronic</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[149];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetActualWeightLimitWMAX_WEITRATForThinningElectromagnetic" href="src/ACorsikaIACTEventHeader.h.html#JwgVEC">GetActualWeightLimitWMAX_WEITRATForThinningElectromagnetic</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[150];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetMaxRadiusForRadialThinning" href="src/ACorsikaIACTEventHeader.h.html#h00tcC">GetMaxRadiusForRadialThinning</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[151];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetInnerAngleOfViewingCone" href="src/ACorsikaIACTEventHeader.h.html#aUgeOD">GetInnerAngleOfViewingCone</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[152];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetOuterAngleOfViewingCone" href="src/ACorsikaIACTEventHeader.h.html#KEqGnC">GetOuterAngleOfViewingCone</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[153];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Float_t">Float_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetTransitionEnergyHighEnergyLowEnergyModel" href="src/ACorsikaIACTEventHeader.h.html#xEn3rD">GetTransitionEnergyHighEnergyLowEnergyModel</a>() const</span><br />
+<div class="funccomm"><pre> Skip 155-167
+</pre></div>
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[154];}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetNumberOfArrays" href="src/ACorsikaIACTEventHeader.h.html#p3Uz5B">GetNumberOfArrays</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fNumberOfArrays" title="Int_t ACorsikaIACTEventHeader::fNumberOfArrays">fNumberOfArrays</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="ACorsikaIACTEventHeader:GetTimeOffset" href="src/ACorsikaIACTEventHeader.h.html#OOyFWB">GetTimeOffset</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fTimeOffset" title="Double_t ACorsikaIACTEventHeader::fTimeOffset">fTimeOffset</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+
+<br />
+<!--SIGNATURE-->
+<div id="footer">
+
+<em>&raquo; Last changed: Mon Oct 12 11:12:34 2015 </em><em>&raquo; Last generated: 2015-10-12 11:12</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+</div>
+</div>
+</body>
+</html>
