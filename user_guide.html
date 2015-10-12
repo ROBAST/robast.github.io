@@ -158,16 +158,107 @@ OK</code></pre>
 
           <p>Auto-generated HTML reference guide for ROBAST classes is also available at <a href="htmldoc/ClassIndex.html" target="_blank">htmldoc/ClassIndex.html</a>.</p>
 
-          <h3>2. Basic Classes</h3>
-          <h4>2.1 AOpticsManager</h4>
-          <h4>2.2 AOpticalComponent</h4>
-          <h4>2.3 AMirror</h4>
-          <h4>2.4 AFocalSurface</h4>
-          <h4>2.5 AObscuration</h4>
-          <h4>2.6 ALens</h4>
-          <h4>2.7 ARay</h4>
-          <h4>2.8 ARayShooter</h4>
-          <h4>2.9 AGeoAsphericDisk</h4>
+          <h3>2. Simulating a Mirror</h3>
+          <p>In this section you will learn how to simulate a mirror. First, let's make a “world” in which all of your optical components are created and simulated. The “world” must be large enough to encapsulate all the optical components. In the example below, you can make a box with a dimension of 200 cm &times; 200 cm &times; 200 cm.</p>
+
+          <pre><code class="language-clike">$ root
+root [0] const double cm = AOpticsManager::cm()
+root [1] AOpticsManager manager("manager", "My first manager")
+root [2] TGeoBBox* box = new TGeoBBox("box", 100*cm, 100*cm, 100*cm)
+root [3] AOpticalComponent* world = new AOpticalComponent("world", box)
+root [4] manager.SetTopVolume(world)
+</code></pre>
+
+          <div class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            <span class="sr-only">Info:</span>
+            Class names starting with “TGeo” and “A” belong to the ROOT geometry library and ROBAST, respectively.
+          </div>
+
+          <div class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            <span class="sr-only">Info:</span>
+            The width, height, and depth of a box are given by their half lengths in the TGeoBBox constructor. Please read <a href="https://root.cern.ch/root/html604/TGeoBBox.html" target="_blank">the ROOT reference guide</a> for details.
+          </div>
+
+          <p>Now your “world” is ready. Let's make a spherical shell mirror with specular surfaces and add it in the “world”. You can draw the 3D model of this mirror in an OpenGL window (use the <code>"ogl"</code> option) as shown in Fig. 3. This mirror has ideal reflectance of 100%.</p>
+
+          <pre><code class="language-clike">root [5] TGeoSphere sphere(49*cm, 50*cm)
+root [6] AMirror* mirror = new AMirror("mirror", &sphere)
+root [7] world->AddNode(mirror, 1)
+root [8] world->Draw("ogl")
+root [9] manager.SetNsegments(100)</code></pre>
+
+          <div class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            <span class="sr-only">Info:</span>
+            The number of polygons used in the OpenGL view can be controlled via <code>TGeoManager::SetNsegments</code> (<code>TGeoManager</code> is the base class of <code>AGeoManager</code>). The default value is 20, but it is a bit too small for your presentation images.
+          </div>
+
+        </div>
+      </div>
+          
+      <div class="row">
+        <div class="col-md-offset-1 col-md-5 col-sm-6 col-xs-6">
+          <div class="thumbnail">
+            <img alt="Spot Diagrams" src="./img/sphere.png">
+            <div class="caption" style="font-size:small;">
+              Fig 3. A spherical shell mirror
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-5 col-sm-6 col-xs-6">
+          <div class="thumbnail">
+            <img alt="Spot Diagrams" src="./img/sphere_with_ray.png">
+            <div class="caption" style="font-size:small;">
+              Fig 4. Wire frame view of the spherical shell mirror and a simulated photon track
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
+
+          <p>Can you tell what will happen if you simulate a ray propagating inside this sphere? What is the general locus (track) of such a photon with arbitrary initial position and direction? If you cannot tell the answer immediately, let's simulate the (geometrical) photon track by ROBAST.</p>
+
+          <pre><code class="language-clike">root [10] const double nm = AOpticsManager::nm()
+root [11] ARay ray(0, 400*nm, 30*cm, 20*cm, -40*cm, 0, 5, -9, -2)
+root [12] manager.TraceNonSequential(ray)
+root [13] TPolyLine3D* pol = ray.MakePolyLine3D()
+root [14] pol->SetLineWidth(3)
+root [15] pol->SetLineColor(2)
+root [16] pol->Draw()</code></pre>
+
+          <div class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            <span class="sr-only">Info:</span>
+            The first argument of <code>ARay::Aray</code> is the track ID which is not used in ROBAST, and so any value is OK. The wavelength of this ray is 400 nm, the initial position is (X, Y, Z) = (30 cm, 20 cm, -40 cm), and the direction is (5, -9, -2). The 6th argument is the time when the ray is at the initial position.
+          </div>
+
+          <p>You cannot see the photon track because the mirror is not transparent (you can change the transparency later). So click the OpenGL view window and press your W key. The OpenGL view will be changed to the wire frame mode as shown in Fig. 4. Does the photon track look like what you imagined?<br>
+
+            The number of reflections inside the spherical mirror with 100% reflection is ideally infinite. However, <code>AOpticsManager::TraceNonSequential</code> must be suspended at some point. Therefore, this number is limited to 100 by default. You can change this upper limit by calling <code>AOpticsManager::SetLimit</code>.<br>
+
+            When an ARay propagation is suspended, its internal status is changed to “suspended.”
+          <pre><code class="language-clike">root [17] ray.IsSuspended()
+(const Bool_t)1</code></pre>
+            
+          </p>
+
+          <h3>3. Simulating a Lens</h3>
+
+          <h3>4. The ROOT Geometry Library and ROBAST</h3>
+
+          <h3>4. Basic Classes</h3>
+          <h4>4.1 AOpticsManager</h4>
+          <h4>4.2 AOpticalComponent</h4>
+          <h4>4.3 AMirror</h4>
+          <h4>4.4 AFocalSurface</h4>
+          <h4>4.5 AObscuration</h4>
+          <h4>4.6 ALens</h4>
+          <h4>4.7 ARay</h4>
+          <h4>4.8 ARayShooter</h4>
+          <h4>4.9 AGeoAsphericDisk</h4>
                     
         </div>
       </div>
