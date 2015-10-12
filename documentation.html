@@ -9,7 +9,7 @@
     <meta name="author" content="Akira Okumura">
     <!-- Bootstrap -->
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    
+    <link href="prism.css" rel="stylesheet" />
     <script src="http://code.jquery.com/jquery.js" type="text/javascript"></script>
     <script type="text/javascript">
       <!--
@@ -25,7 +25,7 @@
     
   </head>
   <body style="padding-top:40px;padding-bottom:40px">
-   
+    <script src="prism.js"></script>
     <div class="container">
       <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -42,9 +42,101 @@
       </nav>
       
       <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-11">
+        <div class="col-md-1 col-sm-0 col-xs-0"></div>
+        <div class="col-md-11 col-sm-12 col-xs-12">
           <h3>1. Getting Started</h3>
+          <h4>1.1 ROOT</h4>
+          <p>ROBAST depends on only ROOT libraries. If you have already installed ROOT on your Linux or Mac, please check that environmental variables <code>ROOTSYS</code>, <code>LD_LIBRARY_PATH</code>, and <code>PATH</code> are properly set in your shell. If <code>ROOTSYS</code> points to <code>/usr/local/root</code> for example, <code>LD_LIBRARY_PATH</code> and <code>PATH</code> are usually set to <code>/usr/local/root/lib</code> and <code>/usr/local/root/bin</code>, respectively.<p>
+            
+          <p>Please first check that your ROOT and its geometry tutorial work properly by running ROOT tutorials.
+            <pre><code class="language-bash">$ cd $ROOTSYS/tutorials/geom
+$ root
+root [0] .x geomAlice.C</code></pre>
+            The ALICE detector will be shown in an OpenGL view. If not, please check that your system has OpenGL libraries.
+          </p>
+          
+          <h4>1.2 Building ROBAST</h4>
+          <p>You must have software development tools such as GNU Make and GCC (or Cling) installed on your machine. Because we do not provide binary files, you must build ROBAST from the source.</p>
+
+          <p>Clone the ROBAST Git repository on your machine, and run <code>make</code>.
+            <pre><code class="language-bash">$ git clone --branch v2.3p1 https://github.com/ROBAST/ROBAST.git ROBAST-2.3p1
+$ cd ROBAST-2.3p1
+$ make</code></pre>
+          </p>
+          
+          <p>You can also download a .tar.gz or .zip file for each release tag from the <a href="download.html">download page</a>.</p>
+          <pre><code class="language-bash">$ curl -O https://github.com/ROBAST/ROBAST/archive/v2.3p1.tar.gz
+$ tar zxvf ROBAST-2.3p1.tar.gz
+$ cd ROBAST-2.3p1
+$ make</code></pre>
+          </p>
+
+          <p>If you use bash or zsh, add the following line in your <code>$HOME/.bashrc</code>, <code>$HOME/.zshrc</code>, or any equivalent (don't forget to replace<code>YOUR_ROBAST_DIRECTORY</code> with your actual ROBAST path).
+            <pre><code class="language-bash">export LD_LIBRARY_PATH=YOUR_ROBAST_DIRECTORY:$LD_LIBRARY_PATH</code></pre>
+            If you use tcsh, the following line must be added to <code>$HOME/.tcshrc</code> instead.
+            <pre><code class="language-bash">setenv LD_LIBRARY_PATH YOUR_ROBAST_DIRECTORY:{$LD_LIBRARY_PATH}</code></pre>
+          </p>
+
+          <p>In addition, you must add the ROBAST include directory to the ROOT search path. Add the following line to your <code>$HOME/.rootlogon.C</code>.
+            <pre><code class="language-clike">gInterpreter->AddIncludePath("YOUR_ROBAST_DIRECTORY/include");</code></pre>
+          </p>
+
+          <p>If you also want to use ROBAST via PyROOT, please do not forget setting <code>PYTHONPATH</code> to the directory where <code>ROOT.py</code> exists.
+            <pre><code class="language-bash">export PYTHONPATH=$ROOTSYS/lib:$PYTHONPATH</code></pre>
+          </p>
+          
+          <h4>1.3 Testing ROBAST</h4>
+          <p>OK. Let's try ROBAST tutorials.</p>
+          <pre><code class="language-bash">$ cd ROBAST-2.3p1/tutorial
+$ root
+root [0] .x HESS1.C+</code></pre>
+You will get an OpenGL view of the H.E.S.S. I optical system (Davies–Cotton) and spot diagrams for various angles of incidence.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-1 col-sm-0 col-xs-0"></div>
+        <div class="col-md-5 col-sm-5 col-xs-5">
+          <div class="thumbnail">
+            <img alt="Spot Diagrams" src="./img/HESS1_OpenGL.png">
+            <div class="caption" style="font-size:small;">
+              Fig 1. 3D model of the H.E.S.S. I optical system
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-7 col-xs-7">
+          <div class="thumbnail">
+            <img alt="Spot Diagrams" src="./img/HESS1_spot.png">
+            <div class="caption" style="font-size:small;">
+              Fig 2. Spot diagrams of the H.E.S.S. I optical system
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-1 col-sm-0 col-xs-0"></div>
+        <div class="col-md-11 col-sm-12 col-xs-12">
+          <p>You can drag, rotate, and zoom the 3D objects in the OpenGL window. Please read the help page of the OpenGL window (click "Help" → "Help on GL Viewer…").<p>
+          <p>There are many other tutorial programs in the same directory. Please try them out!<p>
+
+          <h4>1.4 Unit test</h4>
+          There is a short unit test program in the tutorial directory. As it uses the <code>unittest</code> package of Python, please set your <code>PYTHONPATH</code> properly (see Section 1.2).
+          <pre><code class="language-bash">$ cd ROBAST-2.3p1/tutorial
+$ python unittest_robast.py
+(snip)
+----------------------------------------------------------------------
+Ran 8 tests in 3.459s
+
+OK</code></pre>
+          <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            This unit test occasionally fails because of random numbers used in the program. This is not a ROBAST bug. If it fails, please run the Python code a few more times.
+          </div>
+
           <h3>2. Basic Classes</h3>
           <h4>2.1 AOpticsManager</h4>
           <h4>2.2 AOpticalComponent</h4>
