@@ -236,7 +236,7 @@ root [16] pol->Draw()</code></pre>
             The first argument of <code>ARay::Aray</code> is the track ID which is not used in ROBAST, and so any value is OK. The wavelength of this ray is 400 nm, the initial position is (X, Y, Z) = (30 cm, 20 cm, -40 cm), and the direction is (5, -9, -2). The 6th argument is the time when the ray is at the initial position.
           </div>
 
-          <p>You cannot see the photon track because the mirror is not transparent (you can change the transparency later). So click the OpenGL view window and press your W key. The OpenGL view will be changed to the wire frame mode as shown in Fig. 4. Does the photon track look like what you imagined?</p>
+          <p>You cannot see the photon track because the mirror is not transparent (you can change the transparency later). So click the OpenGL view window and press your <kbd>W</kbd> key. The OpenGL view will be changed to the wire frame mode as shown in Fig. 4. Does the photon track look like what you imagined?</p>
 
           <p>The number of reflections inside the spherical mirror with 100% reflection is ideally infinite. However, <code>AOpticsManager::TraceNonSequential</code> must be suspended at some point. Therefore, this number is limited to 100 by default. You can change this upper limit by calling <code>AOpticsManager::SetLimit</code>.</p>
 
