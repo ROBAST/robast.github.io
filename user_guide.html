@@ -45,7 +45,7 @@
               <li><a href="download.html">Download</a></li>
               <li><a href="support.html">Support</a></li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li class="active"><a href="#">User Guide</a></li>
                   <li><a href="htmldoc/ClassIndex.html" target="_blank">Class Reference</a></li>
@@ -239,11 +239,15 @@ root [16] pol->Draw()</code></pre>
 
             The number of reflections inside the spherical mirror with 100% reflection is ideally infinite. However, <code>AOpticsManager::TraceNonSequential</code> must be suspended at some point. Therefore, this number is limited to 100 by default. You can change this upper limit by calling <code>AOpticsManager::SetLimit</code>.<br>
 
-            When an ARay propagation is suspended, its internal status is changed to “suspended.”
+            When an ARay propagation is suspended, its internal status is changed to “suspended.”</p>
           <pre><code class="language-clike">root [17] ray.IsSuspended()
 (const Bool_t)1</code></pre>
-            
-          </p>
+
+          <div class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            <span class="sr-only">Info:</span>
+            An <code>AMirror</code> object is a volume (<code>AMirror</code> is derived from <code>TGeoVolume</code>) whose whole surfaces are specular. The spherical shell defined here has a 49 cm inner radius and a 50 cm outer radius, and therefore both the inner and outer surfaces are specular. This is why the photon in Fig. 4 is repeatedly reflected on the inner surface.
+          </div>
 
           <h3>3. Simulating a Lens</h3>
 
