@@ -109,14 +109,12 @@ $ root
 root [0] .x HESS1.C+</code></pre>
           <p>You will get an OpenGL view of the H.E.S.S. I optical system (Davies–Cotton) and spot diagrams for various angles of incidence.</p>
         </div>
-      </div>
 
-      <div class="row">
         <div class="col-md-offset-1 col-md-5 col-sm-5 col-xs-5">
           <div class="thumbnail">
             <img alt="Spot Diagrams" src="./img/HESS1_OpenGL.png">
             <div class="caption" style="font-size:small;">
-              Fig 1. 3D model of the H.E.S.S. I optical system
+              Figure 1. 3D model of the H.E.S.S. I optical system
             </div>
           </div>
         </div>
@@ -125,13 +123,11 @@ root [0] .x HESS1.C+</code></pre>
           <div class="thumbnail">
             <img alt="Spot Diagrams" src="./img/HESS1_spot.png">
             <div class="caption" style="font-size:small;">
-              Fig 2. Spot diagrams of the H.E.S.S. I optical system
+              Figure 2. Spot diagrams of the H.E.S.S. I optical system
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
         <div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
           <p>You can drag, rotate, and zoom the 3D objects in the OpenGL window. Please read the help page of the OpenGL window (click "Help" → "Help on GL Viewer…").</p>
 
@@ -187,8 +183,9 @@ root [4] manager.SetTopVolume(world)
           <pre><code class="language-clike">root [5] TGeoSphere sphere(49*cm, 50*cm)
 root [6] AMirror* mirror = new AMirror("mirror", &sphere)
 root [7] world->AddNode(mirror, 1)
-root [8] world->Draw("ogl")
-root [9] manager.SetNsegments(100)</code></pre>
+root [8] manager.CloseGeometry()
+root [9] world->Draw("ogl")
+root [10] manager.SetNsegments(100)</code></pre>
 
           <div class="alert alert-success" role="alert">
             <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
@@ -197,14 +194,12 @@ root [9] manager.SetNsegments(100)</code></pre>
           </div>
 
         </div>
-      </div>
-          
-      <div class="row">
+
         <div class="col-md-offset-1 col-md-5 col-sm-6 col-xs-6">
           <div class="thumbnail">
             <img alt="Spot Diagrams" src="./img/sphere.png">
             <div class="caption" style="font-size:small;">
-              Fig 3. A spherical shell mirror
+              Figure 3. A spherical shell mirror
             </div>
           </div>
         </div>
@@ -213,7 +208,7 @@ root [9] manager.SetNsegments(100)</code></pre>
           <div class="thumbnail">
             <img alt="Spot Diagrams" src="./img/sphere_with_ray.png">
             <div class="caption" style="font-size:small;">
-              Fig 4. Wire frame view of the spherical shell mirror and a simulated photon track
+              Figure 4. Wire frame view of the spherical shell mirror and a simulated photon track
             </div>
           </div>
         </div>
@@ -222,13 +217,13 @@ root [9] manager.SetNsegments(100)</code></pre>
 
           <p>Can you tell what will happen if you simulate a ray propagating inside this sphere? What is the general locus (track) of such a photon with arbitrary initial position and direction? If you cannot tell the answer immediately, let's simulate the (geometrical) photon track by ROBAST.</p>
 
-          <pre><code class="language-clike">root [10] const double nm = AOpticsManager::nm()
-root [11] ARay ray(0, 400*nm, 30*cm, 20*cm, -40*cm, 0, 5, -9, -2)
-root [12] manager.TraceNonSequential(ray)
-root [13] TPolyLine3D* pol = ray.MakePolyLine3D()
-root [14] pol->SetLineWidth(3)
-root [15] pol->SetLineColor(2)
-root [16] pol->Draw()</code></pre>
+          <pre><code class="language-clike">root [11] const double nm = AOpticsManager::nm()
+root [12] ARay ray(0, 400*nm, 30*cm, 20*cm, -40*cm, 0, 5, -9, -2)
+root [13] manager.TraceNonSequential(ray)
+root [14] TPolyLine3D* pol = ray.MakePolyLine3D()
+root [15] pol->SetLineWidth(3)
+root [16] pol->SetLineColor(2)
+root [17] pol->Draw()</code></pre>
 
           <div class="alert alert-success" role="alert">
             <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
@@ -251,6 +246,68 @@ root [16] pol->Draw()</code></pre>
           </div>
 
           <h3>3. Simulating a Lens</h3>
+
+          <p>The next step is a lens simulation. For simplicity, we will make a triangular prism made of SCHOTT N-BK7. The prism geometry is made with the <code>TGeoTrd1</code> class (<a>https://root.cern.ch/root/html604/TGeoTrd1.html</a>). In a similar way to the <code>AMirror</code> class, the prism is made with the <code>ALens</code> class as shown in Fig. 5.</p>
+
+<pre><code class="language-clike">root [0] const double cm = AOpticsManager::cm()
+root [1] AOpticsManager manager("manager", "My second manager")
+root [2] TGeoBBox* box = new TGeoBBox(30*cm, 30*cm, 30*cm);
+root [3] AOpticalComponent* world = new AOpticalComponent("world", box)
+root [4] manager.SetTopVolume(world)
+root [5] TGeoTrd1* trd1 = new TGeoTrd1(10*cm, 0*cm, 5*cm, 10*cm)
+root [6] ALens* prism = new ALens("prism", trd1)
+root [7] prism->SetRefractiveIndex(AGlassCatalog::GetRefractiveIndex("N-BK7"))
+root [8] world->AddNode(prism, 1)
+root [9] manager.CloseGeometry()
+root [10] gGeoManager->GetTopVolume()->Draw("ogl")</code></pre>
+        </div>
+
+        <div class="col-md-offset-1 col-md-5 col-sm-6 col-xs-6">
+          <div class="thumbnail">
+            <img alt="Prism" src="./img/prism.png">
+            <div class="caption" style="font-size:small;">
+              Figure 5. A triangular prism
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-5 col-sm-6 col-xs-6">
+          <div class="thumbnail">
+            <img alt="Prism with rays" src="./img/prism_with_rays.png">
+            <div class="caption" style="font-size:small;">
+              Figure 6. Wire frame view of the prism and simulated photon tracks
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
+          <p>We did not worry about the photon wavelength in the mirror simulation example, but the prism has refractive indices for different colors. So now different wavelengths will show you different simulation results. Fig. 6 illustrates the simulated photon tracks of three different colors (400, 500, and 650 nm). You can see that the prism really works as a prism!</p>
+
+<pre><code class="language-clike">root [11] Double_t nm = AOpticsManager::nm()
+root [12] ARay blue(0, 400*nm, -20*cm, 0*cm, 0*cm, 0, 1, 0, 0)
+root [13] ARay green(0, 500*nm, -20*cm, 0*cm, 0*cm, 0, 1, 0, 0)
+root [14] ARay red(0, 650*nm, -20*cm, 0*cm, 0*cm, 0, 1, 0, 0)
+root [15] manager.TraceNonSequential(blue)
+root [16] manager.TraceNonSequential(green)
+root [17] manager.TraceNonSequential(red)
+root [18] TPolyLine3D* polB = blue.MakePolyLine3D()
+root [19] polB->SetLineColor(4)
+root [20] polB->SetLineWidth(3)
+root [21] polB->Draw()
+root [22] TPolyLine3D* polG = green.MakePolyLine3D()
+root [23] polG->SetLineColor(3)
+root [24] polG->SetLineWidth(3)
+root [25] polG->Draw()
+root [26] TPolyLine3D* polR = red.MakePolyLine3D()
+root [27] polR->SetLineColor(2)
+root [28] polR->SetLineWidth(3)
+root [29] polR->Draw()</code></pre>
+
+          <div class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            <span class="sr-only">Info:</span>
+            If your simulation result is different from Fig. 6, it is probably due to random Fresnel reflection on the prism boundary surface. You can disable Fresnel reflection by adding <code>manager.DisableFresnelReflection(kTRUE)</code>.
+          </div>
 
           <h3>4. The ROOT Geometry Library and ROBAST</h3>
 
