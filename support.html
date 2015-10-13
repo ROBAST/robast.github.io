@@ -22,7 +22,7 @@
       ga('send', 'pageview');
       //-->
     </script>
-    
+    <link href="./ROBAST.css" rel="stylesheet" media="screen">
   </head>
   <body style="padding-top:40px;padding-bottom:40px">
    
@@ -60,12 +60,18 @@
         <div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
           <h3>General Support</h3>
           <p>ROBAST is currently developed by <a href="http://www.stelab.nagoya-u.ac.jp/~okumura/profile.html" target="_blank">Akira Okumura</a> (Institute for Space-Earth Environmental Research, Nagoya University) as an open-source project on GitHub. Please feel free to contact me by <a href="mailto:oxon@mac.com">e-mail</a>.</p>
+          
           <p>In addition to the tutorial programs provided with ROBAST, you can get some more complex (= dirty) simulation examples upon request.</p>
+          
           <h3>Bug Reports and Feature Requests</h3>
+
           <p>Pleas go to the GitHub page <a href="https://github.com/ROBAST/ROBAST" target="_blank">https://github.com/ROBAST/ROBAST</a> to post your bug report or feature request. If you are not familiar with GitHub, please contact me by e-mail.</p>
+          
           <h3>ROOT Help</h3>
+
           <p>ROBAST requires you very basic knowledge of ROOT and C++. We do not answer your basic ROOT questions such as how to use TH2D or what <code class="language-cpp">new</code> and <code class="language-cpp">delete</code> are. Pleaes refer to <a href="https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html" target="_blank">the ROOT User's Guide</a>, that is quite well written for ROOT beginners. You can also use <a href="https://root.cern.ch/mailing-list" target="_blank">the ROOT mailing list</a> or <a href="https://root.cern.ch/phpBB3/" target="_blank">the ROOT forum</a> to get an answer for your question.</p>
           <h3>Future Development</h3>
+
           <p>ROBAST is a volunteer-based open-source project, and it is currently developed and maintained by only Akira Okumura. Thus, we cannot guarantee the future development or support at the moment. In my personal prospect, however, ROBAST will be maintained for the next 10 years, because it will be used during the initial phase (–2025) of the Cherenkov Telescope Array observatory.</p>
 
           <h3>FAQ</h3>
@@ -120,7 +126,9 @@
               <h3 class="panel-title">Q. Who is the owner of TGeo objects?</h3>
             </div>
             <div class="panel-body">
-              <p><code>TGeoManager</code>, the base class of <code>AOpticsManager</code>, takes care of heap objects. TGeo objects are automatically deleted when the destructor of <code>TGeoManager</code> or <code>AOpticsManager</code> is called.</p>
+              <p><code>TGeoManager</code>, the base class of <code>AOpticsManager</code>, takes care of heap objects. TGeo objects are automatically deleted when the destructor of <code>TGeoManager</code> or <code>AOpticsManager</code> is called. Some ROBAST classes are derived from TGeo classe, and you do not need to delete them yourself. Classes starting with <code>AGeo</code> are derived from the <code>TGeoBBox</code> class. <code>AOpticalComponent</code>, <code>AMirror</code>, <code>ALens</code>, <code>AFocalSurface</code>, and <code>AObscuration</code> are derived from <code>TGeoVolume</code>. <code>ARay</code> inherits <code>TGeoTrack</code>.</p>
+
+              <p>Other <code>TGeo</code> classes such as <code>TGeoCompositeShape</code> and <code>TGeoRotation</code> are also deleted by <code>TGeoManager</code> or <code>AOpticsManager</code>.</p>
             </div>
           </div>
 

@@ -22,7 +22,7 @@
       ga('send', 'pageview');
       //-->
     </script>
-    
+    <link href="./ROBAST.css" rel="stylesheet" media="screen">    
   </head>
   <body style="padding-top:40px;padding-bottom:40px">
     <script type="text/javascript" src="prism/prism.js"></script>
@@ -61,9 +61,8 @@
         <div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
           <h3>1. Getting Started</h3>
           <h4>1.1 ROOT</h4>
-          <p>ROBAST depends on only ROOT libraries. If you have already installed ROOT on your Linux or Mac, please check that environmental variables <code>ROOTSYS</code>, <code>LD_LIBRARY_PATH</code>, and <code>PATH</code> are properly set in your shell. If <code>ROOTSYS</code> points to <code>/usr/local/root</code> for example, <code>LD_LIBRARY_PATH</code> and <code>PATH</code> are usually set to <code>/usr/local/root/lib</code> and <code>/usr/local/root/bin</code>, respectively.
-          <br>
-          Please first check that your ROOT and its geometry tutorial work properly by running ROOT tutorials.</p>
+          <p>ROBAST depends on only ROOT libraries. If you have already installed ROOT on your Linux or Mac, please check that environmental variables <code>ROOTSYS</code>, <code>LD_LIBRARY_PATH</code>, and <code>PATH</code> are properly set in your shell. If <code>ROOTSYS</code> points to <code>/usr/local/root</code> for example, <code>LD_LIBRARY_PATH</code> and <code>PATH</code> are usually set to <code>/usr/local/root/lib</code> and <code>/usr/local/root/bin</code>, respectively.</p>
+          <p>Please first check that your ROOT and its geometry tutorial work properly by running ROOT tutorials.</p>
 
           <pre><code class="language-bash">$ cd $ROOTSYS/tutorials/geom
 $ root
@@ -72,8 +71,9 @@ root [0] .x geomAlice.C</code></pre>
           <p>The ALICE detector will be shown in an OpenGL view. If not, please check that your system has OpenGL libraries.</p>
           
           <h4>1.2 Building ROBAST</h4>
-          <p>You must have software development tools such as GNU Make and GCC (or Cling) installed on your machine. Because we do not provide binary files, you must build ROBAST from the source.<br>
-            Clone the ROBAST Git repository on your machine, and run <code>make</code>.</p>
+          <p>You must have software development tools such as GNU Make and GCC (or Cling) installed on your machine. Because we do not provide binary files, you must build ROBAST from the source.</p>
+
+          <p>Clone the ROBAST Git repository on your machine, and run <code>make</code>.</p>
           
           <pre><code class="language-bash">$ git clone --branch v2.3p1 https://github.com/ROBAST/ROBAST.git ROBAST-2.3p1
 $ cd ROBAST-2.3p1
@@ -133,8 +133,9 @@ root [0] .x HESS1.C+</code></pre>
 
       <div class="row">
         <div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
-          <p>You can drag, rotate, and zoom the 3D objects in the OpenGL window. Please read the help page of the OpenGL window (click "Help" → "Help on GL Viewer…").<br>
-            There are many other tutorial programs in the same directory. Please try them out!</p>
+          <p>You can drag, rotate, and zoom the 3D objects in the OpenGL window. Please read the help page of the OpenGL window (click "Help" → "Help on GL Viewer…").</p>
+
+          <p>There are many other tutorial programs in the same directory. Please try them out!</p>
 
           <h4>1.4 Unit test</h4>
 
@@ -235,11 +236,11 @@ root [16] pol->Draw()</code></pre>
             The first argument of <code>ARay::Aray</code> is the track ID which is not used in ROBAST, and so any value is OK. The wavelength of this ray is 400 nm, the initial position is (X, Y, Z) = (30 cm, 20 cm, -40 cm), and the direction is (5, -9, -2). The 6th argument is the time when the ray is at the initial position.
           </div>
 
-          <p>You cannot see the photon track because the mirror is not transparent (you can change the transparency later). So click the OpenGL view window and press your W key. The OpenGL view will be changed to the wire frame mode as shown in Fig. 4. Does the photon track look like what you imagined?<br>
+          <p>You cannot see the photon track because the mirror is not transparent (you can change the transparency later). So click the OpenGL view window and press your W key. The OpenGL view will be changed to the wire frame mode as shown in Fig. 4. Does the photon track look like what you imagined?</p>
 
-            The number of reflections inside the spherical mirror with 100% reflection is ideally infinite. However, <code>AOpticsManager::TraceNonSequential</code> must be suspended at some point. Therefore, this number is limited to 100 by default. You can change this upper limit by calling <code>AOpticsManager::SetLimit</code>.<br>
+          <p>The number of reflections inside the spherical mirror with 100% reflection is ideally infinite. However, <code>AOpticsManager::TraceNonSequential</code> must be suspended at some point. Therefore, this number is limited to 100 by default. You can change this upper limit by calling <code>AOpticsManager::SetLimit</code>.</p>
 
-            When an ARay propagation is suspended, its internal status is changed to “suspended.”</p>
+          <p>When an ARay propagation is suspended, its internal status is changed to “suspended.”</p>
           <pre><code class="language-clike">root [17] ray.IsSuspended()
 (const Bool_t)1</code></pre>
 
