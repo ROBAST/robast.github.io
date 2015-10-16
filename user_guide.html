@@ -191,10 +191,10 @@ root [4] manager.SetTopVolume(world)
           <p>Now your “world” is ready. Let's make a spherical shell mirror with specular surfaces and add it in the “world”. You can draw the 3D model of this mirror in an OpenGL window (use the <code>"ogl"</code> option) as shown in Fig. 3. This mirror has ideal reflectance of 100%.</p>
 
           <pre><code class="language-clike">root [5] TGeoSphere sphere(49*cm, 50*cm)
-root [6] AMirror* mirror = new AMirror("mirror", &sphere)
-root [7] world->AddNode(mirror, 1)
+root [6] AMirror* mirror = new AMirror("mirror", &amp;sphere)
+root [7] world-&gt;AddNode(mirror, 1)
 root [8] manager.CloseGeometry()
-root [9] world->Draw("ogl")
+root [9] world-&gt;Draw("ogl")
 root [10] manager.SetNsegments(100)</code></pre>
 
           <div class="alert alert-success" role="alert">
@@ -231,9 +231,9 @@ root [10] manager.SetNsegments(100)</code></pre>
 root [12] ARay ray(0, 400*nm, 30*cm, 20*cm, -40*cm, 0, 5, -9, -2)
 root [13] manager.TraceNonSequential(ray)
 root [14] TPolyLine3D* pol = ray.MakePolyLine3D()
-root [15] pol->SetLineWidth(3)
-root [16] pol->SetLineColor(2)
-root [17] pol->Draw()</code></pre>
+root [15] pol-&gt;SetLineWidth(3)
+root [16] pol-&gt;SetLineColor(2)
+root [17] pol-&gt;Draw()</code></pre>
 
           <div class="alert alert-success" role="alert">
             <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
@@ -266,10 +266,10 @@ root [3] AOpticalComponent* world = new AOpticalComponent("world", box)
 root [4] manager.SetTopVolume(world)
 root [5] TGeoTrd1* trd1 = new TGeoTrd1(10*cm, 0*cm, 5*cm, 10*cm)
 root [6] ALens* prism = new ALens("prism", trd1)
-root [7] prism->SetRefractiveIndex(AGlassCatalog::GetRefractiveIndex("N-BK7"))
-root [8] world->AddNode(prism, 1)
+root [7] prism-&gt;SetRefractiveIndex(AGlassCatalog::GetRefractiveIndex("N-BK7"))
+root [8] world-&gt;AddNode(prism, 1)
 root [9] manager.CloseGeometry()
-root [10] gGeoManager->GetTopVolume()->Draw("ogl")</code></pre>
+root [10] gGeoManager-&gt;GetTopVolume()-&gt;Draw("ogl")</code></pre>
         </div>
 
         <div class="col-md-offset-1 col-md-5 col-sm-6 col-xs-6">
@@ -301,17 +301,17 @@ root [15] manager.TraceNonSequential(blue)
 root [16] manager.TraceNonSequential(green)
 root [17] manager.TraceNonSequential(red)
 root [18] TPolyLine3D* polB = blue.MakePolyLine3D()
-root [19] polB->SetLineColor(4)
-root [20] polB->SetLineWidth(3)
-root [21] polB->Draw()
+root [19] polB-&gt;SetLineColor(4)
+root [20] polB-&gt;SetLineWidth(3)
+root [21] polB-&gt;Draw()
 root [22] TPolyLine3D* polG = green.MakePolyLine3D()
-root [23] polG->SetLineColor(3)
-root [24] polG->SetLineWidth(3)
-root [25] polG->Draw()
+root [23] polG-&gt;SetLineColor(3)
+root [24] polG-&gt;SetLineWidth(3)
+root [25] polG-&gt;Draw()
 root [26] TPolyLine3D* polR = red.MakePolyLine3D()
-root [27] polR->SetLineColor(2)
-root [28] polR->SetLineWidth(3)
-root [29] polR->Draw()</code></pre>
+root [27] polR-&gt;SetLineColor(2)
+root [28] polR-&gt;SetLineWidth(3)
+root [29] polR-&gt;Draw()</code></pre>
 
           <div class="alert alert-success" role="alert">
             <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
