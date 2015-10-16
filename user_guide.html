@@ -309,6 +309,10 @@ root [29] polR->Draw()</code></pre>
             If your simulation result is different from Fig. 6, it is probably due to random Fresnel reflection on the prism boundary surface. You can disable Fresnel reflection by adding <code>manager.DisableFresnelReflection(kTRUE)</code>.
           </div>
 
+	  <p>Please note that the non-sequential ray tracing in ROBAST is halted when a ray exits the world. In Fig. 6 the rays propagate from the initial point at left, and they exit the world at the right bottom in the window. You can check the ray status by calling <pre>ARay::IsExited()</pre>.</p>
+          <pre><code class="language-clike">root [30] blue.IsExited()
+(const Bool_t)1</code></pre>
+
           <h3>4. The ROOT Geometry Library and ROBAST</h3>
 
           <h3>4. Basic Classes</h3>
