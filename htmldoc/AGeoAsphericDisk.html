@@ -1,0 +1,578 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--                                             -->
+<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!--                                             -->
+<!--   Date: Mon Oct 12 11:12:37 2015            -->
+<!--                                             -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>AGeoAsphericDisk</title>
+<meta name="rating" content="General" />
+<meta name="objecttype" content="Manual" />
+<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
+<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<link rel="stylesheet" type="text/css" href="ROOT.css" id="ROOTstyle" />
+<script type="text/javascript" src="ROOT.js"></script>
+</head>
+<body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
+<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<a name="TopOfPage"></a>
+<script type="text/javascript">WriteFollowPageBox('class AGeoAsphericDisk','libROBAST','AGeoAsphericDisk.h');</script>
+<div id="toplinks">
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Quick Links:</span>
+<a class="descrheadentry" href="http://root.cern.ch">ROOT Homepage</a>
+<a class="descrheadentry" href="./ClassIndex.html">Class Index</a>
+<a class="descrheadentry" href="./ClassHierarchy.html">Class Hierarchy</a></div>
+<script type="text/javascript">
+function onSearch() {
+var s='http://www.google.com/search?q=%s+site%3A%u+-site%3A%u%2Fsrc%2F+-site%3A%u%2Fexamples%2F';
+var ref=String(document.location.href).replace(/https?:\/\//,'').replace(/\/[^\/]*$/,'').replace(/\//g,'%2F');
+window.location.href=s.replace(/%u/ig,ref).replace(/%s/ig,escape(document.searchform.t.value));
+return false;}
+</script>
+<form id="searchform" name="searchform" onsubmit="return onSearch()" action="javascript:onSearch();" method="post">
+<input name="t" size="30" value="Search documentation..." onfocus="if (document.searchform.t.value=='Search documentation...') document.searchform.t.value='';"></input>
+<a id="searchlink"  title="www.google.com"  href="javascript:onSearch();" onclick="return onSearch()">Search</a></form>
+</div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Source:</span>
+<a class="descrheadentry" href="src/AGeoAsphericDisk.h.html">header file</a>
+<a class="descrheadentry" href="src/AGeoAsphericDisk.cxx.html">source file</a>
+
+</div></div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Sections:</span>
+<a class="descrheadentry" href="#AGeoAsphericDisk:description">class description</a> 
+<a class="descrheadentry" href="#AGeoAsphericDisk:Function_Members">function members</a>
+<a class="descrheadentry" href="#AGeoAsphericDisk:Data_Members">data members</a>
+<a class="descrheadentry" href="#AGeoAsphericDisk:Class_Charts">class charts</a>
+</div></div>
+</div>
+<div class="location">
+<a class="locationlevel" href="index.html">ROBAST</a>
+ &#187; <a class="locationlevel" href="./SRC_Index.html">SRC</a>
+ &#187; <a class="locationlevel" href="#TopOfPage">AGeoAsphericDisk</a>
+</div>
+<div class="dropshadow"><div class="withshadow"><h1><a name="AGeoAsphericDisk:description"></a>class AGeoAsphericDisk: public TGeoBBox</h1>
+<div class="classdescr">
+<pre>
+
+ <a href="./AGeoAsphericDisk.html">AGeoAsphericDisk</a>
+
+ Geometry class for tubes which have two aspheric surface
+
+
+</pre></div>
+</div></div>
+
+<div id="functions">
+<h2><a id="AGeoAsphericDisk:Function_Members"></a>Function Members (Methods)</h2>
+<div class="access" id="funcpubl"><b>public:</b>
+<table class="func" id="tabfuncpubl" cellspacing="0">
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:AGeoAsphericDisk">AGeoAsphericDisk</a>()</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:AGeoAsphericDisk@3">AGeoAsphericDisk</a>(<span class="keyword">const</span> <a href="./AGeoAsphericDisk.html">AGeoAsphericDisk</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:AGeoAsphericDisk@1">AGeoAsphericDisk</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> z1, <a href="./ListOfTypes.html#Double_t">Double_t</a> curve1, <a href="./ListOfTypes.html#Double_t">Double_t</a> z2, <a href="./ListOfTypes.html#Double_t">Double_t</a> curve2, <a href="./ListOfTypes.html#Double_t">Double_t</a> rmax, <a href="./ListOfTypes.html#Double_t">Double_t</a> rmin = 0)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:AGeoAsphericDisk@2">AGeoAsphericDisk</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Double_t">Double_t</a> z1, <a href="./ListOfTypes.html#Double_t">Double_t</a> curve1, <a href="./ListOfTypes.html#Double_t">Double_t</a> z2, <a href="./ListOfTypes.html#Double_t">Double_t</a> curve2, <a href="./ListOfTypes.html#Double_t">Double_t</a> rmax, <a href="./ListOfTypes.html#Double_t">Double_t</a> rmin = 0)</td></tr>
+<tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:_AGeoAsphericDisk">~AGeoAsphericDisk</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:AfterStreamer"><span class="baseclass">TGeoShape::</span>AfterStreamer</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoBBox:AreOverlapping"><span class="baseclass">TGeoBBox::</span>AreOverlapping</a>(<span class="keyword">const</span> <a href="./#TGeoBBox:TGeoBBox" title="TGeoBBox TGeoBBox::TGeoBBox() or overloads">TGeoBBox</a>* box1, <span class="keyword">const</span> TGeoMatrix* mat1, <span class="keyword">const</span> <a href="./#TGeoBBox:TGeoBBox" title="TGeoBBox TGeoBBox::TGeoBBox() or overloads">TGeoBBox</a>* box2, <span class="keyword">const</span> TGeoMatrix* mat2)</td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:Big"><span class="baseclass">TGeoShape::</span>Big</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Browse"><span class="baseclass">TObject::</span>Browse</a>(TBrowser* b)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:CalcdF1dr">CalcdF1dr</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> r) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:CalcdF2dr">CalcdF2dr</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> r) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:CalcF1">CalcF1</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> r) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:CalcF2">CalcF2</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> r) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:Capacity">Capacity</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:CheckShape"><span class="baseclass">TGeoShape::</span>CheckShape</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> testNo, <a href="./ListOfTypes.html#Int_t">Int_t</a> nsamples = 10000, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:Class">Class</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNamed:Clear"><span class="baseclass">TNamed::</span>Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:ClearThreadData"><span class="baseclass">TGeoShape::</span>ClearThreadData</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TNamed:Clone"><span class="baseclass">TNamed::</span>Clone</a>(<span class="keyword">const</span> <span class="keyword">char</span>* newname = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TNamed:Compare"><span class="baseclass">TNamed::</span>Compare</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:ComputeBBox">ComputeBBox</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:ComputeEpsMch"><span class="baseclass">TGeoShape::</span>ComputeEpsMch</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:ComputeNormal">ComputeNormal</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir, <a href="./ListOfTypes.html#Double_t">Double_t</a>* norm)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoBBox:ComputeNormal_v"><span class="baseclass">TGeoBBox::</span>ComputeNormal_v</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* points, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dirs, <a href="./ListOfTypes.html#Double_t">Double_t</a>* norms, <a href="./ListOfTypes.html#Int_t">Int_t</a> vecsize)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:Contains">Contains</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoBBox:Contains_v"><span class="baseclass">TGeoBBox::</span>Contains_v</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* points, <a href="./ListOfTypes.html#Bool_t">Bool_t</a>* inside, <a href="./ListOfTypes.html#Int_t">Int_t</a> vecsize) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNamed:Copy"><span class="baseclass">TNamed::</span>Copy</a>(<a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>&amp; named) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoBBox:CouldBeCrossed"><span class="baseclass">TGeoBBox::</span>CouldBeCrossed</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:CreateThreadData"><span class="baseclass">TGeoShape::</span>CreateThreadData</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Delete"><span class="baseclass">TObject::</span>Delete</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:DistancetoPrimitive">DistancetoPrimitive</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:DistFromInside">DistFromInside</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir, <a href="./ListOfTypes.html#Int_t">Int_t</a> iact = 1, <a href="./ListOfTypes.html#Double_t">Double_t</a> step = TGeoShape::<a href="./#TGeoShape:Big" title="Double_t TGeoShape::Big()">Big</a>(), <a href="./ListOfTypes.html#Double_t">Double_t</a>* safe = 0) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoBBox:DistFromInside_v"><span class="baseclass">TGeoBBox::</span>DistFromInside_v</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* points, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dirs, <a href="./ListOfTypes.html#Double_t">Double_t</a>* dists, <a href="./ListOfTypes.html#Int_t">Int_t</a> vecsize, <a href="./ListOfTypes.html#Double_t">Double_t</a>* step) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:DistFromOutside">DistFromOutside</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir, <a href="./ListOfTypes.html#Int_t">Int_t</a> iact = 1, <a href="./ListOfTypes.html#Double_t">Double_t</a> step = TGeoShape::<a href="./#TGeoShape:Big" title="Double_t TGeoShape::Big()">Big</a>(), <a href="./ListOfTypes.html#Double_t">Double_t</a>* safe = 0) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoBBox:DistFromOutside_v"><span class="baseclass">TGeoBBox::</span>DistFromOutside_v</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* points, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dirs, <a href="./ListOfTypes.html#Double_t">Double_t</a>* dists, <a href="./ListOfTypes.html#Int_t">Int_t</a> vecsize, <a href="./ListOfTypes.html#Double_t">Double_t</a>* step) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:DistToAsphere">DistToAsphere</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:DistToInner">DistToInner</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:DistToOuter">DistToOuter</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:DistToPhiMin"><span class="baseclass">TGeoShape::</span>DistToPhiMin</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir, <a href="./ListOfTypes.html#Double_t">Double_t</a> s1, <a href="./ListOfTypes.html#Double_t">Double_t</a> c1, <a href="./ListOfTypes.html#Double_t">Double_t</a> s2, <a href="./ListOfTypes.html#Double_t">Double_t</a> c2, <a href="./ListOfTypes.html#Double_t">Double_t</a> sm, <a href="./ListOfTypes.html#Double_t">Double_t</a> cm, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> in = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="func"><td class="funcret">virtual TGeoVolume*</td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:Divide">Divide</a>(TGeoVolume* voldiv, <span class="keyword">const</span> <span class="keyword">char</span>* divname, <a href="./ListOfTypes.html#Int_t">Int_t</a> iaxis, <a href="./ListOfTypes.html#Int_t">Int_t</a> ndiv, <a href="./ListOfTypes.html#Double_t">Double_t</a> start, <a href="./ListOfTypes.html#Double_t">Double_t</a> step)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:Draw"><span class="baseclass">TGeoShape::</span>Draw</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:DrawClass"><span class="baseclass">TObject::</span>DrawClass</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:DrawClone"><span class="baseclass">TObject::</span>DrawClone</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Dump"><span class="baseclass">TObject::</span>Dump</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:EpsMch"><span class="baseclass">TGeoShape::</span>EpsMch</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Error"><span class="baseclass">TObject::</span>Error</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Execute"><span class="baseclass">TObject::</span>Execute</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Execute@1"><span class="baseclass">TObject::</span>Execute</a>(TMethod* method, TObjArray* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:ExecuteEvent"><span class="baseclass">TGeoShape::</span>ExecuteEvent</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> event, <a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Fatal"><span class="baseclass">TObject::</span>Fatal</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNamed:FillBuffer"><span class="baseclass">TNamed::</span>FillBuffer</a>(<span class="keyword">char</span>*&amp; buffer)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TGeoBBox:GetAxisName"><span class="baseclass">TGeoBBox::</span>GetAxisName</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> iaxis) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGeoBBox:GetAxisRange"><span class="baseclass">TGeoBBox::</span>GetAxisRange</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> iaxis, <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; xlo, <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; xhi) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:GetBoundingCylinder">GetBoundingCylinder</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* param) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">const</span> TBuffer3D&amp;</td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:GetBuffer3D">GetBuffer3D</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> reqSections, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> localFrame) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:GetByteCount">GetByteCount</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:GetCurve1">GetCurve1</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:GetCurve2">GetCurve2</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetDtorOnly"><span class="baseclass">TObject::</span>GetDtorOnly</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGeoBBox:GetDX"><span class="baseclass">TGeoBBox::</span>GetDX</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGeoBBox:GetDY"><span class="baseclass">TGeoBBox::</span>GetDY</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGeoBBox:GetDZ"><span class="baseclass">TGeoBBox::</span>GetDZ</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGeoBBox:GetFacetArea"><span class="baseclass">TGeoBBox::</span>GetFacetArea</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> index = 0) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TGeoBBox:GetFittingBox"><span class="baseclass">TGeoBBox::</span>GetFittingBox</a>(<span class="keyword">const</span> <a href="./#TGeoBBox:TGeoBBox" title="TGeoBBox TGeoBBox::TGeoBBox() or overloads">TGeoBBox</a>* parambox, TGeoMatrix* mat, <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; dx, <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; dy, <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; dz) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetIconName"><span class="baseclass">TObject::</span>GetIconName</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:GetId"><span class="baseclass">TGeoShape::</span>GetId</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a>*</td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:GetK1">GetK1</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a>*</td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:GetK2">GetK2</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual TGeoShape*</td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:GetMakeRuntimeShape">GetMakeRuntimeShape</a>(TGeoShape*, TGeoMatrix*) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:GetMeshNumbers">GetMeshNumbers</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; nvert, <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; nsegs, <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; npols) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TGeoShape:GetName"><span class="baseclass">TGeoShape::</span>GetName</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:GetNmeshVertices">GetNmeshVertices</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:GetNPol1">GetNPol1</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:GetNPol2">GetNPol2</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetObjectInfo"><span class="baseclass">TObject::</span>GetObjectInfo</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetObjectStat"><span class="baseclass">TObject::</span>GetObjectStat</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetOption"><span class="baseclass">TObject::</span>GetOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>*</td><td class="funcname"><a class="funcname" href="#TGeoBBox:GetOrigin"><span class="baseclass">TGeoBBox::</span>GetOrigin</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TGeoShape:GetPointerName"><span class="baseclass">TGeoShape::</span>GetPointerName</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoBBox:GetPointsOnFacet"><span class="baseclass">TGeoBBox::</span>GetPointsOnFacet</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> index, <a href="./ListOfTypes.html#Int_t">Int_t</a> npoints, <a href="./ListOfTypes.html#Double_t">Double_t</a>* array) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoBBox:GetPointsOnSegments"><span class="baseclass">TGeoBBox::</span>GetPointsOnSegments</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> npoints, <a href="./ListOfTypes.html#Double_t">Double_t</a>* array) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:GetRmax">GetRmax</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:GetRmin">GetRmin</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TNamed:GetTitle"><span class="baseclass">TNamed::</span>GetTitle</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static TGeoMatrix*</td><td class="funcname"><a class="funcname" href="#TGeoShape:GetTransform"><span class="baseclass">TGeoShape::</span>GetTransform</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetUniqueID"><span class="baseclass">TObject::</span>GetUniqueID</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:GetZ1">GetZ1</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:GetZ2">GetZ2</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:HandleTimer"><span class="baseclass">TObject::</span>HandleTimer</a>(TTimer* timer)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="#TNamed:Hash"><span class="baseclass">TNamed::</span>Hash</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Info"><span class="baseclass">TObject::</span>Info</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> <span class="keyword">char</span>* classname) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom@1"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> TClass* cl) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Inspect"><span class="baseclass">TObject::</span>Inspect</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:InspectShape">InspectShape</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:InvertBit"><span class="baseclass">TObject::</span>InvertBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:InvertShapeBit"><span class="baseclass">TGeoShape::</span>InvertShapeBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="func"><td class="funcret">virtual TClass*</td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:IsAssembly"><span class="baseclass">TGeoShape::</span>IsAssembly</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:IsCloseToPhi"><span class="baseclass">TGeoShape::</span>IsCloseToPhi</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> epsil, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <a href="./ListOfTypes.html#Double_t">Double_t</a> c1, <a href="./ListOfTypes.html#Double_t">Double_t</a> s1, <a href="./ListOfTypes.html#Double_t">Double_t</a> c2, <a href="./ListOfTypes.html#Double_t">Double_t</a> s2)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:IsComposite"><span class="baseclass">TGeoShape::</span>IsComposite</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:IsCrossingSemiplane"><span class="baseclass">TGeoShape::</span>IsCrossingSemiplane</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir, <a href="./ListOfTypes.html#Double_t">Double_t</a> cphi, <a href="./ListOfTypes.html#Double_t">Double_t</a> sphi, <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; snext, <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; rxy)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:IsCylType">IsCylType</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsEqual"><span class="baseclass">TObject::</span>IsEqual</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsFolder"><span class="baseclass">TObject::</span>IsFolder</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:IsInPhiRange"><span class="baseclass">TGeoShape::</span>IsInPhiRange</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <a href="./ListOfTypes.html#Double_t">Double_t</a> phi1, <a href="./ListOfTypes.html#Double_t">Double_t</a> phi2)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoBBox:IsNullBox"><span class="baseclass">TGeoBBox::</span>IsNullBox</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsOnHeap"><span class="baseclass">TObject::</span>IsOnHeap</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:IsReflected"><span class="baseclass">TGeoShape::</span>IsReflected</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:IsRunTimeShape"><span class="baseclass">TGeoShape::</span>IsRunTimeShape</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:IsSameWithinTolerance"><span class="baseclass">TGeoShape::</span>IsSameWithinTolerance</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> a, <a href="./ListOfTypes.html#Double_t">Double_t</a> b)</td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:IsSegCrossing"><span class="baseclass">TGeoShape::</span>IsSegCrossing</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> x1, <a href="./ListOfTypes.html#Double_t">Double_t</a> y1, <a href="./ListOfTypes.html#Double_t">Double_t</a> x2, <a href="./ListOfTypes.html#Double_t">Double_t</a> y2, <a href="./ListOfTypes.html#Double_t">Double_t</a> x3, <a href="./ListOfTypes.html#Double_t">Double_t</a> y3, <a href="./ListOfTypes.html#Double_t">Double_t</a> x4, <a href="./ListOfTypes.html#Double_t">Double_t</a> y4)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TNamed:IsSortable"><span class="baseclass">TNamed::</span>IsSortable</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:IsValid"><span class="baseclass">TGeoShape::</span>IsValid</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoBBox:IsValidBox"><span class="baseclass">TGeoBBox::</span>IsValidBox</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsZombie"><span class="baseclass">TObject::</span>IsZombie</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNamed:ls"><span class="baseclass">TNamed::</span>ls</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual TBuffer3D*</td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:MakeBuffer3D">MakeBuffer3D</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MayNotUse"><span class="baseclass">TObject::</span>MayNotUse</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:NormalPhi"><span class="baseclass">TGeoShape::</span>NormalPhi</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir, <a href="./ListOfTypes.html#Double_t">Double_t</a>* norm, <a href="./ListOfTypes.html#Double_t">Double_t</a> c1, <a href="./ListOfTypes.html#Double_t">Double_t</a> s1, <a href="./ListOfTypes.html#Double_t">Double_t</a> c2, <a href="./ListOfTypes.html#Double_t">Double_t</a> s2)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Notify"><span class="baseclass">TObject::</span>Notify</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Obsolete"><span class="baseclass">TObject::</span>Obsolete</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* asOfVers, <span class="keyword">const</span> <span class="keyword">char</span>* removedFromVers) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete@1"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete[]"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete[]@1"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new@1"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]@1"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="func"><td class="funcret"><a href="./AGeoAsphericDisk.html">AGeoAsphericDisk</a>&amp;</td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:operator_">operator=</a>(<span class="keyword">const</span> <a href="./AGeoAsphericDisk.html">AGeoAsphericDisk</a>&amp;)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:Paint"><span class="baseclass">TGeoShape::</span>Paint</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Pop"><span class="baseclass">TObject::</span>Pop</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNamed:Print"><span class="baseclass">TNamed::</span>Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Read"><span class="baseclass">TObject::</span>Read</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:RecursiveRemove"><span class="baseclass">TObject::</span>RecursiveRemove</a>(<a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:ResetShapeBit"><span class="baseclass">TGeoShape::</span>ResetShapeBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:Safety">Safety</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> in = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoBBox:Safety_v"><span class="baseclass">TGeoBBox::</span>Safety_v</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* points, <span class="keyword">const</span> <a href="./ListOfTypes.html#Bool_t">Bool_t</a>* inside, <a href="./ListOfTypes.html#Double_t">Double_t</a>* safe, <a href="./ListOfTypes.html#Int_t">Int_t</a> vecsize) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:SafetyPhi"><span class="baseclass">TGeoShape::</span>SafetyPhi</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> in, <a href="./ListOfTypes.html#Double_t">Double_t</a> phi1, <a href="./ListOfTypes.html#Double_t">Double_t</a> phi2)</td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:SafetySeg"><span class="baseclass">TGeoShape::</span>SafetySeg</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> r, <a href="./ListOfTypes.html#Double_t">Double_t</a> z, <a href="./ListOfTypes.html#Double_t">Double_t</a> r1, <a href="./ListOfTypes.html#Double_t">Double_t</a> z1, <a href="./ListOfTypes.html#Double_t">Double_t</a> r2, <a href="./ListOfTypes.html#Double_t">Double_t</a> z2, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> outer)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:SavePrimitive">SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:SetAsphDimensions">SetAsphDimensions</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> x1, <a href="./ListOfTypes.html#Double_t">Double_t</a> curve1, <a href="./ListOfTypes.html#Double_t">Double_t</a> x2, <a href="./ListOfTypes.html#Double_t">Double_t</a> curve2, <a href="./ListOfTypes.html#Double_t">Double_t</a> rmax, <a href="./ListOfTypes.html#Double_t">Double_t</a> rmin)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoBBox:SetBoxDimensions"><span class="baseclass">TGeoBBox::</span>SetBoxDimensions</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> dx, <a href="./ListOfTypes.html#Double_t">Double_t</a> dy, <a href="./ListOfTypes.html#Double_t">Double_t</a> dz, <a href="./ListOfTypes.html#Double_t">Double_t</a>* origin = 0)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoBBox:SetBoxPoints"><span class="baseclass">TGeoBBox::</span>SetBoxPoints</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* points) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:SetConicConstants">SetConicConstants</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> conic1, <a href="./ListOfTypes.html#Double_t">Double_t</a> conic2)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:SetDimensions">SetDimensions</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* param)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetDrawOption"><span class="baseclass">TObject::</span>SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetDtorOnly"><span class="baseclass">TObject::</span>SetDtorOnly</a>(<span class="keyword">void</span>* obj)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:SetFineness">SetFineness</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> steps, <a href="./ListOfTypes.html#Int_t">Int_t</a> repeat)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:SetId"><span class="baseclass">TGeoShape::</span>SetId</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> id)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNamed:SetName"><span class="baseclass">TNamed::</span>SetName</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNamed:SetNameTitle"><span class="baseclass">TNamed::</span>SetNameTitle</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> <span class="keyword">char</span>* title)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetObjectStat"><span class="baseclass">TObject::</span>SetObjectStat</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> stat)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:SetPoints">SetPoints</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* points) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:SetPoints@1">SetPoints</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a>* points) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:SetPolynomials">SetPolynomials</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> n1, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* k1, <a href="./ListOfTypes.html#Int_t">Int_t</a> n2, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* k2)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:SetRuntime"><span class="baseclass">TGeoShape::</span>SetRuntime</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> flag = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:SetSegsAndPols">SetSegsAndPols</a>(TBuffer3D&amp; buff) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:SetShapeBit@1"><span class="baseclass">TGeoShape::</span>SetShapeBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:SetShapeBit"><span class="baseclass">TGeoShape::</span>SetShapeBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNamed:SetTitle"><span class="baseclass">TNamed::</span>SetTitle</a>(<span class="keyword">const</span> <span class="keyword">char</span>* title = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:SetTransform"><span class="baseclass">TGeoShape::</span>SetTransform</a>(TGeoMatrix* matrix)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetUniqueID"><span class="baseclass">TObject::</span>SetUniqueID</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> uid)</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:ShapeDistancetoPrimitive"><span class="baseclass">TGeoShape::</span>ShapeDistancetoPrimitive</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> numpoints, <a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:ShowMembers">ShowMembers</a>(TMemberInspector&amp;)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TNamed:Sizeof"><span class="baseclass">TNamed::</span>Sizeof</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:Sizeof3D">Sizeof3D</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:Streamer">Streamer</a>(TBuffer&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:StreamerNVirtual">StreamerNVirtual</a>(TBuffer&amp; ClassDef_StreamerNVirtual_b)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SysError"><span class="baseclass">TObject::</span>SysError</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:TestBit"><span class="baseclass">TObject::</span>TestBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:TestBits"><span class="baseclass">TObject::</span>TestBits</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:TestShapeBit"><span class="baseclass">TGeoShape::</span>TestShapeBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:TestShapeBits"><span class="baseclass">TGeoShape::</span>TestShapeBits</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:Tolerance"><span class="baseclass">TGeoShape::</span>Tolerance</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:UseCurrentStyle"><span class="baseclass">TObject::</span>UseCurrentStyle</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Warning"><span class="baseclass">TObject::</span>Warning</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Write"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Write@1"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0) <span class="keyword">const</span></td></tr>
+
+</table></div>
+<div class="access" id="funcprot"><b>protected:</b>
+<table class="func" id="tabfuncprot" cellspacing="0">
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AGeoAsphericDisk:DeleteArrays">DeleteArrays</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:DoError"><span class="baseclass">TObject::</span>DoError</a>(<span class="keyword">int</span> level, <span class="keyword">const</span> <span class="keyword">char</span>* location, <span class="keyword">const</span> <span class="keyword">char</span>* fmt, va_list va) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoBBox:FillBuffer3D"><span class="baseclass">TGeoBBox::</span>FillBuffer3D</a>(TBuffer3D&amp; buffer, <a href="./ListOfTypes.html#Int_t">Int_t</a> reqSections, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> localFrame) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TGeoShape:GetBasicColor"><span class="baseclass">TGeoShape::</span>GetBasicColor</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MakeZombie"><span class="baseclass">TObject::</span>MakeZombie</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:SetOnBoundary"><span class="baseclass">TGeoShape::</span>SetOnBoundary</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a>)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:TransformPoints"><span class="baseclass">TGeoShape::</span>TransformPoints</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* points, <a href="./ListOfTypes.html#UInt_t">UInt_t</a> NbPoints) <span class="keyword">const</span></td></tr>
+
+</table></div>
+</div>
+
+<div id="datamembers">
+<h2><a name="AGeoAsphericDisk:Data_Members"></a>Data Members</h2>
+<div class="access" id="enumpubl"><b>public:</b>
+<table class="data" id="tabenumpubl" cellspacing="0">
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TGeoShape::</span>EShapeType { </td><td class="dataname"><a href="#TGeoShape:kBitMask32">kBitMask32</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoNoShape">kGeoNoShape</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoBad">kGeoBad</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoRSeg">kGeoRSeg</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoPhiSeg">kGeoPhiSeg</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoThetaSeg">kGeoThetaSeg</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoVisX">kGeoVisX</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoVisY">kGeoVisY</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoVisZ">kGeoVisZ</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoRunTimeShape">kGeoRunTimeShape</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoInvalidShape">kGeoInvalidShape</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoTorus">kGeoTorus</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoBox">kGeoBox</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoPara">kGeoPara</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoSph">kGeoSph</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoTube">kGeoTube</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoTubeSeg">kGeoTubeSeg</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoCone">kGeoCone</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoConeSeg">kGeoConeSeg</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoPcon">kGeoPcon</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoPgon">kGeoPgon</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoArb8">kGeoArb8</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoEltu">kGeoEltu</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoTrap">kGeoTrap</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoCtub">kGeoCtub</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoTrd1">kGeoTrd1</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoTrd2">kGeoTrd2</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoComb">kGeoComb</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoClosedShape">kGeoClosedShape</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoXtru">kGeoXtru</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoParaboloid">kGeoParaboloid</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoHalfSpace">kGeoHalfSpace</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoHype">kGeoHype</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoShape:kGeoSavePrimitive">kGeoSavePrimitive</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TObject::</span>EStatusBits { </td><td class="dataname"><a href="#TObject:kCanDelete">kCanDelete</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kMustCleanup">kMustCleanup</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kObjInCanvas">kObjInCanvas</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kIsReferenced">kIsReferenced</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kHasUUID">kHasUUID</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kCannotPick">kCannotPick</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kNoContextMenu">kNoContextMenu</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kInvalidObject">kInvalidObject</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TObject::</span><i>[unnamed]</i> { </td><td class="dataname"><a href="#TObject:kIsOnHeap">kIsOnHeap</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kNotDeleted">kNotDeleted</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kZombie">kZombie</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kBitMask">kBitMask</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kSingleKey">kSingleKey</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kOverwrite">kOverwrite</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kWriteDelete">kWriteDelete</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+
+</table></div>
+<div class="access" id="dataprot"><b>protected:</b>
+<table class="data" id="tabdataprot" cellspacing="0">
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="AGeoAsphericDisk:fConic1"></a>fConic1</td><td class="datadesc">Conic constant of surface 1</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="AGeoAsphericDisk:fConic2"></a>fConic2</td><td class="datadesc">Conic constant of surface 2</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="AGeoAsphericDisk:fCurve1"></a>fCurve1</td><td class="datadesc">Curvature of surface 1 (=1/R1)</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="AGeoAsphericDisk:fCurve2"></a>fCurve2</td><td class="datadesc">Curvature of surface 2 (=1/R2)</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a href="#TGeoBBox:fDX"><span class="baseclass">TGeoBBox::</span>fDX</a></td><td class="datadesc">X half-length</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a href="#TGeoBBox:fDY"><span class="baseclass">TGeoBBox::</span>fDY</a></td><td class="datadesc">Y half-length</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a href="#TGeoBBox:fDZ"><span class="baseclass">TGeoBBox::</span>fDZ</a></td><td class="datadesc">Z half-length</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a>*</td><td class="dataname"><a name="AGeoAsphericDisk:fK1"></a>fK1</td><td class="datadesc">[fNPol1] Coefficients of polynomial of surface 1</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a>*</td><td class="dataname"><a name="AGeoAsphericDisk:fK2"></a>fK2</td><td class="datadesc">[fNPol2] Coefficients of polynomial of surface 2</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="AGeoAsphericDisk:fKappa1"></a>fKappa1</td><td class="datadesc">conic1 + 1</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="AGeoAsphericDisk:fKappa2"></a>fKappa2</td><td class="datadesc">conic2 + 1</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="AGeoAsphericDisk:fNPol1"></a>fNPol1</td><td class="datadesc">Order of polynomial of surface 1 (=Nmax/2)</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="AGeoAsphericDisk:fNPol2"></a>fNPol2</td><td class="datadesc">Order of polynomial of surface 2</td></tr>
+<tr class="datainh"><td class="datatype">TString</td><td class="dataname"><a href="#TNamed:fName"><span class="baseclass">TNamed::</span>fName</a></td><td class="datadesc">object identifier</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a href="#TGeoBBox:fOrigin"><span class="baseclass">TGeoBBox::</span>fOrigin[3]</a></td><td class="datadesc">box origin</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="AGeoAsphericDisk:fRepeat"></a>fRepeat</td><td class="datadesc">repeat times of approximate calculation</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="AGeoAsphericDisk:fRmax"></a>fRmax</td><td class="datadesc">outer radius</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="AGeoAsphericDisk:fRmin"></a>fRmin</td><td class="datadesc">inner radius</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="dataname"><a href="#TGeoShape:fShapeBits"><span class="baseclass">TGeoShape::</span>fShapeBits</a></td><td class="datadesc">shape bits</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a href="#TGeoShape:fShapeId"><span class="baseclass">TGeoShape::</span>fShapeId</a></td><td class="datadesc">shape id</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="AGeoAsphericDisk:fSteps"></a>fSteps</td><td class="datadesc">steps of approximate calculation</td></tr>
+<tr class="datainh"><td class="datatype">TString</td><td class="dataname"><a href="#TNamed:fTitle"><span class="baseclass">TNamed::</span>fTitle</a></td><td class="datadesc">object title</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="AGeoAsphericDisk:fZ1"></a>fZ1</td><td class="datadesc">Z of the center of surface 1 (lower)</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="AGeoAsphericDisk:fZ2"></a>fZ2</td><td class="datadesc">Z of the center of surface 2 (upper)</td></tr>
+
+</table></div>
+</div>
+<h2><a id="AGeoAsphericDisk:Class_Charts"></a>Class Charts</h2>
+<map name="MapAGeoAsphericDisk_Lib" id="MapAGeoAsphericDisk_Lib">
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="471,237,589,285"/>
+</map>
+<div class="tabs">
+<a id="imgAGeoAsphericDisk_Inh" class="tabsel" href="inh/AGeoAsphericDisk_Inh.png" onclick="javascript:return SetImg('Charts','inh/AGeoAsphericDisk_Inh.png');">Inheritance</a>
+<a id="imgAGeoAsphericDisk_InhMem" class="tab" href="inhmem/AGeoAsphericDisk_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/AGeoAsphericDisk_InhMem.png');">Inherited Members</a>
+<a id="imgAGeoAsphericDisk_Incl" class="tab" href="incl/AGeoAsphericDisk_Incl.png" onclick="javascript:return SetImg('Charts','incl/AGeoAsphericDisk_Incl.png');">Includes</a>
+<a id="imgAGeoAsphericDisk_Lib" class="tab" href="lib/AGeoAsphericDisk_Lib.png" onclick="javascript:return SetImg('Charts','lib/AGeoAsphericDisk_Lib.png');">Libraries</a><br/>
+</div><div class="classcharts"><div class="classchartswidth"></div>
+<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapAGeoAsphericDisk_Inh" src="inh/AGeoAsphericDisk_Inh.png"/></div>
+<h2>Function documentation</h2>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="AGeoAsphericDisk:AGeoAsphericDisk" href="src/AGeoAsphericDisk.cxx.html#bsqTSC">AGeoAsphericDisk</a>()</span><br />
+<div class="funccomm"><pre> Default constructor
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="AGeoAsphericDisk:AGeoAsphericDisk@1" href="src/AGeoAsphericDisk.cxx.html#p100KC">AGeoAsphericDisk</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> z1, <a href="./ListOfTypes.html#Double_t">Double_t</a> curve1, <a href="./ListOfTypes.html#Double_t">Double_t</a> z2, <a href="./ListOfTypes.html#Double_t">Double_t</a> curve2, <a href="./ListOfTypes.html#Double_t">Double_t</a> rmax, <a href="./ListOfTypes.html#Double_t">Double_t</a> rmin = 0)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="AGeoAsphericDisk:AGeoAsphericDisk@2" href="src/AGeoAsphericDisk.cxx.html#WGkbhB">AGeoAsphericDisk</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Double_t">Double_t</a> z1, <a href="./ListOfTypes.html#Double_t">Double_t</a> curve1, <a href="./ListOfTypes.html#Double_t">Double_t</a> z2, <a href="./ListOfTypes.html#Double_t">Double_t</a> curve2, <a href="./ListOfTypes.html#Double_t">Double_t</a> rmax, <a href="./ListOfTypes.html#Double_t">Double_t</a> rmin = 0)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="AGeoAsphericDisk:_AGeoAsphericDisk" href="src/AGeoAsphericDisk.cxx.html#VwQwQB">~AGeoAsphericDisk</a>()</span><br />
+<div class="funccomm"><pre> Destructor
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:CalcdF1dr" href="src/AGeoAsphericDisk.cxx.html#rvjmrC">CalcdF1dr</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> r) const</span><br />
+<div class="funccomm"><pre> Calculate dF1/dr
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:CalcdF2dr" href="src/AGeoAsphericDisk.cxx.html#n0ermC">CalcdF2dr</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> r) const</span><br />
+<div class="funccomm"><pre> Calculate dF2/dr
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:CalcF1" href="src/AGeoAsphericDisk.cxx.html#QyP9P">CalcF1</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> r) const</span><br />
+<div class="funccomm"><pre> Calculate z value of surface 1 at given r
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:CalcF2" href="src/AGeoAsphericDisk.cxx.html#cje_P">CalcF2</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> r) const</span><br />
+<div class="funccomm"><pre> Calculate z value of surface 1 at given r
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:Capacity" href="src/AGeoAsphericDisk.cxx.html#V9XUcB">Capacity</a>() const</span><br />
+<div class="funccomm"><pre> Compute capacity of the shape in [length^3]
+ Not implemeted yet
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoAsphericDisk:ComputeBBox" href="src/AGeoAsphericDisk.cxx.html#dc65dD">ComputeBBox</a>()</span><br />
+<div class="funccomm"><pre> Compute bounding box of the shape
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoAsphericDisk:ComputeNormal" href="src/AGeoAsphericDisk.cxx.html#gSXJa">ComputeNormal</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir, <a href="./ListOfTypes.html#Double_t">Double_t</a>* norm)</span><br />
+<div class="funccomm"><pre> Compute normal to closest surface from POINT.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="AGeoAsphericDisk:Contains" href="src/AGeoAsphericDisk.cxx.html#yaSqMD">Contains</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point) const</span><br />
+<div class="funccomm"><pre> Test if point is in this shape
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="AGeoAsphericDisk:DistancetoPrimitive" href="src/AGeoAsphericDisk.cxx.html#n1.xWB">DistancetoPrimitive</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</span><br />
+<div class="funccomm"><pre> compute closest distance from point px,py to each corner
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:DistFromInside" href="src/AGeoAsphericDisk.cxx.html#Po7QND">DistFromInside</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir, <a href="./ListOfTypes.html#Int_t">Int_t</a> iact = 1, <a href="./ListOfTypes.html#Double_t">Double_t</a> step = TGeoShape::<a href="./#TGeoShape:Big" title="Double_t TGeoShape::Big()">Big</a>(), <a href="./ListOfTypes.html#Double_t">Double_t</a>* safe = 0) const</span><br />
+<div class="funccomm"><pre> compute distance from inside point to surface of the sphere
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:DistFromOutside" href="src/AGeoAsphericDisk.cxx.html#YkDdOC">DistFromOutside</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir, <a href="./ListOfTypes.html#Int_t">Int_t</a> iact = 1, <a href="./ListOfTypes.html#Double_t">Double_t</a> step = TGeoShape::<a href="./#TGeoShape:Big" title="Double_t TGeoShape::Big()">Big</a>(), <a href="./ListOfTypes.html#Double_t">Double_t</a>* safe = 0) const</span><br />
+<div class="funccomm"><pre> compute distance from outside point to surface of the sphere
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:DistToAsphere" href="src/AGeoAsphericDisk.cxx.html#cuQroC">DistToAsphere</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:DistToInner" href="src/AGeoAsphericDisk.cxx.html#ATeQ3E">DistToInner</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:DistToOuter" href="src/AGeoAsphericDisk.cxx.html#Pm8y0E">DistToOuter</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname">TGeoVolume* <a class="funcname" name="AGeoAsphericDisk:Divide" href="src/AGeoAsphericDisk.cxx.html#tZS83D">Divide</a>(TGeoVolume* voldiv, <span class="keyword">const</span> <span class="keyword">char</span>* divname, <a href="./ListOfTypes.html#Int_t">Int_t</a> iaxis, <a href="./ListOfTypes.html#Int_t">Int_t</a> ndiv, <a href="./ListOfTypes.html#Double_t">Double_t</a> start, <a href="./ListOfTypes.html#Double_t">Double_t</a> step)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoAsphericDisk:GetBoundingCylinder" href="src/AGeoAsphericDisk.cxx.html#bD0RKD">GetBoundingCylinder</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* param) const</span><br />
+<div class="funccomm"><pre>--- Fill vector param[4] with the bounding cylinder parameters. The order
+ is the following : Rmin, Rmax, Phi1, Phi2
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> TBuffer3D&amp; <a class="funcname" name="AGeoAsphericDisk:GetBuffer3D" href="src/AGeoAsphericDisk.cxx.html#Q35XRD">GetBuffer3D</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> reqSections, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> localFrame) const</span><br />
+<div class="funccomm"><pre> Fills a static 3D buffer and returns a reference
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoAsphericDisk:GetMeshNumbers" href="src/AGeoAsphericDisk.cxx.html#k72yzD">GetMeshNumbers</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; nvert, <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; nsegs, <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; npols) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="AGeoAsphericDisk:GetNmeshVertices" href="src/AGeoAsphericDisk.cxx.html#O6YwH">GetNmeshVertices</a>() const</span><br />
+<div class="funccomm"><pre> Return number of vertices of the mesh representation
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoAsphericDisk:InspectShape" href="src/AGeoAsphericDisk.cxx.html#UMXXnC">InspectShape</a>() const</span><br />
+<div class="funccomm"><pre> print shape parameters
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname">TBuffer3D* <a class="funcname" name="AGeoAsphericDisk:MakeBuffer3D" href="src/AGeoAsphericDisk.cxx.html#g2C_i">MakeBuffer3D</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:Safety" href="src/AGeoAsphericDisk.cxx.html#dB16PE">Safety</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> in = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoAsphericDisk:SavePrimitive" href="src/AGeoAsphericDisk.cxx.html#uCI9uD">SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</span><br />
+<div class="funccomm"><pre> Save a primitive as a C++ statement(s) on output stream <span class="string">"out"</span>.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoAsphericDisk:SetAsphDimensions" href="src/AGeoAsphericDisk.cxx.html#Uc5kNE">SetAsphDimensions</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> x1, <a href="./ListOfTypes.html#Double_t">Double_t</a> curve1, <a href="./ListOfTypes.html#Double_t">Double_t</a> x2, <a href="./ListOfTypes.html#Double_t">Double_t</a> curve2, <a href="./ListOfTypes.html#Double_t">Double_t</a> rmax, <a href="./ListOfTypes.html#Double_t">Double_t</a> rmin)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoAsphericDisk:SetConicConstants" href="src/AGeoAsphericDisk.cxx.html#GAS.M">SetConicConstants</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> conic1, <a href="./ListOfTypes.html#Double_t">Double_t</a> conic2)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoAsphericDisk:SetDimensions" href="src/AGeoAsphericDisk.cxx.html#t_wLWE">SetDimensions</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* param)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoAsphericDisk:SetFineness" href="src/AGeoAsphericDisk.cxx.html#VKu.EE">SetFineness</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> steps, <a href="./ListOfTypes.html#Int_t">Int_t</a> repeat)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoAsphericDisk:SetPoints" href="src/AGeoAsphericDisk.cxx.html#I7MPqE">SetPoints</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* points) const</span><br />
+<div class="funccomm"><pre> create mesh points
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoAsphericDisk:SetPoints@1" href="src/AGeoAsphericDisk.cxx.html#HqTgXE">SetPoints</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a>* points) const</span><br />
+<div class="funccomm"><pre> create mesh points
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoAsphericDisk:SetPolynomials" href="src/AGeoAsphericDisk.cxx.html#l1OAh">SetPolynomials</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> n1, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* k1, <a href="./ListOfTypes.html#Int_t">Int_t</a> n2, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* k2)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoAsphericDisk:SetSegsAndPols" href="src/AGeoAsphericDisk.cxx.html#ytoaID">SetSegsAndPols</a>(TBuffer3D&amp; buff) const</span><br />
+<div class="funccomm"><pre> Fill TBuffer3D structure for segments and polygons.
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoAsphericDisk:Sizeof3D" href="src/AGeoAsphericDisk.cxx.html#kl73CE">Sizeof3D</a>() const</span><br />
+<div class="funccomm"><pre> obsolete - to be removed
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoAsphericDisk:DeleteArrays" href="src/AGeoAsphericDisk.h.html#eoT0NC">DeleteArrays</a>()</span><br />
+<div class="funccomm"><pre>
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="AGeoAsphericDisk:AGeoAsphericDisk" href="src/AGeoAsphericDisk.h.html#HkLNFD">AGeoAsphericDisk</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="AGeoAsphericDisk:GetByteCount" href="src/AGeoAsphericDisk.h.html#xdeuxC">GetByteCount</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{<span class="keyword">return</span> 68 + 4*(<a href="./AGeoAsphericDisk.html#AGeoAsphericDisk:fNPol1" title="Int_t AGeoAsphericDisk::fNPol1">fNPol1</a> + <a href="./AGeoAsphericDisk.html#AGeoAsphericDisk:fNPol2" title="Int_t AGeoAsphericDisk::fNPol2">fNPol2</a>);}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:GetCurve1" href="src/AGeoAsphericDisk.h.html#DizQQB">GetCurve1</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./AGeoAsphericDisk.html#AGeoAsphericDisk:fCurve1" title="Double_t AGeoAsphericDisk::fCurve1">fCurve1</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:GetCurve2" href="src/AGeoAsphericDisk.h.html#LYCCfC">GetCurve2</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./AGeoAsphericDisk.html#AGeoAsphericDisk:fCurve2" title="Double_t AGeoAsphericDisk::fCurve2">fCurve2</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a>* <a class="funcname" name="AGeoAsphericDisk:GetK1" href="src/AGeoAsphericDisk.h.html#orBbUD">GetK1</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./AGeoAsphericDisk.html#AGeoAsphericDisk:fK1" title="Double_t* AGeoAsphericDisk::fK1">fK1</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a>* <a class="funcname" name="AGeoAsphericDisk:GetK2" href="src/AGeoAsphericDisk.h.html#ITf9RD">GetK2</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./AGeoAsphericDisk.html#AGeoAsphericDisk:fK2" title="Double_t* AGeoAsphericDisk::fK2">fK2</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname">TGeoShape* <a class="funcname" name="AGeoAsphericDisk:GetMakeRuntimeShape" href="src/AGeoAsphericDisk.h.html#XcqIAD">GetMakeRuntimeShape</a>(TGeoShape* , TGeoMatrix* ) const</span><br />
+
+<div class="code"><code class="inlinecode">{<span class="keyword">return</span> 0;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:GetNPol1" href="src/AGeoAsphericDisk.h.html#wr3jX">GetNPol1</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./AGeoAsphericDisk.html#AGeoAsphericDisk:fNPol1" title="Int_t AGeoAsphericDisk::fNPol1">fNPol1</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:GetNPol2" href="src/AGeoAsphericDisk.h.html#g.j3DC">GetNPol2</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./AGeoAsphericDisk.html#AGeoAsphericDisk:fNPol2" title="Int_t AGeoAsphericDisk::fNPol2">fNPol2</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:GetRmax" href="src/AGeoAsphericDisk.h.html#AgXHdE">GetRmax</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./AGeoAsphericDisk.html#AGeoAsphericDisk:fRmax" title="Double_t AGeoAsphericDisk::fRmax">fRmax</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:GetRmin" href="src/AGeoAsphericDisk.h.html#URqFdE">GetRmin</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./AGeoAsphericDisk.html#AGeoAsphericDisk:fRmin" title="Double_t AGeoAsphericDisk::fRmin">fRmin</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:GetZ1" href="src/AGeoAsphericDisk.h.html#RdQzPD">GetZ1</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./AGeoAsphericDisk.html#AGeoAsphericDisk:fZ1" title="Double_t AGeoAsphericDisk::fZ1">fZ1</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoAsphericDisk:GetZ2" href="src/AGeoAsphericDisk.h.html#t63LXD">GetZ2</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./AGeoAsphericDisk.html#AGeoAsphericDisk:fZ2" title="Double_t AGeoAsphericDisk::fZ2">fZ2</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="AGeoAsphericDisk:IsCylType" href="src/AGeoAsphericDisk.h.html#XICRzE">IsCylType</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{<span class="keyword">return</span> <a href="./ListOfTypes.html#Bool_t">kTRUE</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+
+<br />
+<!--SIGNATURE-->
+<div id="footer">
+<em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Akira+Okumura"> Akira Okumura 2007/09/24</a> </em><em>&raquo; Copyright   (C) 2006-, Akira Okumura                                         *</em><br />
+<em>&raquo; Last changed: Mon Oct 12 11:12:38 2015 </em><em>&raquo; Last generated: 2015-10-12 11:12</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+</div>
+</div>
+</body>
+</html>

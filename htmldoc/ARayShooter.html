@@ -1,0 +1,355 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--                                             -->
+<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!--                                             -->
+<!--   Date: Mon Oct 12 11:12:50 2015            -->
+<!--                                             -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>ARayShooter</title>
+<meta name="rating" content="General" />
+<meta name="objecttype" content="Manual" />
+<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
+<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<link rel="stylesheet" type="text/css" href="ROOT.css" id="ROOTstyle" />
+<script type="text/javascript" src="ROOT.js"></script>
+</head>
+<body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
+<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<a name="TopOfPage"></a>
+<script type="text/javascript">WriteFollowPageBox('class ARayShooter','libROBAST','ARayShooter.h');</script>
+<div id="toplinks">
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Quick Links:</span>
+<a class="descrheadentry" href="http://root.cern.ch">ROOT Homepage</a>
+<a class="descrheadentry" href="./ClassIndex.html">Class Index</a>
+<a class="descrheadentry" href="./ClassHierarchy.html">Class Hierarchy</a></div>
+<script type="text/javascript">
+function onSearch() {
+var s='http://www.google.com/search?q=%s+site%3A%u+-site%3A%u%2Fsrc%2F+-site%3A%u%2Fexamples%2F';
+var ref=String(document.location.href).replace(/https?:\/\//,'').replace(/\/[^\/]*$/,'').replace(/\//g,'%2F');
+window.location.href=s.replace(/%u/ig,ref).replace(/%s/ig,escape(document.searchform.t.value));
+return false;}
+</script>
+<form id="searchform" name="searchform" onsubmit="return onSearch()" action="javascript:onSearch();" method="post">
+<input name="t" size="30" value="Search documentation..." onfocus="if (document.searchform.t.value=='Search documentation...') document.searchform.t.value='';"></input>
+<a id="searchlink"  title="www.google.com"  href="javascript:onSearch();" onclick="return onSearch()">Search</a></form>
+</div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Source:</span>
+<a class="descrheadentry" href="src/ARayShooter.h.html">header file</a>
+<a class="descrheadentry" href="src/ARayShooter.cxx.html">source file</a>
+
+</div></div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Sections:</span>
+<a class="descrheadentry" href="#ARayShooter:description">class description</a> 
+<a class="descrheadentry" href="#ARayShooter:Function_Members">function members</a>
+<a class="descrheadentry" href="#ARayShooter:Data_Members">data members</a>
+<a class="descrheadentry" href="#ARayShooter:Class_Charts">class charts</a>
+</div></div>
+</div>
+<div class="location">
+<a class="locationlevel" href="index.html">ROBAST</a>
+ &#187; <a class="locationlevel" href="./SRC_Index.html">SRC</a>
+ &#187; <a class="locationlevel" href="#TopOfPage">ARayShooter</a>
+</div>
+<div class="dropshadow"><div class="withshadow"><h1><a name="ARayShooter:description"></a>class ARayShooter: public TObject</h1>
+<div class="classdescr">
+<pre>
+
+</pre><!-- TDocHtmlDirective start --><p>ARayShooter creates an array of photons to be traced.</p>
+<p>Three static member functions create aligned initial photons as below.
+By default, the start coordinates is at (x, y, z) = (0, 0, 0) and emitted direction is in parallel to z axis.
+Users can change these values using TGeoRotation and TGeoTranslation.
+</p>
+<!-- TDocHtmlDirective end --><pre>
+</pre><div class="tabs">
+<a id="MACRO_ARayShooter_1_can_A0" class="tabsel" href="MACRO_ARayShooter_1_can.gif" onclick="javascript:return SetDiv('MACRO_ARayShooter_1_can',0);">Picture</a>
+<a id="MACRO_ARayShooter_1_can_A1" class="tab" href="#" onclick="javascript:return SetDiv('MACRO_ARayShooter_1_can',1);">Source</a>
+<br /></div><div class="tabcontent">
+<div id="MACRO_ARayShooter_1_can_0" class="tabvisible"><span class="macro"><img class="macro" alt="output of MACRO_ARayShooter_1_can" title="MACRO" src="MACRO_ARayShooter_1_can.gif" /></span></div>
+<div id="MACRO_ARayShooter_1_can_1" class="tabhidden"><div class="listing"><pre class="code">{
+  <a href="./ListOfTypes.html#Double_t">Double_t</a> nm = <a href="./AOpticsManager.html">AOpticsManager</a>::<a href="./AOpticsManager.html#AOpticsManager:nm" title="Double_t AOpticsManager::nm()">nm</a>();
+  <a href="./ListOfTypes.html#Double_t">Double_t</a>  m = <a href="./AOpticsManager.html">AOpticsManager</a>::<a href="./AOpticsManager.html#AOpticsManager:m" title="Double_t AOpticsManager::m()">m</a>();
+
+  <a href="./ARayArray.html">ARayArray</a>* array = <a href="./ARayShooter.html">ARayShooter</a>::<a href="./ARayShooter.html#ARayShooter:Circle" title="ARayArray* ARayShooter::Circle(Double_t lambda,Double_t rmax,Int_t nr,Int_t nphi,TGeoRotation* rot=0,TGeoTranslation* tr=0,TVector3* v=0)">Circle</a>(400*nm, 100*m, 20, 6, 0, 0);
+  TGraph* circle = <span class="keyword">new</span> TGraph;
+  circle-&gt;SetTitle(<span class="string">"Circle(400*nm, 100*m, 20, 6, 0, 0);X (m);Y (m)"</span>);
+  TObjArray* running = array-&gt;GetRunning();
+
+  <span class="keyword">for</span>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt;= running-&gt;GetLast(); i++){
+    <a href="./ARay.html">ARay</a>* ray = (<a href="./ARay.html">ARay</a>*)(*running)[i];
+    <span class="keyword">if</span>(!ray) <span class="keyword">continue</span>;
+    <a href="./ListOfTypes.html#Double_t">Double_t</a> p[4];
+    ray-&gt;GetLastPoint(p);
+    circle-&gt;SetPoint(i, p[0], p[1]);
+  } <span class="comment">// i</span>
+
+  array = <a href="./ARayShooter.html">ARayShooter</a>::<a href="./ARayShooter.html#ARayShooter:Rectangle" title="ARayArray* ARayShooter::Rectangle(Double_t lambda,Double_t dx,Double_t dy,Int_t nx,Int_t ny,TGeoRotation* rot=0,TGeoTranslation* tr=0,TVector3* v=0)">Rectangle</a>(400*nm, 100*m, 80*m, 20, 10, 0, 0);
+  TGraph* rectangle = <span class="keyword">new</span> TGraph;
+  rectangle-&gt;SetTitle(<span class="string">"Rectangle(400*nm, 100*m, 80*m, 20, 10, 0, 0);X (m);Y (m)"</span>);
+  running = array-&gt;GetRunning();
+
+  <span class="keyword">for</span>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt;= running-&gt;GetLast(); i++){
+    <a href="./ARay.html">ARay</a>* ray = (<a href="./ARay.html">ARay</a>*)(*running)[i];
+    <span class="keyword">if</span>(!ray) <span class="keyword">continue</span>;
+    <a href="./ListOfTypes.html#Double_t">Double_t</a> p[4];
+    ray-&gt;GetLastPoint(p);
+    rectangle-&gt;SetPoint(i, p[0], p[1]);
+  } <span class="comment">// i</span>
+
+  array = <a href="./ARayShooter.html">ARayShooter</a>::<a href="./ARayShooter.html#ARayShooter:Square" title="ARayArray* ARayShooter::Square(Double_t lambda,Double_t d,Int_t n,TGeoRotation* rot=0,TGeoTranslation* tr=0,TVector3* v=0)">Square</a>(400*nm, 90*m, 30, 0, 0);
+  TGraph* square = <span class="keyword">new</span> TGraph;
+  square-&gt;SetTitle(<span class="string">"Square(400*nm, 90*m, 30, 0, 0);X (m);Y (m)"</span>);
+  running = array-&gt;GetRunning();
+
+  <span class="keyword">for</span>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt;= running-&gt;GetLast(); i++){
+    <a href="./ARay.html">ARay</a>* ray = (<a href="./ARay.html">ARay</a>*)(*running)[i];
+    <span class="keyword">if</span>(!ray) <span class="keyword">continue</span>;
+    <a href="./ListOfTypes.html#Double_t">Double_t</a> p[4];
+    ray-&gt;GetLastPoint(p);
+    square-&gt;SetPoint(i, p[0], p[1]);
+  } <span class="comment">// i</span>
+
+  <a href="./AOpticsManager.html">AOpticsManager</a>* manager = <span class="keyword">new</span> <a href="./AOpticsManager.html">AOpticsManager</a>(<span class="string">"manager"</span>, <span class="string">"manager"</span>);
+  <span class="comment">// Make the world</span>
+  TGeoBBox* worldbox = <span class="keyword">new</span> TGeoBBox(<span class="string">"worldbox"</span>, 100*m, 100*m, 100*m);
+  <a href="./AOpticalComponent.html">AOpticalComponent</a>* world = <span class="keyword">new</span> <a href="./AOpticalComponent.html">AOpticalComponent</a>(<span class="string">"world"</span>, worldbox);
+  manager-&gt;SetTopVolume(world);
+
+  <span class="comment">// Top volume</span>
+  TGeoBBox* topbox = <span class="keyword">new</span> TGeoBBox(<span class="string">"topbox"</span>, 100*m, 100*m, 100*m);
+  <a href="./AOpticalComponent.html">AOpticalComponent</a>* top = <span class="keyword">new</span> <a href="./AOpticalComponent.html">AOpticalComponent</a>(<span class="string">"top"</span>, topbox);
+
+  TGeoBBox* focal_box = <span class="keyword">new</span> TGeoBBox(<span class="string">"focal_box"</span>,45*m, 45*m, 1*m);
+  <a href="./AFocalSurface.html">AFocalSurface</a>* focal = <span class="keyword">new</span> <a href="./AFocalSurface.html">AFocalSurface</a>(<span class="string">"focal"</span>, focal_box);
+  top-&gt;AddNode(focal, 1, <span class="keyword">new</span> TGeoTranslation(0, 0, 11*m));
+  world-&gt;AddNode(top, 1);
+  manager-&gt;CloseGeometry();
+
+  array = <a href="./ARayShooter.html">ARayShooter</a>::<a href="./ARayShooter.html#ARayShooter:RandomCone" title="ARayArray* ARayShooter::RandomCone(Double_t lambda,Double_t r,Double_t d,Int_t n,TGeoRotation* rot=0,TGeoTranslation* tr=0)">RandomCone</a>(400*nm, 45*m, 10*m, 1000, 0);
+  TGraph* cone = <span class="keyword">new</span> TGraph;
+  cone-&gt;SetTitle(<span class="string">"RandomCone(400*nm, 45*m, 10*m, 1000, 0, 0);X (m);Y (m)"</span>);
+  manager-&gt;TraceNonSequential(*array);
+  running = array-&gt;GetFocused();
+
+  <span class="keyword">for</span>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt;= running-&gt;GetLast(); i++){
+    <a href="./ARay.html">ARay</a>* ray = (<a href="./ARay.html">ARay</a>*)(*running)[i];
+    <span class="keyword">if</span>(!ray) <span class="keyword">continue</span>;
+    <a href="./ListOfTypes.html#Double_t">Double_t</a> p[4];
+    ray-&gt;GetLastPoint(p);
+    cone-&gt;SetPoint(i, p[0], p[1]);
+  } <span class="comment">// i</span>
+
+  TCanvas* can = <span class="keyword">new</span> TCanvas(<span class="string">"can"</span>, <span class="string">"can"</span>, 400, 1600);
+  can-&gt;Divide(1, 4, 1e-10, 1e-10);
+  can-&gt;cd(1);
+  circle-&gt;<a href="./#TObject:Draw" title="void TObject::Draw(Option_t* option=&quot;&quot;)">Draw</a>(<span class="string">"ap"</span>);
+  can-&gt;cd(2);
+  rectangle-&gt;<a href="./#TObject:Draw" title="void TObject::Draw(Option_t* option=&quot;&quot;)">Draw</a>(<span class="string">"ap"</span>);
+  can-&gt;cd(3);
+  square-&gt;<a href="./#TObject:Draw" title="void TObject::Draw(Option_t* option=&quot;&quot;)">Draw</a>(<span class="string">"ap"</span>);
+  can-&gt;cd(4);
+  cone-&gt;<a href="./#TObject:Draw" title="void TObject::Draw(Option_t* option=&quot;&quot;)">Draw</a>(<span class="string">"ap"</span>);
+
+  <span class="keyword">return</span> can;
+}</pre></div></div><div class="clear"></div></div><pre>
+
+</pre></div>
+</div></div>
+
+<div id="functions">
+<h2><a id="ARayShooter:Function_Members"></a>Function Members (Methods)</h2>
+<div class="access" id="funcpubl"><b>public:</b>
+<table class="func" id="tabfuncpubl" cellspacing="0">
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#ARayShooter:ARayShooter">ARayShooter</a>()</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#ARayShooter:ARayShooter@1">ARayShooter</a>(<span class="keyword">const</span> <a href="./ARayShooter.html">ARayShooter</a>&amp;)</td></tr>
+<tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#ARayShooter:_ARayShooter">~ARayShooter</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Browse"><span class="baseclass">TObject::</span>Browse</a>(TBrowser* b)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ARayArray.html">ARayArray</a>*</td><td class="funcname"><a class="funcname" href="#ARayShooter:Circle">Circle</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> rmax, <a href="./ListOfTypes.html#Int_t">Int_t</a> nr, <a href="./ListOfTypes.html#Int_t">Int_t</a> nphi, TGeoRotation* rot = 0, TGeoTranslation* tr = 0, TVector3* v = 0)</td></tr>
+<tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#ARayShooter:Class">Class</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Clear"><span class="baseclass">TObject::</span>Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:Clone"><span class="baseclass">TObject::</span>Clone</a>(<span class="keyword">const</span> <span class="keyword">char</span>* newname = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Compare"><span class="baseclass">TObject::</span>Compare</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Copy"><span class="baseclass">TObject::</span>Copy</a>(<a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>&amp; object) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Delete"><span class="baseclass">TObject::</span>Delete</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:DistancetoPrimitive"><span class="baseclass">TObject::</span>DistancetoPrimitive</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Draw"><span class="baseclass">TObject::</span>Draw</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:DrawClass"><span class="baseclass">TObject::</span>DrawClass</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:DrawClone"><span class="baseclass">TObject::</span>DrawClone</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Dump"><span class="baseclass">TObject::</span>Dump</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Error"><span class="baseclass">TObject::</span>Error</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Execute"><span class="baseclass">TObject::</span>Execute</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Execute@1"><span class="baseclass">TObject::</span>Execute</a>(TMethod* method, TObjArray* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ExecuteEvent"><span class="baseclass">TObject::</span>ExecuteEvent</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> event, <a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Fatal"><span class="baseclass">TObject::</span>Fatal</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetDtorOnly"><span class="baseclass">TObject::</span>GetDtorOnly</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetIconName"><span class="baseclass">TObject::</span>GetIconName</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetName"><span class="baseclass">TObject::</span>GetName</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetObjectInfo"><span class="baseclass">TObject::</span>GetObjectInfo</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetObjectStat"><span class="baseclass">TObject::</span>GetObjectStat</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetOption"><span class="baseclass">TObject::</span>GetOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetTitle"><span class="baseclass">TObject::</span>GetTitle</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetUniqueID"><span class="baseclass">TObject::</span>GetUniqueID</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:HandleTimer"><span class="baseclass">TObject::</span>HandleTimer</a>(TTimer* timer)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Hash"><span class="baseclass">TObject::</span>Hash</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Info"><span class="baseclass">TObject::</span>Info</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> <span class="keyword">char</span>* classname) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom@1"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> TClass* cl) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Inspect"><span class="baseclass">TObject::</span>Inspect</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:InvertBit"><span class="baseclass">TObject::</span>InvertBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="func"><td class="funcret">virtual TClass*</td><td class="funcname"><a class="funcname" href="#ARayShooter:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsEqual"><span class="baseclass">TObject::</span>IsEqual</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsFolder"><span class="baseclass">TObject::</span>IsFolder</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsOnHeap"><span class="baseclass">TObject::</span>IsOnHeap</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsSortable"><span class="baseclass">TObject::</span>IsSortable</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsZombie"><span class="baseclass">TObject::</span>IsZombie</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ls"><span class="baseclass">TObject::</span>ls</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MayNotUse"><span class="baseclass">TObject::</span>MayNotUse</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Notify"><span class="baseclass">TObject::</span>Notify</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Obsolete"><span class="baseclass">TObject::</span>Obsolete</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* asOfVers, <span class="keyword">const</span> <span class="keyword">char</span>* removedFromVers) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete@1"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete[]"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete[]@1"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new@1"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]@1"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="func"><td class="funcret"><a href="./ARayShooter.html">ARayShooter</a>&amp;</td><td class="funcname"><a class="funcname" href="#ARayShooter:operator_">operator=</a>(<span class="keyword">const</span> <a href="./ARayShooter.html">ARayShooter</a>&amp;)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Paint"><span class="baseclass">TObject::</span>Paint</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Pop"><span class="baseclass">TObject::</span>Pop</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Print"><span class="baseclass">TObject::</span>Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">static <a href="./ARayArray.html">ARayArray</a>*</td><td class="funcname"><a class="funcname" href="#ARayShooter:RandomCircle">RandomCircle</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> rmax, <a href="./ListOfTypes.html#Int_t">Int_t</a> n, TGeoRotation* rot = 0, TGeoTranslation* tr = 0, TVector3* v = 0)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ARayArray.html">ARayArray</a>*</td><td class="funcname"><a class="funcname" href="#ARayShooter:RandomCone">RandomCone</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> r, <a href="./ListOfTypes.html#Double_t">Double_t</a> d, <a href="./ListOfTypes.html#Int_t">Int_t</a> n, TGeoRotation* rot = 0, TGeoTranslation* tr = 0)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ARayArray.html">ARayArray</a>*</td><td class="funcname"><a class="funcname" href="#ARayShooter:RandomRectangle">RandomRectangle</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> dx, <a href="./ListOfTypes.html#Double_t">Double_t</a> dy, <a href="./ListOfTypes.html#Int_t">Int_t</a> n, TGeoRotation* rot = 0, TGeoTranslation* tr = 0, TVector3* v = 0)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ARayArray.html">ARayArray</a>*</td><td class="funcname"><a class="funcname" href="#ARayShooter:RandomSphere">RandomSphere</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Int_t">Int_t</a> n, TGeoTranslation* tr = 0)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ARayArray.html">ARayArray</a>*</td><td class="funcname"><a class="funcname" href="#ARayShooter:RandomSphericalCone">RandomSphericalCone</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Int_t">Int_t</a> n, <a href="./ListOfTypes.html#Double_t">Double_t</a> theta, TGeoRotation* rot = 0, TGeoTranslation* tr = 0)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ARayArray.html">ARayArray</a>*</td><td class="funcname"><a class="funcname" href="#ARayShooter:RandomSquare">RandomSquare</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> d, <a href="./ListOfTypes.html#Int_t">Int_t</a> n, TGeoRotation* rot = 0, TGeoTranslation* tr = 0, TVector3* v = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Read"><span class="baseclass">TObject::</span>Read</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ARayArray.html">ARayArray</a>*</td><td class="funcname"><a class="funcname" href="#ARayShooter:Rectangle">Rectangle</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> dx, <a href="./ListOfTypes.html#Double_t">Double_t</a> dy, <a href="./ListOfTypes.html#Int_t">Int_t</a> nx, <a href="./ListOfTypes.html#Int_t">Int_t</a> ny, TGeoRotation* rot = 0, TGeoTranslation* tr = 0, TVector3* v = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:RecursiveRemove"><span class="baseclass">TObject::</span>RecursiveRemove</a>(<a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetDrawOption"><span class="baseclass">TObject::</span>SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetDtorOnly"><span class="baseclass">TObject::</span>SetDtorOnly</a>(<span class="keyword">void</span>* obj)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetObjectStat"><span class="baseclass">TObject::</span>SetObjectStat</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> stat)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetUniqueID"><span class="baseclass">TObject::</span>SetUniqueID</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> uid)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARayShooter:ShowMembers">ShowMembers</a>(TMemberInspector&amp;)</td></tr>
+<tr class="func"><td class="funcret">static <a href="./ARayArray.html">ARayArray</a>*</td><td class="funcname"><a class="funcname" href="#ARayShooter:Square">Square</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> d, <a href="./ListOfTypes.html#Int_t">Int_t</a> n, TGeoRotation* rot = 0, TGeoTranslation* tr = 0, TVector3* v = 0)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARayShooter:Streamer">Streamer</a>(TBuffer&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARayShooter:StreamerNVirtual">StreamerNVirtual</a>(TBuffer&amp; ClassDef_StreamerNVirtual_b)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SysError"><span class="baseclass">TObject::</span>SysError</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:TestBit"><span class="baseclass">TObject::</span>TestBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:TestBits"><span class="baseclass">TObject::</span>TestBits</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:UseCurrentStyle"><span class="baseclass">TObject::</span>UseCurrentStyle</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Warning"><span class="baseclass">TObject::</span>Warning</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Write"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Write@1"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0) <span class="keyword">const</span></td></tr>
+
+</table></div>
+<div class="access" id="funcprot"><b>protected:</b>
+<table class="func" id="tabfuncprot" cellspacing="0">
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:DoError"><span class="baseclass">TObject::</span>DoError</a>(<span class="keyword">int</span> level, <span class="keyword">const</span> <span class="keyword">char</span>* location, <span class="keyword">const</span> <span class="keyword">char</span>* fmt, va_list va) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MakeZombie"><span class="baseclass">TObject::</span>MakeZombie</a>()</td></tr>
+
+</table></div>
+</div>
+
+<div id="datamembers">
+<h2><a name="ARayShooter:Data_Members"></a>Data Members</h2>
+<div class="access" id="enumpubl"><b>public:</b>
+<table class="data" id="tabenumpubl" cellspacing="0">
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TObject::</span>EStatusBits { </td><td class="dataname"><a href="#TObject:kCanDelete">kCanDelete</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kMustCleanup">kMustCleanup</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kObjInCanvas">kObjInCanvas</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kIsReferenced">kIsReferenced</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kHasUUID">kHasUUID</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kCannotPick">kCannotPick</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kNoContextMenu">kNoContextMenu</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kInvalidObject">kInvalidObject</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TObject::</span><i>[unnamed]</i> { </td><td class="dataname"><a href="#TObject:kIsOnHeap">kIsOnHeap</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kNotDeleted">kNotDeleted</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kZombie">kZombie</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kBitMask">kBitMask</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kSingleKey">kSingleKey</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kOverwrite">kOverwrite</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kWriteDelete">kWriteDelete</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+
+</table></div>
+</div>
+<h2><a id="ARayShooter:Class_Charts"></a>Class Charts</h2>
+<map name="MapARayShooter_Lib" id="MapARayShooter_Lib">
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="471,237,589,285"/>
+</map>
+<div class="tabs">
+<a id="imgARayShooter_Inh" class="tabsel" href="inh/ARayShooter_Inh.png" onclick="javascript:return SetImg('Charts','inh/ARayShooter_Inh.png');">Inheritance</a>
+<a id="imgARayShooter_InhMem" class="tab" href="inhmem/ARayShooter_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/ARayShooter_InhMem.png');">Inherited Members</a>
+<a id="imgARayShooter_Incl" class="tab" href="incl/ARayShooter_Incl.png" onclick="javascript:return SetImg('Charts','incl/ARayShooter_Incl.png');">Includes</a>
+<a id="imgARayShooter_Lib" class="tab" href="lib/ARayShooter_Lib.png" onclick="javascript:return SetImg('Charts','lib/ARayShooter_Lib.png');">Libraries</a><br/>
+</div><div class="classcharts"><div class="classchartswidth"></div>
+<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapARayShooter_Inh" src="inh/ARayShooter_Inh.png"/></div>
+<h2>Function documentation</h2>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ARayShooter:ARayShooter" href="src/ARayShooter.cxx.html#lQCh5B">ARayShooter</a>()</span><br />
+<div class="funccomm"><pre> Default constructor
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ARayShooter:_ARayShooter" href="src/ARayShooter.cxx.html#KssAsE">~ARayShooter</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ARayArray.html">ARayArray</a>* <a class="funcname" name="ARayShooter:Circle" href="src/ARayShooter.cxx.html#B9dy1">Circle</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> rmax, <a href="./ListOfTypes.html#Int_t">Int_t</a> nr, <a href="./ListOfTypes.html#Int_t">Int_t</a> nphi, TGeoRotation* rot = 0, TGeoTranslation* tr = 0, TVector3* v = 0)</span><br />
+<div class="funccomm"><pre> Create initial photons aligned in concentric circles
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ARayArray.html">ARayArray</a>* <a class="funcname" name="ARayShooter:RandomCircle" href="src/ARayShooter.cxx.html#syaX0D">RandomCircle</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> rmax, <a href="./ListOfTypes.html#Int_t">Int_t</a> n, TGeoRotation* rot = 0, TGeoTranslation* tr = 0, TVector3* v = 0)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ARayArray.html">ARayArray</a>* <a class="funcname" name="ARayShooter:RandomCone" href="src/ARayShooter.cxx.html#VvLVVB">RandomCone</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> r, <a href="./ListOfTypes.html#Double_t">Double_t</a> d, <a href="./ListOfTypes.html#Int_t">Int_t</a> n, TGeoRotation* rot = 0, TGeoTranslation* tr = 0)</span><br />
+<div class="funccomm"><pre> Create initial photons aligned in a cone. Direction is random
+ Start position is at the origin.
+ Arrival position is inside the circle of radius r at z = d
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ARayArray.html">ARayArray</a>* <a class="funcname" name="ARayShooter:RandomRectangle" href="src/ARayShooter.cxx.html#A7WYz">RandomRectangle</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> dx, <a href="./ListOfTypes.html#Double_t">Double_t</a> dy, <a href="./ListOfTypes.html#Int_t">Int_t</a> n, TGeoRotation* rot = 0, TGeoTranslation* tr = 0, TVector3* v = 0)</span><br />
+<div class="funccomm"><pre> Create initial photons randomly distributed in a rectangle
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ARayArray.html">ARayArray</a>* <a class="funcname" name="ARayShooter:RandomSphere" href="src/ARayShooter.cxx.html#R_ljXC">RandomSphere</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Int_t">Int_t</a> n, TGeoTranslation* tr = 0)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ARayArray.html">ARayArray</a>* <a class="funcname" name="ARayShooter:RandomSphericalCone" href="src/ARayShooter.cxx.html#XbwnGD">RandomSphericalCone</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Int_t">Int_t</a> n, <a href="./ListOfTypes.html#Double_t">Double_t</a> theta, TGeoRotation* rot = 0, TGeoTranslation* tr = 0)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ARayArray.html">ARayArray</a>* <a class="funcname" name="ARayShooter:RandomSquare" href="src/ARayShooter.cxx.html#pd8ATE">RandomSquare</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> d, <a href="./ListOfTypes.html#Int_t">Int_t</a> n, TGeoRotation* rot = 0, TGeoTranslation* tr = 0, TVector3* v = 0)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ARayArray.html">ARayArray</a>* <a class="funcname" name="ARayShooter:Rectangle" href="src/ARayShooter.cxx.html#v1MP9D">Rectangle</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> dx, <a href="./ListOfTypes.html#Double_t">Double_t</a> dy, <a href="./ListOfTypes.html#Int_t">Int_t</a> nx, <a href="./ListOfTypes.html#Int_t">Int_t</a> ny, TGeoRotation* rot = 0, TGeoTranslation* tr = 0, TVector3* v = 0)</span><br />
+<div class="funccomm"><pre> Create initial photons aligned in rectangles
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ARayArray.html">ARayArray</a>* <a class="funcname" name="ARayShooter:Square" href="src/ARayShooter.cxx.html#jubmSE">Square</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> d, <a href="./ListOfTypes.html#Int_t">Int_t</a> n, TGeoRotation* rot = 0, TGeoTranslation* tr = 0, TVector3* v = 0)</span><br />
+<div class="funccomm"><pre> Create initial photons aligned in squares
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ARayShooter:ARayShooter" href="src/ARayShooter.h.html#LS.Ng">ARayShooter</a>()</span><br />
+</div>
+
+<br />
+<!--SIGNATURE-->
+<div id="footer">
+<em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Akira+Okumura"> Akira Okumura 2007/10/02</a> </em><em>&raquo; Copyright   (C) 2006-, Akira Okumura                                         *</em><br />
+<em>&raquo; Last changed: Mon Oct 12 11:12:51 2015 </em><em>&raquo; Last generated: 2015-10-12 11:12</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+</div>
+</div>
+</body>
+</html>

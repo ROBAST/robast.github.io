@@ -1,0 +1,472 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--                                             -->
+<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!--                                             -->
+<!--   Date: Mon Oct 12 11:12:48 2015            -->
+<!--                                             -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>ARay</title>
+<meta name="rating" content="General" />
+<meta name="objecttype" content="Manual" />
+<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
+<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<link rel="stylesheet" type="text/css" href="ROOT.css" id="ROOTstyle" />
+<script type="text/javascript" src="ROOT.js"></script>
+</head>
+<body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
+<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<a name="TopOfPage"></a>
+<script type="text/javascript">WriteFollowPageBox('class ARay','libROBAST','ARay.h');</script>
+<div id="toplinks">
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Quick Links:</span>
+<a class="descrheadentry" href="http://root.cern.ch">ROOT Homepage</a>
+<a class="descrheadentry" href="./ClassIndex.html">Class Index</a>
+<a class="descrheadentry" href="./ClassHierarchy.html">Class Hierarchy</a></div>
+<script type="text/javascript">
+function onSearch() {
+var s='http://www.google.com/search?q=%s+site%3A%u+-site%3A%u%2Fsrc%2F+-site%3A%u%2Fexamples%2F';
+var ref=String(document.location.href).replace(/https?:\/\//,'').replace(/\/[^\/]*$/,'').replace(/\//g,'%2F');
+window.location.href=s.replace(/%u/ig,ref).replace(/%s/ig,escape(document.searchform.t.value));
+return false;}
+</script>
+<form id="searchform" name="searchform" onsubmit="return onSearch()" action="javascript:onSearch();" method="post">
+<input name="t" size="30" value="Search documentation..." onfocus="if (document.searchform.t.value=='Search documentation...') document.searchform.t.value='';"></input>
+<a id="searchlink"  title="www.google.com"  href="javascript:onSearch();" onclick="return onSearch()">Search</a></form>
+</div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Source:</span>
+<a class="descrheadentry" href="src/ARay.h.html">header file</a>
+<a class="descrheadentry" href="src/ARay.cxx.html">source file</a>
+
+</div></div>
+<div class="descrhead"><div class="descrheadcontent">
+<span class="descrtitle">Sections:</span>
+<a class="descrheadentry" href="#ARay:description">class description</a> 
+<a class="descrheadentry" href="#ARay:Function_Members">function members</a>
+<a class="descrheadentry" href="#ARay:Data_Members">data members</a>
+<a class="descrheadentry" href="#ARay:Class_Charts">class charts</a>
+</div></div>
+</div>
+<div class="location">
+<a class="locationlevel" href="index.html">ROBAST</a>
+ &#187; <a class="locationlevel" href="./SRC_Index.html">SRC</a>
+ &#187; <a class="locationlevel" href="#TopOfPage">ARay</a>
+</div>
+<div class="dropshadow"><div class="withshadow"><h1><a name="ARay:description"></a>class ARay: public TGeoTrack</h1>
+<div class="classdescr">
+<pre>
+
+ <a href="./ARay.html">ARay</a>
+
+ Classical ray class
+
+
+</pre></div>
+</div></div>
+
+<div id="functions">
+<h2><a id="ARay:Function_Members"></a>Function Members (Methods)</h2>
+<div class="access" id="funcpubl"><b>public:</b>
+<table class="func" id="tabfuncpubl" cellspacing="0">
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#ARay:ARay">ARay</a>()</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#ARay:ARay@1">ARay</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> id, <a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> x, <a href="./ListOfTypes.html#Double_t">Double_t</a> y, <a href="./ListOfTypes.html#Double_t">Double_t</a> z, <a href="./ListOfTypes.html#Double_t">Double_t</a> t, <a href="./ListOfTypes.html#Double_t">Double_t</a> dx, <a href="./ListOfTypes.html#Double_t">Double_t</a> dy, <a href="./ListOfTypes.html#Double_t">Double_t</a> dz)</td></tr>
+<tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#ARay:_ARay">~ARay</a>()</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARay:Absorb">Absorb</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TGeoTrack:AddDaughter@1"><span class="baseclass">TGeoTrack::</span>AddDaughter</a>(TVirtualGeoTrack* other)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual TVirtualGeoTrack*</td><td class="funcname"><a class="funcname" href="#TGeoTrack:AddDaughter"><span class="baseclass">TGeoTrack::</span>AddDaughter</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> id, <a href="./ListOfTypes.html#Int_t">Int_t</a> pdgcode, <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* particle = 0)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARay:AddNode">AddNode</a>(TGeoNode* node)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoTrack:AddPoint"><span class="baseclass">TGeoTrack::</span>AddPoint</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> x, <a href="./ListOfTypes.html#Double_t">Double_t</a> y, <a href="./ListOfTypes.html#Double_t">Double_t</a> z, <a href="./ListOfTypes.html#Double_t">Double_t</a> t)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoTrack:AnimateTrack"><span class="baseclass">TGeoTrack::</span>AnimateTrack</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> tmin = 0, <a href="./ListOfTypes.html#Double_t">Double_t</a> tmax = 5E-8, <a href="./ListOfTypes.html#Double_t">Double_t</a> nframes = 200, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">"/*"</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoTrack:Browse"><span class="baseclass">TGeoTrack::</span>Browse</a>(TBrowser* b)</td></tr>
+<tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#ARay:Class">Class</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Clear"><span class="baseclass">TObject::</span>Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:Clone"><span class="baseclass">TObject::</span>Clone</a>(<span class="keyword">const</span> <span class="keyword">char</span>* newname = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Compare"><span class="baseclass">TObject::</span>Compare</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Copy"><span class="baseclass">TObject::</span>Copy</a>(<a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>&amp; object) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Delete"><span class="baseclass">TObject::</span>Delete</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TAttLine:DistancetoLine"><span class="baseclass">TAttLine::</span>DistancetoLine</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py, <a href="./ListOfTypes.html#Double_t">Double_t</a> xp1, <a href="./ListOfTypes.html#Double_t">Double_t</a> yp1, <a href="./ListOfTypes.html#Double_t">Double_t</a> xp2, <a href="./ListOfTypes.html#Double_t">Double_t</a> yp2)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TGeoTrack:DistancetoPrimitive"><span class="baseclass">TGeoTrack::</span>DistancetoPrimitive</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoTrack:Draw"><span class="baseclass">TGeoTrack::</span>Draw</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:DrawClass"><span class="baseclass">TObject::</span>DrawClass</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:DrawClone"><span class="baseclass">TObject::</span>DrawClone</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Dump"><span class="baseclass">TObject::</span>Dump</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Error"><span class="baseclass">TObject::</span>Error</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Execute"><span class="baseclass">TObject::</span>Execute</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Execute@1"><span class="baseclass">TObject::</span>Execute</a>(TMethod* method, TObjArray* params, <a href="./ListOfTypes.html#Int_t">Int_t</a>* error = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoTrack:ExecuteEvent"><span class="baseclass">TGeoTrack::</span>ExecuteEvent</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> event, <a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARay:Exit">Exit</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Fatal"><span class="baseclass">TObject::</span>Fatal</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">TGeoNode*</td><td class="funcname"><a class="funcname" href="#ARay:FindNode">FindNode</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#ARay:FindNodeNumberStartWith">FindNodeNumberStartWith</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">TGeoNode*</td><td class="funcname"><a class="funcname" href="#ARay:FindNodeStartWith">FindNodeStartWith</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual TVirtualGeoTrack*</td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:FindTrackWithId"><span class="baseclass">TVirtualGeoTrack::</span>FindTrackWithId</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> id) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARay:Focus">Focus</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">TVirtualGeoTrack*</td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:GetDaughter"><span class="baseclass">TVirtualGeoTrack::</span>GetDaughter</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> index) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:GetDaughterId"><span class="baseclass">TVirtualGeoTrack::</span>GetDaughterId</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> index) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARay:GetDirection">GetDirection</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* d) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Long_t">Long_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetDtorOnly"><span class="baseclass">TObject::</span>GetDtorOnly</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>*</td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:GetFirstPoint"><span class="baseclass">TVirtualGeoTrack::</span>GetFirstPoint</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetIconName"><span class="baseclass">TObject::</span>GetIconName</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:GetId"><span class="baseclass">TVirtualGeoTrack::</span>GetId</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#ARay:GetLambda">GetLambda</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARay:GetLastPoint">GetLastPoint</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* x) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Color_t">Color_t</a></td><td class="funcname"><a class="funcname" href="#TAttLine:GetLineColor"><span class="baseclass">TAttLine::</span>GetLineColor</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Style_t">Style_t</a></td><td class="funcname"><a class="funcname" href="#TAttLine:GetLineStyle"><span class="baseclass">TAttLine::</span>GetLineStyle</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Width_t">Width_t</a></td><td class="funcname"><a class="funcname" href="#TAttLine:GetLineWidth"><span class="baseclass">TAttLine::</span>GetLineWidth</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Color_t">Color_t</a></td><td class="funcname"><a class="funcname" href="#TAttMarker:GetMarkerColor"><span class="baseclass">TAttMarker::</span>GetMarkerColor</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Size_t">Size_t</a></td><td class="funcname"><a class="funcname" href="#TAttMarker:GetMarkerSize"><span class="baseclass">TAttMarker::</span>GetMarkerSize</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Style_t">Style_t</a></td><td class="funcname"><a class="funcname" href="#TAttMarker:GetMarkerStyle"><span class="baseclass">TAttMarker::</span>GetMarkerStyle</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">TVirtualGeoTrack*</td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:GetMother"><span class="baseclass">TVirtualGeoTrack::</span>GetMother</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:GetMotherParticle"><span class="baseclass">TVirtualGeoTrack::</span>GetMotherParticle</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:GetName"><span class="baseclass">TVirtualGeoTrack::</span>GetName</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:GetNdaughters"><span class="baseclass">TVirtualGeoTrack::</span>GetNdaughters</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">const</span> TObjArray*</td><td class="funcname"><a class="funcname" href="#ARay:GetNodeHistory">GetNodeHistory</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TGeoTrack:GetNpoints"><span class="baseclass">TGeoTrack::</span>GetNpoints</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TGeoTrack:GetObjectInfo"><span class="baseclass">TGeoTrack::</span>GetObjectInfo</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetObjectStat"><span class="baseclass">TObject::</span>GetObjectStat</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetOption"><span class="baseclass">TObject::</span>GetOption</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:GetParentId"><span class="baseclass">TVirtualGeoTrack::</span>GetParentId</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:GetParticle"><span class="baseclass">TVirtualGeoTrack::</span>GetParticle</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:GetPDG"><span class="baseclass">TVirtualGeoTrack::</span>GetPDG</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>*</td><td class="funcname"><a class="funcname" href="#TGeoTrack:GetPoint@1"><span class="baseclass">TGeoTrack::</span>GetPoint</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TGeoTrack:GetPoint@2"><span class="baseclass">TGeoTrack::</span>GetPoint</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> tof, <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <a href="./ListOfTypes.html#Int_t">Int_t</a> istart = 0) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TGeoTrack:GetPoint"><span class="baseclass">TGeoTrack::</span>GetPoint</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i, <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; x, <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; y, <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; z, <a href="./ListOfTypes.html#Double_t">Double_t</a>&amp; t) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:GetTitle"><span class="baseclass">TObject::</span>GetTitle</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetUniqueID"><span class="baseclass">TObject::</span>GetUniqueID</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:HandleTimer"><span class="baseclass">TObject::</span>HandleTimer</a>(TTimer* timer)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Hash"><span class="baseclass">TObject::</span>Hash</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:HasPoints"><span class="baseclass">TVirtualGeoTrack::</span>HasPoints</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Info"><span class="baseclass">TObject::</span>Info</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> <span class="keyword">char</span>* classname) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom@1"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> TClass* cl) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Inspect"><span class="baseclass">TObject::</span>Inspect</a>() <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:InvertBit"><span class="baseclass">TObject::</span>InvertBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="func"><td class="funcret">virtual TClass*</td><td class="funcname"><a class="funcname" href="#ARay:IsA">IsA</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#ARay:IsAbsorbed">IsAbsorbed</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoAtt:IsActive"><span class="baseclass">TGeoAtt::</span>IsActive</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoAtt:IsActiveDaughters"><span class="baseclass">TGeoAtt::</span>IsActiveDaughters</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsEqual"><span class="baseclass">TObject::</span>IsEqual</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#ARay:IsExited">IsExited</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#ARay:IsFocused">IsFocused</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoTrack:IsFolder"><span class="baseclass">TGeoTrack::</span>IsFolder</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:IsInTimeRange"><span class="baseclass">TVirtualGeoTrack::</span>IsInTimeRange</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsOnHeap"><span class="baseclass">TObject::</span>IsOnHeap</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#ARay:IsRunning">IsRunning</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsSortable"><span class="baseclass">TObject::</span>IsSortable</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#ARay:IsStopped">IsStopped</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#ARay:IsSuspended">IsSuspended</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoAtt:IsVisBranch"><span class="baseclass">TGeoAtt::</span>IsVisBranch</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoAtt:IsVisContainers"><span class="baseclass">TGeoAtt::</span>IsVisContainers</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoAtt:IsVisDaughters"><span class="baseclass">TGeoAtt::</span>IsVisDaughters</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoAtt:IsVisible"><span class="baseclass">TGeoAtt::</span>IsVisible</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoAtt:IsVisLeaves"><span class="baseclass">TGeoAtt::</span>IsVisLeaves</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoAtt:IsVisOnly"><span class="baseclass">TGeoAtt::</span>IsVisOnly</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoAtt:IsVisRaytrace"><span class="baseclass">TGeoAtt::</span>IsVisRaytrace</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoAtt:IsVisStreamed"><span class="baseclass">TGeoAtt::</span>IsVisStreamed</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoAtt:IsVisTouched"><span class="baseclass">TGeoAtt::</span>IsVisTouched</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsZombie"><span class="baseclass">TObject::</span>IsZombie</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ls"><span class="baseclass">TObject::</span>ls</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">TPolyLine3D*</td><td class="funcname"><a class="funcname" href="#ARay:MakePolyLine3D">MakePolyLine3D</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MayNotUse"><span class="baseclass">TObject::</span>MayNotUse</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:Modify"><span class="baseclass">TAttLine::</span>Modify</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Notify"><span class="baseclass">TObject::</span>Notify</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Obsolete"><span class="baseclass">TObject::</span>Obsolete</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* asOfVers, <span class="keyword">const</span> <span class="keyword">char</span>* removedFromVers) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete@1"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete[]"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete[]@1"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new@1"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]@1"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoTrack:Paint"><span class="baseclass">TGeoTrack::</span>Paint</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoTrack:PaintCollect"><span class="baseclass">TGeoTrack::</span>PaintCollect</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> time, <a href="./ListOfTypes.html#Double_t">Double_t</a>* box)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoTrack:PaintCollectTrack"><span class="baseclass">TGeoTrack::</span>PaintCollectTrack</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> time, <a href="./ListOfTypes.html#Double_t">Double_t</a>* box)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoTrack:PaintMarker"><span class="baseclass">TGeoTrack::</span>PaintMarker</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoTrack:PaintTrack"><span class="baseclass">TGeoTrack::</span>PaintTrack</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Pop"><span class="baseclass">TObject::</span>Pop</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoTrack:Print"><span class="baseclass">TGeoTrack::</span>Print</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Read"><span class="baseclass">TObject::</span>Read</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:RecursiveRemove"><span class="baseclass">TObject::</span>RecursiveRemove</a>(<a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoAtt:ResetAttBit"><span class="baseclass">TGeoAtt::</span>ResetAttBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:ResetAttLine"><span class="baseclass">TAttLine::</span>ResetAttLine</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttMarker:ResetAttMarker"><span class="baseclass">TAttMarker::</span>ResetAttMarker</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* toption = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ResetBit"><span class="baseclass">TObject::</span>ResetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoTrack:ResetTrack"><span class="baseclass">TGeoTrack::</span>ResetTrack</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SaveAs"><span class="baseclass">TObject::</span>SaveAs</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:SaveLineAttributes"><span class="baseclass">TAttLine::</span>SaveLineAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> widdef = 1)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttMarker:SaveMarkerAttributes"><span class="baseclass">TAttMarker::</span>SaveMarkerAttributes</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Int_t">Int_t</a> coldef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> stydef = 1, <a href="./ListOfTypes.html#Int_t">Int_t</a> sizdef = 1)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SavePrimitive"><span class="baseclass">TObject::</span>SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TGeoTrack:SearchPoint"><span class="baseclass">TGeoTrack::</span>SearchPoint</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> time, <a href="./ListOfTypes.html#Int_t">Int_t</a> istart = 0) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoAtt:SetActiveDaughters"><span class="baseclass">TGeoAtt::</span>SetActiveDaughters</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> flag = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoAtt:SetActivity"><span class="baseclass">TGeoAtt::</span>SetActivity</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> flag = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoAtt:SetAttBit"><span class="baseclass">TGeoAtt::</span>SetAttBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoAtt:SetAttBit@1"><span class="baseclass">TGeoAtt::</span>SetAttBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetBit@1"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetBit"><span class="baseclass">TObject::</span>SetBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> set)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoTrack:SetBits"><span class="baseclass">TGeoTrack::</span>SetBits</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> is_default = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> is_onelevel = <a href="./ListOfTypes.html#Bool_t">kFALSE</a>, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> is_all = <a href="./ListOfTypes.html#Bool_t">kFALSE</a>, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> is_type = <a href="./ListOfTypes.html#Bool_t">kFALSE</a>)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARay:SetDirection@1">SetDirection</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* d)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARay:SetDirection">SetDirection</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> dx, <a href="./ListOfTypes.html#Double_t">Double_t</a> dy, <a href="./ListOfTypes.html#Double_t">Double_t</a> dz)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetDrawOption"><span class="baseclass">TObject::</span>SetDrawOption</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetDtorOnly"><span class="baseclass">TObject::</span>SetDtorOnly</a>(<span class="keyword">void</span>* obj)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:SetId"><span class="baseclass">TVirtualGeoTrack::</span>SetId</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> id)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARay:SetLambda">SetLambda</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:SetLineAttributes"><span class="baseclass">TAttLine::</span>SetLineAttributes</a>()<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:SetLineColor"><span class="baseclass">TAttLine::</span>SetLineColor</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> lcolor)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:SetLineColorAlpha"><span class="baseclass">TAttLine::</span>SetLineColorAlpha</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> lcolor, <a href="./ListOfTypes.html#Float_t">Float_t</a> lalpha)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:SetLineStyle"><span class="baseclass">TAttLine::</span>SetLineStyle</a>(<a href="./ListOfTypes.html#Style_t">Style_t</a> lstyle)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:SetLineWidth"><span class="baseclass">TAttLine::</span>SetLineWidth</a>(<a href="./ListOfTypes.html#Width_t">Width_t</a> lwidth)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttMarker:SetMarkerAttributes"><span class="baseclass">TAttMarker::</span>SetMarkerAttributes</a>()<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttMarker:SetMarkerColor"><span class="baseclass">TAttMarker::</span>SetMarkerColor</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> mcolor = 1)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttMarker:SetMarkerColorAlpha"><span class="baseclass">TAttMarker::</span>SetMarkerColorAlpha</a>(<a href="./ListOfTypes.html#Color_t">Color_t</a> mcolor, <a href="./ListOfTypes.html#Float_t">Float_t</a> malpha)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttMarker:SetMarkerSize"><span class="baseclass">TAttMarker::</span>SetMarkerSize</a>(<a href="./ListOfTypes.html#Size_t">Size_t</a> msize = 1)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttMarker:SetMarkerStyle"><span class="baseclass">TAttMarker::</span>SetMarkerStyle</a>(<a href="./ListOfTypes.html#Style_t">Style_t</a> mstyle = 1)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:SetName"><span class="baseclass">TVirtualGeoTrack::</span>SetName</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name)</td></tr>
+<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetObjectStat"><span class="baseclass">TObject::</span>SetObjectStat</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> stat)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoAtt:SetOptimization"><span class="baseclass">TGeoAtt::</span>SetOptimization</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:SetParent"><span class="baseclass">TVirtualGeoTrack::</span>SetParent</a>(TVirtualGeoTrack* parent)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:SetParticle"><span class="baseclass">TVirtualGeoTrack::</span>SetParticle</a>(<a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* particle)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:SetPDG"><span class="baseclass">TVirtualGeoTrack::</span>SetPDG</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> pdgcode)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetUniqueID"><span class="baseclass">TObject::</span>SetUniqueID</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> uid)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoAtt:SetVisBranch"><span class="baseclass">TGeoAtt::</span>SetVisBranch</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoAtt:SetVisContainers"><span class="baseclass">TGeoAtt::</span>SetVisContainers</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> flag = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoAtt:SetVisDaughters"><span class="baseclass">TGeoAtt::</span>SetVisDaughters</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> vis = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoAtt:SetVisibility"><span class="baseclass">TGeoAtt::</span>SetVisibility</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> vis = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoAtt:SetVisLeaves"><span class="baseclass">TGeoAtt::</span>SetVisLeaves</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> flag = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoAtt:SetVisOnly"><span class="baseclass">TGeoAtt::</span>SetVisOnly</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> flag = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoAtt:SetVisRaytrace"><span class="baseclass">TGeoAtt::</span>SetVisRaytrace</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> flag = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoAtt:SetVisStreamed"><span class="baseclass">TGeoAtt::</span>SetVisStreamed</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> vis = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoAtt:SetVisTouched"><span class="baseclass">TGeoAtt::</span>SetVisTouched</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> vis = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARay:ShowMembers">ShowMembers</a>(TMemberInspector&amp;)</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TGeoTrack:Size"><span class="baseclass">TGeoTrack::</span>Size</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; imin, <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; imax)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoTrack:Sizeof3D"><span class="baseclass">TGeoTrack::</span>Sizeof3D</a>() <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARay:Stop">Stop</a>()</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARay:Streamer">Streamer</a>(TBuffer&amp;)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARay:StreamerNVirtual">StreamerNVirtual</a>(TBuffer&amp; ClassDef_StreamerNVirtual_b)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARay:Suspend">Suspend</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SysError"><span class="baseclass">TObject::</span>SysError</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoAtt:TestAttBit"><span class="baseclass">TGeoAtt::</span>TestAttBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:TestBit"><span class="baseclass">TObject::</span>TestBit</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:TestBits"><span class="baseclass">TObject::</span>TestBits</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> f) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:UseCurrentStyle"><span class="baseclass">TObject::</span>UseCurrentStyle</a>()</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Warning"><span class="baseclass">TObject::</span>Warning</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Write"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0)</td></tr>
+<tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Write@1"><span class="baseclass">TObject::</span>Write</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> option = 0, <a href="./ListOfTypes.html#Int_t">Int_t</a> bufsize = 0) <span class="keyword">const</span></td></tr>
+
+</table></div>
+<div class="access" id="funcprot"><b>protected:</b>
+<table class="func" id="tabfuncprot" cellspacing="0">
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:DoError"><span class="baseclass">TObject::</span>DoError</a>(<span class="keyword">int</span> level, <span class="keyword">const</span> <span class="keyword">char</span>* location, <span class="keyword">const</span> <span class="keyword">char</span>* fmt, va_list va) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MakeZombie"><span class="baseclass">TObject::</span>MakeZombie</a>()</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./#TGeoTrack:TGeoTrack" title="TGeoTrack TGeoTrack::TGeoTrack(const TGeoTrack&amp; ) or overloads">TGeoTrack</a>&amp;</td><td class="funcname"><a class="funcname" href="#TGeoTrack:operator_"><span class="baseclass">TGeoTrack::</span>operator=</a>(<span class="keyword">const</span> <a href="./#TGeoTrack:TGeoTrack" title="TGeoTrack TGeoTrack::TGeoTrack(const TGeoTrack&amp; ) or overloads">TGeoTrack</a>&amp;)</td></tr>
+
+</table></div>
+</div>
+
+<div id="datamembers">
+<h2><a name="ARay:Data_Members"></a>Data Members</h2>
+<div class="access" id="enumpubl"><b>public:</b>
+<table class="data" id="tabenumpubl" cellspacing="0">
+<tr class="data"><td class="datatype">enum  { </td><td class="dataname"><a name="ARay:kRun"></a>kRun</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="ARay:kStop"></a>kStop</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="ARay:kExit"></a>kExit</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="ARay:kFocus"></a>kFocus</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="ARay:kSuspend"></a>kSuspend</td><td></td></tr>
+<tr class="data"><td class="datatype"></td><td class="dataname"><a name="ARay:kAbsorb"></a>kAbsorb</td><td></td></tr>
+<tr class="data"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TGeoTrack::</span>EGeoParticleActions { </td><td class="dataname"><a href="#TGeoTrack:kGeoPDefault">kGeoPDefault</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoTrack:kGeoPOnelevel">kGeoPOnelevel</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoTrack:kGeoPAllDaughters">kGeoPAllDaughters</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoTrack:kGeoPType">kGeoPType</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoTrack:kGeoPDrawn">kGeoPDrawn</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TObject::</span>EStatusBits { </td><td class="dataname"><a href="#TObject:kCanDelete">kCanDelete</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kMustCleanup">kMustCleanup</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kObjInCanvas">kObjInCanvas</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kIsReferenced">kIsReferenced</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kHasUUID">kHasUUID</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kCannotPick">kCannotPick</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kNoContextMenu">kNoContextMenu</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kInvalidObject">kInvalidObject</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TObject::</span><i>[unnamed]</i> { </td><td class="dataname"><a href="#TObject:kIsOnHeap">kIsOnHeap</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kNotDeleted">kNotDeleted</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kZombie">kZombie</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kBitMask">kBitMask</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kSingleKey">kSingleKey</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kOverwrite">kOverwrite</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kWriteDelete">kWriteDelete</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TGeoAtt::</span><i>[unnamed]</i> { </td><td class="dataname"><a href="#TGeoAtt:kBitMask">kBitMask</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TGeoAtt::</span>EGeoVisibilityAtt { </td><td class="dataname"><a href="#TGeoAtt:kVisOverride">kVisOverride</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoAtt:kVisNone">kVisNone</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoAtt:kVisThis">kVisThis</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoAtt:kVisDaughters">kVisDaughters</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoAtt:kVisOneLevel">kVisOneLevel</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoAtt:kVisStreamed">kVisStreamed</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoAtt:kVisTouched">kVisTouched</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoAtt:kVisOnScreen">kVisOnScreen</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoAtt:kVisContainers">kVisContainers</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoAtt:kVisOnly">kVisOnly</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoAtt:kVisBranch">kVisBranch</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoAtt:kVisRaytrace">kVisRaytrace</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TGeoAtt::</span>EGeoActivityAtt { </td><td class="dataname"><a href="#TGeoAtt:kActOverride">kActOverride</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoAtt:kActNone">kActNone</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoAtt:kActThis">kActThis</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoAtt:kActDaughters">kActDaughters</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TGeoAtt::</span>EGeoOptimizationAtt { </td><td class="dataname"><a href="#TGeoAtt:kUseBoundingBox">kUseBoundingBox</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoAtt:kUseVoxels">kUseVoxels</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoAtt:kUseGsord">kUseGsord</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+<tr class="datainh"><td class="datatype">enum <span class="baseclass">TGeoAtt::</span>EGeoSavePrimitiveAtt { </td><td class="dataname"><a href="#TGeoAtt:kSavePrimitiveAtt">kSavePrimitiveAtt</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TGeoAtt:kSaveNodesAtt">kSaveNodesAtt</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+
+</table></div>
+<div class="access" id="dataprot"><b>protected:</b>
+<table class="data" id="tabdataprot" cellspacing="0">
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="dataname"><a href="#TGeoAtt:fGeoAtt"><span class="baseclass">TGeoAtt::</span>fGeoAtt</a></td><td class="datadesc">option flags</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a href="#TVirtualGeoTrack:fId"><span class="baseclass">TVirtualGeoTrack::</span>fId</a></td><td class="datadesc">track id</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Color_t">Color_t</a></td><td class="dataname"><a href="#TAttLine:fLineColor"><span class="baseclass">TAttLine::</span>fLineColor</a></td><td class="datadesc">line color</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Style_t">Style_t</a></td><td class="dataname"><a href="#TAttLine:fLineStyle"><span class="baseclass">TAttLine::</span>fLineStyle</a></td><td class="datadesc">line style</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Width_t">Width_t</a></td><td class="dataname"><a href="#TAttLine:fLineWidth"><span class="baseclass">TAttLine::</span>fLineWidth</a></td><td class="datadesc">line width</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Color_t">Color_t</a></td><td class="dataname"><a href="#TAttMarker:fMarkerColor"><span class="baseclass">TAttMarker::</span>fMarkerColor</a></td><td class="datadesc">Marker color index</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Size_t">Size_t</a></td><td class="dataname"><a href="#TAttMarker:fMarkerSize"><span class="baseclass">TAttMarker::</span>fMarkerSize</a></td><td class="datadesc">Marker size</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Style_t">Style_t</a></td><td class="dataname"><a href="#TAttMarker:fMarkerStyle"><span class="baseclass">TAttMarker::</span>fMarkerStyle</a></td><td class="datadesc">Marker style</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a href="#TVirtualGeoTrack:fPDG"><span class="baseclass">TVirtualGeoTrack::</span>fPDG</a></td><td class="datadesc">track pdg code</td></tr>
+<tr class="datainh"><td class="datatype">TVirtualGeoTrack*</td><td class="dataname"><a href="#TVirtualGeoTrack:fParent"><span class="baseclass">TVirtualGeoTrack::</span>fParent</a></td><td class="datadesc">id of parent</td></tr>
+<tr class="datainh"><td class="datatype"><a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="dataname"><a href="#TVirtualGeoTrack:fParticle"><span class="baseclass">TVirtualGeoTrack::</span>fParticle</a></td><td class="datadesc">particle for this track</td></tr>
+<tr class="datainh"><td class="datatype">TObjArray*</td><td class="dataname"><a href="#TVirtualGeoTrack:fTracks"><span class="baseclass">TVirtualGeoTrack::</span>fTracks</a></td><td class="datadesc">daughter tracks</td></tr>
+
+</table></div>
+<div class="access" id="datapriv"><b>private:</b>
+<table class="data" id="tabdatapriv" cellspacing="0">
+<tr class="data"><td class="datatype">TVector3</td><td class="dataname"><a name="ARay:fDirection"></a>fDirection</td><td class="datadesc">Current direction vector</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="ARay:fLambda"></a>fLambda</td><td class="datadesc">Wavelength</td></tr>
+<tr class="data"><td class="datatype">TObjArray</td><td class="dataname"><a name="ARay:fNodeHisotry"></a>fNodeHisotry</td><td class="datadesc">History of nodes on which the photon has hi</td></tr>
+<tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="dataname"><a name="ARay:fStatus"></a>fStatus</td><td class="datadesc">status of ray</td></tr>
+
+</table></div>
+</div>
+<h2><a id="ARay:Class_Charts"></a>Class Charts</h2>
+<map name="MapARay_Lib" id="MapARay_Lib">
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="471,237,589,285"/>
+</map>
+<div class="tabs">
+<a id="imgARay_Inh" class="tabsel" href="inh/ARay_Inh.png" onclick="javascript:return SetImg('Charts','inh/ARay_Inh.png');">Inheritance</a>
+<a id="imgARay_InhMem" class="tab" href="inhmem/ARay_InhMem.png" onclick="javascript:return SetImg('Charts','inhmem/ARay_InhMem.png');">Inherited Members</a>
+<a id="imgARay_Incl" class="tab" href="incl/ARay_Incl.png" onclick="javascript:return SetImg('Charts','incl/ARay_Incl.png');">Includes</a>
+<a id="imgARay_Lib" class="tab" href="lib/ARay_Lib.png" onclick="javascript:return SetImg('Charts','lib/ARay_Lib.png');">Libraries</a><br/>
+</div><div class="classcharts"><div class="classchartswidth"></div>
+<img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapARay_Inh" src="inh/ARay_Inh.png"/></div>
+<h2>Function documentation</h2>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ARay:ARay" href="src/ARay.cxx.html#ahJ7YE">ARay</a>()</span><br />
+<div class="funccomm"><pre> Default constructor
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ARay:ARay@1" href="src/ARay.cxx.html#WMlZzB">ARay</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> id, <a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> x, <a href="./ListOfTypes.html#Double_t">Double_t</a> y, <a href="./ListOfTypes.html#Double_t">Double_t</a> z, <a href="./ListOfTypes.html#Double_t">Double_t</a> t, <a href="./ListOfTypes.html#Double_t">Double_t</a> dx, <a href="./ListOfTypes.html#Double_t">Double_t</a> dy, <a href="./ListOfTypes.html#Double_t">Double_t</a> dz)</span><br />
+<div class="funccomm"><pre> Constructor
+</pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ARay:_ARay" href="src/ARay.cxx.html#lhd8zB">~ARay</a>()</span><br />
+</div>
+<div class="funcdoc"><span class="funcname">TGeoNode* <a class="funcname" name="ARay:FindNodeStartWith" href="src/ARay.cxx.html#yqBEQC">FindNodeStartWith</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ARay:FindNodeNumberStartWith" href="src/ARay.cxx.html#w4qcLE">FindNodeNumberStartWith</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:GetDirection" href="src/ARay.cxx.html#A1uisC">GetDirection</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* d) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:GetLastPoint" href="src/ARay.cxx.html#Ggy_bD">GetLastPoint</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* x) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsAbsorbed" href="src/ARay.cxx.html#doawPB">IsAbsorbed</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsExited" href="src/ARay.cxx.html#ic8KVC">IsExited</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsFocused" href="src/ARay.cxx.html#ZbVvtB">IsFocused</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsRunning" href="src/ARay.cxx.html#UlwRTE">IsRunning</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsStopped" href="src/ARay.cxx.html#rn7oSE">IsStopped</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsSuspended" href="src/ARay.cxx.html#YIF2FB">IsSuspended</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname">TPolyLine3D* <a class="funcname" name="ARay:MakePolyLine3D" href="src/ARay.cxx.html#f08Ii">MakePolyLine3D</a>() const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:SetDirection@1" href="src/ARay.cxx.html#le1UgE">SetDirection</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* d)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:SetDirection" href="src/ARay.cxx.html#rhFzfC">SetDirection</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> dx, <a href="./ListOfTypes.html#Double_t">Double_t</a> dy, <a href="./ListOfTypes.html#Double_t">Double_t</a> dz)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:Absorb" href="src/ARay.h.html#moa4iD">Absorb</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{<a href="./ARay.html#ARay:fStatus" title="Int_t ARay::fStatus">fStatus</a> = <a href="./ARay.html#ARay:kAbsorb" title="const enum ARay:: ARay::kAbsorb">kAbsorb</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:Exit" href="src/ARay.h.html#zZHu4">Exit</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{<a href="./ARay.html#ARay:fStatus" title="Int_t ARay::fStatus">fStatus</a> = <a href="./ARay.html#ARay:kExit" title="const enum ARay:: ARay::kExit">kExit</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:Focus" href="src/ARay.h.html#aHVI7C">Focus</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{<a href="./ARay.html#ARay:fStatus" title="Int_t ARay::fStatus">fStatus</a> = <a href="./ARay.html#ARay:kFocus" title="const enum ARay:: ARay::kFocus">kFocus</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> TObjArray* <a class="funcname" name="ARay:GetNodeHistory" href="src/ARay.h.html#to4Nx">GetNodeHistory</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{<span class="keyword">return</span> &amp;<a href="./ARay.html#ARay:fNodeHisotry" title="TObjArray ARay::fNodeHisotry">fNodeHisotry</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="ARay:GetLambda" href="src/ARay.h.html#gCym6D">GetLambda</a>() const</span><br />
+
+<div class="code"><code class="inlinecode">{<span class="keyword">return</span> <a href="./ARay.html#ARay:fLambda" title="Double_t ARay::fLambda">fLambda</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:AddNode" href="src/ARay.h.html#dH_cHB">AddNode</a>(TGeoNode* node)</span><br />
+
+<div class="code"><code class="inlinecode">{<a href="./ARay.html#ARay:fNodeHisotry" title="TObjArray ARay::fNodeHisotry">fNodeHisotry</a>.Add(node);}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname">TGeoNode* <a class="funcname" name="ARay:FindNode" href="src/ARay.h.html#Wsqsz">FindNode</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) const</span><br />
+
+<div class="code"><code class="inlinecode">{<span class="keyword">return</span> (TGeoNode*)<a href="./ARay.html#ARay:fNodeHisotry" title="TObjArray ARay::fNodeHisotry">fNodeHisotry</a>.<a href="./#TObject:FindObject" title="TObject* TObject::FindObject(const char* name) or overloads">FindObject</a>(name);}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:SetLambda" href="src/ARay.h.html#HFzvRD">SetLambda</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda)</span><br />
+
+<div class="code"><code class="inlinecode">{<a href="./ARay.html#ARay:fLambda" title="Double_t ARay::fLambda">fLambda</a> = lambda;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:Stop" href="src/ARay.h.html#XsW9ND">Stop</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{<a href="./ARay.html#ARay:fStatus" title="Int_t ARay::fStatus">fStatus</a> = <a href="./ARay.html#ARay:kStop" title="const enum ARay:: ARay::kStop">kStop</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:Suspend" href="src/ARay.h.html#LRyKXD">Suspend</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{<a href="./ARay.html#ARay:fStatus" title="Int_t ARay::fStatus">fStatus</a> = <a href="./ARay.html#ARay:kSuspend" title="const enum ARay:: ARay::kSuspend">kSuspend</a>;}</code></div>
+<div style="clear:both;"></div>
+</div>
+
+<br />
+<!--SIGNATURE-->
+<div id="footer">
+<em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Akira+Okumura"> Akira Okumura 2007/09/24</a> </em><em>&raquo; Copyright   (C) 2006-, Akira Okumura                                         *</em><br />
+<em>&raquo; Last changed: Mon Oct 12 11:12:49 2015 </em><em>&raquo; Last generated: 2015-10-12 11:12</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+</div>
+</div>
+</body>
+</html>

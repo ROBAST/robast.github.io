@@ -1,0 +1,345 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <title>ROBAST - User Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Akira Okumura">
+    <!-- Bootstrap -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="prism/prism.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      <!--
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-317349-9', 'robast.github.io');
+      ga('send', 'pageview');
+      //-->
+    </script>
+    <link href="./ROBAST.css" rel="stylesheet" media="screen">    
+  </head>
+  <body style="padding-top:40px;padding-bottom:40px">
+    <script type="text/javascript" src="prism/prism.js"></script>
+
+    <div class="container">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">ROBAST</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="download.html">Download</a></li>
+              <li><a href="support.html">Support</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li class="active"><a href="#">User Guide</a></li>
+                  <li><a href="htmldoc/ClassIndex.html" target="_blank">Class Reference</a></li>
+                </ul>
+              </li>
+              <li><a href="publications.html">Publications</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="row">
+        <div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
+          <h3>1. Getting Started</h3>
+          <h4>1.1 ROOT</h4>
+          <p>ROBAST depends on only ROOT libraries. If you have already installed ROOT on your Linux or Mac, please check that environmental variables <code>ROOTSYS</code>, <code>LD_LIBRARY_PATH</code>, and <code>PATH</code> are properly set in your shell. If <code>ROOTSYS</code> points to <code>/usr/local/root</code> for example, <code>LD_LIBRARY_PATH</code> and <code>PATH</code> are usually set to <code>/usr/local/root/lib</code> and <code>/usr/local/root/bin</code>, respectively.</p>
+          <p>Please first check that your ROOT and its geometry tutorial work properly by running ROOT tutorials.</p>
+
+          <pre><code class="language-bash">$ cd $ROOTSYS/tutorials/geom
+$ root
+root [0] .x geomAlice.C</code></pre>
+
+          <p>The ALICE detector will be shown in an OpenGL view. If not, please check that your system has OpenGL libraries.</p>
+          
+          <h4>1.2 Building ROBAST</h4>
+          <p>You must have software development tools such as GNU Make and GCC (or Cling) installed on your machine. Because we do not provide binary files, you must build ROBAST from the source.</p>
+
+          <p>Clone the ROBAST Git repository on your machine, and run <code>make</code>.</p>
+          
+          <pre><code class="language-bash">$ git clone --branch v2.3.2 https://github.com/ROBAST/ROBAST.git ROBAST-2.3.2
+$ cd ROBAST-2.3.2
+$ make</code></pre>
+
+            <p>You can also download a .tar.gz or .zip file for each release tag from the <a href="download.html">download page</a>.</p>
+
+            <pre><code class="language-bash">$ curl -O https://github.com/ROBAST/ROBAST/archive/v2.3.2.tar.gz
+$ tar zxvf ROBAST-2.3.2.tar.gz
+$ cd ROBAST-2.3.2
+$ make</code></pre>
+
+          <p>If you use bash or zsh, add the following line in your <code>$HOME/.bashrc</code>, <code>$HOME/.zshrc</code>, or any equivalent (don't forget to replace<code>YOUR_ROBAST_DIRECTORY</code> with your actual ROBAST path).</p>
+
+          <pre><code class="language-bash">export LD_LIBRARY_PATH=YOUR_ROBAST_DIRECTORY:$LD_LIBRARY_PATH</code></pre>
+          
+          <p>If you use tcsh, the following line must be added to <code>$HOME/.tcshrc</code> instead.</p>
+          <pre><code class="language-bash">setenv LD_LIBRARY_PATH YOUR_ROBAST_DIRECTORY:{$LD_LIBRARY_PATH}</code></pre>
+
+          <p>In addition, you must add the ROBAST include directory to the ROOT search path. Add the following line to your <code>$HOME/.rootlogon.C</code>.</p>
+
+          <pre><code class="language-clike">gInterpreter-&gt;AddIncludePath("YOUR_ROBAST_DIRECTORY/include");</code></pre>
+
+          <p>If you also want to use ROBAST via PyROOT, please do not forget setting <code>PYTHONPATH</code> to the directory where <code>ROOT.py</code> exists.</p>
+
+          <pre><code class="language-bash">export PYTHONPATH=$ROOTSYS/lib:$PYTHONPATH</code></pre>
+          
+          <h4>1.3 Testing ROBAST</h4>
+          <p>OK. Let's try a ROBAST tutorial to see how ROBAST works.</p>
+
+          <pre><code class="language-bash">$ cd ROBAST-2.3.2/tutorial
+$ root
+root [0] .x HESS1.C+</code></pre>
+          <p>You will get an OpenGL view of the H.E.S.S. I optical system (Davies–Cotton) and spot diagrams for various field angles.</p>
+        </div>
+
+        <div class="col-md-offset-1 col-md-5 col-sm-5 col-xs-5">
+          <div class="thumbnail">
+            <img alt="Spot Diagrams" src="./img/HESS1_OpenGL.png">
+            <div class="caption" style="font-size:small;">
+              Figure 1. 3D ROBAST model of the H.E.S.S. I optical system drawn in an OpenGL window.
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-7 col-xs-7">
+          <div class="thumbnail">
+            <img alt="Spot Diagrams" src="./img/HESS1_spot.png">
+            <div class="caption" style="font-size:small;">
+              Figure 2. Spot diagrams of the H.E.S.S. I optical system
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
+          <p>You can drag, rotate, and zoom the 3D objects in the OpenGL window. Please read the help page of the OpenGL window (click "Help" → "Help on GL Viewer…").</p>
+
+          <p>There are many other tutorial programs in the same directory. Please try them out!</p>
+
+          <h4>1.4 Unit test</h4>
+
+          <p>There is a short unit test program in the tutorial directory. As it uses the <code>unittest</code> package of Python, please set your <code>PYTHONPATH</code> properly (see Section 1.2).</p>
+
+          <pre><code class="language-bash">$ cd ROBAST-2.3.2/tutorial
+$ python unittest_robast.py
+(snip)
+----------------------------------------------------------------------
+Ran 8 tests in 3.459s
+
+OK</code></pre>
+
+          <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            This unit test occasionally fails because of random numbers used in the program. This is not a ROBAST bug. If it fails, please run the Python code a few more times.
+          </div>
+
+          <h4>1.5 HTML Reference Guide</h4>
+
+          <p>Auto-generated HTML reference guide for ROBAST classes is also available at <a href="htmldoc/ClassIndex.html" target="_blank">htmldoc/ClassIndex.html</a>.</p>
+
+          <h3>2. Simulating a Mirror</h3>
+          <p>In this section you will learn how to simulate a mirror. First, let's make a “world” in which all of your optical components are created and simulated. The “world” must be large enough to encapsulate all the optical components. In the example below, you can make a box with a dimension of 200 cm &times; 200 cm &times; 200 cm.</p>
+
+          <pre><code class="language-clike">$ root
+root [0] const double cm = AOpticsManager::cm()
+root [1] AOpticsManager manager("manager", "My first manager")
+root [2] TGeoBBox* box = new TGeoBBox("box", 100*cm, 100*cm, 100*cm)
+root [3] AOpticalComponent* world = new AOpticalComponent("world", box)
+root [4] manager.SetTopVolume(world)
+</code></pre>
+
+          <div class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            <span class="sr-only">Info:</span>
+            Class names starting with “TGeo” and “A” belong to the ROOT geometry library and ROBAST, respectively.
+          </div>
+
+          <div class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            <span class="sr-only">Info:</span>
+            The width, height, and depth of a box are given by their half lengths in the TGeoBBox constructor. Please read <a href="https://root.cern.ch/root/html604/TGeoBBox.html" target="_blank">the ROOT reference guide</a> for details.
+          </div>
+
+          <p>Now your “world” is ready. Let's make a spherical shell mirror with specular surfaces and add it in the “world”. You can draw the 3D model of this mirror in an OpenGL window (use the <code>"ogl"</code> option) as shown in Fig. 3. This mirror has ideal reflectance of 100%.</p>
+
+          <pre><code class="language-clike">root [5] TGeoSphere sphere(49*cm, 50*cm)
+root [6] AMirror* mirror = new AMirror("mirror", &sphere)
+root [7] world->AddNode(mirror, 1)
+root [8] manager.CloseGeometry()
+root [9] world->Draw("ogl")
+root [10] manager.SetNsegments(100)</code></pre>
+
+          <div class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            <span class="sr-only">Info:</span>
+            The number of polygons used in the OpenGL view can be controlled via <code>TGeoManager::SetNsegments</code> (<code>TGeoManager</code> is the base class of <code>AOpticsManager</code>). The default value is 20, but it is a bit too small for your presentation images.
+          </div>
+
+        </div>
+
+        <div class="col-md-offset-1 col-md-5 col-sm-6 col-xs-6">
+          <div class="thumbnail">
+            <img alt="Spot Diagrams" src="./img/sphere.png">
+            <div class="caption" style="font-size:small;">
+              Figure 3. A spherical shell mirror
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-5 col-sm-6 col-xs-6">
+          <div class="thumbnail">
+            <img alt="Spot Diagrams" src="./img/sphere_with_ray.png">
+            <div class="caption" style="font-size:small;">
+              Figure 4. Wire frame view of the spherical shell mirror and a simulated photon track
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
+
+          <p>Can you tell what will happen if you simulate a ray propagating inside this sphere? What is the general locus (track) of such a photon with arbitrary initial position and direction? If you cannot tell the answer immediately, let's simulate the (geometrical) photon track by ROBAST.</p>
+
+          <pre><code class="language-clike">root [11] const double nm = AOpticsManager::nm()
+root [12] ARay ray(0, 400*nm, 30*cm, 20*cm, -40*cm, 0, 5, -9, -2)
+root [13] manager.TraceNonSequential(ray)
+root [14] TPolyLine3D* pol = ray.MakePolyLine3D()
+root [15] pol->SetLineWidth(3)
+root [16] pol->SetLineColor(2)
+root [17] pol->Draw()</code></pre>
+
+          <div class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            <span class="sr-only">Info:</span>
+            The first argument of <code>ARay::Aray</code> is the track ID which is not used in ROBAST, and so any value is OK. The wavelength of this ray is 400 nm, the initial position is (X, Y, Z) = (30 cm, 20 cm, -40 cm), and the direction is (5, -9, -2). The 6th argument is the time when the ray is at the initial position.
+          </div>
+
+          <p>You cannot see the photon track because the mirror is not transparent (you can change the transparency later). So click the OpenGL view window and press your <kbd>W</kbd> key. The OpenGL view will be changed to the wire frame mode as shown in Fig. 4. Does the photon track look like what you imagined?</p>
+
+          <p>The number of reflections inside the spherical mirror with 100% reflection is ideally infinite. However, <code>AOpticsManager::TraceNonSequential</code> must be suspended at some point. Therefore, this number is limited to 100 by default. You can change this upper limit by calling <code>AOpticsManager::SetLimit</code>.</p>
+
+          <p>When an ARay propagation is suspended, its internal status is changed to “suspended.”</p>
+          <pre><code class="language-clike">root [17] ray.IsSuspended()
+(const Bool_t)1</code></pre>
+
+          <div class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            <span class="sr-only">Info:</span>
+            An <code>AMirror</code> object is a volume (<code>AMirror</code> is derived from <code>TGeoVolume</code>) whose whole surfaces are specular. The spherical shell defined here has a 49 cm inner radius and a 50 cm outer radius, and therefore both the inner and outer surfaces are specular. This is why the photon in Fig. 4 is repeatedly reflected on the inner surface.
+          </div>
+
+          <h3>3. Simulating a Lens</h3>
+
+          <p>The next step is a lens simulation. For simplicity, we will make a triangular prism made of SCHOTT N-BK7. The prism geometry is made with the <code>TGeoTrd1</code> class (<a>https://root.cern.ch/root/html604/TGeoTrd1.html</a>). In a similar way to the <code>AMirror</code> class, the prism is made with the <code>ALens</code> class as shown in Fig. 5.</p>
+
+<pre><code class="language-clike">root [0] const double cm = AOpticsManager::cm()
+root [1] AOpticsManager manager("manager", "My second manager")
+root [2] TGeoBBox* box = new TGeoBBox(30*cm, 30*cm, 30*cm);
+root [3] AOpticalComponent* world = new AOpticalComponent("world", box)
+root [4] manager.SetTopVolume(world)
+root [5] TGeoTrd1* trd1 = new TGeoTrd1(10*cm, 0*cm, 5*cm, 10*cm)
+root [6] ALens* prism = new ALens("prism", trd1)
+root [7] prism->SetRefractiveIndex(AGlassCatalog::GetRefractiveIndex("N-BK7"))
+root [8] world->AddNode(prism, 1)
+root [9] manager.CloseGeometry()
+root [10] gGeoManager->GetTopVolume()->Draw("ogl")</code></pre>
+        </div>
+
+        <div class="col-md-offset-1 col-md-5 col-sm-6 col-xs-6">
+          <div class="thumbnail">
+            <img alt="Prism" src="./img/prism.png">
+            <div class="caption" style="font-size:small;">
+              Figure 5. A triangular prism
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-5 col-sm-6 col-xs-6">
+          <div class="thumbnail">
+            <img alt="Prism with rays" src="./img/prism_with_rays.png">
+            <div class="caption" style="font-size:small;">
+              Figure 6. Wire frame view of the prism and simulated photon tracks
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
+          <p>We did not worry about the photon wavelength in the mirror simulation example, but the prism has refractive indices for different colors. So now different wavelengths will show you different simulation results. Fig. 6 illustrates the simulated photon tracks of three different colors (400, 500, and 650 nm). You can see that the prism really works as a prism!</p>
+
+<pre><code class="language-clike">root [11] Double_t nm = AOpticsManager::nm()
+root [12] ARay blue(0, 400*nm, -20*cm, 0*cm, 0*cm, 0, 1, 0, 0)
+root [13] ARay green(0, 500*nm, -20*cm, 0*cm, 0*cm, 0, 1, 0, 0)
+root [14] ARay red(0, 650*nm, -20*cm, 0*cm, 0*cm, 0, 1, 0, 0)
+root [15] manager.TraceNonSequential(blue)
+root [16] manager.TraceNonSequential(green)
+root [17] manager.TraceNonSequential(red)
+root [18] TPolyLine3D* polB = blue.MakePolyLine3D()
+root [19] polB->SetLineColor(4)
+root [20] polB->SetLineWidth(3)
+root [21] polB->Draw()
+root [22] TPolyLine3D* polG = green.MakePolyLine3D()
+root [23] polG->SetLineColor(3)
+root [24] polG->SetLineWidth(3)
+root [25] polG->Draw()
+root [26] TPolyLine3D* polR = red.MakePolyLine3D()
+root [27] polR->SetLineColor(2)
+root [28] polR->SetLineWidth(3)
+root [29] polR->Draw()</code></pre>
+
+          <div class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            <span class="sr-only">Info:</span>
+            If your simulation result is different from Fig. 6, it is probably due to random Fresnel reflection on the prism boundary surface. You can disable Fresnel reflection by adding <code>manager.DisableFresnelReflection(kTRUE)</code>.
+          </div>
+
+	  <p>Please note that the non-sequential ray tracing in ROBAST is halted when a ray exits the world. In Fig. 6 the rays propagate from the initial point at left, and they exit the world at the right bottom in the window. You can check the ray status by calling <code>ARay::IsExited()</code>.</p>
+          <pre><code class="language-clike">root [30] blue.IsExited()
+(const Bool_t)1</code></pre>
+
+          <h3>4. The ROOT Geometry Library and ROBAST</h3>
+
+          <h3>4. Basic Classes</h3>
+          <h4>4.1 AOpticsManager</h4>
+          <h4>4.2 AOpticalComponent</h4>
+          <h4>4.3 AMirror</h4>
+          <h4>4.4 AFocalSurface</h4>
+          <h4>4.5 AObscuration</h4>
+          <h4>4.6 ALens</h4>
+          <h4>4.7 ARay</h4>
+          <h4>4.8 ARayShooter</h4>
+          <h4>4.9 AGeoAsphericDisk</h4>
+                    
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <hr>
+          <footer>
+            <p style="text-align:right;">&copy; Copyright 2015 Akira Okumura</p>
+          </footer>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./retina/retina.js" type="text/javascript"></script>
+  </body>
+</html>
