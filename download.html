@@ -70,22 +70,7 @@
       
       <div class="row">
         <div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
-          <h3>Git Repository</h3>
-          <p>If you are already familiar with Git, please visit our GitHub page <a href="https://github.com/ROBAST/ROBAST" target="_blank">https://github.com/ROBAST/ROBAST</a> for the ROBAST Git repository.</p>
-          <pre><code class="language-bash">$ git clone https://github.com/ROBAST/ROBAST.git ROBAST
-$ cd ROBAST
-$ make</code></pre>
-          <div class="alert alert-danger" role="alert">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <span class="sr-only">Error:</span>
-            The old Git repository hosted by sourceforge.net is obsolete. The origin repository was moved to GitHub in Oct 2015.
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
-          <h3>Files</h3>
+          <h3>File Archive</h3>
         </div>
       </div>
 
@@ -111,6 +96,7 @@ $ make</code></pre>
       </div>
 
       <div class="row">
+
         <div class="col-md-offset-1 col-md-3 col-sm-4 col-xs-5">
           <h5>Release v2.3.2 (2015-Oct-15)</h5>
         </div>
@@ -151,8 +137,35 @@ $ make</code></pre>
           <div class="alert alert-danger" role="alert">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <span class="sr-only">Error:</span>
-            The origin/master version is the latest copy of the Git repository, but release version 2.3.3 is recommended for most users.
+            The origin/master version is the latest copy of the ROBAST Git repository, but release version 2.3.3 is recommended for most users.
           </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
+          <h3>Git Repository</h3>
+          <p>If you are already familiar with Git, please visit our GitHub page <a target="_blank">https://github.com/ROBAST/ROBAST</a> for the ROBAST Git repository.</p>
+          <pre><code class="language-bash">$ git clone https://github.com/ROBAST/ROBAST.git ROBAST
+$ cd ROBAST
+$ make</code></pre>
+          <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            The old Git repository hosted by sourceforge.net is obsolete. The origin repository was moved to GitHub in Oct 2015.
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
+          <h3>Subversion (SVN) Repository</h3>
+          <p>If you prefer SVN to Git, you can <code>checkout</code> the ROBAST repository by SVN. You can find more details at <a href="https://help.github.com/articles/support-for-subversion-clients/" target="_blank">Support for Subversion clients</a>.</p>
+          <pre><code class="language-bash">$ svn checkout --depth empty https://github.com/ROBAST/ROBAST ROBAST
+$ cd ROBAST
+$ svn update trunk
+$ cd trunk
+$ make</code></pre>
         </div>
       </div>
 
