@@ -76,7 +76,7 @@
           
           <h3>Bug Reports and Feature Requests</h3>
 
-          <p>Pleas go to the GitHub page <a target="_blank">https://github.com/ROBAST/ROBAST</a> to post your bug report or feature request. If you are not familiar with GitHub, please contact me by e-mail.</p>
+          <p>Pleas go to the ROBAST issue page <a target="_blank">https://github.com/ROBAST/ROBAST/issues</a> to post your bug report or feature request. If you do not have a GitHub account, please make it and log in. You can also contact me by e-mail.</p>
           
           <h3>ROOT Help</h3>
 
@@ -132,7 +132,7 @@ submitted to <i>Astroparticle Physics</i>.</pre>
               <h3 class="panel-title">Q. Can ROBAST simulate polarization?</h3>
             </div>
             <div class="panel-body">
-              <p>Currently ROBAST cannot simulate photon polarization, however, we have a plan to support it in a future ROBAST release. Fresnel reflection and refraction in ROBAST assume random polarization.</p>
+              <p>Currently ROBAST cannot simulate photon polarization, however, we have a plan to support it in a future ROBAST release. Fresnel reflection and refraction in ROBAST assume random polarization. If it is really important in your simulation, please send us your request.</p>
             </div>
           </div>
 
@@ -150,7 +150,7 @@ submitted to <i>Astroparticle Physics</i>.</pre>
               <h3 class="panel-title">Q. Can I simulate diffusive reflection?</h3>
             </div>
             <div class="panel-body">
-              <p>Currently no. We have a plan to support diffusive reflection on a matte surface such as white paint or the ground.</p>
+              <p>Currently no. We have a plan to support diffusive reflection on a matte surface such as white paint or the ground. If it is really important in your simulation, please send us your request.</p>
             </div>
           </div>
           
@@ -189,6 +189,15 @@ submitted to <i>Astroparticle Physics</i>.</pre>
             </div>
             <div class="panel-body">
               <p>Yes. You can use it via PyROOT. Please try <code>tutorial/SimpleParabolicTelescope.py</code>.</p>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Q. Can I import a CAD file?</h3>
+            </div>
+            <div class="panel-body">
+              <p>It is not currently possible because the ROOT geometry library does not support tessellated solids. If it supports tessellated objects in future, you will be able to import a CAD file using an intermediate format converter such as <a href="http://www.fastrad.net" target="_brank">FASTRAD</a> to generate a <a href="http://gdml.web.cern.ch/GDML/" target="_blank">GDML</a> file.</p>
             </div>
           </div>
 
