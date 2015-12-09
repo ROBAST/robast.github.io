@@ -72,17 +72,17 @@
         <div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
           <h3>1. Getting Started</h3>
           <h4>1.1 ROOT</h4>
-          <p>ROBAST depends on only ROOT libraries. If you have already installed ROOT on your Linux or Mac, please check that environmental variables <code>ROOTSYS</code>, <code>LD_LIBRARY_PATH</code>, and <code>PATH</code> are properly set in your shell. If <code>ROOTSYS</code> points to <code>/usr/local/root</code> for example, <code>LD_LIBRARY_PATH</code> and <code>PATH</code> are usually set to <code>/usr/local/root/lib</code> and <code>/usr/local/root/bin</code>, respectively.</p>
-          <p>Please first check that your ROOT and its geometry tutorial work properly by running ROOT tutorials.</p>
+          <p>ROBAST depends on only ROOT libraries. If you have already installed ROOT on your Linux or Mac, please check whether environmental variables <code>ROOTSYS</code>, <code>LD_LIBRARY_PATH</code>, and <code>PATH</code> are properly set in your shell. If <code>ROOTSYS</code> points to <code>/usr/local/root</code> for example, <code>LD_LIBRARY_PATH</code> and <code>PATH</code> are usually set to <code>/usr/local/root/lib</code> and <code>/usr/local/root/bin</code>, respectively.</p>
+          <p>Please first check if your ROOT and its geometry tutorial work properly by running ROOT tutorials.</p>
 
           <pre><code class="language-bash">$ cd $ROOTSYS/tutorials/geom
 $ root
 root [0] .x geomAlice.C</code></pre>
 
-          <p>The ALICE detector will be shown in an OpenGL view. If not, please check that your system has OpenGL libraries.</p>
+          <p>The ALICE detector should appear in an OpenGL view. If not, please confirm that your system has OpenGL libraries.</p>
           
           <h4>1.2 Building ROBAST</h4>
-          <p>You must have software development tools such as GNU Make and GCC (or Cling) installed on your machine. Because we do not provide binary files, you must build ROBAST from the source.</p>
+          <p>You must have software development tools such as GNU Make and GCC (or Cling) installed on your machine. As we do not provide pre-compiled ROBAST binary files, you must build ROBAST from the source code.</p>
 
           <p>Clone the ROBAST Git repository on your machine, and run <code>make</code>.</p>
           
@@ -97,7 +97,7 @@ $ tar zxvf ROBAST-2.4.0.tar.gz
 $ cd ROBAST-2.4.0
 $ make</code></pre>
 
-          <p>If you use bash or zsh, add the following line in your <code>$HOME/.bashrc</code>, <code>$HOME/.zshrc</code>, or any equivalent (don't forget to replace<code>YOUR_ROBAST_DIRECTORY</code> with your actual ROBAST path).</p>
+          <p>If you use bash or zsh, add the following line in your <code>$HOME/.bashrc</code>, <code>$HOME/.zshrc</code>, or any equivalent (don't forget to replace<code>YOUR_ROBAST_DIRECTORY</code> with your actual ROBAST path!).</p>
 
           <pre><code class="language-bash">export LD_LIBRARY_PATH=YOUR_ROBAST_DIRECTORY:$LD_LIBRARY_PATH</code></pre>
           
@@ -140,13 +140,13 @@ root [0] .x HESS1.C+</code></pre>
         </div>
 
         <div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
-          <p>You can drag, rotate, and zoom the 3D objects in the OpenGL window. Please read the help page of the OpenGL window (click "Help" → "Help on GL Viewer…").</p>
+          <p>You can drag, rotate, and zoom the 3D objects in the OpenGL window. Please refer to the help page of the OpenGL window (click "Help" → "Help on GL Viewer…") for details.</p>
 
           <p>There are many other tutorial programs in the same directory. Please try them out!</p>
 
           <h4>1.4 Unit test</h4>
 
-          <p>There is a short unit test program in the tutorial directory. As it uses the <code>unittest</code> package of Python, please set your <code>PYTHONPATH</code> properly (see Section 1.2).</p>
+          <p>There is a short unit test program in the tutorial directory. As it uses the <code>unittest</code> package of Python, please properly set your <code>PYTHONPATH</code> (see Section 1.2).</p>
 
           <pre><code class="language-bash">$ cd ROBAST-2.4.0/tutorial
 $ python unittest_robast.py
@@ -167,7 +167,7 @@ OK</code></pre>
           <p>Auto-generated HTML reference guide for ROBAST classes is also available at <a target="_blank">htmldoc/ClassIndex.html</a>.</p>
 
           <h3>2. Simulating a Mirror</h3>
-          <p>In this section you will learn how to simulate a mirror. First, let's make a “world” in which all of your optical components are created and simulated. The “world” must be large enough to encapsulate all the optical components. In the example below, you can make a box with a dimension of 200 cm &times; 200 cm &times; 200 cm.</p>
+          <p>In this section you will learn how to simulate a mirror using ROBAST. First, let's make a “world” in which all of your optical components are created and simulated. The “world” must be large enough to encapsulate all the optical components. In the example below, you can make a box with a dimension of 200 cm &times; 200 cm &times; 200 cm.</p>
 
           <pre><code class="language-clike">$ root
 root [0] const double cm = AOpticsManager::cm()
@@ -187,6 +187,12 @@ root [4] manager.SetTopVolume(world)
             <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
             <span class="sr-only">Info:</span>
             The width, height, and depth of a box are given by their half lengths in the TGeoBBox constructor. Please read <a href="https://root.cern.ch/root/html604/TGeoBBox.html" target="_blank">the ROOT reference guide</a> for details.
+          </div>
+
+          <div class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            <span class="sr-only">Info:</span>
+            The length units in the ROOT geometry library are arbitrary, but it assumes that the default unit is centimeter. Thus, <code>AOpticsManager::cm()</code> returns <code>1</code>, and it is strongly recommended to always use <code>AOpticsManager::cm()</code>, <code>AOpticsManager::nm()</code>, and other similar static methods in your simulations.
           </div>
 
           <p>Now your “world” is ready. Let's make a spherical shell mirror with specular surfaces and add it in the “world”. You can draw the 3D model of this mirror in an OpenGL window (use the <code>"ogl"</code> option) as shown in Fig. 3. This mirror has ideal reflectance of 100%.</p>
@@ -239,14 +245,14 @@ root [17] pol-&gt;Draw()</code></pre>
           <div class="alert alert-success" role="alert">
             <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
             <span class="sr-only">Info:</span>
-            The first argument of <code>ARay::Aray</code> is the track ID which is not used in ROBAST, and so any value is OK. The wavelength of this ray is 400 nm, the initial position is (X, Y, Z) = (30 cm, 20 cm, -40 cm), and the direction is (5, -9, -2). The 6th argument is the time when the ray is at the initial position.
+            The first argument of <code>ARay::Aray</code> is the track ID which is not used in ROBAST, and so any value is OK. The wavelength of this ray is 400 nm, the initial position is (X, Y, Z) = (30 cm, 20 cm, -40 cm), and the direction is (5, -9, -2). The 6th argument is the time when the ray starts from the initial position.
           </div>
 
           <p>You cannot see the photon track because the mirror is not transparent (you can change the transparency later). So click the OpenGL view window and press your <kbd>W</kbd> key. The OpenGL view will be changed to the wire frame mode as shown in Fig. 4. Does the photon track look like what you imagined?</p>
 
-          <p>The number of reflections inside the spherical mirror with 100% reflection is ideally infinite. However, <code>AOpticsManager::TraceNonSequential</code> must be suspended at some point. Therefore, this number is limited to 100 by default. You can change this upper limit by calling <code>AOpticsManager::SetLimit</code>.</p>
+          <p>The number of reflections inside the spherical mirror with 100% reflectance is ideally infinite. However, <code>AOpticsManager::TraceNonSequential</code> must be suspended at some point to avoid an infinite loop. Therefore, this number is limited to 100 by default. You can change this upper limit by calling <code>AOpticsManager::SetLimit</code>.</p>
 
-          <p>When an ARay propagation is suspended, its internal status is changed to “suspended.”</p>
+          <p>When an <code>ARay</code> propagation is suspended, its internal status is changed to “suspended.”</p>
           <pre><code class="language-clike">root [17] ray.IsSuspended()
 (const Bool_t)1</code></pre>
 
@@ -292,9 +298,9 @@ root [10] gGeoManager-&gt;GetTopVolume()-&gt;Draw("ogl")</code></pre>
         </div>
 
         <div class="col-md-offset-1 col-md-11 col-sm-12 col-xs-12">
-          <p>We did not worry about the photon wavelength in the mirror simulation example, but the prism has refractive indices for different colors. So now different wavelengths will show you different simulation results. Fig. 6 illustrates the simulated photon tracks of three different colors (400, 500, and 650 nm). You can see that the prism really works as a prism!</p>
+          <p>We did not worry about the photon wavelength in the mirror simulation example, but the prism has refractive indices for different colors. So now different wavelengths will show you different simulation results. Fig. 6 illustrates the simulated photon tracks of three different colors (400, 500, and 650 nm). You can see that your first prism really works as a prism!</p>
 
-<pre><code class="language-clike">root [11] Double_t nm = AOpticsManager::nm()
+<pre><code class="language-clike">root [11] const double nm = AOpticsManager::nm()
 root [12] ARay blue(0, 400*nm, -20*cm, 0*cm, 0*cm, 0, 1, 0, 0)
 root [13] ARay green(0, 500*nm, -20*cm, 0*cm, 0*cm, 0, 1, 0, 0)
 root [14] ARay red(0, 650*nm, -20*cm, 0*cm, 0*cm, 0, 1, 0, 0)
@@ -320,10 +326,10 @@ root [29] polR-&gt;Draw()</code></pre>
             If your simulation result is different from Fig. 6, it is probably due to random Fresnel reflection on the prism boundary surface. You can disable Fresnel reflection by adding <code>manager.DisableFresnelReflection(kTRUE)</code>.
           </div>
 
-      <p>Please note that the non-sequential ray tracing in ROBAST is halted when a ray exits the world. In Fig. 6 the rays propagate from the initial point at left, and they exit the world at the right bottom in the window. You can check the ray status by calling <code>ARay::IsExited()</code>.</p>
+          <p>Please note that the non-sequential ray tracing in ROBAST is halted when a ray exits the world. In Fig. 6 the rays propagate from the initial point at left, and they exit the world at the right bottom in the window. You can check the ray status by calling <code>ARay::IsExited()</code>.</p>
           <pre><code class="language-clike">root [30] blue.IsExited()
 (const Bool_t)1</code></pre>
-
+          
           <h3>4. The ROOT Geometry Library and ROBAST</h3>
 
           <h3>4. Basic Classes</h3>
