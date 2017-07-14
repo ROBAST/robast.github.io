@@ -1,3 +1,4 @@
+// Author: Akira Okumura <mailto:oxon@mac.com>
 /******************************************************************************
  * Copyright (C) 2006-, Akira Okumura                                         *
  * All rights reserved.                                                       *
@@ -5,6 +6,10 @@
 
 #ifndef A_BORDER_SURFACE_CONDITION_H
 #define A_BORDER_SURFACE_CONDITION_H
+
+#include "TObject.h"
+
+class AOpticalComponent;
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -14,12 +19,6 @@
 // G4LogicalBorderSurface + G4OpticalSurface in Geant4.
 //
 ///////////////////////////////////////////////////////////////////////////////
-
-#ifndef ROOT_TObject
-#include "TObject.h"
-#endif
-
-class AOpticalComponent;
 
 class ABorderSurfaceCondition : public TObject {
 private:

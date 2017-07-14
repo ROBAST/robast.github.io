@@ -2,27 +2,28 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!--                                             -->
-<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!-- Author: Akira Okumura (oxon@mac.com)        -->
 <!--                                             -->
-<!--   Date: Mon Oct 12 11:12:50 2015            -->
+<!--   Date: Sat Jul 15 08:46:10 2017            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>ARayShooter</title>
 <meta name="rating" content="General" />
 <meta name="objecttype" content="Manual" />
-<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
-<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<meta name="keywords" content="ROBAST, ROOT-Based Simulator for Ray-Tracing, software, ray tracing, C++, ROOT" />
+<meta name="description" content="ROBAST - ROOT-Based Simulator for Ray-Tracing" />
 <link rel="stylesheet" type="text/css" href="ROOT.css" id="ROOTstyle" />
 <script type="text/javascript" src="ROOT.js"></script>
 </head>
 <body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
-<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<div id="root_header"><img src="http://robast.github.io/img/ROBAST_logo.png" alt="ROBAST logo"/></div>
 <a name="TopOfPage"></a>
 <script type="text/javascript">WriteFollowPageBox('class ARayShooter','libROBAST','ARayShooter.h');</script>
 <div id="toplinks">
 <div class="descrhead"><div class="descrheadcontent">
 <span class="descrtitle">Quick Links:</span>
+<a class="descrheadentry" href="http://robast.github.io/">ROBAST</a>
 <a class="descrheadentry" href="http://root.cern.ch">ROOT Homepage</a>
 <a class="descrheadentry" href="./ClassIndex.html">Class Index</a>
 <a class="descrheadentry" href="./ClassHierarchy.html">Class Hierarchy</a></div>
@@ -53,7 +54,7 @@ return false;}
 </div>
 <div class="location">
 <a class="locationlevel" href="index.html">ROBAST</a>
- &#187; <a class="locationlevel" href="./SRC_Index.html">SRC</a>
+ &#187; <a class="locationlevel" href="./INCLUDE_Index.html">INCLUDE</a>
  &#187; <a class="locationlevel" href="#TopOfPage">ARayShooter</a>
 </div>
 <div class="dropshadow"><div class="withshadow"><h1><a name="ARayShooter:description"></a>class ARayShooter: public TObject</h1>
@@ -67,18 +68,18 @@ Users can change these values using TGeoRotation and TGeoTranslation.
 </p>
 <!-- TDocHtmlDirective end --><pre>
 </pre><div class="tabs">
-<a id="MACRO_ARayShooter_1_can_A0" class="tabsel" href="MACRO_ARayShooter_1_can.gif" onclick="javascript:return SetDiv('MACRO_ARayShooter_1_can',0);">Picture</a>
-<a id="MACRO_ARayShooter_1_can_A1" class="tab" href="#" onclick="javascript:return SetDiv('MACRO_ARayShooter_1_can',1);">Source</a>
+<a id="MACRO_ARayShooter_1_A0" class="tabsel" href="MACRO_ARayShooter_1.gif" onclick="javascript:return SetDiv('MACRO_ARayShooter_1',0);">Picture</a>
+<a id="MACRO_ARayShooter_1_A1" class="tab" href="#" onclick="javascript:return SetDiv('MACRO_ARayShooter_1',1);">Source</a>
 <br /></div><div class="tabcontent">
-<div id="MACRO_ARayShooter_1_can_0" class="tabvisible"><span class="macro"><img class="macro" alt="output of MACRO_ARayShooter_1_can" title="MACRO" src="MACRO_ARayShooter_1_can.gif" /></span></div>
-<div id="MACRO_ARayShooter_1_can_1" class="tabhidden"><div class="listing"><pre class="code">{
+<div id="MACRO_ARayShooter_1_0" class="tabvisible"><span class="macro"><img class="macro" alt="output of htmldoc/MACRO_ARayShooter_1.gif" title="MACRO" src="MACRO_ARayShooter_1.gif" /></span></div>
+<div id="MACRO_ARayShooter_1_1" class="tabhidden"><div class="listing"><pre class="code">{
   <a href="./ListOfTypes.html#Double_t">Double_t</a> nm = <a href="./AOpticsManager.html">AOpticsManager</a>::<a href="./AOpticsManager.html#AOpticsManager:nm" title="Double_t AOpticsManager::nm()">nm</a>();
   <a href="./ListOfTypes.html#Double_t">Double_t</a>  m = <a href="./AOpticsManager.html">AOpticsManager</a>::<a href="./AOpticsManager.html#AOpticsManager:m" title="Double_t AOpticsManager::m()">m</a>();
 
-  <a href="./ARayArray.html">ARayArray</a>* array = <a href="./ARayShooter.html">ARayShooter</a>::<a href="./ARayShooter.html#ARayShooter:Circle" title="ARayArray* ARayShooter::Circle(Double_t lambda,Double_t rmax,Int_t nr,Int_t nphi,TGeoRotation* rot=0,TGeoTranslation* tr=0,TVector3* v=0)">Circle</a>(400*nm, 100*m, 20, 6, 0, 0);
+  <a href="./ARayArray.html">ARayArray</a>* rays = <a href="./ARayShooter.html">ARayShooter</a>::<a href="./ARayShooter.html#ARayShooter:Circle" title="ARayArray* ARayShooter::Circle(Double_t lambda, Double_t rmax, Int_t nr, Int_t nphi, TGeoRotation* rot = 0, TGeoTranslation* tr = 0, TVector3* v = 0)">Circle</a>(400*nm, 100*m, 20, 6, 0, 0);
   TGraph* circle = <span class="keyword">new</span> TGraph;
   circle-&gt;SetTitle(<span class="string">"Circle(400*nm, 100*m, 20, 6, 0, 0);X (m);Y (m)"</span>);
-  TObjArray* running = array-&gt;GetRunning();
+  TObjArray* running = rays-&gt;GetRunning();
 
   <span class="keyword">for</span>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt;= running-&gt;GetLast(); i++){
     <a href="./ARay.html">ARay</a>* ray = (<a href="./ARay.html">ARay</a>*)(*running)[i];
@@ -86,12 +87,12 @@ Users can change these values using TGeoRotation and TGeoTranslation.
     <a href="./ListOfTypes.html#Double_t">Double_t</a> p[4];
     ray-&gt;GetLastPoint(p);
     circle-&gt;SetPoint(i, p[0], p[1]);
-  } <span class="comment">// i</span>
+  } <span class="codecomment">// i</span>
 
-  array = <a href="./ARayShooter.html">ARayShooter</a>::<a href="./ARayShooter.html#ARayShooter:Rectangle" title="ARayArray* ARayShooter::Rectangle(Double_t lambda,Double_t dx,Double_t dy,Int_t nx,Int_t ny,TGeoRotation* rot=0,TGeoTranslation* tr=0,TVector3* v=0)">Rectangle</a>(400*nm, 100*m, 80*m, 20, 10, 0, 0);
+  rays = <a href="./ARayShooter.html">ARayShooter</a>::<a href="./ARayShooter.html#ARayShooter:Rectangle" title="ARayArray* ARayShooter::Rectangle(Double_t lambda, Double_t dx, Double_t dy, Int_t nx, Int_t ny, TGeoRotation* rot = 0, TGeoTranslation* tr = 0, TVector3* v = 0)">Rectangle</a>(400*nm, 100*m, 80*m, 20, 10, 0, 0);
   TGraph* rectangle = <span class="keyword">new</span> TGraph;
   rectangle-&gt;SetTitle(<span class="string">"Rectangle(400*nm, 100*m, 80*m, 20, 10, 0, 0);X (m);Y (m)"</span>);
-  running = array-&gt;GetRunning();
+  running = rays-&gt;GetRunning();
 
   <span class="keyword">for</span>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt;= running-&gt;GetLast(); i++){
     <a href="./ARay.html">ARay</a>* ray = (<a href="./ARay.html">ARay</a>*)(*running)[i];
@@ -99,12 +100,12 @@ Users can change these values using TGeoRotation and TGeoTranslation.
     <a href="./ListOfTypes.html#Double_t">Double_t</a> p[4];
     ray-&gt;GetLastPoint(p);
     rectangle-&gt;SetPoint(i, p[0], p[1]);
-  } <span class="comment">// i</span>
+  } <span class="codecomment">// i</span>
 
-  array = <a href="./ARayShooter.html">ARayShooter</a>::<a href="./ARayShooter.html#ARayShooter:Square" title="ARayArray* ARayShooter::Square(Double_t lambda,Double_t d,Int_t n,TGeoRotation* rot=0,TGeoTranslation* tr=0,TVector3* v=0)">Square</a>(400*nm, 90*m, 30, 0, 0);
+  rays = <a href="./ARayShooter.html">ARayShooter</a>::<a href="./ARayShooter.html#ARayShooter:Square" title="ARayArray* ARayShooter::Square(Double_t lambda, Double_t d, Int_t n, TGeoRotation* rot = 0, TGeoTranslation* tr = 0, TVector3* v = 0)">Square</a>(400*nm, 90*m, 30, 0, 0);
   TGraph* square = <span class="keyword">new</span> TGraph;
   square-&gt;SetTitle(<span class="string">"Square(400*nm, 90*m, 30, 0, 0);X (m);Y (m)"</span>);
-  running = array-&gt;GetRunning();
+  running = rays-&gt;GetRunning();
 
   <span class="keyword">for</span>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt;= running-&gt;GetLast(); i++){
     <a href="./ARay.html">ARay</a>* ray = (<a href="./ARay.html">ARay</a>*)(*running)[i];
@@ -112,15 +113,15 @@ Users can change these values using TGeoRotation and TGeoTranslation.
     <a href="./ListOfTypes.html#Double_t">Double_t</a> p[4];
     ray-&gt;GetLastPoint(p);
     square-&gt;SetPoint(i, p[0], p[1]);
-  } <span class="comment">// i</span>
+  } <span class="codecomment">// i</span>
 
   <a href="./AOpticsManager.html">AOpticsManager</a>* manager = <span class="keyword">new</span> <a href="./AOpticsManager.html">AOpticsManager</a>(<span class="string">"manager"</span>, <span class="string">"manager"</span>);
-  <span class="comment">// Make the world</span>
+  <span class="codecomment">// Make the world</span>
   TGeoBBox* worldbox = <span class="keyword">new</span> TGeoBBox(<span class="string">"worldbox"</span>, 100*m, 100*m, 100*m);
   <a href="./AOpticalComponent.html">AOpticalComponent</a>* world = <span class="keyword">new</span> <a href="./AOpticalComponent.html">AOpticalComponent</a>(<span class="string">"world"</span>, worldbox);
   manager-&gt;SetTopVolume(world);
 
-  <span class="comment">// Top volume</span>
+  <span class="codecomment">// Top volume</span>
   TGeoBBox* topbox = <span class="keyword">new</span> TGeoBBox(<span class="string">"topbox"</span>, 100*m, 100*m, 100*m);
   <a href="./AOpticalComponent.html">AOpticalComponent</a>* top = <span class="keyword">new</span> <a href="./AOpticalComponent.html">AOpticalComponent</a>(<span class="string">"top"</span>, topbox);
 
@@ -130,11 +131,11 @@ Users can change these values using TGeoRotation and TGeoTranslation.
   world-&gt;AddNode(top, 1);
   manager-&gt;CloseGeometry();
 
-  array = <a href="./ARayShooter.html">ARayShooter</a>::<a href="./ARayShooter.html#ARayShooter:RandomCone" title="ARayArray* ARayShooter::RandomCone(Double_t lambda,Double_t r,Double_t d,Int_t n,TGeoRotation* rot=0,TGeoTranslation* tr=0)">RandomCone</a>(400*nm, 45*m, 10*m, 1000, 0);
+  rays = <a href="./ARayShooter.html">ARayShooter</a>::<a href="./ARayShooter.html#ARayShooter:RandomCone" title="ARayArray* ARayShooter::RandomCone(Double_t lambda, Double_t r, Double_t d, Int_t n, TGeoRotation* rot = 0, TGeoTranslation* tr = 0)">RandomCone</a>(400*nm, 45*m, 10*m, 1000, 0);
   TGraph* cone = <span class="keyword">new</span> TGraph;
   cone-&gt;SetTitle(<span class="string">"RandomCone(400*nm, 45*m, 10*m, 1000, 0, 0);X (m);Y (m)"</span>);
-  manager-&gt;TraceNonSequential(*array);
-  running = array-&gt;GetFocused();
+  manager-&gt;TraceNonSequential(*rays);
+  running = rays-&gt;GetFocused();
 
   <span class="keyword">for</span>(<a href="./ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt;= running-&gt;GetLast(); i++){
     <a href="./ARay.html">ARay</a>* ray = (<a href="./ARay.html">ARay</a>*)(*running)[i];
@@ -142,18 +143,18 @@ Users can change these values using TGeoRotation and TGeoTranslation.
     <a href="./ListOfTypes.html#Double_t">Double_t</a> p[4];
     ray-&gt;GetLastPoint(p);
     cone-&gt;SetPoint(i, p[0], p[1]);
-  } <span class="comment">// i</span>
+  } <span class="codecomment">// i</span>
 
   TCanvas* can = <span class="keyword">new</span> TCanvas(<span class="string">"can"</span>, <span class="string">"can"</span>, 400, 1600);
   can-&gt;Divide(1, 4, 1e-10, 1e-10);
   can-&gt;cd(1);
-  circle-&gt;<a href="./#TObject:Draw" title="void TObject::Draw(Option_t* option=&quot;&quot;)">Draw</a>(<span class="string">"ap"</span>);
+  circle-&gt;<a href="./#TObject:Draw" title="void TObject::Draw(Option_t* option = &quot;&quot;)">Draw</a>(<span class="string">"ap"</span>);
   can-&gt;cd(2);
-  rectangle-&gt;<a href="./#TObject:Draw" title="void TObject::Draw(Option_t* option=&quot;&quot;)">Draw</a>(<span class="string">"ap"</span>);
+  rectangle-&gt;<a href="./#TObject:Draw" title="void TObject::Draw(Option_t* option = &quot;&quot;)">Draw</a>(<span class="string">"ap"</span>);
   can-&gt;cd(3);
-  square-&gt;<a href="./#TObject:Draw" title="void TObject::Draw(Option_t* option=&quot;&quot;)">Draw</a>(<span class="string">"ap"</span>);
+  square-&gt;<a href="./#TObject:Draw" title="void TObject::Draw(Option_t* option = &quot;&quot;)">Draw</a>(<span class="string">"ap"</span>);
   can-&gt;cd(4);
-  cone-&gt;<a href="./#TObject:Draw" title="void TObject::Draw(Option_t* option=&quot;&quot;)">Draw</a>(<span class="string">"ap"</span>);
+  cone-&gt;<a href="./#TObject:Draw" title="void TObject::Draw(Option_t* option = &quot;&quot;)">Draw</a>(<span class="string">"ap"</span>);
 
   <span class="keyword">return</span> can;
 }</pre></div></div><div class="clear"></div></div><pre>
@@ -165,11 +166,11 @@ Users can change these values using TGeoRotation and TGeoTranslation.
 <h2><a id="ARayShooter:Function_Members"></a>Function Members (Methods)</h2>
 <div class="access" id="funcpubl"><b>public:</b>
 <table class="func" id="tabfuncpubl" cellspacing="0">
-<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#ARayShooter:ARayShooter">ARayShooter</a>()</td></tr>
-<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#ARayShooter:ARayShooter@1">ARayShooter</a>(<span class="keyword">const</span> <a href="./ARayShooter.html">ARayShooter</a>&amp;)</td></tr>
 <tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#ARayShooter:_ARayShooter">~ARayShooter</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AppendPad"><span class="baseclass">TObject::</span>AppendPad</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#ARayShooter:ARayShooter">ARayShooter</a>()</td></tr>
+<tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#ARayShooter:ARayShooter@1">ARayShooter</a>(<span class="keyword">const</span> <a href="./ARayShooter.html">ARayShooter</a>&amp;)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Browse"><span class="baseclass">TObject::</span>Browse</a>(TBrowser* b)</td></tr>
 <tr class="func"><td class="funcret">static <a href="./ARayArray.html">ARayArray</a>*</td><td class="funcname"><a class="funcname" href="#ARayShooter:Circle">Circle</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> rmax, <a href="./ListOfTypes.html#Int_t">Int_t</a> nr, <a href="./ListOfTypes.html#Int_t">Int_t</a> nphi, TGeoRotation* rot = 0, TGeoTranslation* tr = 0, TVector3* v = 0)</td></tr>
 <tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#ARayShooter:Class">Class</a>()</td></tr>
@@ -217,10 +218,10 @@ Users can change these values using TGeoRotation and TGeoTranslation.
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MayNotUse"><span class="baseclass">TObject::</span>MayNotUse</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Notify"><span class="baseclass">TObject::</span>Notify</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Obsolete"><span class="baseclass">TObject::</span>Obsolete</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* asOfVers, <span class="keyword">const</span> <span class="keyword">char</span>* removedFromVers) <span class="keyword">const</span></td></tr>
-<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr)</td></tr>
-<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete@1"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
-<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete[]"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr)</td></tr>
-<tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete[]@1"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete@1"><span class="baseclass">TObject::</span>operator delete</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete[]"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr)</td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:operator_delete[]@1"><span class="baseclass">TObject::</span>operator delete[]</a>(<span class="keyword">void</span>* ptr, <span class="keyword">void</span>* vp)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new@1"><span class="baseclass">TObject::</span>operator new</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz, <span class="keyword">void</span>* vp)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span>*</td><td class="funcname"><a class="funcname" href="#TObject:operator_new[]"><span class="baseclass">TObject::</span>operator new[]</a>(<a href="./ListOfTypes.html#size_t">size_t</a> sz)</td></tr>
@@ -247,7 +248,7 @@ Users can change these values using TGeoRotation and TGeoTranslation.
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetDtorOnly"><span class="baseclass">TObject::</span>SetDtorOnly</a>(<span class="keyword">void</span>* obj)</td></tr>
 <tr class="funcinh"><td class="funcret">static <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetObjectStat"><span class="baseclass">TObject::</span>SetObjectStat</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> stat)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:SetUniqueID"><span class="baseclass">TObject::</span>SetUniqueID</a>(<a href="./ListOfTypes.html#UInt_t">UInt_t</a> uid)</td></tr>
-<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARayShooter:ShowMembers">ShowMembers</a>(TMemberInspector&amp;)</td></tr>
+<tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARayShooter:ShowMembers">ShowMembers</a>(TMemberInspector&amp; insp) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">static <a href="./ARayArray.html">ARayArray</a>*</td><td class="funcname"><a class="funcname" href="#ARayShooter:Square">Square</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> d, <a href="./ListOfTypes.html#Int_t">Int_t</a> n, TGeoRotation* rot = 0, TGeoTranslation* tr = 0, TVector3* v = 0)</td></tr>
 <tr class="func"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARayShooter:Streamer">Streamer</a>(TBuffer&amp;)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#ARayShooter:StreamerNVirtual">StreamerNVirtual</a>(TBuffer&amp; ClassDef_StreamerNVirtual_b)</td></tr>
@@ -262,7 +263,7 @@ Users can change these values using TGeoRotation and TGeoTranslation.
 </table></div>
 <div class="access" id="funcprot"><b>protected:</b>
 <table class="func" id="tabfuncprot" cellspacing="0">
-<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:DoError"><span class="baseclass">TObject::</span>DoError</a>(<span class="keyword">int</span> level, <span class="keyword">const</span> <span class="keyword">char</span>* location, <span class="keyword">const</span> <span class="keyword">char</span>* fmt, va_list va) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:DoError"><span class="baseclass">TObject::</span>DoError</a>(<span class="keyword">int</span> level, <span class="keyword">const</span> <span class="keyword">char</span>* location, <span class="keyword">const</span> <span class="keyword">char</span>* fmt, <a href="./ListOfTypes.html#va_list">va_list</a> va) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MakeZombie"><span class="baseclass">TObject::</span>MakeZombie</a>()</td></tr>
 
 </table></div>
@@ -270,31 +271,29 @@ Users can change these values using TGeoRotation and TGeoTranslation.
 
 <div id="datamembers">
 <h2><a name="ARayShooter:Data_Members"></a>Data Members</h2>
-<div class="access" id="enumpubl"><b>public:</b>
-<table class="data" id="tabenumpubl" cellspacing="0">
-<tr class="datainh"><td class="datatype">enum <span class="baseclass">TObject::</span>EStatusBits { </td><td class="dataname"><a href="#TObject:kCanDelete">kCanDelete</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kMustCleanup">kMustCleanup</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kObjInCanvas">kObjInCanvas</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kIsReferenced">kIsReferenced</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kHasUUID">kHasUUID</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kCannotPick">kCannotPick</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kNoContextMenu">kNoContextMenu</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kInvalidObject">kInvalidObject</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
-<tr class="datainh"><td class="datatype">enum <span class="baseclass">TObject::</span><i>[unnamed]</i> { </td><td class="dataname"><a href="#TObject:kIsOnHeap">kIsOnHeap</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kNotDeleted">kNotDeleted</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kZombie">kZombie</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kBitMask">kBitMask</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kSingleKey">kSingleKey</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kOverwrite">kOverwrite</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype"></td><td class="dataname"><a href="#TObject:kWriteDelete">kWriteDelete</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype">};</td><td></td><td></td></tr>
+<div class="access" id="datapubl"><b>public:</b>
+<table class="data" id="tabdatapubl" cellspacing="0">
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kBitMask"><span class="baseclass">TObject::</span>kBitMask</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kCanDelete"><span class="baseclass">TObject::</span>kCanDelete</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kCannotPick"><span class="baseclass">TObject::</span>kCannotPick</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kHasUUID"><span class="baseclass">TObject::</span>kHasUUID</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kInvalidObject"><span class="baseclass">TObject::</span>kInvalidObject</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kIsOnHeap"><span class="baseclass">TObject::</span>kIsOnHeap</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kIsReferenced"><span class="baseclass">TObject::</span>kIsReferenced</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kMustCleanup"><span class="baseclass">TObject::</span>kMustCleanup</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kNoContextMenu"><span class="baseclass">TObject::</span>kNoContextMenu</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kNotDeleted"><span class="baseclass">TObject::</span>kNotDeleted</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kObjInCanvas"><span class="baseclass">TObject::</span>kObjInCanvas</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kOverwrite"><span class="baseclass">TObject::</span>kOverwrite</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kSingleKey"><span class="baseclass">TObject::</span>kSingleKey</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kWriteDelete"><span class="baseclass">TObject::</span>kWriteDelete</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kZombie"><span class="baseclass">TObject::</span>kZombie</a></td><td></td></tr>
 
 </table></div>
 </div>
 <h2><a id="ARayShooter:Class_Charts"></a>Class Charts</h2>
 <map name="MapARayShooter_Lib" id="MapARayShooter_Lib">
-<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="471,237,589,285"/>
+<area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="381,44,498,92"/>
 </map>
 <div class="tabs">
 <a id="imgARayShooter_Inh" class="tabsel" href="inh/ARayShooter_Inh.png" onclick="javascript:return SetImg('Charts','inh/ARayShooter_Inh.png');">Inheritance</a>
@@ -346,9 +345,9 @@ Users can change these values using TGeoRotation and TGeoTranslation.
 <br />
 <!--SIGNATURE-->
 <div id="footer">
-<em>&raquo; Author: <a href="http://consult.cern.ch/xwho/people?Akira+Okumura"> Akira Okumura 2007/10/02</a> </em><em>&raquo; Copyright   (C) 2006-, Akira Okumura                                         *</em><br />
-<em>&raquo; Last changed: Mon Oct 12 11:12:51 2015 </em><em>&raquo; Last generated: 2015-10-12 11:12</em><br />
-<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+<em>&raquo; Author: <a href="mailto:oxon@mac.com"> Akira Okumura </a> </em><em>&raquo; Copyright   (C) 2006-, Akira Okumura                                         *</em><br />
+<em>&raquo; Last changed: Sat Jul 15 08:46:11 2017 </em><em>&raquo; Last generated: 2017-07-15 08:46</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROBAST in general please send a mail to <a href="mailto:oxon@mac.com">ROBAST support</a>.</em>
 </div>
 </div>
 </body>

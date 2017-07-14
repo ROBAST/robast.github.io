@@ -2,22 +2,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!--                                             -->
-<!-- Author: ROOT team (rootdev@cern.ch)         -->
+<!-- Author: Akira Okumura (oxon@mac.com)        -->
 <!--                                             -->
-<!--   Date: Mon Oct 12 11:12:34 2015            -->
+<!--   Date: Sat Jul 15 08:46:02 2017            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>ACorsikaIACTEventHeader - source file</title>
 <meta name="rating" content="General" />
 <meta name="objecttype" content="Manual" />
-<meta name="keywords" content="software development, oo, object oriented, unix, x11, windows, c++, html, rene brun, fons rademakers, cern" />
-<meta name="description" content="ROOT - An Object Oriented Framework For Large Scale Data Analysis." />
+<meta name="keywords" content="ROBAST, ROOT-Based Simulator for Ray-Tracing, software, ray tracing, C++, ROOT" />
+<meta name="description" content="ROBAST - ROOT-Based Simulator for Ray-Tracing" />
 <link rel="stylesheet" type="text/css" href="../ROOT.css" id="ROOTstyle" />
 <script type="text/javascript" src="../ROOT.js"></script>
 </head>
 <body  onload="javascript:SetValuesFromCookie();"><div id="body_content">
-<div id="root_header"><img src="http://root.cern.ch/drupal/sites/default/files/rootdrawing-logo.png" alt="ROOT logo"/></div>
+<div id="root_header"><img src="http://robast.github.io/img/ROBAST_logo.png" alt="ROBAST logo"/></div>
 <div id="codeAndLineNumbers"><pre class="listing">
 <span class="cpp">#include &lt;stdlib.h&gt;</span>
 
@@ -27,7 +27,7 @@ ClassImp(<a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>)
 
 <span class="keyword">const</span> <a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:kMaxArrays" title="const Int_t ACorsikaIACTEventHeader::kMaxArrays">kMaxArrays</a> = 20;
 
-<a name="TG5P9C"></a><a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:ACorsikaIACTEventHeader" title="ACorsikaIACTEventHeader ACorsikaIACTEventHeader::ACorsikaIACTEventHeader(Float_t* eventHeader=0) or overloads">ACorsikaIACTEventHeader</a>(<a href="../ListOfTypes.html#Float_t">Float_t</a>* eventHeader)
+<a name="TG5P9C"></a><a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:ACorsikaIACTEventHeader" title="ACorsikaIACTEventHeader ACorsikaIACTEventHeader::ACorsikaIACTEventHeader(Float_t* eventHeader = 0) or overloads">ACorsikaIACTEventHeader</a>(<a href="../ListOfTypes.html#Float_t">Float_t</a>* eventHeader)
 {
   <span class="keyword">if</span>(eventHeader){
     <span class="keyword">for</span>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt; 273; i++){
@@ -42,7 +42,7 @@ ClassImp(<a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>)
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="mi.9vD"></a>TDatime <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetDateOfBeginRun" title="TDatime ACorsikaIACTEventHeader::GetDateOfBeginRun()">GetDateOfBeginRun</a>() <span class="keyword">const</span>
+<a name="mi.9vD"></a>TDatime <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetDateOfBeginRun" title="TDatime ACorsikaIACTEventHeader::GetDateOfBeginRun() const">GetDateOfBeginRun</a>() <span class="keyword">const</span>
 {
   <a href="../ListOfTypes.html#Int_t">Int_t</a> yymmdd = (<a href="../ListOfTypes.html#Int_t">Int_t</a>)<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[44];
   <a href="../ListOfTypes.html#Int_t">Int_t</a> year  = yymmdd/10000; <span class="comment">// Y2K problem may be happened.</span>
@@ -53,7 +53,7 @@ ClassImp(<a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>)
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="mTFSlE"></a><a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetNumberOfRandomCalls" title="Int_t ACorsikaIACTEventHeader::GetNumberOfRandomCalls(Int_t i)">GetNumberOfRandomCalls</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span>
+<a name="mTFSlE"></a><a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetNumberOfRandomCalls" title="Int_t ACorsikaIACTEventHeader::GetNumberOfRandomCalls(Int_t i) const">GetNumberOfRandomCalls</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span>
 {
   <span class="keyword">if</span>(1 &lt;= i and i &lt;= 10){
     <span class="keyword">return</span> (<a href="../ListOfTypes.html#Int_t">Int_t</a>)<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[11 + 3*i] + (<a href="../ListOfTypes.html#Int_t">Int_t</a>)<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[12 + 3*i]*1000000;
@@ -63,7 +63,7 @@ ClassImp(<a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>)
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="ATgEWC"></a><a href="../ListOfTypes.html#Float_t">Float_t</a> <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetHeightOfLevel" title="Float_t ACorsikaIACTEventHeader::GetHeightOfLevel(Int_t i)">GetHeightOfLevel</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span>
+<a name="ATgEWC"></a><a href="../ListOfTypes.html#Float_t">Float_t</a> <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetHeightOfLevel" title="Float_t ACorsikaIACTEventHeader::GetHeightOfLevel(Int_t i) const">GetHeightOfLevel</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span>
 {
   <span class="keyword">if</span>(1 &lt;= i and i &lt;= 10){
     <span class="keyword">return</span> <a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[46 + i];
@@ -73,7 +73,7 @@ ClassImp(<a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>)
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="RdYjnC"></a><a href="../ListOfTypes.html#Float_t">Float_t</a> <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetXCoordinateOfCoreLocationForScatteredEvent" title="Float_t ACorsikaIACTEventHeader::GetXCoordinateOfCoreLocationForScatteredEvent(Int_t i)">GetXCoordinateOfCoreLocationForScatteredEvent</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span>
+<a name="RdYjnC"></a><a href="../ListOfTypes.html#Float_t">Float_t</a> <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetXCoordinateOfCoreLocationForScatteredEvent" title="Float_t ACorsikaIACTEventHeader::GetXCoordinateOfCoreLocationForScatteredEvent(Int_t i) const">GetXCoordinateOfCoreLocationForScatteredEvent</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span>
 {
   <span class="keyword">if</span>(1 &lt;= i and i &lt;= <a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:kMaxArrays" title="const Int_t ACorsikaIACTEventHeader::kMaxArrays">kMaxArrays</a>){
     <span class="keyword">return</span> <a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[97 + i];
@@ -83,7 +83,7 @@ ClassImp(<a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>)
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="FcYjnC"></a><a href="../ListOfTypes.html#Float_t">Float_t</a> <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetYCoordinateOfCoreLocationForScatteredEvent" title="Float_t ACorsikaIACTEventHeader::GetYCoordinateOfCoreLocationForScatteredEvent(Int_t i)">GetYCoordinateOfCoreLocationForScatteredEvent</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span>
+<a name="FcYjnC"></a><a href="../ListOfTypes.html#Float_t">Float_t</a> <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetYCoordinateOfCoreLocationForScatteredEvent" title="Float_t ACorsikaIACTEventHeader::GetYCoordinateOfCoreLocationForScatteredEvent(Int_t i) const">GetYCoordinateOfCoreLocationForScatteredEvent</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span>
 {
   <span class="keyword">if</span>(1 &lt;= i and i &lt;= <a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:kMaxArrays" title="const Int_t ACorsikaIACTEventHeader::kMaxArrays">kMaxArrays</a>){
     <span class="keyword">return</span> <a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fEventHeader" title="Float_t ACorsikaIACTEventHeader::fEventHeader">fEventHeader</a>[117 + i];
@@ -93,7 +93,7 @@ ClassImp(<a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>)
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="V2R7qE"></a><a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetXOffset" title="Double_t ACorsikaIACTEventHeader::GetXOffset(Int_t i)">GetXOffset</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span>
+<a name="V2R7qE"></a><a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetXOffset" title="Double_t ACorsikaIACTEventHeader::GetXOffset(Int_t i) const">GetXOffset</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span>
 {
   <span class="keyword">if</span>(1 &lt;= i and i &lt;= <a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:kMaxArrays" title="const Int_t ACorsikaIACTEventHeader::kMaxArrays">kMaxArrays</a>){
     <span class="keyword">return</span> <a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fXOffset" title="Double_t ACorsikaIACTEventHeader::fXOffset">fXOffset</a>[i - 1];
@@ -103,7 +103,7 @@ ClassImp(<a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>)
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="X2R7qE"></a><a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetYOffset" title="Double_t ACorsikaIACTEventHeader::GetYOffset(Int_t i)">GetYOffset</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span>
+<a name="X2R7qE"></a><a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetYOffset" title="Double_t ACorsikaIACTEventHeader::GetYOffset(Int_t i) const">GetYOffset</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span>
 {
   <span class="keyword">if</span>(1 &lt;= i and i &lt;= <a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:kMaxArrays" title="const Int_t ACorsikaIACTEventHeader::kMaxArrays">kMaxArrays</a>){
     <span class="keyword">return</span> <a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fYOffset" title="Double_t ACorsikaIACTEventHeader::fYOffset">fYOffset</a>[i - 1];
@@ -113,7 +113,7 @@ ClassImp(<a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>)
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="KLXX9D"></a><span class="keyword">void</span> <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:SetMultipleUseHeader" title="void ACorsikaIACTEventHeader::SetMultipleUseHeader(Int_t numberOfArrays,Double_t timeOffset,Double_t* xOffset,Double_t* yOffset)">SetMultipleUseHeader</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> numberOfArrays, <a href="../ListOfTypes.html#Double_t">Double_t</a> timeOffset, <a href="../ListOfTypes.html#Double_t">Double_t</a>* xOffset, <a href="../ListOfTypes.html#Double_t">Double_t</a>* yOffset)
+<a name="KLXX9D"></a><span class="keyword">void</span> <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>::<a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:SetMultipleUseHeader" title="void ACorsikaIACTEventHeader::SetMultipleUseHeader(Int_t numberOfArrays, Double_t timeOffset, Double_t* xOffset, Double_t* yOffset)">SetMultipleUseHeader</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> numberOfArrays, <a href="../ListOfTypes.html#Double_t">Double_t</a> timeOffset, <a href="../ListOfTypes.html#Double_t">Double_t</a>* xOffset, <a href="../ListOfTypes.html#Double_t">Double_t</a>* yOffset)
 {
   <a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fNumberOfArrays" title="Int_t ACorsikaIACTEventHeader::fNumberOfArrays">fNumberOfArrays</a> = numberOfArrays;
   <a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:fTimeOffset" title="Double_t ACorsikaIACTEventHeader::fTimeOffset">fTimeOffset</a> = timeOffset;
@@ -131,8 +131,8 @@ ClassImp(<a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2015-10-12 11:12 </em><em>&raquo; Last generated: 2015-10-12 11:12</em><br />
-<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROOT in general please send a mail to <a href="mailto:rootdev@cern.ch">ROOT support</a>.</em>
+<em>&raquo; Last changed: 2017-07-15 08:46 </em><em>&raquo; Last generated: 2017-07-15 08:46</em><br />
+<em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROBAST in general please send a mail to <a href="mailto:oxon@mac.com">ROBAST support</a>.</em>
 </div>
 </div>
 </body>

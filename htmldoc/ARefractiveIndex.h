@@ -1,6 +1,4 @@
-// $Id: ARefractiveIndex.h 3 2010-11-26 17:17:31Z oxon $
-// Author: Akira Okumura 2007/09/24
-
+// Author: Akira Okumura <mailto:oxon@mac.com>
 /******************************************************************************
  * Copyright (C) 2006-, Akira Okumura                                         *
  * All rights reserved.                                                       *
@@ -9,6 +7,8 @@
 #ifndef A_REFRACTIVE_INDEX_H
 #define A_REFRACTIVE_INDEX_H
 
+#include "TObject.h"
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 // ARefractiveIndex
@@ -16,10 +16,6 @@
 // Abstract class for refractive index
 //
 ///////////////////////////////////////////////////////////////////////////////
-
-#ifndef ROOT_TObject
-#include "TObject.h"
-#endif
 
 class ARefractiveIndex : public TObject {
  private:

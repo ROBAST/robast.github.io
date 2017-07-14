@@ -62,12 +62,11 @@ h3 {
   margin-top: 1em;
   font-size: 75%;
   line-height: 110%;
-  border: 1px solid #CCCCCC;
-  padding: 0.7em;
-  /*text-align: center;*/
+  border-top: 1px solid #CCCCCC;
+  padding: 0.3em;
 }
 #footer em {
-  padding: 1em;
+  display: block;
   font-style: normal;
 }
 
@@ -156,8 +155,9 @@ div.clear {
 
 /* links on top of page */
 #root_header {
-   background: #336299 url(http://root.cern.ch/drupal/sites/all/themes/newsflash/images/blue/root-banner.png) no-repeat scroll 0 0;
+  background: #336299 url(http://root.cern.ch/drupal/sites/default/files/images/root6-banner.jpg) no-repeat scroll 0 0;
   margin:0px -13px;
+  height:148px;
 }
 #root_header img {
   margin: 10px;
@@ -170,6 +170,7 @@ div.clear {
    color: #FFFFFF;
    margin: 1px -13px 3px -13px;
    background-color: #2E4A6B;
+   padding-bottom: 5px;
 }
 div.descrhead {
    text-align:right;
@@ -217,7 +218,7 @@ div.location {
    margin-bottom: 0.5em;
    padding-bottom: 0.5em;
    padding-top: 3px;
-   font-size: 80%;   
+   font-size: 80%;
 }
 
 /* convert */
@@ -462,7 +463,7 @@ div.access {
 
 table.func, table.data /* but not table.data! */ {
    width: 100%;
-} 
+}
 tr.func, tr.data {
    white-space: nowrap;
 }
@@ -654,10 +655,10 @@ img.latex {
 }
 
 /* Source pages */
-span.comment, span.keyword, span.cpp, span.string {
+span.comment, span.codecomment, span.keyword, span.cpp, span.string {
    font-weight: normal;
 }
-span.comment {
+span.codecomment, span.comment {
    background-color: #eeeeee;
    color: Green;
 }

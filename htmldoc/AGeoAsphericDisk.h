@@ -1,10 +1,19 @@
-// $Id$
-// Author: Akira Okumura 2007/09/24
-
+// Author: Akira Okumura <mailto:oxon@mac.com>
 /******************************************************************************
  * Copyright (C) 2006-, Akira Okumura                                         *
  * All rights reserved.                                                       *
  *****************************************************************************/
+
+#ifndef A_GEO_ASPHERIC_DISK_H
+#define A_GEO_ASPHERIC_DISK_H
+
+#include "TGeoBBox.h"
+
+#if ROOT_VERSION_CODE >= ROOT_VERSION(5,34,10)
+#define CONST53410 const
+#else
+#define CONST53410
+#endif
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -13,19 +22,6 @@
 // Geometry class for tubes which have two aspheric surface
 //
 ///////////////////////////////////////////////////////////////////////////////
-
-#ifndef A_GEO_ASPHERIC_DISK_H
-#define A_GEO_ASPHERIC_DISK_H
-
-#ifndef ROOT_TGeoBBox
-#include "TGeoBBox.h"
-#endif
-
-#if ROOT_VERSION_CODE >= ROOT_VERSION(5,34,10)
-#define CONST53410 const
-#else
-#define CONST53410
-#endif
 
 class AGeoAsphericDisk : public TGeoBBox {
 protected:

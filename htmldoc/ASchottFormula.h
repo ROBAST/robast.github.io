@@ -1,6 +1,4 @@
-// $Id: ASchottFormula.h 7 2010-11-28 01:42:20Z oxon $
-// Author: Akira Okumura 2007/09/24
-
+// Author: Akira Okumura <mailto:oxon@mac.com>
 /******************************************************************************
  * Copyright (C) 2006-, Akira Okumura                                         *
  * All rights reserved.                                                       *
@@ -8,6 +6,8 @@
 
 #ifndef A_SCHOTT_FORMULA_H
 #define A_SCHOTT_FORMULA_H
+
+#include "ARefractiveIndex.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -17,10 +17,6 @@
 // this formula in its catalog any more. Sellmeier's formula is used instead.
 //
 ///////////////////////////////////////////////////////////////////////////////
-
-#ifndef A_REFRACTIVE_INDEX_H
-#include "ARefractiveIndex.h"
-#endif
 
 class ASchottFormula : public ARefractiveIndex {
  private:

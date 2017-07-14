@@ -28,8 +28,8 @@
  *
  *  @author  Konrad Bernloehr 
  *  @date    1997 to 2010
- *  @date    @verbatim CVS $Date: 2013/02/26 16:23:19 $ @endverbatim
- *  @version @verbatim CVS $Revision: 1.14 $ @endverbatim
+ *  @date    @verbatim CVS $Date: 2014/02/20 10:53:06 $ @endverbatim
+ *  @version @verbatim CVS $Revision: 1.15 $ @endverbatim
  */
 /* ========================================================= */
 
@@ -48,9 +48,9 @@ extern "C" {
 /* Data types: */
 
 #ifdef DOUBLEPREC
-typedef double real;
+typedef double bernlohr_real;
 #else
-typedef float real;
+typedef float bernlohr_real;
 #endif
 
 typedef short INT16;
@@ -151,7 +151,7 @@ struct shower_extra_parameters
    int *iparam;   /**< Space for extra integer parameters, at least of size
                        niparam. */
    size_t nfparam;/**< Number of extra floating-point parameters. */
-   int *fparam;   /**< Space for extra floats, at least of size nfparam. */ 
+   float *fparam;   /**< Space for extra floats, at least of size nfparam. */ 
 };
 
 /* I/O item types: */
@@ -179,8 +179,8 @@ struct shower_extra_parameters
 
 /* io_telescope.c */
 int write_tel_block (IO_BUFFER *iobuf, int type, int num,
-      real *data, int len);
-int read_tel_block (IO_BUFFER *iobuf, int type, real *data,
+      bernlohr_real *data, int len);
+int read_tel_block (IO_BUFFER *iobuf, int type, bernlohr_real *data,
       int maxlen);
 int print_tel_block (IO_BUFFER *iobuf);
 

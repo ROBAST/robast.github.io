@@ -1,6 +1,4 @@
-// $Id: ALens.h 3 2010-11-26 17:17:31Z oxon $
-// Author: Akira Okumura 2007/09/24
-
+// Author: Akira Okumura <mailto:oxon@mac.com>
 /******************************************************************************
  * Copyright (C) 2006-, Akira Okumura                                         *
  * All rights reserved.                                                       *
@@ -9,6 +7,11 @@
 #ifndef A_LENS_H
 #define A_LENS_H
 
+#include "TGraph.h"
+
+#include "AOpticalComponent.h"
+#include "ARefractiveIndex.h"
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 // ALens
@@ -16,15 +19,6 @@
 // Lens class
 //
 ///////////////////////////////////////////////////////////////////////////////
-
-#include "TGraph.h"
-
-#ifndef A_OPTICAL_COMPONENT_H
-#include "AOpticalComponent.h"
-#endif
-#ifndef A_REFRACTIVE_INDEX_H
-#include "ARefractiveIndex.h"
-#endif
 
 class ALens : public AOpticalComponent {
  private:

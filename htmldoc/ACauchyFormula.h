@@ -1,6 +1,4 @@
-// $Id: ACauchyFormula.h 5 2010-11-26 17:30:46Z oxon $
-// Author: Akira Okumura 2007/09/24
-
+// Author: Akira Okumura <mailto:oxon@mac.com>
 /******************************************************************************
  * Copyright (C) 2006-, Akira Okumura                                         *
  * All rights reserved.                                                       *
@@ -8,6 +6,8 @@
 
 #ifndef A_CAUCHY_FORMULA_H
 #define A_CAUCHY_FORMULA_H
+
+#include "ARefractiveIndex.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -17,10 +17,6 @@
 // See http://en.wikipedia.org/wiki/Cauchy's_equation
 //
 ///////////////////////////////////////////////////////////////////////////////
-
-#ifndef A_REFRACTIVE_INDEX_H
-#include "ARefractiveIndex.h"
-#endif
 
 class ACauchyFormula : public ARefractiveIndex {
  private:

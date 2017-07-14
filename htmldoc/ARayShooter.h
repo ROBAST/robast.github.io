@@ -1,6 +1,4 @@
-// $Id: ARayShooter.h 3 2010-11-26 17:17:31Z oxon $
-// Author: Akira Okumura 2007/10/02
-
+// Author: Akira Okumura <mailto:oxon@mac.com>
 /******************************************************************************
  * Copyright (C) 2006-, Akira Okumura                                         *
  * All rights reserved.                                                       *
@@ -9,6 +7,12 @@
 #ifndef A_RAY_SHOOTER_H
 #define A_RAY_SHOOTER_H
 
+#include "TGeoMatrix.h"
+#include "TMath.h"
+#include "TVector3.h"
+
+#include "ARayArray.h"
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 // ARayShooter
@@ -16,20 +20,6 @@
 // Ray shooter
 //
 ///////////////////////////////////////////////////////////////////////////////
-
-#ifndef ROOT_TGeoMatrix
-#include "TGeoMatrix.h"
-#endif
-#ifndef ROOT_TMath
-#include "TMath.h"
-#endif
-#ifndef ROOT_TVector3
-#include "TVector3.h"
-#endif
-
-#ifndef A_RAY_ARRAY_H
-#include "ARayArray.h"
-#endif
 
 class ARayShooter : public TObject {
  private:

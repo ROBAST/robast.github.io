@@ -1,10 +1,19 @@
-// $Id: AGeoWinstonCone2D.h 10 2010-11-28 06:35:46Z oxon $
-// Author: Akira Okumura 2011/03/05
-
+// Author: Akira Okumura <mailto:oxon@mac.com>
 /******************************************************************************
  * Copyright (C) 2006-, Akira Okumura                                         *
  * All rights reserved.                                                       *
  *****************************************************************************/
+
+#ifndef A_GEO_WINSTON_CONE_2D_H
+#define A_GEO_WINSTON_CONE_2D_H
+
+#include "TGeoBBox.h"
+
+#if ROOT_VERSION_CODE >= ROOT_VERSION(5,34,10)
+#define CONST53410 const
+#else
+#define CONST53410
+#endif
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -15,19 +24,6 @@
 // Roland Winston (1970) J. Opt. Soc.Amer. 60, 245-247
 //
 ///////////////////////////////////////////////////////////////////////////////
-
-#ifndef A_GEO_WINSTON_CONE_2D_H
-#define A_GEO_WINSTON_CONE_2D_H
-
-#ifndef ROOT_TGeoBBox
-#include "TGeoBBox.h"
-#endif
-
-#if ROOT_VERSION_CODE >= ROOT_VERSION(5,34,10)
-#define CONST53410 const
-#else
-#define CONST53410
-#endif
 
 class AGeoWinstonCone2D : public TGeoBBox {
 protected:

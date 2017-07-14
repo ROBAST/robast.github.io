@@ -1,6 +1,4 @@
-// $Id: ARayArray.h 3 2010-11-26 17:17:31Z oxon $
-// Author: Akira Okumura 2007/10/02
-
+// Author: Akira Okumura <mailto:oxon@mac.com>
 /******************************************************************************
  * Copyright (C) 2006-, Akira Okumura                                         *
  * All rights reserved.                                                       *
@@ -9,6 +7,10 @@
 #ifndef A_RAY_ARRAY_H
 #define A_RAY_ARRAY_H
 
+#include "TObjArray.h"
+
+#include "ARay.h"
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 // ARayArray
@@ -16,13 +18,6 @@
 // Array of ARay
 //
 ///////////////////////////////////////////////////////////////////////////////
-
-#ifndef A_RAY_H
-#include "ARay.h"
-#endif
-#ifndef ROOT_TObjArray
-#include "TObjArray.h"
-#endif
 
 class ARayArray : public TObject {
  private:
