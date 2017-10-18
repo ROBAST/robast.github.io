@@ -54,7 +54,7 @@
             <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
               <li><a href="download.html">Download</a></li>
-              <li><a href="support.html">Support & FAQ</a></li>
+              <li><a href="support.html">Support &amp; FAQ</a></li>
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -104,16 +104,16 @@ $ make</code></pre>
           <p>If you use tcsh, the following line must be added to <code>$HOME/.tcshrc</code> instead.</p>
           <pre><code class="language-bash">setenv LD_LIBRARY_PATH YOUR_ROBAST_DIRECTORY:{$LD_LIBRARY_PATH}</code></pre>
 
-          <p>In addition, you must add the ROBAST include directory to the ROOT search path. Add the following line to your existing <code>$HOME/.rootlogon.C</code>
-
-            <pre><code class="language-clike">gInterpreter-&gt;AddIncludePath("YOUR_ROBAST_DIRECTORY/include");</code></pre>
-
-	    or create a new one with the following lines.
+          <p>In addition, you must add the ROBAST include directory to the ROOT search path. Add the following line to your existing <code>$HOME/.rootlogon.C</code></p>
+          
+          <pre><code class="language-clike">gInterpreter-&gt;AddIncludePath("YOUR_ROBAST_DIRECTORY/include");</code></pre>
+          
+	  <p>or create a new one with the following lines.</p>
 	    
-            <pre><code class="language-clike">{
+          <pre><code class="language-clike">{
   gInterpreter-&gt;AddIncludePath("YOUR_ROBAST_DIRECTORY/include");
 }</code></pre>
-</p>
+
           <p>If you also want to use ROBAST via PyROOT, please do not forget setting <code>PYTHONPATH</code> to the directory where <code>ROOT.py</code> exists.</p>
 
           <pre><code class="language-bash">export PYTHONPATH=$ROOTSYS/lib:$PYTHONPATH</code></pre>
