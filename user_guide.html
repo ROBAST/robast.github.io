@@ -86,15 +86,15 @@ root [0] .x geomAlice.C</code></pre>
 
           <p>Clone the ROBAST Git repository on your machine, and run <code>make</code>.</p>
           
-          <pre><code class="language-bash">$ git clone --branch v2.4.4 https://github.com/ROBAST/ROBAST.git ROBAST-2.4.4
-$ cd ROBAST-2.4.4
+          <pre><code class="language-bash">$ git clone --branch v2.5.0 https://github.com/ROBAST/ROBAST.git ROBAST-2.5.0
+$ cd ROBAST-2.5.0
 $ make</code></pre>
 
             <p>You can also download a .tar.gz or .zip file for each release tag from the <a href="download.html">download page</a>.</p>
 
-            <pre><code class="language-bash">$ curl -L -O https://github.com/ROBAST/ROBAST/archive/v2.4.4.tar.gz
-$ tar zxvf v2.4.4.tar.gz
-$ cd ROBAST-2.4.4
+            <pre><code class="language-bash">$ curl -L -O https://github.com/ROBAST/ROBAST/archive/v2.5.0.tar.gz
+$ tar zxvf v2.5.0.tar.gz
+$ cd ROBAST-2.5.0
 $ make</code></pre>
 
           <p>If you use bash or zsh, add the following line in your <code>$HOME/.bashrc</code>, <code>$HOME/.zshrc</code>, or any equivalent (don't forget to replace<code>YOUR_ROBAST_DIRECTORY</code> with your actual ROBAST path!).</p>
@@ -117,7 +117,7 @@ $ make</code></pre>
           <h2 class="h4">1.3 Testing ROBAST</h2>
           <p>OK. Let's try a ROBAST tutorial to see how ROBAST works.</p>
 
-          <pre><code class="language-bash">$ cd ROBAST-2.4.4/tutorials
+          <pre><code class="language-bash">$ cd ROBAST-2.5.0/tutorials
 $ root
 root [0] .x HESS1.C+</code></pre>
           <p>You will get an OpenGL view of the H.E.S.S. I optical system (Davies–Cotton) and spot diagrams for various field angles.</p>
@@ -150,7 +150,7 @@ root [0] .x HESS1.C+</code></pre>
 
           <p>There is a short unit test program in the tutorial directory. As it uses the <code>unittest</code> package of Python, please properly set your <code>PYTHONPATH</code> (see Section 1.2).</p>
 
-          <pre><code class="language-bash">$ cd ROBAST-2.4.4/tutorials
+          <pre><code class="language-bash">$ cd ROBAST-2.5.0/tutorials
 $ python unittest_robast.py
 (snip)
 ----------------------------------------------------------------------
