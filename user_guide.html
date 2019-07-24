@@ -199,7 +199,7 @@ root [4] manager.SetTopVolume(world)
 
           <p>Now your “world” is ready. Let's make a spherical shell mirror with specular surfaces and add it in the “world”. You can draw the 3D model of this mirror in an OpenGL window (use the <code>"ogl"</code> option) as shown in Fig. 3. This mirror has ideal reflectance of 100%.</p>
 
-          <pre><code class="language-clike">root [5] TGeoSphere sphere(49*cm, 50*cm)
+          <pre><code class="language-clike">root [5] TGeoSphere sphere(99*cm, 100*cm)
 root [6] AMirror* mirror = new AMirror("mirror", &amp;sphere)
 root [7] world-&gt;AddNode(mirror, 1)
 root [8] manager.CloseGeometry()
