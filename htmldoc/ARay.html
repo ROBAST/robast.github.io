@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: Akira Okumura (oxon@mac.com)        -->
 <!--                                             -->
-<!--   Date: Sat Jul 15 08:46:10 2017            -->
+<!--   Date: Tue Jan  7 14:48:07 2020            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -86,6 +86,7 @@ return false;}
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#ARay:ARay@2">ARay</a>(<span class="keyword">const</span> <a href="./ARay.html">ARay</a>&amp;)</td></tr>
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#ARay:ARay@1">ARay</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> id, <a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> x, <a href="./ListOfTypes.html#Double_t">Double_t</a> y, <a href="./ListOfTypes.html#Double_t">Double_t</a> z, <a href="./ListOfTypes.html#Double_t">Double_t</a> t, <a href="./ListOfTypes.html#Double_t">Double_t</a> dx, <a href="./ListOfTypes.html#Double_t">Double_t</a> dy, <a href="./ListOfTypes.html#Double_t">Double_t</a> dz)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoTrack:Browse"><span class="baseclass">TGeoTrack::</span>Browse</a>(TBrowser* b)</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="#TObject:CheckedHash"><span class="baseclass">TObject::</span>CheckedHash</a>()</td></tr>
 <tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#ARay:Class">Class</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Clear"><span class="baseclass">TObject::</span>Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* = <span class="string">""</span>)</td></tr>
@@ -147,6 +148,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetUniqueID"><span class="baseclass">TObject::</span>GetUniqueID</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:HandleTimer"><span class="baseclass">TObject::</span>HandleTimer</a>(TTimer* timer)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Hash"><span class="baseclass">TObject::</span>Hash</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:HasInconsistentHash"><span class="baseclass">TObject::</span>HasInconsistentHash</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TVirtualGeoTrack:HasPoints"><span class="baseclass">TVirtualGeoTrack::</span>HasPoints</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Info"><span class="baseclass">TObject::</span>Info</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> <span class="keyword">char</span>* classname) <span class="keyword">const</span></td></tr>
@@ -178,6 +180,7 @@ return false;}
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoAtt:IsVisTouched"><span class="baseclass">TGeoAtt::</span>IsVisTouched</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:IsZombie"><span class="baseclass">TObject::</span>IsZombie</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:ls"><span class="baseclass">TObject::</span>ls</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span></td></tr>
+<tr class="func"><td class="funcret">TColor*</td><td class="funcname"><a class="funcname" href="#ARay:MakeColor">MakeColor</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">TPolyLine3D*</td><td class="funcname"><a class="funcname" href="#ARay:MakePolyLine3D">MakePolyLine3D</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MayNotUse"><span class="baseclass">TObject::</span>MayNotUse</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TAttLine:Modify"><span class="baseclass">TAttLine::</span>Modify</a>()</td></tr>
@@ -273,6 +276,11 @@ return false;}
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MakeZombie"><span class="baseclass">TObject::</span>MakeZombie</a>()</td></tr>
 
 </table></div>
+<div class="access" id="funcpriv"><b>private:</b>
+<table class="func" id="tabfuncpriv" cellspacing="0">
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#ARay:CheckTObjectHashConsistency">CheckTObjectHashConsistency</a>() <span class="keyword">const</span></td></tr>
+
+</table></div>
 </div>
 
 <div id="datamembers">
@@ -293,13 +301,14 @@ return false;}
 <tr class="datainh"><td class="datatype">static <a href="./#TGeoTrack:TGeoTrack" title="TGeoTrack TGeoTrack::TGeoTrack(const TGeoTrack&amp;) or overloads">TGeoTrack</a>::EGeoParticleActions</td><td class="dataname"><a href="#TGeoTrack:kGeoPOnelevel"><span class="baseclass">TGeoTrack::</span>kGeoPOnelevel</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TGeoTrack:TGeoTrack" title="TGeoTrack TGeoTrack::TGeoTrack(const TGeoTrack&amp;) or overloads">TGeoTrack</a>::EGeoParticleActions</td><td class="dataname"><a href="#TGeoTrack:kGeoPType"><span class="baseclass">TGeoTrack::</span>kGeoPType</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kHasUUID"><span class="baseclass">TObject::</span>kHasUUID</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kInconsistent"><span class="baseclass">TObject::</span>kInconsistent</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kInvalidObject"><span class="baseclass">TObject::</span>kInvalidObject</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kIsOnHeap"><span class="baseclass">TObject::</span>kIsOnHeap</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kIsReferenced"><span class="baseclass">TObject::</span>kIsReferenced</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kMustCleanup"><span class="baseclass">TObject::</span>kMustCleanup</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kNoContextMenu"><span class="baseclass">TObject::</span>kNoContextMenu</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kNotDeleted"><span class="baseclass">TObject::</span>kNotDeleted</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kObjInCanvas"><span class="baseclass">TObject::</span>kObjInCanvas</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EDeprecatedStatusBits</td><td class="dataname"><a href="#TObject:kObjInCanvas"><span class="baseclass">TObject::</span>kObjInCanvas</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kOverwrite"><span class="baseclass">TObject::</span>kOverwrite</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TGeoAtt:TGeoAtt" title="TGeoAtt TGeoAtt::TGeoAtt() or overloads">TGeoAtt</a>::EGeoSavePrimitiveAtt</td><td class="dataname"><a href="#TGeoAtt:kSaveNodesAtt"><span class="baseclass">TGeoAtt::</span>kSaveNodesAtt</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TGeoAtt:TGeoAtt" title="TGeoAtt TGeoAtt::TGeoAtt() or overloads">TGeoAtt</a>::EGeoSavePrimitiveAtt</td><td class="dataname"><a href="#TGeoAtt:kSavePrimitiveAtt"><span class="baseclass">TGeoAtt::</span>kSavePrimitiveAtt</a></td><td></td></tr>
@@ -366,7 +375,7 @@ return false;}
 </div><div class="classcharts"><div class="classchartswidth"></div>
 <img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapARay_Inh" src="inh/ARay_Inh.png"/></div>
 <h2>Function documentation</h2>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ARay:ARay" href="src/ARay.cxx.html#ahJ7YE">ARay</a>()</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ARay:ARay" href="src/ARay.cxx.html#zRuknC">ARay</a>()</span><br />
 <div class="funccomm"><pre> Default constructor
 </pre></div>
 </div>
@@ -374,84 +383,92 @@ return false;}
 <div class="funccomm"><pre> Constructor
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ARay:_ARay" href="src/ARay.cxx.html#lhd8zB">~ARay</a>()</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ARay:_ARay" href="src/ARay.cxx.html#xSMnq">~ARay</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{}</code></div>
+<div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname">TGeoNode* <a class="funcname" name="ARay:FindNodeStartWith" href="src/ARay.cxx.html#yqBEQC">FindNodeStartWith</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) const</span><br />
+<div class="funcdoc"><span class="funcname">TGeoNode* <a class="funcname" name="ARay:FindNodeStartWith" href="src/ARay.cxx.html#tqRlQC">FindNodeStartWith</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) const</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ARay:FindNodeNumberStartWith" href="src/ARay.cxx.html#w4qcLE">FindNodeNumberStartWith</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="ARay:FindNodeNumberStartWith" href="src/ARay.cxx.html#MeXy0">FindNodeNumberStartWith</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) const</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:GetDirection" href="src/ARay.cxx.html#A1uisC">GetDirection</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* d) const</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:GetDirection" href="src/ARay.cxx.html#Pfj5kD">GetDirection</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* d) const</span><br />
+
+<div class="code"><code class="inlinecode">{ <a href="./ARay.html#ARay:fDirection" title="TVector3 ARay::fDirection">fDirection</a>.GetXYZ(v); }</code></div>
+<div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:GetLastPoint" href="src/ARay.cxx.html#Ggy_bD">GetLastPoint</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* x) const</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:GetLastPoint" href="src/ARay.cxx.html#FbaX5D">GetLastPoint</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* x) const</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsAbsorbed" href="src/ARay.cxx.html#doawPB">IsAbsorbed</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsAbsorbed" href="src/ARay.cxx.html#TlxIh">IsAbsorbed</a>() const</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsExited" href="src/ARay.cxx.html#ic8KVC">IsExited</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsExited" href="src/ARay.cxx.html#V6IRVC">IsExited</a>() const</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsFocused" href="src/ARay.cxx.html#ZbVvtB">IsFocused</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsFocused" href="src/ARay.cxx.html#SgN5p">IsFocused</a>() const</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsRunning" href="src/ARay.cxx.html#UlwRTE">IsRunning</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsRunning" href="src/ARay.cxx.html#XqegKD">IsRunning</a>() const</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsStopped" href="src/ARay.cxx.html#rn7oSE">IsStopped</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsStopped" href="src/ARay.cxx.html#MFx3JD">IsStopped</a>() const</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsSuspended" href="src/ARay.cxx.html#YIF2FB">IsSuspended</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="ARay:IsSuspended" href="src/ARay.cxx.html#IREgd">IsSuspended</a>() const</span><br />
 </div>
-<div class="funcdoc"><span class="funcname">TPolyLine3D* <a class="funcname" name="ARay:MakePolyLine3D" href="src/ARay.cxx.html#f08Ii">MakePolyLine3D</a>() const</span><br />
+<div class="funcdoc"><span class="funcname">TColor* <a class="funcname" name="ARay:MakeColor" href="src/ARay.cxx.html#gT2JOD">MakeColor</a>() const</span><br />
+<div class="funccomm"><pre> The origianl code in FORTRAN was written by Dan Bruton
+ See http://www.physics.sfasu.edu/astro/color/spectra.html
+</pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:SetDirection@1" href="src/ARay.cxx.html#le1UgE">SetDirection</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* d)</span><br />
+<div class="funcdoc"><span class="funcname">TPolyLine3D* <a class="funcname" name="ARay:MakePolyLine3D" href="src/ARay.cxx.html#oW69g">MakePolyLine3D</a>() const</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:SetDirection" href="src/ARay.cxx.html#rhFzfC">SetDirection</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> dx, <a href="./ListOfTypes.html#Double_t">Double_t</a> dy, <a href="./ListOfTypes.html#Double_t">Double_t</a> dz)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:SetDirection@1" href="src/ARay.cxx.html#iNZOZB">SetDirection</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* d)</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:SetDirection" href="src/ARay.cxx.html#UWQW0E">SetDirection</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> dx, <a href="./ListOfTypes.html#Double_t">Double_t</a> dy, <a href="./ListOfTypes.html#Double_t">Double_t</a> dz)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="ARay:ARay" href="src/ARay.h.html#MKnK2">ARay</a>()</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:Absorb" href="src/ARay.h.html#moa4iD">Absorb</a>()</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:Absorb" href="src/ARay.h.html#l1_AXC">Absorb</a>()</span><br />
 
-<div class="code"><code class="inlinecode">{<a href="./ARay.html#ARay:fStatus" title="Int_t ARay::fStatus">fStatus</a> = <a href="./ARay.html#ARay:kAbsorb" title="ARay::(anonymous) ARay::kAbsorb">kAbsorb</a>;}</code></div>
+<div class="code"><code class="inlinecode">{ <a href="./ARay.html#ARay:fStatus" title="Int_t ARay::fStatus">fStatus</a> = <a href="./ARay.html#ARay:kAbsorb" title="ARay::(anonymous) ARay::kAbsorb">kAbsorb</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:Exit" href="src/ARay.h.html#zZHu4">Exit</a>()</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:Exit" href="src/ARay.h.html#aEG8PB">Exit</a>()</span><br />
 
-<div class="code"><code class="inlinecode">{<a href="./ARay.html#ARay:fStatus" title="Int_t ARay::fStatus">fStatus</a> = <a href="./ARay.html#ARay:kExit" title="ARay::(anonymous) ARay::kExit">kExit</a>;}</code></div>
+<div class="code"><code class="inlinecode">{ <a href="./ARay.html#ARay:fStatus" title="Int_t ARay::fStatus">fStatus</a> = <a href="./ARay.html#ARay:kExit" title="ARay::(anonymous) ARay::kExit">kExit</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:Focus" href="src/ARay.h.html#aHVI7C">Focus</a>()</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:Focus" href="src/ARay.h.html#ECGlOC">Focus</a>()</span><br />
 
-<div class="code"><code class="inlinecode">{<a href="./ARay.html#ARay:fStatus" title="Int_t ARay::fStatus">fStatus</a> = <a href="./ARay.html#ARay:kFocus" title="ARay::(anonymous) ARay::kFocus">kFocus</a>;}</code></div>
+<div class="code"><code class="inlinecode">{ <a href="./ARay.html#ARay:fStatus" title="Int_t ARay::fStatus">fStatus</a> = <a href="./ARay.html#ARay:kFocus" title="ARay::(anonymous) ARay::kFocus">kFocus</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> TObjArray* <a class="funcname" name="ARay:GetNodeHistory" href="src/ARay.h.html#to4Nx">GetNodeHistory</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">const</span> TObjArray* <a class="funcname" name="ARay:GetNodeHistory" href="src/ARay.h.html#dDGoW">GetNodeHistory</a>() const</span><br />
 
-<div class="code"><code class="inlinecode">{<span class="keyword">return</span> &amp;<a href="./ARay.html#ARay:fNodeHisotry" title="TObjArray ARay::fNodeHisotry">fNodeHisotry</a>;}</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> &amp;<a href="./ARay.html#ARay:fNodeHisotry" title="TObjArray ARay::fNodeHisotry">fNodeHisotry</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="ARay:GetLambda" href="src/ARay.h.html#gCym6D">GetLambda</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="ARay:GetLambda" href="src/ARay.h.html#IwQcnB">GetLambda</a>() const</span><br />
 
-<div class="code"><code class="inlinecode">{<span class="keyword">return</span> <a href="./ARay.html#ARay:fLambda" title="Double_t ARay::fLambda">fLambda</a>;}</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ARay.html#ARay:fLambda" title="Double_t ARay::fLambda">fLambda</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:AddNode" href="src/ARay.h.html#dH_cHB">AddNode</a>(TGeoNode* node)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:AddNode" href="src/ARay.h.html#e26MmB">AddNode</a>(TGeoNode* node)</span><br />
 
-<div class="code"><code class="inlinecode">{<a href="./ARay.html#ARay:fNodeHisotry" title="TObjArray ARay::fNodeHisotry">fNodeHisotry</a>.Add(node);}</code></div>
+<div class="code"><code class="inlinecode">{ <a href="./ARay.html#ARay:fNodeHisotry" title="TObjArray ARay::fNodeHisotry">fNodeHisotry</a>.Add(node); }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname">TGeoNode* <a class="funcname" name="ARay:FindNode" href="src/ARay.h.html#Wsqsz">FindNode</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) const</span><br />
+<div class="funcdoc"><span class="funcname">TGeoNode* <a class="funcname" name="ARay:FindNode" href="src/ARay.h.html#zmXYUC">FindNode</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) const</span><br />
+</div>
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:SetLambda" href="src/ARay.h.html#BUY7.D">SetLambda</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda)</span><br />
 
-<div class="code"><code class="inlinecode">{<span class="keyword">return</span> (TGeoNode*)<a href="./ARay.html#ARay:fNodeHisotry" title="TObjArray ARay::fNodeHisotry">fNodeHisotry</a>.<a href="./#TObject:FindObject" title="TObject* TObject::FindObject(const char* name) const or overloads">FindObject</a>(name);}</code></div>
+<div class="code"><code class="inlinecode">{ <a href="./ARay.html#ARay:fLambda" title="Double_t ARay::fLambda">fLambda</a> = lambda; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:SetLambda" href="src/ARay.h.html#HFzvRD">SetLambda</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:Stop" href="src/ARay.h.html#apPjoC">Stop</a>()</span><br />
 
-<div class="code"><code class="inlinecode">{<a href="./ARay.html#ARay:fLambda" title="Double_t ARay::fLambda">fLambda</a> = lambda;}</code></div>
+<div class="code"><code class="inlinecode">{ <a href="./ARay.html#ARay:fStatus" title="Int_t ARay::fStatus">fStatus</a> = <a href="./ARay.html#ARay:kStop" title="ARay::(anonymous) ARay::kStop">kStop</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:Stop" href="src/ARay.h.html#XsW9ND">Stop</a>()</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:Suspend" href="src/ARay.h.html#fKelPE">Suspend</a>()</span><br />
 
-<div class="code"><code class="inlinecode">{<a href="./ARay.html#ARay:fStatus" title="Int_t ARay::fStatus">fStatus</a> = <a href="./ARay.html#ARay:kStop" title="ARay::(anonymous) ARay::kStop">kStop</a>;}</code></div>
-<div style="clear:both;"></div>
-</div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARay:Suspend" href="src/ARay.h.html#LRyKXD">Suspend</a>()</span><br />
-
-<div class="code"><code class="inlinecode">{<a href="./ARay.html#ARay:fStatus" title="Int_t ARay::fStatus">fStatus</a> = <a href="./ARay.html#ARay:kSuspend" title="ARay::(anonymous) ARay::kSuspend">kSuspend</a>;}</code></div>
+<div class="code"><code class="inlinecode">{ <a href="./ARay.html#ARay:fStatus" title="Int_t ARay::fStatus">fStatus</a> = <a href="./ARay.html#ARay:kSuspend" title="ARay::(anonymous) ARay::kSuspend">kSuspend</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
 
@@ -459,7 +476,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="mailto:oxon@mac.com"> Akira Okumura </a> </em><em>&raquo; Copyright   (C) 2006-, Akira Okumura                                         *</em><br />
-<em>&raquo; Last changed: Sat Jul 15 08:46:10 2017 </em><em>&raquo; Last generated: 2017-07-15 08:46</em><br />
+<em>&raquo; Last changed: Tue Jan  7 14:48:07 2020 </em><em>&raquo; Last generated: 2020-01-07 14:48</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROBAST in general please send a mail to <a href="mailto:oxon@mac.com">ROBAST support</a>.</em>
 </div>
 </div>

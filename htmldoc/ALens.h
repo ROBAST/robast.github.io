@@ -22,25 +22,21 @@
 
 class ALens : public AOpticalComponent {
  private:
-  TGraph*           fAbsorptionLength; // Absorption length of the material
-  ARefractiveIndex* fIndex; // Refractive index
-  Double_t          fConstantIndex; // Constant refractive index
-  Double_t          fConstantAbsorptionLength; // Absorption length of the material
+  std::shared_ptr<ARefractiveIndex> fIndex;  // Refractive index
 
  public:
   ALens();
   ALens(const char* name, const TGeoShape* shape, const TGeoMedium* med = 0);
-  virtual ~ALens();
+  virtual ~ALens(){};
 
   virtual Double_t GetAbsorptionLength(Double_t lambda) const;
+  virtual Double_t GetExtinctionCoefficient(Double_t lambda) const;
   virtual Double_t GetRefractiveIndex(Double_t lambda) const;
-  virtual void     SetAbsorptionLength(TGraph* graph) {fAbsorptionLength = graph;}
-  virtual void     SetConstantAbsorptionLength(Double_t length) {fConstantAbsorptionLength = length;}
-  virtual void     SetConstantRefractiveIndex(Double_t index) {fConstantIndex = index;}
-  virtual void     SetRefractiveIndex(ARefractiveIndex* index) {fIndex = index;}
-
+  virtual void SetRefractiveIndex(std::shared_ptr<ARefractiveIndex> index) {
+    fIndex = index;
+  }
 
   ClassDef(ALens, 1)
 };
 
-#endif // A_LENS_H
+#endif  // A_LENS_H

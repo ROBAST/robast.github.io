@@ -7,9 +7,9 @@
 #ifndef A_OPTICAL_COMPONENT_H
 #define A_OPTICAL_COMPONENT_H
 
+#include "ABorderSurfaceCondition.h"
 #include "TGeoVolume.h"
 #include "TObjArray.h"
-#include "ABorderSurfaceCondition.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -21,22 +21,23 @@
 
 class AOpticalComponent : public TGeoVolume {
  private:
-  TObjArray* fSurfaceArray;
+  TObjArray* fBorderSurfaceConditionArray;
 
  public:
   AOpticalComponent();
-  AOpticalComponent(const char* name, const TGeoShape* shape, const TGeoMedium* med = 0);
+  AOpticalComponent(const char* name, const TGeoShape* shape,
+                    const TGeoMedium* med = 0);
   virtual ~AOpticalComponent();
 
-  void AddSurfaceCondition(ABorderSurfaceCondition* condition);
-  ABorderSurfaceCondition* FindSurfaceCondition(AOpticalComponent* component2);
+  void AddBorderSurfaceCondition(ABorderSurfaceCondition* condition);
+  ABorderSurfaceCondition* FindBorderSurfaceCondition(
+      AOpticalComponent* component2);
   TGeoMaterial* GetOpaqueVacuumMaterial() const;
   TGeoMaterial* GetTransparentVacuumMaterial() const;
   TGeoMedium* GetOpaqueVacuumMedium() const;
   TGeoMedium* GetTransparentVacuumMedium() const;
 
-
   ClassDef(AOpticalComponent, 1)
 };
 
-#endif // A_OPTICAL_COMPONENT_H
+#endif  // A_OPTICAL_COMPONENT_H

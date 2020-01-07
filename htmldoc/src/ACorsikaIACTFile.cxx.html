@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: Akira Okumura (oxon@mac.com)        -->
 <!--                                             -->
-<!--   Date: Sat Jul 15 08:46:02 2017            -->
+<!--   Date: Tue Jan  7 14:47:59 2020            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -20,69 +20,66 @@
 <div id="root_header"><img src="http://robast.github.io/img/ROBAST_logo.png" alt="ROBAST logo"/></div>
 <div id="codeAndLineNumbers"><pre class="listing">
 <span class="cpp">#include "TDirectory.h"</span>
-<span class="cpp">#include "TSystem.h"</span>
 <span class="cpp">#include "TRandom.h"</span>
+<span class="cpp">#include "TSystem.h"</span>
 
 <span class="cpp">#include "<a href="../ACorsikaIACTFile.h">ACorsikaIACTFile.h</a>"</span>
 <span class="cpp">#include "<a href="../AOpticsManager.h">AOpticsManager.h</a>"</span>
 
-ClassImp(<a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>)
+ClassImp(<a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>);
 
 <span class="keyword">const</span> <a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:kMaxArrays" title="const Int_t ACorsikaIACTFile::kMaxArrays">kMaxArrays</a> = 100;
 <span class="keyword">const</span> <a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:kMaxTelescopes" title="const Int_t ACorsikaIACTFile::kMaxTelescopes">kMaxTelescopes</a> = 1000;
 
 <a name="a9bbLB"></a><a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:ACorsikaIACTFile" title="ACorsikaIACTFile ACorsikaIACTFile::ACorsikaIACTFile(Int_t bufferLenght = 20000000) or overloads">ACorsikaIACTFile</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> bufferLength)
-  : <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>(0), <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fEventHeader" title="ACorsikaIACTEventHeader* ACorsikaIACTFile::fEventHeader">fEventHeader</a>(0), fRunHeader(0)
-{
+    : <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>(0), <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fEventHeader" title="ACorsikaIACTEventHeader* ACorsikaIACTFile::fEventHeader">fEventHeader</a>(0), fRunHeader(0) {
   <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a> = allocate_io_buffer(0);
   <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>-&gt;max_length = bufferLength;
   <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fMaxPhotonBunches" title="Int_t ACorsikaIACTFile::fMaxPhotonBunches">fMaxPhotonBunches</a> = 100000;
-  <span class="keyword">for</span>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt; 4; i++){
+  <span class="keyword">for</span> (<a href="../ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt; 4; i++) {
     <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fTelescopePosition" title="Double_t* ACorsikaIACTFile::fTelescopePosition">fTelescopePosition</a>[i] = <span class="keyword">new</span> <a href="../ListOfTypes.html#Double_t">Double_t</a>[<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:kMaxTelescopes" title="const Int_t ACorsikaIACTFile::kMaxTelescopes">kMaxTelescopes</a>];
-  } <span class="comment">// if</span>
+  }
   <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fCorsikaInputs" title="struct linked_string ACorsikaIACTFile::fCorsikaInputs">fCorsikaInputs</a>.text = 0;
   <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fCorsikaInputs" title="struct linked_string ACorsikaIACTFile::fCorsikaInputs">fCorsikaInputs</a>.next = 0;
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="gINkAE"></a><a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:_ACorsikaIACTFile" title="void ACorsikaIACTFile::~ACorsikaIACTFile()">~ACorsikaIACTFile</a>()
-{
+<a name="C0AaAE"></a><a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:_ACorsikaIACTFile" title="void ACorsikaIACTFile::~ACorsikaIACTFile()">~ACorsikaIACTFile</a>() {
   <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:Close" title="void ACorsikaIACTFile::Close()">Close</a>();
-  <span class="keyword">for</span>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt; 4; i++){
-    <span class="keyword">delete</span> [] <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fTelescopePosition" title="Double_t* ACorsikaIACTFile::fTelescopePosition">fTelescopePosition</a>[i];
+  <span class="keyword">for</span> (<a href="../ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt; 4; i++) {
+    <span class="keyword">delete</span>[] <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fTelescopePosition" title="Double_t* ACorsikaIACTFile::fTelescopePosition">fTelescopePosition</a>[i];
     <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fTelescopePosition" title="Double_t* ACorsikaIACTFile::fTelescopePosition">fTelescopePosition</a>[i] = 0;
-  } <span class="comment">// if</span>
+  }
   free_io_buffer(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>);
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="UgrkYD"></a><span class="keyword">void</span> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:Close" title="void ACorsikaIACTFile::Close()">Close</a>()
-{
-  <span class="keyword">if</span>(not <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:IsOpen" title="Bool_t ACorsikaIACTFile::IsOpen()">IsOpen</a>()){
+<a name="RlP9FE"></a><span class="keyword">void</span> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:Close" title="void ACorsikaIACTFile::Close()">Close</a>() {
+  <span class="keyword">if</span> (not <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:IsOpen" title="Bool_t ACorsikaIACTFile::IsOpen()">IsOpen</a>()) {
     <span class="keyword">return</span>;
-  } <span class="comment">// if</span>
+  }
 
   <span class="comment">// Reset all variables</span>
   fclose(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>-&gt;input_file);
   <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>-&gt;input_file = 0;
 
   <span class="keyword">struct</span> linked_string *xl, *xln;
-  <span class="keyword">for</span>(xl = &amp;<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fCorsikaInputs" title="struct linked_string ACorsikaIACTFile::fCorsikaInputs">fCorsikaInputs</a>; xl != 0; xl = xln){
+  <span class="keyword">for</span> (xl = &amp;<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fCorsikaInputs" title="struct linked_string ACorsikaIACTFile::fCorsikaInputs">fCorsikaInputs</a>; xl != 0; xl = xln) {
     free(xl-&gt;text);
     xl-&gt;text = 0;
     xln = xl-&gt;next;
     xl-&gt;next = 0;
-    <span class="keyword">if</span>(xl != &amp;<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fCorsikaInputs" title="struct linked_string ACorsikaIACTFile::fCorsikaInputs">fCorsikaInputs</a>){
+    <span class="keyword">if</span> (xl != &amp;<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fCorsikaInputs" title="struct linked_string ACorsikaIACTFile::fCorsikaInputs">fCorsikaInputs</a>) {
       free(xl);
-    } <span class="comment">// if</span>
-  } <span class="comment">// xl</span>
+    }
+  }
 
   <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fNumberOfTelescopes" title="Int_t ACorsikaIACTFile::fNumberOfTelescopes">fNumberOfTelescopes</a> = 0;
-  <span class="keyword">for</span>(<a href="../ListOfTypes.html#Int_t">Int_t</a> j = 0; j &lt; 4; j++){
-    <span class="keyword">for</span>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt; <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:kMaxTelescopes" title="const Int_t ACorsikaIACTFile::kMaxTelescopes">kMaxTelescopes</a>; i++){
+  <span class="keyword">for</span> (<a href="../ListOfTypes.html#Int_t">Int_t</a> j = 0; j &lt; 4; j++) {
+    <span class="keyword">for</span> (<a href="../ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt; <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:kMaxTelescopes" title="const Int_t ACorsikaIACTFile::kMaxTelescopes">kMaxTelescopes</a>; i++) {
       <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fTelescopePosition" title="Double_t* ACorsikaIACTFile::fTelescopePosition">fTelescopePosition</a>[j][i] = 0;
-    } <span class="comment">// i</span>
-  } <span class="comment">// j</span>
+    }
+  }
 
   SafeDelete(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>);
   SafeDelete(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fEventHeader" title="ACorsikaIACTEventHeader* ACorsikaIACTFile::fEventHeader">fEventHeader</a>);
@@ -92,20 +89,19 @@ ClassImp(<a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>)
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="Ma_mRE"></a><a href="../ARayArray.html">ARayArray</a>* <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:GetRayArray" title="ARayArray* ACorsikaIACTFile::GetRayArray(Int_t telNo, Int_t arrayNo, Double_t zoffset, Double_t refractiveIndex)">GetRayArray</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> telNo, <a href="../ListOfTypes.html#Int_t">Int_t</a> arrayNo,
-                                         <a href="../ListOfTypes.html#Double_t">Double_t</a> z, <a href="../ListOfTypes.html#Double_t">Double_t</a> refractiveIndex)
-{
+<a name="t4Ywx"></a><a href="../ARayArray.html">ARayArray</a>* <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:GetRayArray" title="ARayArray* ACorsikaIACTFile::GetRayArray(Int_t telNo, Int_t arrayNo, Double_t zoffset, Double_t refractiveIndex)">GetRayArray</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> telNo, <a href="../ListOfTypes.html#Int_t">Int_t</a> arrayNo, <a href="../ListOfTypes.html#Double_t">Double_t</a> z,
+                                         <a href="../ListOfTypes.html#Double_t">Double_t</a> refractiveIndex) {
   <span class="comment">// z is the starting position of photons relative to the CORSIKA observation</span>
   <span class="comment">// level</span>
 
-  <span class="keyword">if</span>(!<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>){
+  <span class="keyword">if</span> (!<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>) {
     <span class="keyword">return</span> 0;
-  } <span class="comment">// if</span>
+  }
 
-  <span class="keyword">if</span>(telNo &lt; 0 or telNo &gt;= <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fNumberOfTelescopes" title="Int_t ACorsikaIACTFile::fNumberOfTelescopes">fNumberOfTelescopes</a> or
-     arrayNo &lt; 0 or arrayNo &gt;= <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:kMaxArrays" title="const Int_t ACorsikaIACTFile::kMaxArrays">kMaxArrays</a>){
+  <span class="keyword">if</span> (telNo &lt; 0 or telNo &gt;= <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fNumberOfTelescopes" title="Int_t ACorsikaIACTFile::fNumberOfTelescopes">fNumberOfTelescopes</a> or arrayNo &lt; 0 or
+      arrayNo &gt;= <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:kMaxArrays" title="const Int_t ACorsikaIACTFile::kMaxArrays">kMaxArrays</a>) {
     <span class="keyword">return</span> 0;
-  } <span class="comment">// if</span>
+  }
 
   <a href="../ARayArray.html">ARayArray</a>* array = <span class="keyword">new</span> <a href="../ARayArray.html">ARayArray</a>;
 
@@ -123,111 +119,110 @@ ClassImp(<a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>)
   <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;SetBranchAddress(<span class="string">"lambda"</span>, &amp;lambda);
   <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;SetBranchAddress(<span class="string">"photons"</span>, &amp;photons);
 
-  <a href="../ListOfTypes.html#Double_t">Double_t</a>  m = <a href="../AOpticsManager.html">AOpticsManager</a>::<a href="../AOpticsManager.html#AOpticsManager:m" title="Double_t AOpticsManager::m()">m</a>();
+  <a href="../ListOfTypes.html#Double_t">Double_t</a> m = <a href="../AOpticsManager.html">AOpticsManager</a>::<a href="../AOpticsManager.html#AOpticsManager:m" title="Double_t AOpticsManager::m()">m</a>();
   <a href="../ListOfTypes.html#Double_t">Double_t</a> cm = <a href="../AOpticsManager.html">AOpticsManager</a>::<a href="../AOpticsManager.html#AOpticsManager:cm" title="Double_t AOpticsManager::cm()">cm</a>();
   <a href="../ListOfTypes.html#Double_t">Double_t</a> nm = <a href="../AOpticsManager.html">AOpticsManager</a>::<a href="../AOpticsManager.html#AOpticsManager:nm" title="Double_t AOpticsManager::nm()">nm</a>();
   <a href="../ListOfTypes.html#Double_t">Double_t</a> ns = <a href="../AOpticsManager.html">AOpticsManager</a>::<a href="../AOpticsManager.html#AOpticsManager:ns" title="Double_t AOpticsManager::ns()">ns</a>();
 
-  <span class="keyword">for</span>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt; <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;GetEntries(); i++){
+  <span class="keyword">for</span> (<a href="../ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt; <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;GetEntries(); i++) {
     <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;GetEntry(i);
-    <span class="keyword">if</span>(telNo != telNo_ or arrayNo != arrayNo_){
+    <span class="keyword">if</span> (telNo != telNo_ or arrayNo != arrayNo_) {
       <span class="keyword">continue</span>;
-    } <span class="comment">// if</span>
+    }
 
-    <a href="../ListOfTypes.html#Double_t">Double_t</a> airmass = -1./cz;
-    <a href="../ListOfTypes.html#Double_t">Double_t</a> tel_dist = (z - <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:GetTelescopeZ" title="Double_t ACorsikaIACTFile::GetTelescopeZ(Int_t i) const">GetTelescopeZ</a>(telNo)*cm)*airmass;
-    <a href="../ListOfTypes.html#Double_t">Double_t</a> speed = TMath::C()*m/refractiveIndex;
-    <a href="../ListOfTypes.html#Double_t">Double_t</a> px = x*cm - tel_dist*cx;
-    <a href="../ListOfTypes.html#Double_t">Double_t</a> py = y*cm - tel_dist*cy;
-    <a href="../ListOfTypes.html#Double_t">Double_t</a> pt = time*ns - tel_dist/speed;
+    <a href="../ListOfTypes.html#Double_t">Double_t</a> airmass = -1. / cz;
+    <a href="../ListOfTypes.html#Double_t">Double_t</a> tel_dist = (z - <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:GetTelescopeZ" title="Double_t ACorsikaIACTFile::GetTelescopeZ(Int_t i) const">GetTelescopeZ</a>(telNo) * cm) * airmass;
+    <a href="../ListOfTypes.html#Double_t">Double_t</a> speed = TMath::C() * m / refractiveIndex;
+    <a href="../ListOfTypes.html#Double_t">Double_t</a> px = x * cm - tel_dist * cx;
+    <a href="../ListOfTypes.html#Double_t">Double_t</a> py = y * cm - tel_dist * cy;
+    <a href="../ListOfTypes.html#Double_t">Double_t</a> pt = time * ns - tel_dist / speed;
 
-    <span class="keyword">for</span>(<a href="../ListOfTypes.html#Int_t">Int_t</a> j = 0; j &lt; photons; j++){
-      <span class="comment">// if the wavelength is not determined in CORSIKA (i.e. lambda == 0), we randomize it now</span>
-      <a href="../ListOfTypes.html#Double_t">Double_t</a> random_lambda = lambda == 0 ? 1./(1./<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fMinWavelength" title="Double_t ACorsikaIACTFile::fMinWavelength">fMinWavelength</a> - gRandom-&gt;Uniform()*(1./<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fMinWavelength" title="Double_t ACorsikaIACTFile::fMinWavelength">fMinWavelength</a> - 1./<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fMaxPhotonBunches" title="Int_t ACorsikaIACTFile::fMaxPhotonBunches">fMaxPhotonBunches</a>)) : lambda;
-      <a href="../ARay.html">ARay</a>* ray = <span class="keyword">new</span> <a href="../ARay.html">ARay</a>(0, random_lambda*nm, px, py, z, pt, cx, cy, cz);
+    <span class="keyword">for</span> (<a href="../ListOfTypes.html#Int_t">Int_t</a> j = 0; j &lt; photons; j++) {
+      <span class="comment">// if the wavelength is not determined in CORSIKA (i.e. lambda == 0), we</span>
+      <span class="comment">// randomize it now</span>
+      <a href="../ListOfTypes.html#Double_t">Double_t</a> random_lambda =
+          lambda == 0 ? 1. / (1. / <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fMinWavelength" title="Double_t ACorsikaIACTFile::fMinWavelength">fMinWavelength</a> -
+                              gRandom-&gt;Uniform() * (1. / <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fMinWavelength" title="Double_t ACorsikaIACTFile::fMinWavelength">fMinWavelength</a> -
+                                                    1. / <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fMaxPhotonBunches" title="Int_t ACorsikaIACTFile::fMaxPhotonBunches">fMaxPhotonBunches</a>))
+                      : lambda;
+      <a href="../ARay.html">ARay</a>* ray = <span class="keyword">new</span> <a href="../ARay.html">ARay</a>(0, random_lambda * nm, px, py, z, pt, cx, cy, cz);
       array-&gt;Add(ray);
-    } <span class="comment">// j</span>
-  } <span class="comment">// i</span>
+    }
+  }
 
   <span class="keyword">return</span> array;
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="X9WtfE"></a><a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:GetTelescopeR" title="Double_t ACorsikaIACTFile::GetTelescopeR(Int_t i) const">GetTelescopeR</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span>
-{
-  <span class="keyword">if</span>(0 &lt;= i and i &lt; <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fNumberOfTelescopes" title="Int_t ACorsikaIACTFile::fNumberOfTelescopes">fNumberOfTelescopes</a>){
+<a name="uZT1IB"></a><a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:GetTelescopeR" title="Double_t ACorsikaIACTFile::GetTelescopeR(Int_t i) const">GetTelescopeR</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span> {
+  <span class="keyword">if</span> (0 &lt;= i and i &lt; <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fNumberOfTelescopes" title="Int_t ACorsikaIACTFile::fNumberOfTelescopes">fNumberOfTelescopes</a>) {
     <span class="keyword">return</span> <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fTelescopePosition" title="Double_t* ACorsikaIACTFile::fTelescopePosition">fTelescopePosition</a>[3][i];
   } <span class="keyword">else</span> {
     <span class="keyword">return</span> atof(<span class="string">"NaN"</span>);
-  } <span class="comment">// if</span>
+  }
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="DWetfE"></a><a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:GetTelescopeX" title="Double_t ACorsikaIACTFile::GetTelescopeX(Int_t i) const">GetTelescopeX</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span>
-{
-  <span class="keyword">if</span>(0 &lt;= i and i &lt; <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fNumberOfTelescopes" title="Int_t ACorsikaIACTFile::fNumberOfTelescopes">fNumberOfTelescopes</a>){
+<a name="et.4IB"></a><a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:GetTelescopeX" title="Double_t ACorsikaIACTFile::GetTelescopeX(Int_t i) const">GetTelescopeX</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span> {
+  <span class="keyword">if</span> (0 &lt;= i and i &lt; <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fNumberOfTelescopes" title="Int_t ACorsikaIACTFile::fNumberOfTelescopes">fNumberOfTelescopes</a>) {
     <span class="keyword">return</span> <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fTelescopePosition" title="Double_t* ACorsikaIACTFile::fTelescopePosition">fTelescopePosition</a>[0][i];
   } <span class="keyword">else</span> {
     <span class="keyword">return</span> atof(<span class="string">"NaN"</span>);
-  } <span class="comment">// if</span>
+  }
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="rkftfE"></a><a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:GetTelescopeY" title="Double_t ACorsikaIACTFile::GetTelescopeY(Int_t i) const">GetTelescopeY</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span>
-{
-  <span class="keyword">if</span>(0 &lt;= i and i &lt; <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fNumberOfTelescopes" title="Int_t ACorsikaIACTFile::fNumberOfTelescopes">fNumberOfTelescopes</a>){
+<a name="KGn5IB"></a><a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:GetTelescopeY" title="Double_t ACorsikaIACTFile::GetTelescopeY(Int_t i) const">GetTelescopeY</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span> {
+  <span class="keyword">if</span> (0 &lt;= i and i &lt; <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fNumberOfTelescopes" title="Int_t ACorsikaIACTFile::fNumberOfTelescopes">fNumberOfTelescopes</a>) {
     <span class="keyword">return</span> <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fTelescopePosition" title="Double_t* ACorsikaIACTFile::fTelescopePosition">fTelescopePosition</a>[1][i];
   } <span class="keyword">else</span> {
     <span class="keyword">return</span> atof(<span class="string">"NaN"</span>);
-  } <span class="comment">// if</span>
+  }
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="fzgtfE"></a><a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:GetTelescopeZ" title="Double_t ACorsikaIACTFile::GetTelescopeZ(Int_t i) const">GetTelescopeZ</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span>
-{
-  <span class="keyword">if</span>(0 &lt;= i and i &lt; <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fNumberOfTelescopes" title="Int_t ACorsikaIACTFile::fNumberOfTelescopes">fNumberOfTelescopes</a>){
+<a name="qeO6IB"></a><a href="../ListOfTypes.html#Double_t">Double_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:GetTelescopeZ" title="Double_t ACorsikaIACTFile::GetTelescopeZ(Int_t i) const">GetTelescopeZ</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i) <span class="keyword">const</span> {
+  <span class="keyword">if</span> (0 &lt;= i and i &lt; <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fNumberOfTelescopes" title="Int_t ACorsikaIACTFile::fNumberOfTelescopes">fNumberOfTelescopes</a>) {
     <span class="keyword">return</span> <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fTelescopePosition" title="Double_t* ACorsikaIACTFile::fTelescopePosition">fTelescopePosition</a>[2][i];
   } <span class="keyword">else</span> {
     <span class="keyword">return</span> atof(<span class="string">"NaN"</span>);
-  } <span class="comment">// if</span>
+  }
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="wrFjGE"></a><a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:IsAllocated" title="Bool_t ACorsikaIACTFile::IsAllocated()">IsAllocated</a>()
-{
-  <span class="keyword">if</span>(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>){
+<a name="dEogWD"></a><a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:IsAllocated" title="Bool_t ACorsikaIACTFile::IsAllocated()">IsAllocated</a>() {
+  <span class="keyword">if</span> (<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>) {
     <span class="keyword">return</span> <a href="../ListOfTypes.html#Bool_t">kTRUE</a>;
   } <span class="keyword">else</span> {
     <span class="keyword">return</span> <a href="../ListOfTypes.html#Bool_t">kFALSE</a>;
-  } <span class="comment">// if</span>
+  }
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="Tdl10"></a><a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:IsOpen" title="Bool_t ACorsikaIACTFile::IsOpen()">IsOpen</a>()
-{
-  <span class="keyword">if</span>(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:IsAllocated" title="Bool_t ACorsikaIACTFile::IsAllocated()">IsAllocated</a>()){
-    <span class="keyword">if</span>(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>-&gt;input_file){
+<a name="R5np0"></a><a href="../ListOfTypes.html#Bool_t">Bool_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:IsOpen" title="Bool_t ACorsikaIACTFile::IsOpen()">IsOpen</a>() {
+  <span class="keyword">if</span> (<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:IsAllocated" title="Bool_t ACorsikaIACTFile::IsAllocated()">IsAllocated</a>()) {
+    <span class="keyword">if</span> (<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>-&gt;input_file) {
       <span class="keyword">return</span> <a href="../ListOfTypes.html#Bool_t">kTRUE</a>;
-    }  <span class="comment">// if</span>
-  } <span class="comment">// if</span>
+    }
+  }
 
   <span class="keyword">return</span> <a href="../ListOfTypes.html#Bool_t">kFALSE</a>;
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="Rf0y4E"></a><span class="keyword">void</span> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:Open" title="void ACorsikaIACTFile::Open(const Char_t* fname)">Open</a>(<span class="keyword">const</span> <a href="../ListOfTypes.html#Char_t">Char_t</a>* fname)
-{
-  <span class="keyword">if</span>(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:IsOpen" title="Bool_t ACorsikaIACTFile::IsOpen()">IsOpen</a>()){
+<a name="AwqByD"></a><span class="keyword">void</span> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:Open" title="void ACorsikaIACTFile::Open(const Char_t* fname)">Open</a>(<span class="keyword">const</span> <a href="../ListOfTypes.html#Char_t">Char_t</a>* fname) {
+  <span class="keyword">if</span> (<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:IsOpen" title="Bool_t ACorsikaIACTFile::IsOpen()">IsOpen</a>()) {
     fprintf(stderr, <span class="string">"Already open.\n"</span>);
     <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:Close" title="void ACorsikaIACTFile::Close()">Close</a>();
-  } <span class="comment">// if</span>
+  }
 
-  <span class="keyword">if</span>(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:IsAllocated" title="Bool_t ACorsikaIACTFile::IsAllocated()">IsAllocated</a>()){
-    <span class="keyword">if</span>((<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>-&gt;input_file = fileopen(gSystem-&gt;ExpandPathName(fname), <span class="string">"r"</span>)) == 0){
+  <span class="keyword">if</span> (<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:IsAllocated" title="Bool_t ACorsikaIACTFile::IsAllocated()">IsAllocated</a>()) {
+    <span class="keyword">if</span> ((<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>-&gt;input_file =
+             fileopen(gSystem-&gt;ExpandPathName(fname), <span class="string">"r"</span>)) == 0) {
       fprintf(stderr, <span class="string">"Cannot open the file.\n"</span>);
       <span class="keyword">return</span>;
-    } <span class="comment">// if</span>
-  } <span class="comment">// if</span>
+    }
+  }
 
   <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fFileName" title="TString ACorsikaIACTFile::fFileName">fFileName</a> = TString(fname);
 
@@ -245,7 +240,7 @@ ClassImp(<a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>)
   **********************************/</span>
 
   <span class="comment">// Check if block type is CORSIKA run header</span>
-  <span class="keyword">if</span>(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:ReadNextBlock" title="Int_t ACorsikaIACTFile::ReadNextBlock()">ReadNextBlock</a>() == IO_TYPE_MC_RUNH){
+  <span class="keyword">if</span> (<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:ReadNextBlock" title="Int_t ACorsikaIACTFile::ReadNextBlock()">ReadNextBlock</a>() == IO_TYPE_MC_RUNH) {
     <a href="../ListOfTypes.html#Float_t">Float_t</a> runh[273];
     read_tel_block(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, IO_TYPE_MC_RUNH, runh, 273);
     <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fRunHeader" title="ACorsikaIACTRunHeader* ACorsikaIACTFile::fRunHeader">fRunHeader</a> = <span class="keyword">new</span> <a href="../ACorsikaIACTRunHeader.html">ACorsikaIACTRunHeader</a>(runh);
@@ -253,19 +248,19 @@ ClassImp(<a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>)
     fprintf(stderr, <span class="string">"The first header is not IO_TYPE_MC_RUNH.\n"</span>);
     <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:Close" title="void ACorsikaIACTFile::Close()">Close</a>();
     <span class="keyword">return</span>;
-  } <span class="comment">// if</span>
+  }
 
   <span class="comment">// Check if block type is CORSIKA input configuration</span>
-  <span class="keyword">if</span>(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:ReadNextBlock" title="Int_t ACorsikaIACTFile::ReadNextBlock()">ReadNextBlock</a>() == IO_TYPE_MC_INPUTCFG){
+  <span class="keyword">if</span> (<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:ReadNextBlock" title="Int_t ACorsikaIACTFile::ReadNextBlock()">ReadNextBlock</a>() == IO_TYPE_MC_INPUTCFG) {
     read_input_lines(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, &amp;<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fCorsikaInputs" title="struct linked_string ACorsikaIACTFile::fCorsikaInputs">fCorsikaInputs</a>);
   } <span class="keyword">else</span> {
     fprintf(stderr, <span class="string">"The second header is not IO_TYPE_MC_INPUTCFG.\n"</span>);
     <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:Close" title="void ACorsikaIACTFile::Close()">Close</a>();
     <span class="keyword">return</span>;
-  } <span class="comment">// if</span>
+  }
 
   <span class="comment">// Check if block type is telescope information</span>
-  <span class="keyword">if</span>(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:ReadNextBlock" title="Int_t ACorsikaIACTFile::ReadNextBlock()">ReadNextBlock</a>() == IO_TYPE_MC_TELPOS){
+  <span class="keyword">if</span> (<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:ReadNextBlock" title="Int_t ACorsikaIACTFile::ReadNextBlock()">ReadNextBlock</a>() == IO_TYPE_MC_TELPOS) {
     read_tel_pos(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:kMaxTelescopes" title="const Int_t ACorsikaIACTFile::kMaxTelescopes">kMaxTelescopes</a>, &amp;<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fNumberOfTelescopes" title="Int_t ACorsikaIACTFile::fNumberOfTelescopes">fNumberOfTelescopes</a>,
                  <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fTelescopePosition" title="Double_t* ACorsikaIACTFile::fTelescopePosition">fTelescopePosition</a>[0], <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fTelescopePosition" title="Double_t* ACorsikaIACTFile::fTelescopePosition">fTelescopePosition</a>[1],
                  <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fTelescopePosition" title="Double_t* ACorsikaIACTFile::fTelescopePosition">fTelescopePosition</a>[2], <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fTelescopePosition" title="Double_t* ACorsikaIACTFile::fTelescopePosition">fTelescopePosition</a>[3]);
@@ -273,257 +268,262 @@ ClassImp(<a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>)
     fprintf(stderr, <span class="string">"The third header is not IO_TYPE_MC_TELPOS.\n"</span>);
     <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:Close" title="void ACorsikaIACTFile::Close()">Close</a>();
     <span class="keyword">return</span>;
-  } <span class="comment">// if</span>
+  }
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="qSkg1B"></a><span class="keyword">void</span> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:PrintInputCard" title="void ACorsikaIACTFile::PrintInputCard() const">PrintInputCard</a>() <span class="keyword">const</span>
-{
-  <span class="keyword">if</span>(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fCorsikaInputs" title="struct linked_string ACorsikaIACTFile::fCorsikaInputs">fCorsikaInputs</a>.text!=0){
-    <span class="keyword">const</span> <span class="keyword">struct</span> linked_string *xl;
+<a name="xX.XcC"></a><span class="keyword">void</span> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:PrintInputCard" title="void ACorsikaIACTFile::PrintInputCard() const">PrintInputCard</a>() <span class="keyword">const</span> {
+  <span class="keyword">if</span> (<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fCorsikaInputs" title="struct linked_string ACorsikaIACTFile::fCorsikaInputs">fCorsikaInputs</a>.text != 0) {
+    <span class="keyword">const</span> <span class="keyword">struct</span> linked_string* xl;
     printf(<span class="string">"CORSIKA was run with the following input lines:\n"</span>);
 
-    <span class="keyword">for</span>(xl = &amp;<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fCorsikaInputs" title="struct linked_string ACorsikaIACTFile::fCorsikaInputs">fCorsikaInputs</a>; xl!=0; xl=xl-&gt;next){
+    <span class="keyword">for</span> (xl = &amp;<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fCorsikaInputs" title="struct linked_string ACorsikaIACTFile::fCorsikaInputs">fCorsikaInputs</a>; xl != 0; xl = xl-&gt;next) {
       printf(<span class="string">"   %s\n"</span>, xl-&gt;text);
-    } <span class="comment">// xl</span>
+    }
 
     fflush(stdout);
-  } <span class="comment">// if</span>
+  }
 }
 
-<span class="cpp">#define SET_FLAG(flag, key) (flag |= (ULong64_t(0x1) &lt;&lt; (key - IO_TYPE_MC_BASE)))</span>
-<span class="cpp">#define HAS_FLAG(flag, key) Bool_t(flag &amp;  (ULong64_t(0x1) &lt;&lt; (key - IO_TYPE_MC_BASE)))</span>
+<span class="cpp">#define SET_FLAG(flag, key) \</span>
+  (flag |= (<a href="../ListOfTypes.html#ULong64_t">ULong64_t</a>(0x1) &lt;&lt; (key - IO_TYPE_MC_BASE)))
+<span class="cpp">#define HAS_FLAG(flag, key) \</span>
+  <a href="../ListOfTypes.html#Bool_t">Bool_t</a>(flag&amp;(<a href="../ListOfTypes.html#ULong64_t">ULong64_t</a>(0x1) &lt;&lt; (key - IO_TYPE_MC_BASE)))
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="HoPQk"></a><a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:ReadEvent" title="Int_t ACorsikaIACTFile::ReadEvent(Int_t num)">ReadEvent</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> num)
-{
+<a name="A_YgvC"></a><a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:ReadEvent" title="Int_t ACorsikaIACTFile::ReadEvent(Int_t num)">ReadEvent</a>(<a href="../ListOfTypes.html#Int_t">Int_t</a> num) {
   <span class="comment">// Event number in CORSIKA starts from not 0 but 1</span>
-  <span class="keyword">if</span>(!<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:IsOpen" title="Bool_t ACorsikaIACTFile::IsOpen()">IsOpen</a>()){
+  <span class="keyword">if</span> (!<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:IsOpen" title="Bool_t ACorsikaIACTFile::IsOpen()">IsOpen</a>()) {
     fprintf(stderr, <span class="string">"File is not open.\n"</span>);
     <span class="keyword">return</span> -1;
-  } <span class="comment">// if</span>
+  }
 
-  <span class="keyword">if</span>(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fEventHeader" title="ACorsikaIACTEventHeader* ACorsikaIACTFile::fEventHeader">fEventHeader</a>){
-    <span class="keyword">if</span>(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fEventHeader" title="ACorsikaIACTEventHeader* ACorsikaIACTFile::fEventHeader">fEventHeader</a>-><a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetEventNumber" title="Int_t ACorsikaIACTEventHeader::GetEventNumber() const">GetEventNumber</a>() == num){
+  <span class="keyword">if</span> (<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fEventHeader" title="ACorsikaIACTEventHeader* ACorsikaIACTFile::fEventHeader">fEventHeader</a>) {
+    <span class="keyword">if</span> (<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fEventHeader" title="ACorsikaIACTEventHeader* ACorsikaIACTFile::fEventHeader">fEventHeader</a>-><a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetEventNumber" title="Int_t ACorsikaIACTEventHeader::GetEventNumber() const">GetEventNumber</a>() == num) {
       <span class="comment">// Event is already read. Do nothing.</span>
       <span class="keyword">return</span> num;
-    } <span class="keyword">else</span> <span class="keyword">if</span>(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fEventHeader" title="ACorsikaIACTEventHeader* ACorsikaIACTFile::fEventHeader">fEventHeader</a>-><a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetEventNumber" title="Int_t ACorsikaIACTEventHeader::GetEventNumber() const">GetEventNumber</a>() &gt; num){
+    } <span class="keyword">else</span> <span class="keyword">if</span> (<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fEventHeader" title="ACorsikaIACTEventHeader* ACorsikaIACTFile::fEventHeader">fEventHeader</a>-><a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:GetEventNumber" title="Int_t ACorsikaIACTEventHeader::GetEventNumber() const">GetEventNumber</a>() &gt; num) {
       <span class="comment">// Cannot access previous data block in this version.</span>
       <span class="comment">// eventio.c does not have such a function.</span>
       <span class="keyword">return</span> -1;
-    } <span class="comment">// if</span>
-  } <span class="comment">// if</span>
+    }
+  }
 
-  <a href="../ListOfTypes.html#ULong64_t">ULong64_t</a> flag = 0x0; <span class="comment">// flag indicating what blocks we have read</span>
+  <a href="../ListOfTypes.html#ULong64_t">ULong64_t</a> flag = 0x0;  <span class="comment">// flag indicating what blocks we have read</span>
 
-  <span class="keyword">while</span>(1) {
-    <a href="../ListOfTypes.html#Int_t">Int_t</a> numberOfArrays; <span class="comment">// ICERML of CSCAT option</span>
-    <a href="../ListOfTypes.html#Double_t">Double_t</a> timeOffset;  <span class="comment">// Time offset from the first interaction</span>
-    <a href="../ListOfTypes.html#Double_t">Double_t</a> xOffset[<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:kMaxArrays" title="const Int_t ACorsikaIACTFile::kMaxArrays">kMaxArrays</a>]; <span class="comment">// X offset of core locations from (0, 0)</span>
-    <a href="../ListOfTypes.html#Double_t">Double_t</a> yOffset[<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:kMaxArrays" title="const Int_t ACorsikaIACTFile::kMaxArrays">kMaxArrays</a>]; <span class="comment">// Y offset of core locations from (0, 0)</span>
+  <span class="keyword">while</span> (1) {
+    <a href="../ListOfTypes.html#Int_t">Int_t</a> numberOfArrays;          <span class="comment">// ICERML of CSCAT option</span>
+    <a href="../ListOfTypes.html#Double_t">Double_t</a> timeOffset;           <span class="comment">// Time offset from the first interaction</span>
+    <a href="../ListOfTypes.html#Double_t">Double_t</a> xOffset[<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:kMaxArrays" title="const Int_t ACorsikaIACTFile::kMaxArrays">kMaxArrays</a>];  <span class="comment">// X offset of core locations from (0, 0)</span>
+    <a href="../ListOfTypes.html#Double_t">Double_t</a> yOffset[<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:kMaxArrays" title="const Int_t ACorsikaIACTFile::kMaxArrays">kMaxArrays</a>];  <span class="comment">// Y offset of core locations from (0, 0)</span>
 
     <a href="../ListOfTypes.html#Int_t">Int_t</a> telNo, arrayNo;
     <a href="../ListOfTypes.html#Float_t">Float_t</a> x, y, zem, time, cx, cy, cz, lambda, photons;
     <a href="../ListOfTypes.html#Double_t">Double_t</a> totalPhotons;
 
     <a href="../ListOfTypes.html#Int_t">Int_t</a> headerType = <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:ReadNextBlock" title="Int_t ACorsikaIACTFile::ReadNextBlock()">ReadNextBlock</a>();
-    <span class="keyword">if</span>(headerType == -1){
-      <span class="keyword">break</span>;
-    } <span class="comment">// if</span>
-    <span class="keyword">switch</span>(headerType) {
-    <span class="keyword">case</span> IO_TYPE_MC_EVTH:
-      <span class="comment">//fprintf(stderr, <span class="string">"IO_TYPE_MC_EVTH\n"</span>);</span>
-      flag = 0x0; <span class="comment">// initialize when we read the event header</span>
-      <a href="../ListOfTypes.html#Float_t">Float_t</a> evth[273];
-      read_tel_block(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, IO_TYPE_MC_EVTH, evth, 273);
-      <span class="comment">// Data blocks were OK, but event number != num. So skip.</span>
-      <span class="keyword">if</span>(evth[1] != num){
-        <span class="keyword">break</span>;
-      } <span class="comment">// if</span>
-
-      <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fMaxWavelength" title="Double_t ACorsikaIACTFile::fMaxWavelength">fMaxWavelength</a> = evth[96];
-      <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fMinWavelength" title="Double_t ACorsikaIACTFile::fMinWavelength">fMinWavelength</a> = evth[95];
-
-      SafeDelete(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fEventHeader" title="ACorsikaIACTEventHeader* ACorsikaIACTFile::fEventHeader">fEventHeader</a>);
-      <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fEventHeader" title="ACorsikaIACTEventHeader* ACorsikaIACTFile::fEventHeader">fEventHeader</a> = <span class="keyword">new</span> <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>(evth);
-      SET_FLAG(flag, IO_TYPE_MC_EVTH);
-
-      <span class="comment">// Reset bunches</span>
-      SafeDelete(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>);
-      <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a> = <span class="keyword">new</span> TTree(<span class="string">"tree"</span>, <span class="string">"Photon tree of CORSIKA IACT output."</span>);
-
-      <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"telNo"</span>, &amp;telNo, <span class="string">"telNo/I"</span>);
-      <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"arrayNo"</span>, &amp;arrayNo, <span class="string">"arrayNo/I"</span>);
-      <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"x"</span>, &amp;x, <span class="string">"x/F"</span>);
-      <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"y"</span>, &amp;y, <span class="string">"y/F"</span>);
-      <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"zem"</span>, &amp;zem, <span class="string">"zem/F"</span>);
-      <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"time"</span>, &amp;time, <span class="string">"time/F"</span>);
-      <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"cx"</span>, &amp;cx, <span class="string">"cx/F"</span>);
-      <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"cy"</span>, &amp;cy, <span class="string">"cy/F"</span>);
-      <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"cz"</span>, &amp;cz, <span class="string">"cz/F"</span>);
-      <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"lambda"</span>, &amp;lambda, <span class="string">"lambda/F"</span>);
-      <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"photons"</span>, &amp;photons, <span class="string">"photons/F"</span>);
-
-      <span class="keyword">break</span>;
-
-    <span class="keyword">case</span> IO_TYPE_MC_TELOFF:
-      <span class="comment">//fprintf(stderr, <span class="string">"IO_TYPE_MC_TELOFF\n"</span>);</span>
-      <span class="keyword">if</span>(HAS_FLAG(flag, IO_TYPE_MC_EVTH)){
-        read_tel_offset(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:kMaxArrays" title="const Int_t ACorsikaIACTFile::kMaxArrays">kMaxArrays</a>, &amp;numberOfArrays, &amp;timeOffset, xOffset, yOffset);
-        <span class="keyword">if</span>(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fEventHeader" title="ACorsikaIACTEventHeader* ACorsikaIACTFile::fEventHeader">fEventHeader</a>){
-          <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fEventHeader" title="ACorsikaIACTEventHeader* ACorsikaIACTFile::fEventHeader">fEventHeader</a>-><a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:SetMultipleUseHeader" title="void ACorsikaIACTEventHeader::SetMultipleUseHeader(Int_t numberOfArrays, Double_t timeOffset, Double_t* xOffset, Double_t* yOffset)">SetMultipleUseHeader</a>(numberOfArrays, timeOffset, xOffset, yOffset);
-        } <span class="comment">// if</span>
-        SET_FLAG(flag, IO_TYPE_MC_TELOFF);
-      } <span class="comment">// if</span>
-      <span class="keyword">break</span>;
-
-    <span class="keyword">case</span> IO_TYPE_MC_EXTRA_PARAM:
-      <span class="comment">//fprintf(stderr, <span class="string">"IO_TYPE_MC_EXTRA_PARAM\n"</span>);</span>
-      <span class="comment">// not implemented yet</span>
-      <span class="keyword">break</span>;
-
-    <span class="keyword">case</span> IO_TYPE_MC_LONGI:
-      <span class="comment">//fprintf(stderr, <span class="string">"IO_TYPE_MC_LONGI\n"</span>);</span>
-      <span class="comment">// not implemented yet</span>
-      <span class="keyword">break</span>;
-
-    <span class="keyword">case</span> IO_TYPE_MC_TELARRAY:
-    <span class="keyword">case</span> IO_TYPE_MC_TELARRAY_HEAD:
-    {
-      <span class="comment">// IO_TYPE_MC_TELARRAY will appear ICERML times in an event</span>
-      <span class="keyword">if</span>(headerType == IO_TYPE_MC_TELARRAY){
-        <span class="comment">//fprintf(stderr, <span class="string">"IO_TYPE_MC_TELARRAY\n"</span>);</span>
-      } <span class="keyword">else</span> {
-        <span class="comment">//fprintf(stderr, <span class="string">"IO_TYPE_MC_TELARRAY_HEAD\n"</span>);</span>
-      } <span class="comment">// if</span>
-      <span class="keyword">if</span>(not (HAS_FLAG(flag, IO_TYPE_MC_EVTH) and HAS_FLAG(flag, IO_TYPE_MC_TELOFF))){
-        <span class="keyword">break</span>;
-      } <span class="comment">// if</span>
-
-      <a href="../ListOfTypes.html#Int_t">Int_t</a> instanceNumberOfArrays;
-      <a href="../ListOfTypes.html#IO_ITEM_HEADER">IO_ITEM_HEADER</a> itemHeader;
-
-      <a href="../ListOfTypes.html#Bool_t">Bool_t</a> telIndividual;
-      <span class="keyword">if</span>(headerType == IO_TYPE_MC_TELARRAY){
-        telIndividual = <span class="keyword">false</span>;
-        begin_read_tel_array(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, &amp;itemHeader, &amp;instanceNumberOfArrays);
-        SET_FLAG(flag, IO_TYPE_MC_TELARRAY);
-      } <span class="keyword">else</span> {
-        telIndividual = <span class="keyword">true</span>;
-        read_tel_array_head(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, &amp;itemHeader, &amp;instanceNumberOfArrays);
-        SET_FLAG(flag, IO_TYPE_MC_TELARRAY_HEAD);
-      } <span class="comment">// if</span>
-
-      <span class="keyword">struct</span> bunch* bunches = (<span class="keyword">struct</span> bunch*)malloc(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fMaxPhotonBunches" title="Int_t ACorsikaIACTFile::fMaxPhotonBunches">fMaxPhotonBunches</a>*<span class="keyword">sizeof</span>(<span class="keyword">struct</span> bunch));
-
-      <span class="keyword">if</span>(bunches == 0){
-        <span class="comment">//fprintf(stderr, <span class="string">"Error in allocating memory for photon bunch array.\n"</span>);</span>
-        <span class="keyword">return</span> -1;
-      } <span class="comment">// if</span>
-
-      <span class="keyword">for</span>(<a href="../ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt; <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fNumberOfTelescopes" title="Int_t ACorsikaIACTFile::fNumberOfTelescopes">fNumberOfTelescopes</a>; i++){
-        <span class="keyword">if</span>(not telIndividual){
-          <a href="../ListOfTypes.html#IO_ITEM_HEADER">IO_ITEM_HEADER</a> subItemHeader;
-          subItemHeader.type = IO_TYPE_MC_PHOTONS;
-          <span class="keyword">if</span>(search_sub_item(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, &amp;itemHeader, &amp;subItemHeader) &lt; 0){
-            <span class="keyword">break</span>;
-          } <span class="comment">// if</span>
-        } <span class="keyword">else</span> {
-          <span class="keyword">if</span>(find_io_block(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, &amp;<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBlockHeader" title="IO_ITEM_HEADER ACorsikaIACTFile::fBlockHeader">fBlockHeader</a>) != 0){
-            <span class="keyword">break</span>;
-          } <span class="comment">// if</span>
-          <span class="keyword">if</span>(read_io_block(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, &amp;<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBlockHeader" title="IO_ITEM_HEADER ACorsikaIACTFile::fBlockHeader">fBlockHeader</a>) != 0){
-            <span class="keyword">break</span>;
-          } <span class="comment">// if</span>
-          <span class="keyword">if</span>(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBlockHeader" title="IO_ITEM_HEADER ACorsikaIACTFile::fBlockHeader">fBlockHeader</a>.type == IO_TYPE_MC_TELARRAY_END){
-            telIndividual = <span class="keyword">false</span>;
-            <span class="keyword">break</span>;
-          } <span class="comment">// if</span>
-          <span class="keyword">if</span>(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBlockHeader" title="IO_ITEM_HEADER ACorsikaIACTFile::fBlockHeader">fBlockHeader</a>.type != IO_TYPE_MC_PHOTONS){
-            telIndividual = <span class="keyword">false</span>;
-            <span class="keyword">break</span>;
-          } <span class="comment">// if</span>
-        } <span class="comment">// if</span>
-
-        <a href="../ListOfTypes.html#Int_t">Int_t</a> nbunches;
-        <span class="keyword">if</span>(read_tel_photons(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fMaxPhotonBunches" title="Int_t ACorsikaIACTFile::fMaxPhotonBunches">fMaxPhotonBunches</a>, &amp;arrayNo, &amp;telNo,
-                            &amp;totalPhotons, bunches, &amp;nbunches) &lt; 0){
-          <span class="comment">//fprintf(stderr,<span class="string">"Error reading %d photon bunches\n"</span>,nbunches);</span>
-          <span class="keyword">continue</span>;
-        } <span class="comment">// if</span>
-
-        <span class="keyword">if</span>(arrayNo != instanceNumberOfArrays){
-          <span class="comment">// do nothing for now</span>
-        } <span class="comment">// if</span>
-        <span class="keyword">if</span>(i &gt;= <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:kMaxTelescopes" title="const Int_t ACorsikaIACTFile::kMaxTelescopes">kMaxTelescopes</a> or telNo &lt; 0){
-          <span class="comment">//fprintf(stderr, <span class="string">"Cannot process data for telescope #%d because only %d are configured.\n"</span>, i + 1, <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:kMaxTelescopes" title="const Int_t ACorsikaIACTFile::kMaxTelescopes">kMaxTelescopes</a>);</span>
-          <span class="keyword">continue</span>;
-        } <span class="comment">// if</span>
-
-        <span class="keyword">for</span>(<a href="../ListOfTypes.html#Int_t">Int_t</a> j = 0; j &lt; nbunches; j++){
-          x = bunches[j].x;
-          y = bunches[j].y;
-          zem = bunches[j].zem;
-          time = bunches[j].ctime;
-          cx = bunches[j].cx;
-          cy = bunches[j].cy;
-          cz = -1.*sqrt(1. - cx*cx - cy*cy);
-          lambda = bunches[j].lambda;
-          photons = bunches[j].photons;
-          <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Fill();
-        } <span class="comment">// j</span>
-      } <span class="comment">// i</span>
-
-      free(bunches);
-
-      <span class="keyword">if</span>(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBlockHeader" title="IO_ITEM_HEADER ACorsikaIACTFile::fBlockHeader">fBlockHeader</a>.type == IO_TYPE_MC_TELARRAY){
-        end_read_tel_array(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, &amp;itemHeader);
-      } <span class="comment">// if</span>
-
+    <span class="keyword">if</span> (headerType == -1) {
       <span class="keyword">break</span>;
     }
-    <span class="keyword">case</span> IO_TYPE_MC_EVTE:
-      SET_FLAG(flag, IO_TYPE_MC_EVTE);
-      <span class="comment">//fprintf(stderr, <span class="string">"IO_TYPE_MC_EVTE\n"</span>);</span>
-      <span class="keyword">break</span>;
+    <span class="keyword">switch</span> (headerType) {
+      <span class="keyword">case</span> IO_TYPE_MC_EVTH:
+        <span class="comment">// fprintf(stderr, <span class="string">"IO_TYPE_MC_EVTH\n"</span>);</span>
+        flag = 0x0;  <span class="comment">// initialize when we read the event header</span>
+        <a href="../ListOfTypes.html#Float_t">Float_t</a> evth[273];
+        read_tel_block(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, IO_TYPE_MC_EVTH, evth, 273);
+        <span class="comment">// Data blocks were OK, but event number != num. So skip.</span>
+        <span class="keyword">if</span> (evth[1] != num) {
+          <span class="keyword">break</span>;
+        }
 
-    <span class="keyword">case</span> IO_TYPE_MC_RUNE:
-      SET_FLAG(flag, IO_TYPE_MC_RUNE);
-      <span class="comment">//fprintf(stderr, <span class="string">"IO_TYPE_MC_RUNE\n"</span>);</span>
-      <span class="keyword">break</span>;
+        <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fMaxWavelength" title="Double_t ACorsikaIACTFile::fMaxWavelength">fMaxWavelength</a> = evth[96];
+        <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fMinWavelength" title="Double_t ACorsikaIACTFile::fMinWavelength">fMinWavelength</a> = evth[95];
 
-    <span class="keyword">default</span>:
-      fprintf(stderr, <span class="string">"Unknown type\n"</span>);
-      <span class="keyword">break</span>;
+        SafeDelete(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fEventHeader" title="ACorsikaIACTEventHeader* ACorsikaIACTFile::fEventHeader">fEventHeader</a>);
+        <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fEventHeader" title="ACorsikaIACTEventHeader* ACorsikaIACTFile::fEventHeader">fEventHeader</a> = <span class="keyword">new</span> <a href="../ACorsikaIACTEventHeader.html">ACorsikaIACTEventHeader</a>(evth);
+        SET_FLAG(flag, IO_TYPE_MC_EVTH);
 
-    } <span class="comment">// switch</span>
+        <span class="comment">// Reset bunches</span>
+        SafeDelete(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>);
+        <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a> = <span class="keyword">new</span> TTree(<span class="string">"tree"</span>, <span class="string">"Photon tree of CORSIKA IACT output."</span>);
 
-    <span class="keyword">if</span>(HAS_FLAG(flag, IO_TYPE_MC_EVTH) and HAS_FLAG(flag, IO_TYPE_MC_TELOFF) and
-       (HAS_FLAG(flag, IO_TYPE_MC_TELARRAY) or HAS_FLAG(flag, IO_TYPE_MC_TELARRAY_HEAD)) and
-       HAS_FLAG(flag, IO_TYPE_MC_EVTE)){
+        <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"telNo"</span>, &amp;telNo, <span class="string">"telNo/I"</span>);
+        <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"arrayNo"</span>, &amp;arrayNo, <span class="string">"arrayNo/I"</span>);
+        <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"x"</span>, &amp;x, <span class="string">"x/F"</span>);
+        <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"y"</span>, &amp;y, <span class="string">"y/F"</span>);
+        <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"zem"</span>, &amp;zem, <span class="string">"zem/F"</span>);
+        <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"time"</span>, &amp;time, <span class="string">"time/F"</span>);
+        <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"cx"</span>, &amp;cx, <span class="string">"cx/F"</span>);
+        <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"cy"</span>, &amp;cy, <span class="string">"cy/F"</span>);
+        <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"cz"</span>, &amp;cz, <span class="string">"cz/F"</span>);
+        <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"lambda"</span>, &amp;lambda, <span class="string">"lambda/F"</span>);
+        <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Branch(<span class="string">"photons"</span>, &amp;photons, <span class="string">"photons/F"</span>);
+
+        <span class="keyword">break</span>;
+
+      <span class="keyword">case</span> IO_TYPE_MC_TELOFF:
+        <span class="comment">// fprintf(stderr, <span class="string">"IO_TYPE_MC_TELOFF\n"</span>);</span>
+        <span class="keyword">if</span> (HAS_FLAG(flag, IO_TYPE_MC_EVTH)) {
+          read_tel_offset(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:kMaxArrays" title="const Int_t ACorsikaIACTFile::kMaxArrays">kMaxArrays</a>, &amp;numberOfArrays, &amp;timeOffset,
+                          xOffset, yOffset);
+          <span class="keyword">if</span> (<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fEventHeader" title="ACorsikaIACTEventHeader* ACorsikaIACTFile::fEventHeader">fEventHeader</a>) {
+            <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fEventHeader" title="ACorsikaIACTEventHeader* ACorsikaIACTFile::fEventHeader">fEventHeader</a>-><a href="../ACorsikaIACTEventHeader.html#ACorsikaIACTEventHeader:SetMultipleUseHeader" title="void ACorsikaIACTEventHeader::SetMultipleUseHeader(Int_t numberOfArrays, Double_t timeOffset, Double_t* xOffset, Double_t* yOffset)">SetMultipleUseHeader</a>(numberOfArrays, timeOffset,
+                                               xOffset, yOffset);
+          }
+          SET_FLAG(flag, IO_TYPE_MC_TELOFF);
+        }
+        <span class="keyword">break</span>;
+
+      <span class="keyword">case</span> IO_TYPE_MC_EXTRA_PARAM:
+        <span class="comment">// fprintf(stderr, <span class="string">"IO_TYPE_MC_EXTRA_PARAM\n"</span>);</span>
+        <span class="comment">// not implemented yet</span>
+        <span class="keyword">break</span>;
+
+      <span class="keyword">case</span> IO_TYPE_MC_LONGI:
+        <span class="comment">// fprintf(stderr, <span class="string">"IO_TYPE_MC_LONGI\n"</span>);</span>
+        <span class="comment">// not implemented yet</span>
+        <span class="keyword">break</span>;
+
+      <span class="keyword">case</span> IO_TYPE_MC_TELARRAY:
+      <span class="keyword">case</span> IO_TYPE_MC_TELARRAY_HEAD: {
+        <span class="comment">// IO_TYPE_MC_TELARRAY will appear ICERML times in an event</span>
+        <span class="keyword">if</span> (headerType == IO_TYPE_MC_TELARRAY) {
+          <span class="comment">// fprintf(stderr, <span class="string">"IO_TYPE_MC_TELARRAY\n"</span>);</span>
+        } <span class="keyword">else</span> {
+          <span class="comment">// fprintf(stderr, <span class="string">"IO_TYPE_MC_TELARRAY_HEAD\n"</span>);</span>
+        }
+        <span class="keyword">if</span> (not(HAS_FLAG(flag, IO_TYPE_MC_EVTH) and
+                HAS_FLAG(flag, IO_TYPE_MC_TELOFF))) {
+          <span class="keyword">break</span>;
+        }
+
+        <a href="../ListOfTypes.html#Int_t">Int_t</a> instanceNumberOfArrays;
+        <a href="../ListOfTypes.html#IO_ITEM_HEADER">IO_ITEM_HEADER</a> itemHeader;
+
+        <a href="../ListOfTypes.html#Bool_t">Bool_t</a> telIndividual;
+        <span class="keyword">if</span> (headerType == IO_TYPE_MC_TELARRAY) {
+          telIndividual = <span class="keyword">false</span>;
+          begin_read_tel_array(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, &amp;itemHeader, &amp;instanceNumberOfArrays);
+          SET_FLAG(flag, IO_TYPE_MC_TELARRAY);
+        } <span class="keyword">else</span> {
+          telIndividual = <span class="keyword">true</span>;
+          read_tel_array_head(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, &amp;itemHeader, &amp;instanceNumberOfArrays);
+          SET_FLAG(flag, IO_TYPE_MC_TELARRAY_HEAD);
+        }
+
+        <span class="keyword">struct</span> bunch* bunches =
+            (<span class="keyword">struct</span> bunch*)malloc(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fMaxPhotonBunches" title="Int_t ACorsikaIACTFile::fMaxPhotonBunches">fMaxPhotonBunches</a> * <span class="keyword">sizeof</span>(<span class="keyword">struct</span> bunch));
+
+        <span class="keyword">if</span> (bunches == 0) {
+          <span class="comment">// fprintf(stderr, <span class="string">"Error in allocating memory for photon bunch</span></span>
+          <span class="comment">// array.\n<span class="string">");</span></span>
+          <span class="keyword">return</span> -1;
+        }
+
+        <span class="keyword">for</span> (<a href="../ListOfTypes.html#Int_t">Int_t</a> i = 0; i &lt; <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fNumberOfTelescopes" title="Int_t ACorsikaIACTFile::fNumberOfTelescopes">fNumberOfTelescopes</a>; i++) {
+          <span class="keyword">if</span> (not telIndividual) {
+            <a href="../ListOfTypes.html#IO_ITEM_HEADER">IO_ITEM_HEADER</a> subItemHeader;
+            subItemHeader.type = IO_TYPE_MC_PHOTONS;
+            <span class="keyword">if</span> (search_sub_item(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, &amp;itemHeader, &amp;subItemHeader) &lt; 0) {
+              <span class="keyword">break</span>;
+            }
+          } <span class="keyword">else</span> {
+            <span class="keyword">if</span> (find_io_block(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, &amp;<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBlockHeader" title="IO_ITEM_HEADER ACorsikaIACTFile::fBlockHeader">fBlockHeader</a>) != 0) {
+              <span class="keyword">break</span>;
+            }
+            <span class="keyword">if</span> (read_io_block(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, &amp;<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBlockHeader" title="IO_ITEM_HEADER ACorsikaIACTFile::fBlockHeader">fBlockHeader</a>) != 0) {
+              <span class="keyword">break</span>;
+            }
+            <span class="keyword">if</span> (<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBlockHeader" title="IO_ITEM_HEADER ACorsikaIACTFile::fBlockHeader">fBlockHeader</a>.type == IO_TYPE_MC_TELARRAY_END) {
+              telIndividual = <span class="keyword">false</span>;
+              <span class="keyword">break</span>;
+            }
+            <span class="keyword">if</span> (<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBlockHeader" title="IO_ITEM_HEADER ACorsikaIACTFile::fBlockHeader">fBlockHeader</a>.type != IO_TYPE_MC_PHOTONS) {
+              telIndividual = <span class="keyword">false</span>;
+              <span class="keyword">break</span>;
+            }
+          }
+
+          <a href="../ListOfTypes.html#Int_t">Int_t</a> nbunches;
+          <span class="keyword">if</span> (read_tel_photons(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fMaxPhotonBunches" title="Int_t ACorsikaIACTFile::fMaxPhotonBunches">fMaxPhotonBunches</a>, &amp;arrayNo, &amp;telNo,
+                               &amp;totalPhotons, bunches, &amp;nbunches) &lt; 0) {
+            <span class="comment">// fprintf(stderr,<span class="string">"Error reading %d photon bunches\n"</span>,nbunches);</span>
+            <span class="keyword">continue</span>;
+          }
+
+          <span class="keyword">if</span> (arrayNo != instanceNumberOfArrays) {
+            <span class="comment">// do nothing for now</span>
+          }
+          <span class="keyword">if</span> (i &gt;= <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:kMaxTelescopes" title="const Int_t ACorsikaIACTFile::kMaxTelescopes">kMaxTelescopes</a> or telNo &lt; 0) {
+            <span class="comment">// fprintf(stderr, <span class="string">"Cannot process data for telescope #%d because</span></span>
+            <span class="comment">// only %d are configured.\n<span class="string">", i + 1, kMaxTelescopes);</span></span>
+            <span class="keyword">continue</span>;
+          }
+
+          <span class="keyword">for</span> (<a href="../ListOfTypes.html#Int_t">Int_t</a> j = 0; j &lt; nbunches; j++) {
+            x = bunches[j].x;
+            y = bunches[j].y;
+            zem = bunches[j].zem;
+            time = bunches[j].ctime;
+            cx = bunches[j].cx;
+            cy = bunches[j].cy;
+            cz = -1. * sqrt(1. - cx * cx - cy * cy);
+            lambda = bunches[j].lambda;
+            photons = bunches[j].photons;
+            <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBunches" title="TTree* ACorsikaIACTFile::fBunches">fBunches</a>-&gt;Fill();
+          }
+        }
+
+        free(bunches);
+
+        <span class="keyword">if</span> (<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBlockHeader" title="IO_ITEM_HEADER ACorsikaIACTFile::fBlockHeader">fBlockHeader</a>.type == IO_TYPE_MC_TELARRAY) {
+          end_read_tel_array(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, &amp;itemHeader);
+        }
+
+        <span class="keyword">break</span>;
+      }
+      <span class="keyword">case</span> IO_TYPE_MC_EVTE:
+        SET_FLAG(flag, IO_TYPE_MC_EVTE);
+        <span class="comment">// fprintf(stderr, <span class="string">"IO_TYPE_MC_EVTE\n"</span>);</span>
+        <span class="keyword">break</span>;
+
+      <span class="keyword">case</span> IO_TYPE_MC_RUNE:
+        SET_FLAG(flag, IO_TYPE_MC_RUNE);
+        <span class="comment">// fprintf(stderr, <span class="string">"IO_TYPE_MC_RUNE\n"</span>);</span>
+        <span class="keyword">break</span>;
+
+      <span class="keyword">default</span>:
+        fprintf(stderr, <span class="string">"Unknown type\n"</span>);
+        <span class="keyword">break</span>;
+    }
+
+    <span class="keyword">if</span> (HAS_FLAG(flag, IO_TYPE_MC_EVTH) and
+        HAS_FLAG(flag, IO_TYPE_MC_TELOFF) and
+        (HAS_FLAG(flag, IO_TYPE_MC_TELARRAY) or
+         HAS_FLAG(flag, IO_TYPE_MC_TELARRAY_HEAD)) and
+        HAS_FLAG(flag, IO_TYPE_MC_EVTE)) {
       <span class="keyword">return</span> num;
-    } <span class="comment">// if</span>
-  } <span class="comment">// while</span>
+    }
+  }
 
   <span class="keyword">return</span> -1;
 }
 
 <span class="comment">//_____________________________________________________________________________</span>
-<a name="O2ZzjD"></a><a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:ReadNextBlock" title="Int_t ACorsikaIACTFile::ReadNextBlock()">ReadNextBlock</a>()
-{
-  <span class="keyword">if</span>(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:IsOpen" title="Bool_t ACorsikaIACTFile::IsOpen()">IsOpen</a>()){
-    <span class="keyword">if</span>(find_io_block(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, &amp;<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBlockHeader" title="IO_ITEM_HEADER ACorsikaIACTFile::fBlockHeader">fBlockHeader</a>) != 0){
+<a name="QOeK4"></a><a href="../ListOfTypes.html#Int_t">Int_t</a> <a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>::<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:ReadNextBlock" title="Int_t ACorsikaIACTFile::ReadNextBlock()">ReadNextBlock</a>() {
+  <span class="keyword">if</span> (<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:IsOpen" title="Bool_t ACorsikaIACTFile::IsOpen()">IsOpen</a>()) {
+    <span class="keyword">if</span> (find_io_block(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, &amp;<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBlockHeader" title="IO_ITEM_HEADER ACorsikaIACTFile::fBlockHeader">fBlockHeader</a>) != 0) {
       <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:Close" title="void ACorsikaIACTFile::Close()">Close</a>();
       <span class="keyword">return</span> -1;
-    } <span class="comment">// if</span>
+    }
 
-    <span class="keyword">if</span>(read_io_block(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, &amp;<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBlockHeader" title="IO_ITEM_HEADER ACorsikaIACTFile::fBlockHeader">fBlockHeader</a>) != 0){
+    <span class="keyword">if</span> (read_io_block(<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fIOBuffer" title="IO_BUFFER* ACorsikaIACTFile::fIOBuffer">fIOBuffer</a>, &amp;<a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBlockHeader" title="IO_ITEM_HEADER ACorsikaIACTFile::fBlockHeader">fBlockHeader</a>) != 0) {
       <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:Close" title="void ACorsikaIACTFile::Close()">Close</a>();
       <span class="keyword">return</span> -1;
-    } <span class="comment">// if</span>
+    }
   } <span class="keyword">else</span> {
     <span class="keyword">return</span> -1;
-  } <span class="comment">// if</span>
+  }
 
   <span class="keyword">return</span> <a href="../ACorsikaIACTFile.html#ACorsikaIACTFile:fBlockHeader" title="IO_ITEM_HEADER ACorsikaIACTFile::fBlockHeader">fBlockHeader</a>.type;
 }
@@ -535,7 +535,7 @@ ClassImp(<a href="../ACorsikaIACTFile.html">ACorsikaIACTFile</a>)
 <!--SIGNATURE-->
 <div id="footer">
 
-<em>&raquo; Last changed: 2017-07-15 08:46 </em><em>&raquo; Last generated: 2017-07-15 08:46</em><br />
+<em>&raquo; Last changed: 2020-01-07 14:47 </em><em>&raquo; Last generated: 2020-01-07 14:47</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROBAST in general please send a mail to <a href="mailto:oxon@mac.com">ROBAST support</a>.</em>
 </div>
 </div>

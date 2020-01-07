@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: Akira Okumura (oxon@mac.com)        -->
 <!--                                             -->
-<!--   Date: Sat Jul 15 08:46:07 2017            -->
+<!--   Date: Tue Jan  7 14:48:03 2020            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -87,6 +87,7 @@ return false;}
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoWinstonCone2D:CalcdRdZ">CalcdRdZ</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> z) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoWinstonCone2D:CalcR">CalcR</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> z) <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AGeoWinstonCone2D:Capacity">Capacity</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="#TObject:CheckedHash"><span class="baseclass">TObject::</span>CheckedHash</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:CheckShape"><span class="baseclass">TGeoShape::</span>CheckShape</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> testNo, <a href="./ListOfTypes.html#Int_t">Int_t</a> nsamples = 10000, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#AGeoWinstonCone2D:Class">Class</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
@@ -156,6 +157,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetUniqueID"><span class="baseclass">TObject::</span>GetUniqueID</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:HandleTimer"><span class="baseclass">TObject::</span>HandleTimer</a>(TTimer* timer)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="#TNamed:Hash"><span class="baseclass">TNamed::</span>Hash</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:HasInconsistentHash"><span class="baseclass">TObject::</span>HasInconsistentHash</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Info"><span class="baseclass">TObject::</span>Info</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> <span class="keyword">char</span>* classname) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom@1"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> TClass* cl) <span class="keyword">const</span></td></tr>
@@ -260,6 +262,11 @@ return false;}
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoShape:TransformPoints"><span class="baseclass">TGeoShape::</span>TransformPoints</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* points, <a href="./ListOfTypes.html#UInt_t">UInt_t</a> NbPoints) <span class="keyword">const</span></td></tr>
 
 </table></div>
+<div class="access" id="funcpriv"><b>private:</b>
+<table class="func" id="tabfuncpriv" cellspacing="0">
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#AGeoWinstonCone2D:CheckTObjectHashConsistency">CheckTObjectHashConsistency</a>() <span class="keyword">const</span></td></tr>
+
+</table></div>
 </div>
 
 <div id="datamembers">
@@ -304,13 +311,14 @@ return false;}
 <tr class="datainh"><td class="datatype">static <a href="./#TGeoShape:TGeoShape" title="TGeoShape TGeoShape::TGeoShape() or overloads">TGeoShape</a>::EShapeType</td><td class="dataname"><a href="#TGeoShape:kGeoVisZ"><span class="baseclass">TGeoShape::</span>kGeoVisZ</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TGeoShape:TGeoShape" title="TGeoShape TGeoShape::TGeoShape() or overloads">TGeoShape</a>::EShapeType</td><td class="dataname"><a href="#TGeoShape:kGeoXtru"><span class="baseclass">TGeoShape::</span>kGeoXtru</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kHasUUID"><span class="baseclass">TObject::</span>kHasUUID</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kInconsistent"><span class="baseclass">TObject::</span>kInconsistent</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kInvalidObject"><span class="baseclass">TObject::</span>kInvalidObject</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kIsOnHeap"><span class="baseclass">TObject::</span>kIsOnHeap</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kIsReferenced"><span class="baseclass">TObject::</span>kIsReferenced</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kMustCleanup"><span class="baseclass">TObject::</span>kMustCleanup</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kNoContextMenu"><span class="baseclass">TObject::</span>kNoContextMenu</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kNotDeleted"><span class="baseclass">TObject::</span>kNotDeleted</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kObjInCanvas"><span class="baseclass">TObject::</span>kObjInCanvas</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EDeprecatedStatusBits</td><td class="dataname"><a href="#TObject:kObjInCanvas"><span class="baseclass">TObject::</span>kObjInCanvas</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kOverwrite"><span class="baseclass">TObject::</span>kOverwrite</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kSingleKey"><span class="baseclass">TObject::</span>kSingleKey</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kWriteDelete"><span class="baseclass">TObject::</span>kWriteDelete</a></td><td></td></tr>
@@ -349,56 +357,59 @@ return false;}
 </div><div class="classcharts"><div class="classchartswidth"></div>
 <img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapAGeoWinstonCone2D_Inh" src="inh/AGeoWinstonCone2D_Inh.png"/></div>
 <h2>Function documentation</h2>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="AGeoWinstonCone2D:AGeoWinstonCone2D" href="src/AGeoWinstonCone2D.cxx.html#Xiunw">AGeoWinstonCone2D</a>()</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="AGeoWinstonCone2D:AGeoWinstonCone2D" href="src/AGeoWinstonCone2D.cxx.html#i1XAyB">AGeoWinstonCone2D</a>()</span><br />
 <div class="funccomm"><pre> Default constructor
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="AGeoWinstonCone2D:AGeoWinstonCone2D@1" href="src/AGeoWinstonCone2D.cxx.html#VNj.BD">AGeoWinstonCone2D</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> r1, <a href="./ListOfTypes.html#Double_t">Double_t</a> r2, <a href="./ListOfTypes.html#Double_t">Double_t</a> y)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="AGeoWinstonCone2D:AGeoWinstonCone2D@2" href="src/AGeoWinstonCone2D.cxx.html#drjCdB">AGeoWinstonCone2D</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Double_t">Double_t</a> r1, <a href="./ListOfTypes.html#Double_t">Double_t</a> r2, <a href="./ListOfTypes.html#Double_t">Double_t</a> y)</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="AGeoWinstonCone2D:AGeoWinstonCone2D@2" href="src/AGeoWinstonCone2D.cxx.html#Yif6QB">AGeoWinstonCone2D</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <a href="./ListOfTypes.html#Double_t">Double_t</a> r1, <a href="./ListOfTypes.html#Double_t">Double_t</a> r2, <a href="./ListOfTypes.html#Double_t">Double_t</a> y)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="AGeoWinstonCone2D:_AGeoWinstonCone2D" href="src/AGeoWinstonCone2D.cxx.html#bOfP3">~AGeoWinstonCone2D</a>()</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="AGeoWinstonCone2D:_AGeoWinstonCone2D" href="src/AGeoWinstonCone2D.cxx.html#Kcmv5C">~AGeoWinstonCone2D</a>()</span><br />
 <div class="funccomm"><pre> Destructor
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoWinstonCone2D:CalcdRdZ" href="src/AGeoWinstonCone2D.cxx.html#IDgXIB">CalcdRdZ</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> z) const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoWinstonCone2D:CalcdRdZ" href="src/AGeoWinstonCone2D.cxx.html#mDIvBD">CalcdRdZ</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> z) const</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoWinstonCone2D:CalcR" href="src/AGeoWinstonCone2D.cxx.html#WPCG7">CalcR</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> z) const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoWinstonCone2D:CalcR" href="src/AGeoWinstonCone2D.cxx.html#FJEzdD">CalcR</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> z) const</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoWinstonCone2D:Capacity" href="src/AGeoWinstonCone2D.cxx.html#MPZ4AD">Capacity</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoWinstonCone2D:Capacity" href="src/AGeoWinstonCone2D.cxx.html#ACvHhD">Capacity</a>() const</span><br />
 <div class="funccomm"><pre> Compute capacity of the shape in [length^3]
  Not implemeted yet
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:ComputeBBox" href="src/AGeoWinstonCone2D.cxx.html#ilNT0">ComputeBBox</a>()</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:ComputeBBox" href="src/AGeoWinstonCone2D.cxx.html#EsoJ0">ComputeBBox</a>()</span><br />
 <div class="funccomm"><pre> Compute bounding box of the shape
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:ComputeNormal" href="src/AGeoWinstonCone2D.cxx.html#Q1gxDB">ComputeNormal</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir, <a href="./ListOfTypes.html#Double_t">Double_t</a>* norm)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:ComputeNormal" href="src/AGeoWinstonCone2D.cxx.html#FyG7p">ComputeNormal</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir, <a href="./ListOfTypes.html#Double_t">Double_t</a>* norm)</span><br />
 <div class="funccomm"><pre> Compute normal to closest surface from POINT.
+ Following calculation assumes that the point is very close to surfaces.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="AGeoWinstonCone2D:Contains" href="src/AGeoWinstonCone2D.cxx.html#Y0VaRE">Contains</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point) const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="AGeoWinstonCone2D:Contains" href="src/AGeoWinstonCone2D.cxx.html#QkG87D">Contains</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point) const</span><br />
 <div class="funccomm"><pre> Test if point is in this shape
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="AGeoWinstonCone2D:DistancetoPrimitive" href="src/AGeoWinstonCone2D.cxx.html#jU97E">DistancetoPrimitive</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="AGeoWinstonCone2D:DistancetoPrimitive" href="src/AGeoWinstonCone2D.cxx.html#zi7qdC">DistancetoPrimitive</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> px, <a href="./ListOfTypes.html#Int_t">Int_t</a> py)</span><br />
 <div class="funccomm"><pre> compute closest distance from point px,py to each corner
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoWinstonCone2D:DistFromInside" href="src/AGeoWinstonCone2D.cxx.html#oysoiB">DistFromInside</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir, <a href="./ListOfTypes.html#Int_t">Int_t</a> iact = 1, <a href="./ListOfTypes.html#Double_t">Double_t</a> step = <a href="./#TGeoShape:TGeoShape" title="TGeoShape TGeoShape::TGeoShape() or overloads">TGeoShape</a>::<a href="./#TGeoShape:Big" title="Double_t TGeoShape::Big()">Big</a>(), <a href="./ListOfTypes.html#Double_t">Double_t</a>* safe = 0) const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoWinstonCone2D:DistFromInside" href="src/AGeoWinstonCone2D.cxx.html#NXQXS">DistFromInside</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir, <a href="./ListOfTypes.html#Int_t">Int_t</a> iact = 1, <a href="./ListOfTypes.html#Double_t">Double_t</a> step = <a href="./#TGeoShape:TGeoShape" title="TGeoShape TGeoShape::TGeoShape() or overloads">TGeoShape</a>::<a href="./#TGeoShape:Big" title="Double_t TGeoShape::Big()">Big</a>(), <a href="./ListOfTypes.html#Double_t">Double_t</a>* safe = 0) const</span><br />
 <div class="funccomm"><pre> compute distance from inside point to surface of the sphere
+ compute safe distance
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoWinstonCone2D:DistFromOutside" href="src/AGeoWinstonCone2D.cxx.html#CpIjt">DistFromOutside</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir, <a href="./ListOfTypes.html#Int_t">Int_t</a> iact = 1, <a href="./ListOfTypes.html#Double_t">Double_t</a> step = <a href="./#TGeoShape:TGeoShape" title="TGeoShape TGeoShape::TGeoShape() or overloads">TGeoShape</a>::<a href="./#TGeoShape:Big" title="Double_t TGeoShape::Big()">Big</a>(), <a href="./ListOfTypes.html#Double_t">Double_t</a>* safe = 0) const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoWinstonCone2D:DistFromOutside" href="src/AGeoWinstonCone2D.cxx.html#I49lJ">DistFromOutside</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir, <a href="./ListOfTypes.html#Int_t">Int_t</a> iact = 1, <a href="./ListOfTypes.html#Double_t">Double_t</a> step = <a href="./#TGeoShape:TGeoShape" title="TGeoShape TGeoShape::TGeoShape() or overloads">TGeoShape</a>::<a href="./#TGeoShape:Big" title="Double_t TGeoShape::Big()">Big</a>(), <a href="./ListOfTypes.html#Double_t">Double_t</a>* safe = 0) const</span><br />
 <div class="funccomm"><pre> compute distance from outside point to surface of the sphere
+ compute safe distance
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoWinstonCone2D:DistToParabola" href="src/AGeoWinstonCone2D.cxx.html#C3UWqD">DistToParabola</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir, <a href="./ListOfTypes.html#Double_t">Double_t</a> phi, <a href="./ListOfTypes.html#Double_t">Double_t</a> open) const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoWinstonCone2D:DistToParabola" href="src/AGeoWinstonCone2D.cxx.html#sfof2E">DistToParabola</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* dir, <a href="./ListOfTypes.html#Double_t">Double_t</a> phi, <a href="./ListOfTypes.html#Double_t">Double_t</a> open) const</span><br />
 </div>
 <div class="funcdoc"><span class="funcname">TGeoVolume* <a class="funcname" name="AGeoWinstonCone2D:Divide" href="src/AGeoWinstonCone2D.cxx.html#z_y2v">Divide</a>(TGeoVolume* voldiv, <span class="keyword">const</span> <span class="keyword">char</span>* divname, <a href="./ListOfTypes.html#Int_t">Int_t</a> iaxis, <a href="./ListOfTypes.html#Int_t">Int_t</a> ndiv, <a href="./ListOfTypes.html#Double_t">Double_t</a> start, <a href="./ListOfTypes.html#Double_t">Double_t</a> step)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:GetBoundingCylinder" href="src/AGeoWinstonCone2D.cxx.html#F9B_0D">GetBoundingCylinder</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* param) const</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:GetBoundingCylinder" href="src/AGeoWinstonCone2D.cxx.html#O4fgoD">GetBoundingCylinder</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* param) const</span><br />
 <div class="funccomm"><pre>--- Fill vector param[4] with the bounding cylinder parameters. The order
  is the following : Rmin, Rmax, Phi1, Phi2
 </pre></div>
@@ -407,63 +418,61 @@ return false;}
 <div class="funccomm"><pre> Fills a static 3D buffer and returns a reference
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:GetMeshNumbers" href="src/AGeoWinstonCone2D.cxx.html#UUu0xE">GetMeshNumbers</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; nvert, <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; nsegs, <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; npols) const</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:GetMeshNumbers" href="src/AGeoWinstonCone2D.cxx.html#wOA9q">GetMeshNumbers</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; nvert, <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; nsegs, <a href="./ListOfTypes.html#Int_t">Int_t</a>&amp; npols) const</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="AGeoWinstonCone2D:GetNmeshVertices" href="src/AGeoWinstonCone2D.cxx.html#AqksJB">GetNmeshVertices</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Int_t">Int_t</a> <a class="funcname" name="AGeoWinstonCone2D:GetNmeshVertices" href="src/AGeoWinstonCone2D.cxx.html#DgOVJB">GetNmeshVertices</a>() const</span><br />
 <div class="funccomm"><pre> Return number of vertices of the mesh representation
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:InspectShape" href="src/AGeoWinstonCone2D.cxx.html#er64TE">InspectShape</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:InspectShape" href="src/AGeoWinstonCone2D.cxx.html#PeJst">InspectShape</a>() const</span><br />
 <div class="funccomm"><pre> print shape parameters
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname">TBuffer3D* <a class="funcname" name="AGeoWinstonCone2D:MakeBuffer3D" href="src/AGeoWinstonCone2D.cxx.html#fOSLGE">MakeBuffer3D</a>() const</span><br />
+<div class="funcdoc"><span class="funcname">TBuffer3D* <a class="funcname" name="AGeoWinstonCone2D:MakeBuffer3D" href="src/AGeoWinstonCone2D.cxx.html#gTIVWD">MakeBuffer3D</a>() const</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoWinstonCone2D:Safety" href="src/AGeoWinstonCone2D.cxx.html#PymrED">Safety</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> in = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>) const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoWinstonCone2D:Safety" href="src/AGeoWinstonCone2D.cxx.html#UjY6PE">Safety</a>(<span class="keyword">const</span> <a href="./ListOfTypes.html#Double_t">Double_t</a>* point, <a href="./ListOfTypes.html#Bool_t">Bool_t</a> in = <a href="./ListOfTypes.html#Bool_t">kTRUE</a>) const</span><br />
 <div class="funccomm"><pre> Not implemented yet. But keep this as is.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:SavePrimitive" href="src/AGeoWinstonCone2D.cxx.html#m79yQB">SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:SavePrimitive" href="src/AGeoWinstonCone2D.cxx.html#yA0oV">SavePrimitive</a>(<a href="./ListOfTypes.html#ostream">ostream</a>&amp; out, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</span><br />
 <div class="funccomm"><pre> Save a primitive as a C++ statement(s) on output stream <span class="string">"out"</span>.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:SetWinstonDimensions" href="src/AGeoWinstonCone2D.cxx.html#zxKHV">SetWinstonDimensions</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> r1, <a href="./ListOfTypes.html#Double_t">Double_t</a> r2, <a href="./ListOfTypes.html#Double_t">Double_t</a> y)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:SetWinstonDimensions" href="src/AGeoWinstonCone2D.cxx.html#AnX4OE">SetWinstonDimensions</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> r1, <a href="./ListOfTypes.html#Double_t">Double_t</a> r2, <a href="./ListOfTypes.html#Double_t">Double_t</a> y)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:SetDimensions" href="src/AGeoWinstonCone2D.cxx.html#o5zknE">SetDimensions</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* param)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:SetDimensions" href="src/AGeoWinstonCone2D.cxx.html#okWHrC">SetDimensions</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* param)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:SetPoints" href="src/AGeoWinstonCone2D.cxx.html#dxC0CB">SetPoints</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* points) const</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:SetPoints" href="src/AGeoWinstonCone2D.cxx.html#SPVwCB">SetPoints</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a>* points) const</span><br />
 <div class="funccomm"><pre> create mesh points
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:SetPoints@1" href="src/AGeoWinstonCone2D.cxx.html#ak6_eB">SetPoints</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a>* points) const</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:SetPoints@1" href="src/AGeoWinstonCone2D.cxx.html#iU9wLD">SetPoints</a>(<a href="./ListOfTypes.html#Float_t">Float_t</a>* points) const</span><br />
 <div class="funccomm"><pre> create mesh points
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:SetSegsAndPols" href="src/AGeoWinstonCone2D.cxx.html#YxKySD">SetSegsAndPols</a>(TBuffer3D&amp; buff) const</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:SetSegsAndPols" href="src/AGeoWinstonCone2D.cxx.html#bi5tSD">SetSegsAndPols</a>(TBuffer3D&amp; buff) const</span><br />
 <div class="funccomm"><pre> Fill TBuffer3D structure for segments and polygons.
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:Sizeof3D" href="src/AGeoWinstonCone2D.cxx.html#TyDelE">Sizeof3D</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AGeoWinstonCone2D:Sizeof3D" href="src/AGeoWinstonCone2D.cxx.html#Ws2B.D">Sizeof3D</a>() const</span><br />
 <div class="funccomm"><pre> obsolete - to be removed
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="AGeoWinstonCone2D:AGeoWinstonCone2D" href="src/AGeoWinstonCone2D.h.html#QLd8MD">AGeoWinstonCone2D</a>()</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./#TGeoShape:TGeoShape" title="TGeoShape TGeoShape::TGeoShape() or overloads">TGeoShape</a>* <a class="funcname" name="AGeoWinstonCone2D:GetMakeRuntimeShape" href="src/AGeoWinstonCone2D.h.html#XcqIAD">GetMakeRuntimeShape</a>(<a href="./#TGeoShape:TGeoShape" title="TGeoShape TGeoShape::TGeoShape() or overloads">TGeoShape</a>* , TGeoMatrix* ) const</span><br />
-<div class="funccomm"><pre>virtual <a href="./ListOfTypes.html#Int_t">Int_t</a>       <a href="./#TGeoBBox:GetByteCount" title="Int_t TGeoBBox::GetByteCount() const">GetByteCount</a>() const {return 68 + 4*(fNPol1 + fNPol2);} // to be checked
+<div class="funcdoc"><span class="funcname"><a href="./#TGeoShape:TGeoShape" title="TGeoShape TGeoShape::TGeoShape() or overloads">TGeoShape</a>* <a class="funcname" name="AGeoWinstonCone2D:GetMakeRuntimeShape" href="src/AGeoWinstonCone2D.h.html#XsROvC">GetMakeRuntimeShape</a>(<a href="./#TGeoShape:TGeoShape" title="TGeoShape TGeoShape::TGeoShape() or overloads">TGeoShape</a>* , TGeoMatrix* ) const</span><br />
+<div class="funccomm"><pre> virtual <a href="./ListOfTypes.html#Int_t">Int_t</a>       <a href="./#TGeoBBox:GetByteCount" title="Int_t TGeoBBox::GetByteCount() const">GetByteCount</a>() const {return 68 + 4*(fNPol1 + fNPol2);}
+ // to be checked
 </pre></div>
+</div>
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoWinstonCone2D:GetTheta" href="src/AGeoWinstonCone2D.h.html#PsW8eC">GetTheta</a>() const</span><br />
 
-<div class="code"><code class="inlinecode">{<span class="keyword">return</span> 0;}</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./AGeoWinstonCone2D.html#AGeoWinstonCone2D:fTheta" title="Double_t AGeoWinstonCone2D::fTheta">fTheta</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AGeoWinstonCone2D:GetTheta" href="src/AGeoWinstonCone2D.h.html#ZWzWkC">GetTheta</a>() const</span><br />
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="AGeoWinstonCone2D:IsCylType" href="src/AGeoWinstonCone2D.h.html#oaatsE">IsCylType</a>() const</span><br />
 
-<div class="code"><code class="inlinecode">{<span class="keyword">return</span> <a href="./AGeoWinstonCone2D.html#AGeoWinstonCone2D:fTheta" title="Double_t AGeoWinstonCone2D::fTheta">fTheta</a>;}</code></div>
-<div style="clear:both;"></div>
-</div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Bool_t">Bool_t</a> <a class="funcname" name="AGeoWinstonCone2D:IsCylType" href="src/AGeoWinstonCone2D.h.html#g8OGJB">IsCylType</a>() const</span><br />
-
-<div class="code"><code class="inlinecode">{<span class="keyword">return</span> <a href="./ListOfTypes.html#Bool_t">kFALSE</a>;}</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> <a href="./ListOfTypes.html#Bool_t">kFALSE</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
 
@@ -471,7 +480,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="mailto:oxon@mac.com"> Akira Okumura </a> </em><em>&raquo; Copyright   (C) 2006-, Akira Okumura                                         *</em><br />
-<em>&raquo; Last changed: Sat Jul 15 08:46:07 2017 </em><em>&raquo; Last generated: 2017-07-15 08:46</em><br />
+<em>&raquo; Last changed: Tue Jan  7 14:48:04 2020 </em><em>&raquo; Last generated: 2020-01-07 14:48</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROBAST in general please send a mail to <a href="mailto:oxon@mac.com">ROBAST support</a>.</em>
 </div>
 </div>

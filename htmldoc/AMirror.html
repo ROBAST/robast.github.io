@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: Akira Okumura (oxon@mac.com)        -->
 <!--                                             -->
-<!--   Date: Sat Jul 15 08:46:08 2017            -->
+<!--   Date: Tue Jan  7 14:48:05 2020            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -75,10 +75,10 @@ return false;}
 <table class="func" id="tabfuncpubl" cellspacing="0">
 <tr class="func"><td class="funcret"> virtual</td><td class="funcname"><a class="funcname" href="#AMirror:_AMirror">~AMirror</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:AbstractMethod"><span class="baseclass">TObject::</span>AbstractMethod</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./AOpticalComponent.html#AOpticalComponent:AddBorderSurfaceCondition"><span class="baseclass">AOpticalComponent::</span>AddBorderSurfaceCondition</a>(<a href="./ABorderSurfaceCondition.html">ABorderSurfaceCondition</a>* condition)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoVolume:AddNode"><span class="baseclass">TGeoVolume::</span>AddNode</a>(<a href="./#TGeoVolume:TGeoVolume" title="TGeoVolume TGeoVolume::TGeoVolume(const TGeoVolume&amp;) or overloads">TGeoVolume</a>* vol, <a href="./ListOfTypes.html#Int_t">Int_t</a> copy_no, TGeoMatrix* mat = 0, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoVolume:AddNodeOffset"><span class="baseclass">TGeoVolume::</span>AddNodeOffset</a>(<a href="./#TGeoVolume:TGeoVolume" title="TGeoVolume TGeoVolume::TGeoVolume(const TGeoVolume&amp;) or overloads">TGeoVolume</a>* vol, <a href="./ListOfTypes.html#Int_t">Int_t</a> copy_no, <a href="./ListOfTypes.html#Double_t">Double_t</a> offset = 0, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoVolume:AddNodeOverlap"><span class="baseclass">TGeoVolume::</span>AddNodeOverlap</a>(<a href="./#TGeoVolume:TGeoVolume" title="TGeoVolume TGeoVolume::TGeoVolume(const TGeoVolume&amp;) or overloads">TGeoVolume</a>* vol, <a href="./ListOfTypes.html#Int_t">Int_t</a> copy_no, TGeoMatrix* mat = 0, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
-<tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="./AOpticalComponent.html#AOpticalComponent:AddSurfaceCondition"><span class="baseclass">AOpticalComponent::</span>AddSurfaceCondition</a>(<a href="./ABorderSurfaceCondition.html">ABorderSurfaceCondition</a>* condition)</td></tr>
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#AMirror:AMirror">AMirror</a>()</td></tr>
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#AMirror:AMirror@2">AMirror</a>(<span class="keyword">const</span> <a href="./AMirror.html">AMirror</a>&amp;)</td></tr>
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#AMirror:AMirror@1">AMirror</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> TGeoShape* shape, <span class="keyword">const</span> TGeoMedium* med = 0)</td></tr>
@@ -86,6 +86,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoVolume:Browse"><span class="baseclass">TGeoVolume::</span>Browse</a>(TBrowser* b)</td></tr>
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#TGeoVolume:Capacity"><span class="baseclass">TGeoVolume::</span>Capacity</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoVolume:cd"><span class="baseclass">TGeoVolume::</span>cd</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> inode) <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="#TObject:CheckedHash"><span class="baseclass">TObject::</span>CheckedHash</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoVolume:CheckGeometry"><span class="baseclass">TGeoVolume::</span>CheckGeometry</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> nrays = 1, <a href="./ListOfTypes.html#Double_t">Double_t</a> startx = 0, <a href="./ListOfTypes.html#Double_t">Double_t</a> starty = 0, <a href="./ListOfTypes.html#Double_t">Double_t</a> startz = 0) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoVolume:CheckOverlaps"><span class="baseclass">TGeoVolume::</span>CheckOverlaps</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> ovlp = 0.10000000000000001, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>) <span class="keyword">const</span><span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoVolume:CheckShape"><span class="baseclass">TGeoVolume::</span>CheckShape</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a> testNo, <a href="./ListOfTypes.html#Int_t">Int_t</a> nsamples = 10000, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
@@ -123,12 +124,12 @@ return false;}
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TGeoVolume:Export"><span class="baseclass">TGeoVolume::</span>Export</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Fatal"><span class="baseclass">TObject::</span>Fatal</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNamed:FillBuffer"><span class="baseclass">TNamed::</span>FillBuffer</a>(<span class="keyword">char</span>*&amp; buffer)</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ABorderSurfaceCondition.html">ABorderSurfaceCondition</a>*</td><td class="funcname"><a class="funcname" href="./AOpticalComponent.html#AOpticalComponent:FindBorderSurfaceCondition"><span class="baseclass">AOpticalComponent::</span>FindBorderSurfaceCondition</a>(<a href="./AOpticalComponent.html">AOpticalComponent</a>* component2)</td></tr>
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TGeoVolume:FindMatrixOfDaughterVolume"><span class="baseclass">TGeoVolume::</span>FindMatrixOfDaughterVolume</a>(<a href="./#TGeoVolume:TGeoVolume" title="TGeoVolume TGeoVolume::TGeoVolume(const TGeoVolume&amp;) or overloads">TGeoVolume</a>* vol) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">TGeoNode*</td><td class="funcname"><a class="funcname" href="#TGeoVolume:FindNode"><span class="baseclass">TGeoVolume::</span>FindNode</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>*</td><td class="funcname"><a class="funcname" href="#TObject:FindObject@1"><span class="baseclass">TObject::</span>FindObject</a>(<span class="keyword">const</span> <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>* obj) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoVolume:FindOverlaps"><span class="baseclass">TGeoVolume::</span>FindOverlaps</a>() <span class="keyword">const</span></td></tr>
-<tr class="funcinh"><td class="funcret"><a href="./ABorderSurfaceCondition.html">ABorderSurfaceCondition</a>*</td><td class="funcname"><a class="funcname" href="./AOpticalComponent.html#AOpticalComponent:FindSurfaceCondition"><span class="baseclass">AOpticalComponent::</span>FindSurfaceCondition</a>(<a href="./AOpticalComponent.html">AOpticalComponent</a>* component2)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TGeoVolume:GetByteCount"><span class="baseclass">TGeoVolume::</span>GetByteCount</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TGeoVolume:GetCurrentNodeIndex"><span class="baseclass">TGeoVolume::</span>GetCurrentNodeIndex</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Option_t">Option_t</a>*</td><td class="funcname"><a class="funcname" href="#TObject:GetDrawOption"><span class="baseclass">TObject::</span>GetDrawOption</a>() <span class="keyword">const</span></td></tr>
@@ -164,7 +165,6 @@ return false;}
 <tr class="funcinh"><td class="funcret"><span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TGeoVolume:GetPointerName"><span class="baseclass">TGeoVolume::</span>GetPointerName</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Int_t">Int_t</a></td><td class="funcname"><a class="funcname" href="#TGeoVolume:GetRefCount"><span class="baseclass">TGeoVolume::</span>GetRefCount</a>() <span class="keyword">const</span></td></tr>
 <tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AMirror:GetReflectance">GetReflectance</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> angle)</td></tr>
-<tr class="func"><td class="funcret"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="funcname"><a class="funcname" href="#AMirror:GetReflectivity">GetReflectivity</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> angle)</td></tr>
 <tr class="funcinh"><td class="funcret">TGeoShape*</td><td class="funcname"><a class="funcname" href="#TGeoVolume:GetShape"><span class="baseclass">TGeoVolume::</span>GetShape</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TNamed:GetTitle"><span class="baseclass">TNamed::</span>GetTitle</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Char_t">Char_t</a></td><td class="funcname"><a class="funcname" href="#TGeoVolume:GetTransparency"><span class="baseclass">TGeoVolume::</span>GetTransparency</a>() <span class="keyword">const</span></td></tr>
@@ -180,6 +180,7 @@ return false;}
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoVolume:Gsord"><span class="baseclass">TGeoVolume::</span>Gsord</a>(<a href="./ListOfTypes.html#Int_t">Int_t</a>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:HandleTimer"><span class="baseclass">TObject::</span>HandleTimer</a>(TTimer* timer)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="#TNamed:Hash"><span class="baseclass">TNamed::</span>Hash</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:HasInconsistentHash"><span class="baseclass">TObject::</span>HasInconsistentHash</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">static <a href="./#TGeoVolume:TGeoVolume" title="TGeoVolume TGeoVolume::TGeoVolume(const TGeoVolume&amp;) or overloads">TGeoVolume</a>*</td><td class="funcname"><a class="funcname" href="#TGeoVolume:Import"><span class="baseclass">TGeoVolume::</span>Import</a>(<span class="keyword">const</span> <span class="keyword">char</span>* filename, <span class="keyword">const</span> <span class="keyword">char</span>* name = <span class="string">""</span>, <a href="./ListOfTypes.html#Option_t">Option_t</a>* option = <span class="string">""</span>)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Info"><span class="baseclass">TObject::</span>Info</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> <span class="keyword">char</span>* classname) <span class="keyword">const</span></td></tr>
@@ -302,12 +303,9 @@ return false;}
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoVolume:SetOption"><span class="baseclass">TGeoVolume::</span>SetOption</a>(<span class="keyword">const</span> <span class="keyword">char</span>* option)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoVolume:SetOverlappingCandidate"><span class="baseclass">TGeoVolume::</span>SetOverlappingCandidate</a>(<a href="./ListOfTypes.html#Bool_t">Bool_t</a> flag)</td></tr>
 <tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AMirror:SetReflectance">SetReflectance</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> ref)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AMirror:SetReflectance@1">SetReflectance</a>(TGraph* ref)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AMirror:SetReflectance@2">SetReflectance</a>(TGraph2D* ref)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AMirror:SetReflectance@3">SetReflectance</a>(TH2* ref)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AMirror:SetReflectivity">SetReflectivity</a>(TGraph* ref)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AMirror:SetReflectivity@1">SetReflectivity</a>(TGraph2D* ref)</td></tr>
-<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AMirror:SetReflectivity@2">SetReflectivity</a>(TH2* ref)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AMirror:SetReflectance@1">SetReflectance</a>(shared_ptr&lt;<span class="keyword">const</span> TGraph&gt; ref)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AMirror:SetReflectance@2">SetReflectance</a>(shared_ptr&lt;TH2&gt; ref)</td></tr>
+<tr class="func"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#AMirror:SetReflectance@3">SetReflectance</a>(shared_ptr&lt;TGraph2D&gt; ref)</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoVolume:SetReplicated"><span class="baseclass">TGeoVolume::</span>SetReplicated</a>()</td></tr>
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TGeoVolume:SetShape"><span class="baseclass">TGeoVolume::</span>SetShape</a>(<span class="keyword">const</span> TGeoShape* shape)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TNamed:SetTitle"><span class="baseclass">TNamed::</span>SetTitle</a>(<span class="keyword">const</span> <span class="keyword">char</span>* title = <span class="string">""</span>)<span class="funcprop"><abbr title="has a popup menu entry">MENU</abbr> </span></td></tr>
@@ -352,6 +350,11 @@ return false;}
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MakeZombie"><span class="baseclass">TObject::</span>MakeZombie</a>()</td></tr>
 
 </table></div>
+<div class="access" id="funcpriv"><b>private:</b>
+<table class="func" id="tabfuncpriv" cellspacing="0">
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#AMirror:CheckTObjectHashConsistency">CheckTObjectHashConsistency</a>() <span class="keyword">const</span></td></tr>
+
+</table></div>
 </div>
 
 <div id="datamembers">
@@ -367,13 +370,14 @@ return false;}
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kCanDelete"><span class="baseclass">TObject::</span>kCanDelete</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kCannotPick"><span class="baseclass">TObject::</span>kCannotPick</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kHasUUID"><span class="baseclass">TObject::</span>kHasUUID</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kInconsistent"><span class="baseclass">TObject::</span>kInconsistent</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kInvalidObject"><span class="baseclass">TObject::</span>kInvalidObject</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kIsOnHeap"><span class="baseclass">TObject::</span>kIsOnHeap</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kIsReferenced"><span class="baseclass">TObject::</span>kIsReferenced</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kMustCleanup"><span class="baseclass">TObject::</span>kMustCleanup</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kNoContextMenu"><span class="baseclass">TObject::</span>kNoContextMenu</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kNotDeleted"><span class="baseclass">TObject::</span>kNotDeleted</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kObjInCanvas"><span class="baseclass">TObject::</span>kObjInCanvas</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EDeprecatedStatusBits</td><td class="dataname"><a href="#TObject:kObjInCanvas"><span class="baseclass">TObject::</span>kObjInCanvas</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kOverwrite"><span class="baseclass">TObject::</span>kOverwrite</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TGeoAtt:TGeoAtt" title="TGeoAtt TGeoAtt::TGeoAtt() or overloads">TGeoAtt</a>::EGeoSavePrimitiveAtt</td><td class="dataname"><a href="#TGeoAtt:kSaveNodesAtt"><span class="baseclass">TGeoAtt::</span>kSaveNodesAtt</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TGeoAtt:TGeoAtt" title="TGeoAtt TGeoAtt::TGeoAtt() or overloads">TGeoAtt</a>::EGeoSavePrimitiveAtt</td><td class="dataname"><a href="#TGeoAtt:kSavePrimitiveAtt"><span class="baseclass">TGeoAtt::</span>kSavePrimitiveAtt</a></td><td></td></tr>
@@ -437,9 +441,9 @@ return false;}
 <div class="access" id="datapriv"><b>private:</b>
 <table class="data" id="tabdatapriv" cellspacing="0">
 <tr class="data"><td class="datatype"><a href="./ListOfTypes.html#Double_t">Double_t</a></td><td class="dataname"><a name="AMirror:fReflectance"></a>fReflectance</td><td></td></tr>
-<tr class="data"><td class="datatype">TGraph*</td><td class="dataname"><a name="AMirror:fReflectance1D"></a>fReflectance1D</td><td class="datadesc">Reflectance data (ref v.s. wavelength)</td></tr>
-<tr class="data"><td class="datatype">TGraph2D*</td><td class="dataname"><a name="AMirror:fReflectance2D"></a>fReflectance2D</td><td class="datadesc">Reflectance data (ref v.s. angle v.s. wavelength)</td></tr>
-<tr class="data"><td class="datatype">TH2*</td><td class="dataname"><a name="AMirror:fReflectanceTH2"></a>fReflectanceTH2</td><td class="datadesc">Reflectance data (ref v.s. angle v.s. wavelength)</td></tr>
+<tr class="data"><td class="datatype">shared_ptr&lt;<span class="keyword">const</span> TGraph&gt;</td><td class="dataname"><a name="AMirror:fReflectance1D"></a>fReflectance1D</td><td class="datadesc">Reflectance data (ref v.s. wavelength)</td></tr>
+<tr class="data"><td class="datatype">shared_ptr&lt;TGraph2D&gt;</td><td class="dataname"><a name="AMirror:fReflectance2D"></a>fReflectance2D</td><td class="datadesc">Reflectance data (ref v.s. angle v.s. wavelength)</td></tr>
+<tr class="data"><td class="datatype">shared_ptr&lt;TH2&gt;</td><td class="dataname"><a name="AMirror:fReflectanceTH2"></a>fReflectanceTH2</td><td class="datadesc">Reflectance data (ref v.s. angle v.s. wavelength)</td></tr>
 
 </table></div>
 </div>
@@ -449,10 +453,10 @@ return false;}
 </map>
 <map name="MapAMirror_InhMem" id="MapAMirror_InhMem">
 <area shape="rect" id="clust11" href="./AOpticalComponent.html" alt="" coords="745,45,933,64"/>
-<area shape="rect" id="clust12" href="./AOpticalComponent.html" alt="" coords="867,64,933,176"/>
-<area shape="rect" id="clust13" href="./AOpticalComponent.html" alt="" coords="789,64,856,176"/>
-<area shape="rect" id="clust14" href="./AOpticalComponent.html" alt="" coords="712,64,779,176"/>
-<area shape="rect" id="clust10" href="./AOpticalComponent.html" title="AOpticalComponent" alt="" coords="712,16,933,176"/>
+<area shape="rect" id="clust12" href="./AOpticalComponent.html" alt="" coords="867,64,933,160"/>
+<area shape="rect" id="clust13" href="./AOpticalComponent.html" alt="" coords="789,64,856,192"/>
+<area shape="rect" id="clust14" href="./AOpticalComponent.html" alt="" coords="712,64,779,192"/>
+<area shape="rect" id="clust10" href="./AOpticalComponent.html" title="AOpticalComponent" alt="" coords="712,16,933,192"/>
 </map>
 <map name="MapAMirror_Lib" id="MapAMirror_Lib">
 <area shape="rect" id="node1" href="LibraryDependencies.html" title="All Libraries" alt="" coords="381,44,498,92"/>
@@ -465,56 +469,44 @@ return false;}
 </div><div class="classcharts"><div class="classchartswidth"></div>
 <img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapAMirror_Inh" src="inh/AMirror_Inh.png"/></div>
 <h2>Function documentation</h2>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="AMirror:AMirror" href="src/AMirror.cxx.html#HCEarD">AMirror</a>()</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="AMirror:AMirror" href="src/AMirror.cxx.html#qV1o2D">AMirror</a>()</span><br />
 <div class="funccomm"><pre> Default constructor
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="AMirror:AMirror@1" href="src/AMirror.cxx.html#kAf9HD">AMirror</a>(<span class="keyword">const</span> <span class="keyword">char</span>* name, <span class="keyword">const</span> TGeoShape* shape, <span class="keyword">const</span> TGeoMedium* med = 0)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="AMirror:_AMirror" href="src/AMirror.cxx.html#wHOI5">~AMirror</a>()</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="AMirror:_AMirror" href="src/AMirror.cxx.html#hb2LlC">~AMirror</a>()</span><br />
+
+<div class="code"><code class="inlinecode">{}</code></div>
+<div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AMirror:GetReflectance" href="src/AMirror.cxx.html#hKyDI">GetReflectance</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> angle)</span><br />
-<div class="funccomm"><pre> Return mirror reflectivity for a photon whose wavelength is lambda, and
+<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AMirror:GetReflectance" href="src/AMirror.cxx.html#HRNfI">GetReflectance</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> angle)</span><br />
+<div class="funccomm"><pre> Return mirror reflectance for a photon whose wavelength is lambda, and
  whose incident angle is <span class="string">"angle"</span> (rad)
+ This method should be const but TGraph2D::Interpolate and TH2::Interpolate
+ are non-const methods.
 </pre></div>
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="AMirror:AMirror" href="src/AMirror.h.html#f_OETD">AMirror</a>()</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><a href="./ListOfTypes.html#Double_t">Double_t</a> <a class="funcname" name="AMirror:GetReflectivity" href="src/AMirror.h.html#b.VN_D">GetReflectivity</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> lambda, <a href="./ListOfTypes.html#Double_t">Double_t</a> angle)</span><br />
-</div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AMirror:SetReflectance" href="src/AMirror.h.html#ljBlb">SetReflectance</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> ref)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AMirror:SetReflectance" href="src/AMirror.h.html#dPFf2D">SetReflectance</a>(<a href="./ListOfTypes.html#Double_t">Double_t</a> ref)</span><br />
 
-<div class="code"><code class="inlinecode">{<a href="./AMirror.html#AMirror:fReflectance" title="Double_t AMirror::fReflectance">fReflectance</a> = ref;}</code></div>
+<div class="code"><code class="inlinecode">{ <a href="./AMirror.html#AMirror:fReflectance" title="Double_t AMirror::fReflectance">fReflectance</a> = ref; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AMirror:SetReflectance@1" href="src/AMirror.h.html#r_XaeB">SetReflectance</a>(TGraph* ref)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AMirror:SetReflectance@1" href="src/AMirror.h.html#ItAsDD">SetReflectance</a>(shared_ptr&lt;<span class="keyword">const</span> TGraph&gt; ref)</span><br />
 
-<div class="code"><code class="inlinecode">{<a href="./AMirror.html#AMirror:fReflectance1D" title="TGraph* AMirror::fReflectance1D">fReflectance1D</a> = ref;}</code></div>
+<div class="code"><code class="inlinecode">{ <a href="./AMirror.html#AMirror:fReflectance1D" title="shared_ptr&lt;const TGraph&gt; AMirror::fReflectance1D">fReflectance1D</a> = ref; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AMirror:SetReflectivity" href="src/AMirror.h.html#b3pz8">SetReflectivity</a>(TGraph* ref)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AMirror:SetReflectance@2" href="src/AMirror.h.html#VbWuPD">SetReflectance</a>(shared_ptr&lt;TH2&gt; ref)</span><br />
 
-<div class="code"><code class="inlinecode">{<a href="./AMirror.html#AMirror:SetReflectance" title="void AMirror::SetReflectance(Double_t ref) or overloads">SetReflectance</a>(ref);}</code></div>
+<div class="code"><code class="inlinecode">{ <a href="./AMirror.html#AMirror:fReflectanceTH2" title="shared_ptr&lt;TH2&gt; AMirror::fReflectanceTH2">fReflectanceTH2</a> = ref; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AMirror:SetReflectance@2" href="src/AMirror.h.html#s8azj">SetReflectance</a>(TGraph2D* ref)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AMirror:SetReflectance@3" href="src/AMirror.h.html#CzHs5B">SetReflectance</a>(shared_ptr&lt;TGraph2D&gt; ref)</span><br />
 
-<div class="code"><code class="inlinecode">{<a href="./AMirror.html#AMirror:fReflectance2D" title="TGraph2D* AMirror::fReflectance2D">fReflectance2D</a> = ref;}</code></div>
-<div style="clear:both;"></div>
-</div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AMirror:SetReflectivity@1" href="src/AMirror.h.html#RnyJhE">SetReflectivity</a>(TGraph2D* ref)</span><br />
-
-<div class="code"><code class="inlinecode">{<a href="./AMirror.html#AMirror:SetReflectance" title="void AMirror::SetReflectance(Double_t ref) or overloads">SetReflectance</a>(ref);}</code></div>
-<div style="clear:both;"></div>
-</div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AMirror:SetReflectance@3" href="src/AMirror.h.html#EeKZWE">SetReflectance</a>(TH2* ref)</span><br />
-
-<div class="code"><code class="inlinecode">{<a href="./AMirror.html#AMirror:fReflectanceTH2" title="TH2* AMirror::fReflectanceTH2">fReflectanceTH2</a> = ref;}</code></div>
-<div style="clear:both;"></div>
-</div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="AMirror:SetReflectivity@2" href="src/AMirror.h.html#wA6BiD">SetReflectivity</a>(TH2* ref)</span><br />
-
-<div class="code"><code class="inlinecode">{<a href="./AMirror.html#AMirror:SetReflectance" title="void AMirror::SetReflectance(Double_t ref) or overloads">SetReflectance</a>(ref);}</code></div>
+<div class="code"><code class="inlinecode">{ <a href="./AMirror.html#AMirror:fReflectance2D" title="shared_ptr&lt;TGraph2D&gt; AMirror::fReflectance2D">fReflectance2D</a> = ref; }</code></div>
 <div style="clear:both;"></div>
 </div>
 
@@ -522,7 +514,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="mailto:oxon@mac.com"> Akira Okumura </a> </em><em>&raquo; Copyright   (C) 2006-, Akira Okumura                                         *</em><br />
-<em>&raquo; Last changed: Sat Jul 15 08:46:09 2017 </em><em>&raquo; Last generated: 2017-07-15 08:46</em><br />
+<em>&raquo; Last changed: Tue Jan  7 14:48:05 2020 </em><em>&raquo; Last generated: 2020-01-07 14:48</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROBAST in general please send a mail to <a href="mailto:oxon@mac.com">ROBAST support</a>.</em>
 </div>
 </div>

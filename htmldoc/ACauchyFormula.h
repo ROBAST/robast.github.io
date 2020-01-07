@@ -20,16 +20,16 @@
 
 class ACauchyFormula : public ARefractiveIndex {
  private:
-  Double_t fPar[3]; // Parameters
+  Double_t fPar[3];  // Parameters
 
  public:
   ACauchyFormula();
   ACauchyFormula(Double_t A, Double_t B, Double_t C = 0.);
   ACauchyFormula(const Double_t* p);
 
-  virtual Double_t GetIndex(Double_t lambda /* (m) */) const;
+  virtual Double_t GetRefractiveIndex(Double_t lambda /* (m) */) const;
 
   ClassDef(ACauchyFormula, 1)
 };
 
-#endif // A_CAUCHY_FORMULA_H
+#endif  // A_CAUCHY_FORMULA_H

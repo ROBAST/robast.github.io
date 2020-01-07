@@ -4,7 +4,7 @@
 <!--                                             -->
 <!-- Author: Akira Okumura (oxon@mac.com)        -->
 <!--                                             -->
-<!--   Date: Sat Jul 15 08:46:10 2017            -->
+<!--   Date: Tue Jan  7 14:48:07 2020            -->
 <!--                                             -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -80,6 +80,7 @@ return false;}
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#ARayArray:ARayArray">ARayArray</a>()</td></tr>
 <tr class="func"><td class="funcret"></td><td class="funcname"><a class="funcname" href="#ARayArray:ARayArray@1">ARayArray</a>(<span class="keyword">const</span> <a href="./ARayArray.html">ARayArray</a>&amp;)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Browse"><span class="baseclass">TObject::</span>Browse</a>(TBrowser* b)</td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="#TObject:CheckedHash"><span class="baseclass">TObject::</span>CheckedHash</a>()</td></tr>
 <tr class="func"><td class="funcret">static TClass*</td><td class="funcname"><a class="funcname" href="#ARayArray:Class">Class</a>()</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">const</span> <span class="keyword">char</span>*</td><td class="funcname"><a class="funcname" href="#TObject:ClassName"><span class="baseclass">TObject::</span>ClassName</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Clear"><span class="baseclass">TObject::</span>Clear</a>(<a href="./ListOfTypes.html#Option_t">Option_t</a>* = <span class="string">""</span>)</td></tr>
@@ -116,6 +117,7 @@ return false;}
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#UInt_t">UInt_t</a></td><td class="funcname"><a class="funcname" href="#TObject:GetUniqueID"><span class="baseclass">TObject::</span>GetUniqueID</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:HandleTimer"><span class="baseclass">TObject::</span>HandleTimer</a>(TTimer* timer)</td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#ULong_t">ULong_t</a></td><td class="funcname"><a class="funcname" href="#TObject:Hash"><span class="baseclass">TObject::</span>Hash</a>() <span class="keyword">const</span></td></tr>
+<tr class="funcinh"><td class="funcret"><a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:HasInconsistentHash"><span class="baseclass">TObject::</span>HasInconsistentHash</a>() <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:Info"><span class="baseclass">TObject::</span>Info</a>(<span class="keyword">const</span> <span class="keyword">char</span>* method, <span class="keyword">const</span> <span class="keyword">char</span>* msgfmt) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> <span class="keyword">char</span>* classname) <span class="keyword">const</span></td></tr>
 <tr class="funcinh"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#TObject:InheritsFrom@1"><span class="baseclass">TObject::</span>InheritsFrom</a>(<span class="keyword">const</span> TClass* cl) <span class="keyword">const</span></td></tr>
@@ -173,6 +175,11 @@ return false;}
 <tr class="funcinh"><td class="funcret"><span class="keyword">void</span></td><td class="funcname"><a class="funcname" href="#TObject:MakeZombie"><span class="baseclass">TObject::</span>MakeZombie</a>()</td></tr>
 
 </table></div>
+<div class="access" id="funcpriv"><b>private:</b>
+<table class="func" id="tabfuncpriv" cellspacing="0">
+<tr class="func"><td class="funcret">virtual <a href="./ListOfTypes.html#Bool_t">Bool_t</a></td><td class="funcname"><a class="funcname" href="#ARayArray:CheckTObjectHashConsistency">CheckTObjectHashConsistency</a>() <span class="keyword">const</span></td></tr>
+
+</table></div>
 </div>
 
 <div id="datamembers">
@@ -183,13 +190,14 @@ return false;}
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kCanDelete"><span class="baseclass">TObject::</span>kCanDelete</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kCannotPick"><span class="baseclass">TObject::</span>kCannotPick</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kHasUUID"><span class="baseclass">TObject::</span>kHasUUID</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kInconsistent"><span class="baseclass">TObject::</span>kInconsistent</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kInvalidObject"><span class="baseclass">TObject::</span>kInvalidObject</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kIsOnHeap"><span class="baseclass">TObject::</span>kIsOnHeap</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kIsReferenced"><span class="baseclass">TObject::</span>kIsReferenced</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kMustCleanup"><span class="baseclass">TObject::</span>kMustCleanup</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kNoContextMenu"><span class="baseclass">TObject::</span>kNoContextMenu</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kNotDeleted"><span class="baseclass">TObject::</span>kNotDeleted</a></td><td></td></tr>
-<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EStatusBits</td><td class="dataname"><a href="#TObject:kObjInCanvas"><span class="baseclass">TObject::</span>kObjInCanvas</a></td><td></td></tr>
+<tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::EDeprecatedStatusBits</td><td class="dataname"><a href="#TObject:kObjInCanvas"><span class="baseclass">TObject::</span>kObjInCanvas</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kOverwrite"><span class="baseclass">TObject::</span>kOverwrite</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kSingleKey"><span class="baseclass">TObject::</span>kSingleKey</a></td><td></td></tr>
 <tr class="datainh"><td class="datatype">static <a href="./#TObject:TObject" title="TObject TObject::TObject() or overloads">TObject</a>::(anonymous)</td><td class="dataname"><a href="#TObject:kWriteDelete"><span class="baseclass">TObject::</span>kWriteDelete</a></td><td></td></tr>
@@ -219,48 +227,48 @@ return false;}
 </div><div class="classcharts"><div class="classchartswidth"></div>
 <img id="Charts" alt="Class Charts" class="classcharts" usemap="#MapARayArray_Inh" src="inh/ARayArray_Inh.png"/></div>
 <h2>Function documentation</h2>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ARayArray:ARayArray" href="src/ARayArray.cxx.html#Lr4Gj">ARayArray</a>()</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ARayArray:ARayArray" href="src/ARayArray.cxx.html#mIgk.B">ARayArray</a>()</span><br />
 <div class="funccomm"><pre> Constructor
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ARayArray:_ARayArray" href="src/ARayArray.cxx.html#PHGzAE">~ARayArray</a>()</span><br />
+<div class="funcdoc"><span class="funcname"> <a class="funcname" name="ARayArray:_ARayArray" href="src/ARayArray.cxx.html#FMv2l">~ARayArray</a>()</span><br />
 <div class="funccomm"><pre> Destructor
 </pre></div>
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARayArray:Add" href="src/ARayArray.cxx.html#kaCp0D">Add</a>(<a href="./ARay.html">ARay</a>* ray)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARayArray:Add" href="src/ARayArray.cxx.html#M85tpD">Add</a>(<a href="./ARay.html">ARay</a>* ray)</span><br />
 </div>
-<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARayArray:Merge" href="src/ARayArray.cxx.html#hiG1QD">Merge</a>(<a href="./ARayArray.html">ARayArray</a>* array)</span><br />
+<div class="funcdoc"><span class="funcname"><span class="keyword">void</span> <a class="funcname" name="ARayArray:Merge" href="src/ARayArray.cxx.html#qogUJB">Merge</a>(<a href="./ARayArray.html">ARayArray</a>* array)</span><br />
 </div>
 <div class="funcdoc"><span class="funcname"> <a class="funcname" name="ARayArray:ARayArray" href="src/ARayArray.h.html#kvMbxC">ARayArray</a>()</span><br />
 </div>
-<div class="funcdoc"><span class="funcname">TObjArray* <a class="funcname" name="ARayArray:GetAbsorbed" href="src/ARayArray.h.html#V5pv1C">GetAbsorbed</a>()</span><br />
+<div class="funcdoc"><span class="funcname">TObjArray* <a class="funcname" name="ARayArray:GetAbsorbed" href="src/ARayArray.h.html#NzE6PD">GetAbsorbed</a>()</span><br />
 
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> &amp;<a href="./ARayArray.html#ARayArray:fAbsorbed" title="TObjArray ARayArray::fAbsorbed">fAbsorbed</a>;}</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> &amp;<a href="./ARayArray.html#ARayArray:fAbsorbed" title="TObjArray ARayArray::fAbsorbed">fAbsorbed</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname">TObjArray* <a class="funcname" name="ARayArray:GetExited" href="src/ARayArray.h.html#sSSA1D">GetExited</a>()</span><br />
+<div class="funcdoc"><span class="funcname">TObjArray* <a class="funcname" name="ARayArray:GetExited" href="src/ARayArray.h.html#yShk2E">GetExited</a>()</span><br />
 
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> &amp;<a href="./ARayArray.html#ARayArray:fExited" title="TObjArray ARayArray::fExited">fExited</a>;}</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> &amp;<a href="./ARayArray.html#ARayArray:fExited" title="TObjArray ARayArray::fExited">fExited</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname">TObjArray* <a class="funcname" name="ARayArray:GetFocused" href="src/ARayArray.h.html#Vro8UC">GetFocused</a>()</span><br />
+<div class="funcdoc"><span class="funcname">TObjArray* <a class="funcname" name="ARayArray:GetFocused" href="src/ARayArray.h.html#e7lGLE">GetFocused</a>()</span><br />
 
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> &amp;<a href="./ARayArray.html#ARayArray:fFocused" title="TObjArray ARayArray::fFocused">fFocused</a>;}</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> &amp;<a href="./ARayArray.html#ARayArray:fFocused" title="TObjArray ARayArray::fFocused">fFocused</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname">TObjArray* <a class="funcname" name="ARayArray:GetRunning" href="src/ARayArray.h.html#fvKZ9C">GetRunning</a>()</span><br />
+<div class="funcdoc"><span class="funcname">TObjArray* <a class="funcname" name="ARayArray:GetRunning" href="src/ARayArray.h.html#w8SPHB">GetRunning</a>()</span><br />
 
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> &amp;<a href="./ARayArray.html#ARayArray:fRunning" title="TObjArray ARayArray::fRunning">fRunning</a>;}</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> &amp;<a href="./ARayArray.html#ARayArray:fRunning" title="TObjArray ARayArray::fRunning">fRunning</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname">TObjArray* <a class="funcname" name="ARayArray:GetStopped" href="src/ARayArray.h.html#iFR6TC">GetStopped</a>()</span><br />
+<div class="funcdoc"><span class="funcname">TObjArray* <a class="funcname" name="ARayArray:GetStopped" href="src/ARayArray.h.html#twCEKE">GetStopped</a>()</span><br />
 
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> &amp;<a href="./ARayArray.html#ARayArray:fStopped" title="TObjArray ARayArray::fStopped">fStopped</a>;}</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> &amp;<a href="./ARayArray.html#ARayArray:fStopped" title="TObjArray ARayArray::fStopped">fStopped</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
-<div class="funcdoc"><span class="funcname">TObjArray* <a class="funcname" name="ARayArray:GetSuspended" href="src/ARayArray.h.html#P_yKx">GetSuspended</a>()</span><br />
+<div class="funcdoc"><span class="funcname">TObjArray* <a class="funcname" name="ARayArray:GetSuspended" href="src/ARayArray.h.html#ESwUnC">GetSuspended</a>()</span><br />
 
-<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> &amp;<a href="./ARayArray.html#ARayArray:fSuspended" title="TObjArray ARayArray::fSuspended">fSuspended</a>;}</code></div>
+<div class="code"><code class="inlinecode">{ <span class="keyword">return</span> &amp;<a href="./ARayArray.html#ARayArray:fSuspended" title="TObjArray ARayArray::fSuspended">fSuspended</a>; }</code></div>
 <div style="clear:both;"></div>
 </div>
 
@@ -268,7 +276,7 @@ return false;}
 <!--SIGNATURE-->
 <div id="footer">
 <em>&raquo; Author: <a href="mailto:oxon@mac.com"> Akira Okumura </a> </em><em>&raquo; Copyright   (C) 2006-, Akira Okumura                                         *</em><br />
-<em>&raquo; Last changed: Sat Jul 15 08:46:10 2017 </em><em>&raquo; Last generated: 2017-07-15 08:46</em><br />
+<em>&raquo; Last changed: Tue Jan  7 14:48:07 2020 </em><em>&raquo; Last generated: 2020-01-07 14:48</em><br />
 <em>This page has been automatically generated. For comments or suggestions regarding the documentation or ROBAST in general please send a mail to <a href="mailto:oxon@mac.com">ROBAST support</a>.</em>
 </div>
 </div>

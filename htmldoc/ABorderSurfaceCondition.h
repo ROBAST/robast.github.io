@@ -7,6 +7,7 @@
 #ifndef A_BORDER_SURFACE_CONDITION_H
 #define A_BORDER_SURFACE_CONDITION_H
 
+#include "AMultilayer.h"
 #include "TObject.h"
 
 class AOpticalComponent;
@@ -21,20 +22,26 @@ class AOpticalComponent;
 ///////////////////////////////////////////////////////////////////////////////
 
 class ABorderSurfaceCondition : public TObject {
-private:
+ private:
   AOpticalComponent* fComponent[2];
-  Double_t           fSigma;
+  Double_t fSigma;
+  std::shared_ptr<AMultilayer> fMultilayer;
 
-public:
-  ABorderSurfaceCondition(AOpticalComponent* component1, AOpticalComponent* component2);
+ public:
+  ABorderSurfaceCondition(AOpticalComponent* component1,
+                          AOpticalComponent* component2);
   virtual ~ABorderSurfaceCondition();
 
-  const AOpticalComponent* GetComponent1() const {return fComponent[0];}
-  const AOpticalComponent* GetComponent2() const {return fComponent[1];}
-  Double_t                 GetGaussianRoughness() const {return fSigma;}
-  void                     SetGaussianRoughness(Double_t sigma /* (rad) */);
+  const AOpticalComponent* GetComponent1() const { return fComponent[0]; }
+  const AOpticalComponent* GetComponent2() const { return fComponent[1]; }
+  Double_t GetGaussianRoughness() const { return fSigma; }
+  void SetGaussianRoughness(Double_t sigma /* (rad) */);
+  void SetMultilayer(std::shared_ptr<AMultilayer> layer) {
+    fMultilayer = layer;
+  }
+  std::shared_ptr<AMultilayer> GetMultilayer() const { return fMultilayer; }
 
   ClassDef(ABorderSurfaceCondition, 1)
 };
 
-#endif // A_BORDER_SURFACE_CONDITION_H
+#endif  // A_BORDER_SURFACE_CONDITION_H
