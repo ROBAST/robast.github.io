@@ -124,6 +124,15 @@
 
           <div class="panel panel-default">
             <div class="panel-heading">
+              <h2 class="panel-title">Q. Is ROBAST actively developed and maintained?</h2>
+            </div>
+            <div class="panel-body">
+              Yes. ROBAST will be used by the developer for his projects until at least ~2030.
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
               <h2 class="panel-title">Q. Which repository is the origin?</h2>
             </div>
             <div class="panel-body">
@@ -136,7 +145,7 @@
               <h2 class="panel-title">Q. What operating systems are supported?</h2>
             </div>
             <div class="panel-body">
-              <p>OS X and Linux. In principle any POSIX systems that are supported in ROOT are compatible with ROBAST. We have been using ROBAST on several versions of OS X (up to El Capitan) and Linux distributions (Scientific Linux 5, 6, and 7). We do not know if ROBAST runs on Windows machines, because we have never seen researchers who use ROOT on Windows.</p>
+              <p>macOS and Linux. In principle any POSIX systems that are supported in ROOT are compatible with ROBAST. We have been using ROBAST on several versions of OS X (up to Catalina) and Linux distributions (CentOS 6 and 7). We do not know if ROBAST runs on Windows machines, because we have never seen researchers who use ROOT on Windows.</p>
             </div>
           </div>
 
@@ -166,15 +175,6 @@
               <p>Please make a composite shape from a number of <code>AGeoAsphericDisk</code> objects. ROBAST does not have a dedicated class for simulation of Fresnel lenses. However, you can model a Fresnel lens geometry by using a number of <code>AGeoAsphericDisk</code> volumes aligned like an onion slice. The simulation speed will be very slow if the pitch of the concentric circles is very small.</p>
             </div>
           </div>
-
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h2 class="panel-title">Q. Can I simulate diffusive reflection?</h2>
-            </div>
-            <div class="panel-body">
-              <p>Currently no. We have a plan to support diffusive reflection on a matte surface such as white paint or the ground. If it is really important in your simulation, please send us your request.</p>
-            </div>
-          </div>
           
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -192,7 +192,7 @@
               <h2 class="panel-title">Q. What functionality will be added in future?</h2>
             </div>
             <div class="panel-body">
-              <p>I have a plan to support photon polarization and diffuse reflection.</p>
+              <p>I have a plan to support photon polarization. Polarization is supported only in <code>AMultilayer</code> at the moment.</p>
             </div>
           </div>
 
