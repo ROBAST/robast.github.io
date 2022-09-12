@@ -184,9 +184,9 @@ OK</code></pre>
           <pre><code class="language-clike">$ root
 root [0] const double cm = AOpticsManager::cm()
 root [1] AOpticsManager manager("manager", "My first manager")
-root [2] TGeoBBox* box = new TGeoBBox("box", 100*cm, 100*cm, 100*cm)
-root [3] AOpticalComponent* world = new AOpticalComponent("world", box)
-root [4] manager.SetTopVolume(world)
+root [2] TGeoBBox box("box", 100*cm, 100*cm, 100*cm)
+root [3] AOpticalComponent world("world", &box)
+root [4] manager.SetTopVolume(&world)
 </code></pre>
 
           <div class="alert alert-success" role="alert">
@@ -207,13 +207,19 @@ root [4] manager.SetTopVolume(world)
             The length units in the ROOT geometry library are arbitrary, but it assumes that the default unit is centimeter. Thus, <code>AOpticsManager::cm()</code> returns <code>1</code>, and it is strongly recommended to always use <code>AOpticsManager::cm()</code>, <code>AOpticsManager::nm()</code>, and other similar static methods in your simulations.
           </div>
 
+          <div class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            <span class="sr-only">Info:</span>
+            Please note that we did not use <code>new</code> in the above example intentionally. However, when you write your own code in your function, please use <code>new</code> and pointers. Otherwise the geometry objects will be automatically removed from the memory when exiting the function. The example in the next section will show you how to use heap objects.
+          </div>
+
           <p>Now your “world” is ready. Let's make a spherical shell mirror with specular surfaces and add it in the “world”. You can draw the 3D model of this mirror in an OpenGL window (use the <code>"ogl"</code> option) as shown in Fig. 3. This mirror has ideal reflectance of 100%.</p>
 
           <pre><code class="language-clike">root [5] TGeoSphere sphere(99*cm, 100*cm)
-root [6] AMirror* mirror = new AMirror("mirror", &amp;sphere)
-root [7] world-&gt;AddNode(mirror, 1)
+root [6] AMirror mirror("mirror", &amp;sphere)
+root [7] world.AddNode(&mirror, 1)
 root [8] manager.CloseGeometry()
-root [9] world-&gt;Draw("ogl")
+root [9] world.Draw("ogl")
 root [10] manager.SetNsegments(100)</code></pre>
 
           <div class="alert alert-success" role="alert">
@@ -279,15 +285,15 @@ root [17] pol-&gt;Draw()</code></pre>
           <p>The next step is a lens simulation. For simplicity, we will make a triangular prism made of SCHOTT N-BK7. The prism geometry is made with the <code>TGeoTrd1</code> class (<a target="_blank">https://root.cern.ch/root/html604/TGeoTrd1.html</a>). In a similar way to the <code>AMirror</code> class, the prism is made with the <code>ALens</code> class as shown in Fig. 5.</p>
 
 <pre><code class="language-clike">root [0] const double cm = AOpticsManager::cm()
-root [1] AOpticsManager manager("manager", "My second manager")
+root [1] AOpticsManager* manager = new AOpticsManager("manager", "My second manager")
 root [2] TGeoBBox* box = new TGeoBBox(30*cm, 30*cm, 30*cm);
 root [3] AOpticalComponent* world = new AOpticalComponent("world", box)
-root [4] manager.SetTopVolume(world)
+root [4] manager->SetTopVolume(world)
 root [5] TGeoTrd1* trd1 = new TGeoTrd1(10*cm, 0*cm, 5*cm, 10*cm)
 root [6] ALens* prism = new ALens("prism", trd1)
 root [7] prism-&gt;SetRefractiveIndex(AGlassCatalog::GetRefractiveIndex("N-BK7"))
 root [8] world-&gt;AddNode(prism, 1)
-root [9] manager.CloseGeometry()
+root [9] manager->CloseGeometry()
 root [10] gGeoManager-&gt;GetTopVolume()-&gt;Draw("ogl")</code></pre>
         </div>
 
@@ -316,9 +322,9 @@ root [10] gGeoManager-&gt;GetTopVolume()-&gt;Draw("ogl")</code></pre>
 root [12] ARay blue(0, 400*nm, -20*cm, 0*cm, 0*cm, 0, 1, 0, 0)
 root [13] ARay green(0, 500*nm, -20*cm, 0*cm, 0*cm, 0, 1, 0, 0)
 root [14] ARay red(0, 650*nm, -20*cm, 0*cm, 0*cm, 0, 1, 0, 0)
-root [15] manager.TraceNonSequential(blue)
-root [16] manager.TraceNonSequential(green)
-root [17] manager.TraceNonSequential(red)
+root [15] manager-&gt;TraceNonSequential(blue)
+root [16] manager-&gt;TraceNonSequential(green)
+root [17] manager-&gt;TraceNonSequential(red)
 root [18] TPolyLine3D* polB = blue.MakePolyLine3D()
 root [19] polB-&gt;SetLineColor(4)
 root [20] polB-&gt;SetLineWidth(3)
@@ -335,7 +341,7 @@ root [29] polR-&gt;Draw()</code></pre>
           <div class="alert alert-success" role="alert">
             <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
             <span class="sr-only">Info:</span>
-            If your simulation result is different from Fig. 6, it is probably due to random Fresnel reflection on the prism boundary surface. You can disable Fresnel reflection by adding <code>manager.DisableFresnelReflection(kTRUE)</code>.
+            If your simulation result is different from Fig. 6, it is probably due to random Fresnel reflection on the prism boundary surface. You can disable Fresnel reflection by adding <code>manager-&gt;DisableFresnelReflection(kTRUE)</code>.
           </div>
 
           <p>Please note that the non-sequential ray tracing in ROBAST is halted when a ray exits the world. In Fig. 6 the rays propagate from the initial point at left, and they exit the world at the right bottom in the window. You can check the ray status by calling <code>ARay::IsExited()</code>.</p>
